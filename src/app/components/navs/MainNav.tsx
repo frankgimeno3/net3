@@ -2,7 +2,7 @@
 
 import React, { FC, useEffect, useState } from 'react';
 import NavContent from "../content/NavContent.json";
-import 'flag-icons/css/flag-icons.min.css'; // Importa la librería de iconos de banderas
+import 'flag-icons/css/flag-icons.min.css'; 
 
 interface MainNavProps {
     section: string;
@@ -20,7 +20,7 @@ const MainNav: FC<MainNavProps> = ({ section, setSection, lang, setLang }) => {
 
     return (
         <nav className='flex flex-row w-full text-white p-5 justify-between items-center'>
-            <p>Logo</p>
+            <p className='p-1'>Logo</p>
             <div className='flex flex-row'>
                 {content.sections.map(({ label, value }) => (
                     <div 
