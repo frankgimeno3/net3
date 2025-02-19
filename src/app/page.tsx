@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import NavContent from "./components/content/NavContent.json";
 import MainNav from "./components/navs/MainNav";
+import FooterSection from "./components/sections/FooterSection";
 
 export default function Home() {
   const [section, setSection] = useState("quienessomos");
@@ -13,7 +14,7 @@ export default function Home() {
   }, [lang]);
 
   return (
-    <div className="text-white">
+    <div className="flex flex-col min-h-screen justify-between text-white">
       <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
 
       <div className="p-5">
@@ -21,8 +22,8 @@ export default function Home() {
         <p key={value}>{label}</p>
       ))}
       </div>
-      <footer>
-        <p>Contenido del footer</p>
+      <footer className="p-5 w-full bg-white bg-opacity-5">
+        <FooterSection/>
       </footer>
     </div>
   );

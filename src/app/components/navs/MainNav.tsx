@@ -20,15 +20,15 @@ const MainNav: FC<MainNavProps> = ({ section, setSection, lang, setLang }) => {
 
     return (
         <nav className='flex flex-row w-full text-white p-5 justify-between items-center'>
-            <p className='p-1'>Logo</p>
+            <p className='p-1'>net3<span className='text-teal-400'>.es</span></p>
             <div className='flex flex-row'>
-                {content.sections.map(({ value }) => (
+                {content.sections.map(({ label, value }) => (
                     <div 
                         key={value} 
-                        className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === value ? 'bg-white bg-opacity-10' : 'hover:bg-white hover:bg-opacity-5'}`}
+                        className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === value ? 'bg-teal-400 bg-opacity-60' : 'hover:bg-white hover:bg-opacity-5'}`}
                         onClick={() => setSection(value)}
                     >
-                        <p>{value}</p>
+                        <p>{label}</p>
                     </div>
                 ))}
             </div>
@@ -36,7 +36,7 @@ const MainNav: FC<MainNavProps> = ({ section, setSection, lang, setLang }) => {
                 {content.languages.map(({ value }) => (
                     <div 
                         key={value} 
-                        className={`px-2 py-1 mx-1 cursor-pointer transition-colors rounded ${lang === value ? 'bg-white bg-opacity-10' : 'hover:bg-white hover:bg-opacity-5'}`}
+                        className={`px-2 py-1 mx-1 cursor-pointer transition-colors rounded ${lang === value ? 'bg-teal-400 bg-opacity-60' : 'hover:bg-white hover:bg-opacity-5'}`}
                         onClick={() => setLang(value as "ESP" | "ENG")}
                     >
                         {value === "ESP" && (
