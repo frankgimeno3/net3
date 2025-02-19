@@ -1,0 +1,18 @@
+{
+    "ESP": [
+        {"label": "Qué es un", "value": "Plan de Contenidos?"},
+        {"label": "", "value": "Plan que organiza la creación y publicación de contenido"},
+        {"label": "", "value": "para alcanzar tus objetivos de marketing."},
+        {"label": "", "value": "Define qué, cómo y cuándo ejecutar,"},
+        {"label": "", "value": "obteniendo como resultado un Kit de Acción Digital"},
+        {"label": "", "value": "con tu contenido listo para publicar."}
+    ],
+    "ENG": [
+        {"label": "What is a", "value": "Content Plan?"},
+        {"label": "", "value": "A plan that organizes the creation and publication of content"},
+        {"label": "", "value": "to achieve your marketing objectives."},
+        {"label": "", "value": "Defines what, how, and when to execute,"},
+        {"label": "", "value": "resulting in a Digital Action Kit"},
+        {"label": "", "value": "with your content ready to publish."}
+    ]
+}

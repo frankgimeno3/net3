@@ -1,0 +1,16 @@
+{
+    "ESP": [
+        {"label": "Nuestros servicios", "value": ""},
+        {"label": "", "value": "Asesoría técnica y estrategia de contenidos"},
+        {"label": "", "value": "Creación de un Plan de contenidos"},
+        {"label": "", "value": "Creación de un Kit de acción digital"},
+        {"label": "", "value": "Gestión SEM (publicidad en Google)"}
+    ],
+    "ENG": [
+        {"label": "Our services", "value": ""},
+        {"label": "", "value": "Technical consulting and content strategy"},
+        {"label": "", "value": "Creation of a Content Plan"},
+        {"label": "", "value": "Creation of a Digital Action Kit"},
+        {"label": "", "value": "SEM management (Google advertising)"}
+    ]
+}
