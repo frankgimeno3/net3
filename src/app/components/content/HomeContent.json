@@ -1,23 +1,22 @@
 {
-    "ESP": {
-      "sections": [
-        { "label": "Quiénes somos?", "value": "quienessomos" },
-        { "label": "Qué hacemos?", "value": "quehacemos" },
-        { "label": "Sobre el plan de contenidos", "value": "plancontenidos" },
-        { "label": "Nuestros 7 pasos", "value": "pasos" },
-        { "label": "Hablemos", "value": "hablemos" }
-      ],
-      "footer": "Contenido"
-    },
-    "ENG": {
-      "sections": [
-        { "label": "Who are we?", "value": "quienessomos" },
-        { "label": "What do we do?", "value": "quehacemos" },
-        { "label": "About the content plan", "value": "plancontenidos" },
-        { "label": "Our 7 steps", "value": "pasos" },
-        { "label": "Let's talk", "value": "hablemos" }
-      ],
-      "footer": "Content"
-    }
+  "ESP": {
+    "sections": [
+      { "label": "Quiénes somos?", "value": "quienessomos" },
+      { "label": "Qué hacemos?", "value": "quehacemos" },
+      { "label": "Sobre el plan de contenidos", "value": "plancontenidos" },
+      { "label": "Nuestros 7 pasos", "value": "pasos" },
+      { "label": "Hablemos", "value": "hablemos" }
+    ],
+    "footer": "Contenido"
+  },
+  "ENG": {
+    "sections": [
+      { "label": "Who We Are", "value": "quienessomos" },
+      { "label": "What We Do", "value": "quehacemos" },
+      { "label": "Our Content Plan", "value": "plancontenidos" },
+      { "label": "Our 7-Step Process", "value": "pasos" },
+      { "label": "Get in Touch", "value": "hablemos" }
+    ],
+    "footer": "Content"
   }
-  
+}

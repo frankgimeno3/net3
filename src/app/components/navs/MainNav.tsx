@@ -2,6 +2,7 @@
 
 import React, { FC, useEffect, useState } from 'react';
 import NavContent from "../content/NavContent.json";
+import 'flag-icons/css/flag-icons.min.css'; // Importa la librería de iconos de banderas
 
 interface MainNavProps {
     section: string;
@@ -38,7 +39,13 @@ const MainNav: FC<MainNavProps> = ({ section, setSection, lang, setLang }) => {
                         className={`px-2 py-1 mx-1 cursor-pointer transition-colors rounded ${lang === value ? 'bg-white bg-opacity-10' : 'hover:bg-white hover:bg-opacity-5'}`}
                         onClick={() => setLang(value as "ESP" | "ENG")}
                     >
-                        <p>{label}</p>
+                        {/* Banderas usando flag-icons */}
+                        {value === "ESP" && (
+                            <span className="fi fi-es" style={{ fontSize: '24px' }} />
+                        )}
+                        {value === "ENG" && (
+                            <span className="fi fi-gb" style={{ fontSize: '24px' }} />
+                        )}
                     </div>
                 ))}
             </div>

@@ -1,25 +1,25 @@
 'use client';
 import { useState, useEffect } from "react";
- import HomeContent from "./components/content/HomeContent.json";
+import NavContent from "./components/content/NavContent.json";
 import MainNav from "./components/navs/MainNav";
 
 export default function Home() {
   const [section, setSection] = useState("quienessomos");
   const [lang, setLang] = useState<"ESP" | "ENG">("ESP");
-  const [content, setContent] = useState(HomeContent.ESP);
+  const [content, setContent] = useState(NavContent.ESP);
 
   useEffect(() => {
-    setContent(HomeContent[lang as keyof typeof HomeContent]);
+    setContent(NavContent[lang as keyof typeof NavContent]);
   }, [lang]);
 
   return (
-     <div>
+    <div className="text-white">
       <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
       {content.sections.map(({ label, value }) => (
         <p key={value}>{label}</p>
       ))}
       <footer>
-        <p>{content.footer}</p>
+        <p>Contenido del footer</p>
       </footer>
     </div>
   );

@@ -1,29 +1,28 @@
 {
-    "ESP": {
-      "sections": [
-        { "label": "Quiénes somos?", "value": "quienessomos" },
-        { "label": "Qué hacemos?", "value": "quehacemos" },
-        { "label": "Sobre el plan de contenidos", "value": "plancontenidos" },
-        { "label": "Nuestros 7 pasos", "value": "pasos" },
-        { "label": "Hablemos", "value": "hablemos" }
-      ],
-      "languages": [
-        { "label": "ESP", "value": "ESP" },
-        { "label": "ENG", "value": "ENG" }
-      ]
-    },
-    "ENG": {
-      "sections": [
-        { "label": "Who are we?", "value": "quienessomos" },
-        { "label": "What do we do?", "value": "quehacemos" },
-        { "label": "About the content plan", "value": "plancontenidos" },
-        { "label": "Our 7 steps", "value": "pasos" },
-        { "label": "Let's talk", "value": "hablemos" }
-      ],
-      "languages": [
-        { "label": "ESP", "value": "ESP" },
-        { "label": "ENG", "value": "ENG" }
-      ]
-    }
+  "ESP": {
+    "sections": [
+      { "label": "Quiénes somos", "value": "quienessomos" },
+      { "label": "Qué hacemos", "value": "quehacemos" },
+      { "label": "Nuestro plan de contenidos", "value": "plancontenidos" },
+      { "label": "Nuestro proceso de 7 pasos", "value": "pasos" },
+      { "label": "Contáctanos", "value": "hablemos" }
+    ],
+    "languages": [
+      { "label": "ESP", "value": "ESP" },
+      { "label": "ENG", "value": "ENG" }
+    ]
+  },
+  "ENG": {
+    "sections": [
+      { "label": "Who We Are", "value": "quienessomos" },
+      { "label": "What We Do", "value": "quehacemos" },
+      { "label": "Our Content Plan", "value": "plancontenidos" },
+      { "label": "Our 7-Step Process", "value": "pasos" },
+      { "label": "Get in Touch", "value": "hablemos" }
+    ],
+    "languages": [
+      { "label": "ESP", "value": "ESP" },
+      { "label": "ENG", "value": "ENG" }
+    ]
   }
-  
+}
