@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Proporcion3.com",
+  title: "net3",
   description: "Agencia de contenidos para medios técnicos y redes",
 };
 
