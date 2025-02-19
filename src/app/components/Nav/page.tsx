@@ -3,8 +3,8 @@
 import React, { FC } from 'react';
 
 interface MainNavProps {
-    section: any;
-    setSection: any;
+    section: string;
+    setSection: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const MainNav: FC<MainNavProps> = ({ section, setSection }) => {
@@ -17,7 +17,7 @@ const MainNav: FC<MainNavProps> = ({ section, setSection }) => {
     ];
 
     return (
-        <nav className='flex flex-row w-full text-white'>
+        <nav className='flex flex-row w-full text-white p-5 justify-between items-center'>
             <p>Logo</p>
             <div className='flex flex-row'>
                 {items.map(({ label, value }) => (
@@ -30,7 +30,10 @@ const MainNav: FC<MainNavProps> = ({ section, setSection }) => {
                     </div>
                 ))}
             </div>
-            <div></div>
+            <div className='flex flex-col'>
+                <p>ESP</p>
+                <p>ENG</p>
+            </div>
         </nav>
     );
 };
