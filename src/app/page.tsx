@@ -23,7 +23,7 @@ export default function Home() {
       ))}
       </div>
       <footer className="p-5 w-full bg-white bg-opacity-5">
-        <FooterSection/>
+        <FooterSection lang={lang} />
       </footer>
     </div>
   );
