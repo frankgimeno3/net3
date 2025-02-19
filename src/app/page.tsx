@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from "react";
-import MainNav from "./components/Nav/page";
-import HomeContent from "./components/content/HomeContent.json";
+ import HomeContent from "./components/content/HomeContent.json";
+import MainNav from "./components/navs/MainNav";
 
 export default function Home() {
   const [section, setSection] = useState("quienessomos");
