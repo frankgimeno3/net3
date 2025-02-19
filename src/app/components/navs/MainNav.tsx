@@ -22,24 +22,23 @@ const MainNav: FC<MainNavProps> = ({ section, setSection, lang, setLang }) => {
         <nav className='flex flex-row w-full text-white p-5 justify-between items-center'>
             <p className='p-1'>Logo</p>
             <div className='flex flex-row'>
-                {content.sections.map(({ label, value }) => (
+                {content.sections.map(({ value }) => (
                     <div 
                         key={value} 
                         className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === value ? 'bg-white bg-opacity-10' : 'hover:bg-white hover:bg-opacity-5'}`}
                         onClick={() => setSection(value)}
                     >
-                        <p>{label}</p>
+                        <p>{value}</p>
                     </div>
                 ))}
             </div>
             <div className='flex flex-row'>
-                {content.languages.map(({ label, value }) => (
+                {content.languages.map(({ value }) => (
                     <div 
                         key={value} 
                         className={`px-2 py-1 mx-1 cursor-pointer transition-colors rounded ${lang === value ? 'bg-white bg-opacity-10' : 'hover:bg-white hover:bg-opacity-5'}`}
                         onClick={() => setLang(value as "ESP" | "ENG")}
                     >
-                        {/* Banderas usando flag-icons */}
                         {value === "ESP" && (
                             <span className="fi fi-es" style={{ fontSize: '24px' }} />
                         )}

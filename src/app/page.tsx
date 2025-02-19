@@ -15,9 +15,12 @@ export default function Home() {
   return (
     <div className="text-white">
       <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
+
+      <div className="p-5">
       {content.sections.map(({ label, value }) => (
         <p key={value}>{label}</p>
       ))}
+      </div>
       <footer>
         <p>Contenido del footer</p>
       </footer>
