@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import sectionContent from '../../content/Sections/Section1.json';
+import content1 from './content-1.json'
 
  
 
@@ -8,7 +8,7 @@ interface QuienSomosProps {
 }
 
 const QuienSomos: FC<QuienSomosProps> = ({ lang }) => {
-  const content = sectionContent[lang];
+  const content = content1[lang];
 
   return (
     <div className='flex flex-row w-full' style={{ height: '500px' }}>
@@ -28,6 +28,9 @@ const QuienSomos: FC<QuienSomosProps> = ({ lang }) => {
           </p>
           <p   className='py-2 text-left pl-36'>
               {content.subt3}
+          </p>
+          <p   className='py-2 text-left pl-36'>
+              {content.subt4}
           </p>
        </div>
     </div>

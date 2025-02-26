@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import sectionContent from '../../content/Sections/Section2.json';
+import content2 from './content-2.json'
 
  
 
@@ -8,7 +8,7 @@ interface QueHacemosProps {
 }
 
 const QueHacemos: FC<QueHacemosProps> = ({ lang }) => {
-  const content = sectionContent[lang];
+  const content = content2[lang];
 
   return (
     <div className='flex flex-row w-full' style={{ height: '500px' }}>

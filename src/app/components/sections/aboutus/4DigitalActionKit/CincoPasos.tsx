@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import sectionContent from '../../content/Sections/Section4.json';
+import content4 from './content-4.json'
 
 interface SectionContent {
   ESP: { label: string; value: string }[];
@@ -11,7 +11,7 @@ interface CincoPasosProps {
 }
 
 const CincoPasos: FC<CincoPasosProps> = ({ lang }) => {
-  const content = (sectionContent as SectionContent)[lang];
+  const content = (content4 as SectionContent)[lang];
 
   return (
     <div className='flex flex-row w-full' style={{ height: '500px' }}>

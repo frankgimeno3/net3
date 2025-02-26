@@ -12,7 +12,7 @@ interface MainNavProps {
     setLang: React.Dispatch<React.SetStateAction<"ESP" | "ENG">>;
 }
 
-const MainNav: FC<MainNavProps> = ({ section, setSection, lang, setLang }) => {
+const MainNav: FC<MainNavProps> = ({ section, lang, setLang }) => {
     const router = useRouter();
     const [showLangMenu, setShowLangMenu] = useState(false);
 
@@ -21,27 +21,28 @@ const MainNav: FC<MainNavProps> = ({ section, setSection, lang, setLang }) => {
     };
 
     return (
-        <nav className='flex flex-row w-full text-white p-5 justify-between items-center'>
-            <p className='px-5 text-4xl' onClick={() => handleRedirection("/")}
+        <nav className='flex flex-row w-full text-white p-5 justify-between items-center bg-black bg-opacity-80'>
+            <p className='px-5 text-4xl hover:opacity-90' onClick={() => handleRedirection("/")}
             >net3<span className='text-teal-400'>.es</span></p>
             <div className='flex flex-row'>
-                <div className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === "aboutus" ? 'bg-teal-400 bg-opacity-60' : 'hover:bg-white hover:bg-opacity-5'}`}
-                    onClick={() => setSection("aboutus")}>
+                <div className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === "aboutus" ? 'bg-teal-700 ' : 'hover:bg-white hover:bg-opacity-5'}`}
+                    onClick={() => handleRedirection("/")}>
                     <p>{NavContent.aboutus[lang]}</p>
                 </div>
-                <div className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === "ourMethod" ? 'bg-teal-400 bg-opacity-60' : 'hover:bg-white hover:bg-opacity-5'}`}
-                    onClick={() => setSection("ourMethod")}>
+                <div className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === "ourMethod" ? 'bg-teal-700 ' : 'hover:bg-white hover:bg-opacity-5'}`}
+                    onClick={() => handleRedirection("method")}>
                     <p>{NavContent.ourMethod[lang]}</p>
                 </div>
-                <div className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === "contentGuide" ? 'bg-teal-400 bg-opacity-60' : 'hover:bg-white hover:bg-opacity-5'}`}
-                    onClick={() => setSection("contentGuide")}>
+                <div className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === "contentGuide" ? 'bg-teal-700 ' : 'hover:bg-white hover:bg-opacity-5'}`}
+                    onClick={() => handleRedirection("guide")}>
                     <p>{NavContent.contentGuide[lang]}</p>
                 </div>
-                <div className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === "contact" ? 'bg-teal-400 bg-opacity-60' : 'hover:bg-white hover:bg-opacity-5'}`}>
+                
+            </div>
+            <div className='flex flex-row relative'>
+            <div className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === "contact" ? 'font-bold' : 'hover:bg-white hover:bg-opacity-5'}`}>
                     <p onClick={() => handleRedirection("/contact")}>{lang === "ENG" ? "Contact us" : "Contáctanos"}</p>
                 </div>
-            </div>
-            <div className='relative'>
                 <div
                     className='cursor-pointer p-2 px-3 rounded-full hover:bg-white hover:bg-opacity-20'
                     onClick={() => setShowLangMenu(!showLangMenu)}

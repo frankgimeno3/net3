@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import sectionContent from '../../content/Sections/Section3.json';
+import content3 from './content-3.json'
 
 interface SectionContent {
   ESP: { label: string; value: string }[];
@@ -11,7 +11,7 @@ interface PlanContenidosProps {
 }
 
 const PlanContenidos: FC<PlanContenidosProps> = ({ lang }) => {
-  const content = (sectionContent as SectionContent)[lang];
+  const content = (content3 as SectionContent)[lang];
 
   return (
     <div className='flex flex-row w-full justify-between' style={{ height: '500px' }}>
