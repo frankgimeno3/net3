@@ -3,6 +3,7 @@
 import React, { FC, useEffect, useState } from 'react';
 import NavContent from "../content/NavContent.json";
 import 'flag-icons/css/flag-icons.min.css'; 
+import { useRouter } from 'next/navigation';
 
 interface MainNavProps {
     section: string;
@@ -12,6 +13,7 @@ interface MainNavProps {
 }
 
 const MainNav: FC<MainNavProps> = ({ section, setSection, lang, setLang }) => {
+    const router = useRouter()
     const [content, setContent] = useState(NavContent.ESP);
     const [showLangMenu, setShowLangMenu] = useState(false);
 
@@ -19,9 +21,14 @@ const MainNav: FC<MainNavProps> = ({ section, setSection, lang, setLang }) => {
         setContent(NavContent[lang as keyof typeof NavContent]);
     }, [lang]);
 
+    const handleRedirection = (redirection: string)=>{
+        router.push(redirection)
+    }
+
     return (
         <nav className='flex flex-row w-full text-white p-5 justify-between items-center'>
-            <p className='px-5 text-4xl'>net3<span className='text-teal-400'>.es</span></p>
+            <p className='px-5 text-4xl' onClick={()=>{handleRedirection("/")}}
+            >net3<span className='text-teal-400'>.es</span></p>
             <div className='flex flex-row'>
                 {content.sections.map(({ label, value }) => (
                     <div 
