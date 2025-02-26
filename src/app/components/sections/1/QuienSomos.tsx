@@ -17,12 +17,19 @@ const QuienSomos: FC<QuienSomosProps> = ({ lang }) => {
         <p className='pl-16 text-8xl '><span className='pl-4 font-bold'>somos</span>?</p>
       </div>
       <div className='flex flex-1 flex-col bg-teal-600 rounded-sm text-center text-white justify-center w-1/2 text-4xl'>
-        {content.map((item, index) => (
-          <p key={index} className='py-2 text-left pl-36'>
-            {item.label && <span className='font-bold text-yellow-300'>{item.label}</span>} {item.value}
+           <p   className='py-2 text-left pl-36 font-bold text-yellow-300'>
+              {content.titular}
           </p>
-        ))}
-      </div>
+          <p   className='py-2 text-left pl-36'>
+              {content.subt1}
+          </p>
+          <p   className='py-2 text-left pl-36'>
+              {content.subt2}
+          </p>
+          <p   className='py-2 text-left pl-36'>
+              {content.subt3}
+          </p>
+       </div>
     </div>
   );
 };

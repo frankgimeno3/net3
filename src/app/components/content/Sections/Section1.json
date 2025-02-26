@@ -1,14 +1,14 @@
 {
-    "ESP": [
-        {"label": "Agencia", "value": "de Contenidos"},
-        {"label": "", "value": "de presencia internacional"},
-        {"label": "", "value": "focalizada en contenido técnico"},
-        {"label": "", "value": "con clientes en 23 países"}
-    ],
-    "ENG": [
-        {"label": "Agency", "value": "of Content"},
-        {"label": "", "value": "with international presence"},
-        {"label": "", "value": "focused on technical content"},
-        {"label": "", "value": "with clients in 23 countries"}
-    ]
+    "ESP": 
+        {"titular": "Agencia de Contenidos",
+        "subt1": "de presencia internacional",
+        "subt2": "focalizada en contenido técnico",
+        "subt3": "con clientes en 23 países"}
+    ,
+    "ENG": 
+        {"titular": "Contents agency",
+        "subt1": "with international presence",
+        "subt2": "focused on technical content",
+        "subt3": "with clients in 23 countries"}
+    
 }

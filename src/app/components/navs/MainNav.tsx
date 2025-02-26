@@ -39,6 +39,10 @@ const MainNav: FC<MainNavProps> = ({ section, setSection, lang, setLang }) => {
                         <p>{label}</p>
                     </div>
                 ))}
+                <div className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === "contact" ? 'bg-teal-400 bg-opacity-60' : 'hover:bg-white hover:bg-opacity-5'}`}                >
+                    {lang == "ENG" && <p onClick={()=>handleRedirection("/contact")}>Contact us</p>}
+                    {lang == "ESP" && <p onClick={()=>handleRedirection("/contact")}>Contáctanos</p>}
+                </div>
             </div>
             <div className='relative'>
                 <div 
