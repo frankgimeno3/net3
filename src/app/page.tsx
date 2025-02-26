@@ -9,7 +9,7 @@ import CincoPasos from "./components/sections/4/CincoPasos";
 import Contáctanos from "./components/sections/5/Contáctanos";
 
 export default function Home() {
-  const [section, setSection] = useState("quienessomos");
+  const [section, setSection] = useState("aboutus");
   const [lang, setLang] = useState<"ESP" | "ENG">("ESP");
 
   return (

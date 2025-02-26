@@ -1,62 +1,16 @@
 {
-  "ESP": {
-    "sections": [
-      {
-        "label": "Quiénes somos",
-        "value": "quienessomos"
-      },
-      {
-        "label": "Qué hacemos",
-        "value": "quehacemos"
-      },
-      {
-        "label": "Nuestro plan de contenidos",
-        "value": "plancontenidos"
-      },
-      {
-        "label": "Nuestro proceso de 7 pasos",
-        "value": "pasos"
-      }
-    ],
-    "languages": [
-      {
-        "label": "ESP",
-        "value": "ESP"
-      },
-      {
-        "label": "ENG",
-        "value": "ENG"
-      }
-    ]
+  "aboutus": {
+    "ESP": "Sobre nosotros",
+    "ENG": "About us"
   },
-  "ENG": {
-    "sections": [
-      {
-        "label": "Who We Are",
-        "value": "quienessomos"
-      },
-      {
-        "label": "What We Do",
-        "value": "quehacemos"
-      },
-      {
-        "label": "Our Content Plan",
-        "value": "plancontenidos"
-      },
-      {
-        "label": "Our 7-Step Process",
-        "value": "pasos"
-      }
-    ],
-    "languages": [
-      {
-        "label": "ESP",
-        "value": "ESP"
-      },
-      {
-        "label": "ENG",
-        "value": "ENG"
-      }
-    ]
+
+  "ourMethod": {
+    "ESP": "Nuestro método",
+    "ENG":"Our Method"
+  },
+
+  "contentGuide": {
+    "ESP":"Guía de contenidos",
+    "ENG":"Content guide"
   }
 }

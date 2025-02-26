@@ -1,14 +1,14 @@
 {
-    "ESP": 
-        {"titular": "Agencia de Contenidos",
+    "ESP": {
+        "titular": "Agencia de Contenidos",
         "subt1": "de presencia internacional",
         "subt2": "focalizada en contenido técnico",
-        "subt3": "con clientes en 23 países"}
-    ,
-    "ENG": 
-        {"titular": "Contents agency",
+        "subt3": "con clientes en 23 países"
+    },
+    "ENG": {
+        "titular": "Contents agency",
         "subt1": "with international presence",
         "subt2": "focused on technical content",
-        "subt3": "with clients in 23 countries"}
-    
+        "subt3": "with clients in 23 countries"
+    }
 }
