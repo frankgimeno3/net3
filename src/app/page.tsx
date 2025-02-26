@@ -1,7 +1,7 @@
 'use client';
 import { useState } from "react";
 import MainNav from "./components/navs/MainNav";
-import FooterSection from "./components/sections/FooterSection";
+import FooterSection from "./components/navs/FooterSection";
 import QuienSomos from "./components/sections/1/QuienSomos";
 import QueHacemos from "./components/sections/2/QueHacemos";
 import PlanContenidos from "./components/sections/3/PlanContenidos";

@@ -23,7 +23,7 @@ const FooterSection: FC<FooterSectionProps> = ({ lang }) => {
             <p className="font-bold text-teal-400">{content.sections[section]}</p>
             <div className="flex flex-col py-2">
               {content[section as SectionKey].map((item: string, index: number) => (
-                <p key={index} className="hover:font-bold">{item}</p>
+                <p key={index}  >{item}</p>
               ))}
             </div>
           </div>
