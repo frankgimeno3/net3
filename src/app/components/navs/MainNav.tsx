@@ -21,30 +21,30 @@ const MainNav: FC<MainNavProps> = ({ section, lang, setLang }) => {
     };
 
     return (
-        <nav className='flex flex-row w-full text-white p-5 justify-between items-center bg-black bg-opacity-80'>
+        <nav className='flex flex-row w-full text-white px-5 justify-between items-center bg-gray-950 bg-opacity-90'>
             <p className='px-5 text-4xl hover:opacity-90' onClick={() => handleRedirection("/")}
             >net3<span className='text-teal-400'>.es</span></p>
             <div className='flex flex-row'>
-                <div className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === "aboutus" ? 'bg-teal-700 ' : 'hover:bg-white hover:bg-opacity-5'}`}
-                    onClick={() => handleRedirection("/")}>
+                <div className={` py-5 mx-8 text-center text-white ${section === "aboutus" ? '' : 'opacity-30 hover:opacity-90'}`}
+                    onClick={() => handleRedirection("/")} >
                     <p>{NavContent.aboutus[lang]}</p>
                 </div>
-                <div className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === "ourMethod" ? 'bg-teal-700 ' : 'hover:bg-white hover:bg-opacity-5'}`}
-                    onClick={() => handleRedirection("method")}>
-                    <p>{NavContent.ourMethod[lang]}</p>
-                </div>
-                <div className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === "contentGuide" ? 'bg-teal-700 ' : 'hover:bg-white hover:bg-opacity-5'}`}
-                    onClick={() => handleRedirection("guide")}>
+                <div className={` py-5 mx-8 text-center text-white ${section === "ourMethod" ? '' : 'opacity-30 hover:opacity-90'}`}
+                    onClick={() => handleRedirection("method")} >
+                    <p>{NavContent.ourMethod[lang]}</p>                </div>
+                <div className={` py-5 mx-8 text-center text-white ${section === "contentGuide" ? '' : 'opacity-30 hover:opacity-90'}`}
+                    onClick={() => handleRedirection("guide")} >
                     <p>{NavContent.contentGuide[lang]}</p>
                 </div>
-                
+
             </div>
             <div className='flex flex-row relative'>
-            <div className={`px-4 py-2 mx-1 cursor-pointer transition-colors rounded ${section === "contact" ? 'font-bold' : 'hover:bg-white hover:bg-opacity-5'}`}>
-                    <p onClick={() => handleRedirection("/contact")}>{lang === "ENG" ? "Contact us" : "Contáctanos"}</p>
+                <div className={` py-5 mx-8 text-center text-white ${section === "contact" ? '' : 'opacity-30 hover:opacity-90'}`}
+                    onClick={() => handleRedirection("/contact")} >
+                    <p >{lang === "ENG" ? "Contact us" : "Contáctanos"}</p>
                 </div>
                 <div
-                    className='cursor-pointer p-2 px-3 rounded-full hover:bg-white hover:bg-opacity-20'
+                    className='cursor-pointer py-5 px-3 rounded-full hover:bg-white hover:bg-opacity-20'
                     onClick={() => setShowLangMenu(!showLangMenu)}
                 >
                     <span className={`fi ${lang === "ESP" ? "fi-es" : "fi-gb"} rounded-full`} style={{ fontSize: '24px' }} />

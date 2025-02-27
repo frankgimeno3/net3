@@ -13,20 +13,27 @@ export default function Home() {
   const [lang, setLang] = useState<"ESP" | "ENG">("ESP");
 
   return (
-    <div className="relative flex flex-col min-h-screen justify-between text-white bg-slate-900">
-      <div className="fixed top-0 left-0 w-full  z-50">
+    <div className="relative flex flex-col min-h-screen justify-between text-white"
+      style={{
+        backgroundImage: 'url(/background/bgrnd.jpg)', 
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center', 
+        backgroundAttachment: 'fixed',
+      }}
+    >
+       <div className="absolute inset-0 bg-black opacity-40 z-0" />
+      
+      <div className="fixed top-0 left-0 w-full z-50">
         <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
       </div>
-      <div className="flex flex-col mt-20 pt-16">
+      <div className="flex flex-col z-10">
         <QuienSomos lang={lang} />
         <QueHacemos lang={lang} />
         <PlanContenidos lang={lang} />
         <CincoPasos lang={lang} />
         <Contáctanos lang={lang} />
       </div>
-      <footer className="p-5 w-full bg-white bg-opacity-5">
-        <FooterSection lang={lang} />
-      </footer>
-    </div>
+         <FooterSection lang={lang} />
+     </div>
   );
 }

@@ -14,9 +14,8 @@ const CincoPasos: FC<CincoPasosProps> = ({ lang }) => {
   const content = (content4 as SectionContent)[lang];
 
   return (
-    <div className='flex flex-row w-full' style={{ height: '500px' }}>
-      <div className='flex flex-1 flex-col bg-teal-600 rounded-sm text-white justify-center w-1/2'>
-        {/* Títulos principales */}
+    <div className='flex flex-row w-full h-screen p-24'    >
+      <div className='flex flex-1 flex-col bg-teal-600 rounded-sm text-center text-white justify-center w-1/2 text-4xl bg-opacity-80'>
         <p className='font-bold py-1 text-yellow-300 text-right pr-24 text-3xl'>
           {content[0].label}
         </p>
