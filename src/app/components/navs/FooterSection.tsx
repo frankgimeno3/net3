@@ -13,10 +13,10 @@ const FooterSection: FC<FooterSectionProps> = ({ lang }) => {
   return (
     <div className='flex flex-row w-full text-white p-7 items-center justify-center py-12 w-full items-center bg-gray-950 bg-opacity-90'>
 
-       <div className="flex flex-col">
-      <p className=' text-4xl'>net3<span className='text-teal-400'>.es</span></p>
-      <p>{content.copyright}</p>
-        <p>info@net3.com</p> 
+      <div className="flex flex-col">
+        <p className=' text-4xl'>net3<span className='text-teal-400'>.es</span></p>
+        <p>{content.copyright}</p>
+        <p>info@net3.com</p>
       </div>
       <div className="flex flex-row px-12 text-sm">
         {(Object.keys(content.sections) as SectionKey[]).map((section) => (

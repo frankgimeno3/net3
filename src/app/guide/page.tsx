@@ -19,9 +19,7 @@ export default function Guide() {
       <div className="flex flex-col mt-20 pt-16">
         <Contáctanos lang={lang} />
       </div>
-      <footer className="p-5 w-full bg-white bg-opacity-5">
         <FooterSection lang={lang} />
-      </footer>
     </div>
   );
 }
