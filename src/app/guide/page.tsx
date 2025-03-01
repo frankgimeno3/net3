@@ -15,7 +15,17 @@ export default function Guide() {
       <div className="fixed top-0 left-0 w-full bg-black bg-opacity-80 z-50">
         <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
       </div>
-      <IntroContentGuide/>
+      <p className="text-5xl font-bold">Guía de contenidos</p>
+      <p>A continuación se muestran los diferentes formatos de contenido que ofrecemos</p>
+      <p>Elija si quiere ver formatos según la plataforma de publicación, o según la temática del contenido a publicar</p>
+
+      <div className="bg-teal-400 w-full flex flex-col">
+      <p>Mostrar contenidos por...</p>
+      <div className="flex flex-row"> 
+      <button className="px-3 py-1 bg-white hover:bg-gray-100 text-gray-500 mx-3"> Por temáticas</button>
+      <button className="px-3 py-1 bg-white hover:bg-gray-100 text-gray-500 mx-3"> Por Formatos</button>
+      </div>
+      </div>
       <div className="flex flex-col mt-20 pt-16">
         <Contáctanos lang={lang} />
       </div>
