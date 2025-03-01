@@ -24,22 +24,15 @@ const MainNav: FC<MainNavProps> = ({ section, lang, setLang }) => {
         <nav className='flex flex-row w-full text-white px-5 justify-between items-center bg-gray-950 bg-opacity-90'>
             <p className='px-5 text-4xl hover:opacity-90' onClick={() => handleRedirection("/")}
             >net3<span className='text-teal-400'>.es</span></p>
-            <div className='flex flex-row'>
-                <div className={` py-5 mx-8 text-center text-white ${section === "aboutus" ? '' : 'opacity-30 hover:opacity-90'}`}
-                    onClick={() => handleRedirection("/")} >
-                    <p>{NavContent.aboutus[lang]}</p>
-                </div>
-                <div className={` py-5 mx-8 text-center text-white ${section === "ourMethod" ? '' : 'opacity-30 hover:opacity-90'}`}
+            <div className='flex flex-row relative text-sm'>
+                <div className={` pt-6 pb-5 mx-3 text-center text-white ${section === "ourMethod" ? '' : 'opacity-50 hover:opacity-100'}`}
                     onClick={() => handleRedirection("method")} >
                     <p>{NavContent.ourMethod[lang]}</p>                </div>
-                <div className={` py-5 mx-8 text-center text-white ${section === "contentGuide" ? '' : 'opacity-30 hover:opacity-90'}`}
+                <div className={` pt-6 pb-5 mx-3 text-center text-white ${section === "contentGuide" ? '' : 'opacity-50 hover:opacity-100'}`}
                     onClick={() => handleRedirection("guide")} >
                     <p>{NavContent.contentGuide[lang]}</p>
                 </div>
-
-            </div>
-            <div className='flex flex-row relative'>
-                <div className={` py-5 mx-8 text-center text-white ${section === "contact" ? '' : 'opacity-30 hover:opacity-90'}`}
+                <div className={` pt-6 pb-5 mx-3 text-center text-white ${section === "contact" ? '' : 'opacity-50 hover:opacity-100'}`}
                     onClick={() => handleRedirection("/contact")} >
                     <p >{lang === "ENG" ? "Contact us" : "Contáctanos"}</p>
                 </div>
@@ -66,7 +59,7 @@ const MainNav: FC<MainNavProps> = ({ section, lang, setLang }) => {
                     </div>
                 )}
             </div>
-        </nav>
+        </nav >
     );
 };
 
