@@ -25,6 +25,9 @@ const MainNav: FC<MainNavProps> = ({ section, lang, setLang }) => {
             <p className='px-5 text-4xl hover:opacity-90' onClick={() => handleRedirection("/")}
             >net3<span className='text-teal-400'>.es</span></p>
             <div className='flex flex-row relative text-sm'>
+                <div className={` pt-6 pb-5 mx-3 text-center text-white ${section === "services" ? '' : 'opacity-50 hover:opacity-100'}`}
+                    onClick={() => handleRedirection("services")} >
+                    <p>{NavContent.services[lang]}</p>                </div>
                 <div className={` pt-6 pb-5 mx-3 text-center text-white ${section === "ourMethod" ? '' : 'opacity-50 hover:opacity-100'}`}
                     onClick={() => handleRedirection("method")} >
                     <p>{NavContent.ourMethod[lang]}</p>                </div>
