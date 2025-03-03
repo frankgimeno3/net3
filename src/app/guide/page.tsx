@@ -4,7 +4,6 @@ import { useState } from "react";
  import FooterSection from "../components/navs/FooterSection";
 import Contáctanos from "../components/sections/contact/Contáctanos";
 import MainNav from "../components/navs/MainNav";
-import IntroContentGuide from "../components/sections/contentGuide/IntroContentGuide";
 
 export default function Guide() {
   const [section, setSection] = useState("contentGuide");

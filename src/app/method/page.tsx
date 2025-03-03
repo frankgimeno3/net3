@@ -15,7 +15,7 @@ export default function Method() {
       <div className="fixed top-0 left-0 w-full bg-black bg-opacity-80 z-50">
         <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
       </div>
-      <IntroOurMethod/>
+      <IntroOurMethod lang={lang}/>
       <p>Lo de arriba no me gusta</p>
       <p>......................................................</p>
       <p className="font-bold text-4xl">Imagina cómo sería trabajar con nosotros</p>
