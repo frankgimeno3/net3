@@ -21,22 +21,26 @@ const MainNav: FC<MainNavProps> = ({ section, lang, setLang }) => {
     };
 
     return (
-        <nav className='flex flex-row w-full text-white px-5 justify-between items-center bg-gray-950 bg-opacity-90'>
-            <p className='px-5 text-4xl hover:opacity-90' onClick={() => handleRedirection("/")}
+        <nav className='flex flex-row w-full text-white px-5 justify-between items-center bg-gray-950 bg-opacity-80'>
+            <p className='px-5 text-4xl opacity-80 hover:opacity-100 ' onClick={() => handleRedirection("/")} style={{ transitionDuration: "3000ms" }}
             >net3<span className='text-teal-400'>.es</span></p>
             <div className='flex flex-row relative text-sm'>
-                <div className={` pt-6 pb-5 mx-3 text-center text-white ${section === "services" ? '' : 'opacity-50 hover:opacity-100'}`}
-                    onClick={() => handleRedirection("services")} >
+                <div className={` pt-6 pb-5 mx-3 text-center text-white ${section === "services" ? '' : 'opacity-50 hover:opacity-100 hover'}`}
+                    onClick={() => handleRedirection("services")} style={{ transitionDuration: "1200ms" }}
+ >
                     <p>{NavContent.services[lang]}</p>                </div>
-                <div className={` pt-6 pb-5 mx-3 text-center text-white ${section === "ourMethod" ? '' : 'opacity-50 hover:opacity-100'}`}
-                    onClick={() => handleRedirection("method")} >
+                <div className={` pt-6 pb-5 mx-3 text-center text-white ${section === "ourMethod" ? '' : 'opacity-50 hover:opacity-100 hover'}`}
+                    onClick={() => handleRedirection("method")} style={{ transitionDuration: "1200ms" }}
+ >
                     <p>{NavContent.ourMethod[lang]}</p>                </div>
-                <div className={` pt-6 pb-5 mx-3 text-center text-white ${section === "contentGuide" ? '' : 'opacity-50 hover:opacity-100'}`}
-                    onClick={() => handleRedirection("guide")} >
+                <div className={` pt-6 pb-5 mx-3 text-center text-white ${section === "contentGuide" ? '' : 'opacity-50 hover:opacity-100 hover'}`}
+                    onClick={() => handleRedirection("guide")} style={{ transitionDuration: "1200ms" }}
+ >
                     <p>{NavContent.contentGuide[lang]}</p>
                 </div>
-                <div className={` pt-6 pb-5 mx-3 text-center text-white ${section === "contact" ? '' : 'opacity-50 hover:opacity-100'}`}
-                    onClick={() => handleRedirection("/contact")} >
+                <div className={` pt-6 pb-5 mx-3 text-center text-white ${section === "contact" ? '' : 'opacity-50 hover:opacity-100 hover'}`}
+                    onClick={() => handleRedirection("/contact")} style={{ transitionDuration: "1200ms" }}
+ >
                     <p >{lang === "ENG" ? "Contact us" : "Contáctanos"}</p>
                 </div>
                 <div
