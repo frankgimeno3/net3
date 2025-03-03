@@ -4,7 +4,6 @@ import { useState } from "react";
 import FooterSection from "../components/navs/FooterSection";
 import Contáctanos from "../components/sections/contact/Contáctanos";
 import MainNav from "../components/navs/MainNav";
-import IntroOurMethod from "../components/sections/ourMethod/IntroOurMethod";
 
 export default function Services() {
   const [section, setSection] = useState("services");
