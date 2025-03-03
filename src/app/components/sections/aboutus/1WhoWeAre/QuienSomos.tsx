@@ -11,8 +11,7 @@ const QuienSomos: FC<QuienSomosProps> = ({ lang }) => {
   return (
     <div className='flex flex-row w-full h-screen p-24'    >
       <div className='flex-1 my-auto w-1/2 text-center text-white'>
-        <p className='text-8xl '>¿Quiénes</p>
-        <p className='pl-16 text-8xl '><span className='pl-4 font-bold'>somos</span>?</p>
+        <p className='text-8xl '>net3</p>
       </div>
       <div className='flex flex-1 flex-col bg-teal-600 rounded-sm text-center text-white justify-center text-4xl bg-opacity-80 '>
         <div className='mx-auto'>
