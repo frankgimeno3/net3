@@ -2,9 +2,9 @@
     "ESP": {
       "copyright": "© 2024 PROPORCION 3,S.A. Todos los derechos reservados.",
       "sections": {
-        "pages": "PÁGINAS",
-        "services": "SERVICIOS",
-        "links": "ENLACES DE INTERÉS"
+        "pages": "Páginas",
+        "services": "Servicios",
+        "links": "Enlaces de interés"
       },
       "pages": ["Quiénes somos", "Qué hacemos", "Contacto"],
       "services": ["Consultoría de contenido", "Plan de contenidos", "Generación de contenido", "Promoción de contenido"],
@@ -13,9 +13,9 @@
     "ENG": {
       "copyright": "© 2024 PROPORCION 3,S.A. All rights reserved.",
       "sections": {
-        "pages": "PAGES",
-        "services": "SERVICES",
-        "links": "LINKS OF INTEREST"
+        "pages": "Pages",
+        "services": "Services",
+        "links": "Links of interest"
       },
       "pages": ["Who we are", "What we do", "Contact"],
       "services": ["Content consultancy", "Contents plan", "Content generation", "Content promotion"],
