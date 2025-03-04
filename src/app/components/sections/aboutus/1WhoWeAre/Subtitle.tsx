@@ -39,8 +39,8 @@ const Subtitle: FC<SubtitleProps> = ({lang}) => {
       return () => clearInterval(typingEffect);
     }, [wordIndex, lang]);
   return (
-    <div className=' text-center text-white py-12'>
-    <p className='text-5xl relative glitch' data-text={displayText}>{displayText}</p>
+    <div className=' text-center text-white pt-8  '>
+    <p className='text-5xl glitch ' data-text={displayText}>{displayText}</p>
   </div>);
 };
 

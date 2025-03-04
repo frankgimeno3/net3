@@ -4,7 +4,9 @@ import React, { FC } from 'react';
 
 const Net3: FC = ({ }) => {
   return (
-    <div>Net3</div>
+    <div className='pt-36 text-center text-9xl font-bold '> 
+    <p className=''>net3<span className='text-teal-400'>.es </span></p>
+     </div>
   );
 };
 
