@@ -10,7 +10,7 @@ interface QuienSomosProps {
 
 const paises = [
   "ar", "bo", "br", "cl", "co", "cr", "cu", "do", "ec", "sv", "gt", "hn",
-  "mx", "ni", "pa", "py", "pe", "pr", "uy", "ve", "us"
+  "mx", "ni", "pa", "py", "pe", "uy", "ve", "us"
 ];
 
 const QuienSomos: FC<QuienSomosProps> = ({ lang }) => {

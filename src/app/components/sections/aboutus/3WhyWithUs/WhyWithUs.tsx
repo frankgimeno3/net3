@@ -2,10 +2,6 @@ import React, { FC, useState, useEffect } from 'react';
 import content3 from './content-3.json';
 import Card from './Card';
 
-interface SectionContent {
-  ESP: { label: string; value: string }[];
-  ENG: { label: string; value: string }[];
-}
 
 interface WhyWithUsProps {
   lang: "ESP" | "ENG";
