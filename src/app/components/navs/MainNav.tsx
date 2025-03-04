@@ -24,7 +24,7 @@ const MainNav: FC<MainNavProps> = ({ section, setSection, lang, setLang }) => {
   return (
     <nav className="flex flex-row w-full text-white px-5 justify-between items-center bg-gray-950 bg-opacity-80">
       <p
-        className="px-5 text-4xl opacity-80 hover:opacity-100 cursor-pointer"
+        className="px-5 text-xl md:text-4xl opacity-80 hover:opacity-100 cursor-pointer"
         onClick={() => handleRedirection("/")}
         style={{ transitionDuration: "3000ms" }}
       >

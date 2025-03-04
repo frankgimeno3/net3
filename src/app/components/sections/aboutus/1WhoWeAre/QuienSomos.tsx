@@ -43,12 +43,12 @@ const QuienSomos: FC<QuienSomosProps> = ({ lang }) => {
           {content.subt2} {content.subt3} <span className='font-bold text-yellow-300'>{content.subt4}</span>
         </p>
       </div>
-      <div className='bg-black bg-opacity-30 w-full flex justify-center items-center py-12'>
+      <div className='bg-white bg-opacity-20 w-full flex justify-center items-center py-6'>
         <div className='relative flex transition-all duration-1000 ease-in-out opacity-70 ml-24'>
           {paisesVisibles.map(({ pais, opacity }) => (
             <span
               key={pais}
-              className={`fi fi-${pais} text-6xl mx-2 rounded-full`}
+              className={`fi fi-${pais} text-5xl mx-2 rounded-full`}
               style={{ opacity, transition: 'opacity 1s ease-in-out' }}
             />
           ))}

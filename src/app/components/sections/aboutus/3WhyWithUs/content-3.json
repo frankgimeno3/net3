@@ -1,0 +1,58 @@
+{
+    "ESP": {
+        "titular": "Por qué elegirnos?",
+        "card1":{
+            "titlevalue":"",
+            "subtitlecontent":"",
+            "iconcontent":""
+        },
+        "card2":{
+            "titlevalue":"",
+            "subtitlecontent":"",
+            "iconcontent":""
+        },
+        "card3":{
+            "titlevalue":"",
+            "subtitlecontent":"",
+            "iconcontent":""
+        },
+        "card4":{
+            "titlevalue":"",
+            "subtitlecontent":"",
+            "iconcontent":""
+        },
+        "card5":{
+            "titlevalue":"",
+            "subtitlecontent":"",
+            "iconcontent":""
+        }
+    },
+    "ENG": {
+        "titular": "Why choose us?",
+        "card1":{
+            "titlevalue":"",
+            "subtitlecontent":"",
+            "iconcontent":""
+        },
+        "card2":{
+            "titlevalue":"",
+            "subtitlecontent":"",
+            "iconcontent":""
+        },
+        "card3":{
+            "titlevalue":"",
+            "subtitlecontent":"",
+            "iconcontent":""
+        },
+        "card4":{
+            "titlevalue":"",
+            "subtitlecontent":"",
+            "iconcontent":""
+        },
+        "card5":{
+            "titlevalue":"",
+            "subtitlecontent":"",
+            "iconcontent":""
+        }
+    }
+}

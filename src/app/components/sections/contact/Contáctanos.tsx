@@ -7,7 +7,7 @@ interface ContáctanosProps {
 const Contáctanos: FC<ContáctanosProps> = ({ lang }) => {
   return (
     <div className='flex flex-col w-full text-center' style={{ height: '500px' }}>
-      {lang == "ESP" && <div className='flex flex-row my-auto text-9xl text-white mx-auto'>
+      {lang == "ESP" && <div className='flex flex-row my-auto text-6xl text-white mx-auto'>
         <p className='hover:text-teal-400'>C</p>
         <p className='hover:text-teal-400'>o</p>
         <p className='hover:text-teal-400'>n</p>
@@ -21,7 +21,7 @@ const Contáctanos: FC<ContáctanosProps> = ({ lang }) => {
         <p className='hover:text-teal-400'>s</p>
       </div>}
 
-      {lang == "ENG" && <div className='flex flex-row my-auto text-9xl text-white mx-auto'>
+      {lang == "ENG" && <div className='flex flex-row my-auto text-6xl text-white mx-auto'>
         <p className='hover:text-teal-400'>C</p>
         <p className='hover:text-teal-400'>o</p>
         <p className='hover:text-teal-400'>n</p>
