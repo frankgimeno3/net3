@@ -58,8 +58,8 @@ const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
   };
 
   return (
-    <div className='flex flex-col w-full h-screen p-24'>
-      <p className='text-8xl text-white text-center pb-12 '>{content.titular}</p>
+    <div className='flex flex-col  min-h-screen '>
+      <p className='text-7xl md:text-9xl text-white text-center pb-12 '>{content.titular}</p>
       <div>
         <div className='flex justify-center mb-4'>
           {cardsArray.map((card) => (
@@ -73,11 +73,11 @@ const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
         </div>
         <div className='flex flex-row justify-center'>
           {isMobile ? (
-            <div key={selectedCard} className='mx-2'>
+            <div key={selectedCard} className='px-2'>
               <Card
                 opacityByPosition='100%'
-                heightByPosition='450px'
-                widthByPosition='350px'
+                heightByPosition='400px'
+                widthByPosition='300px'
                 titular={cardsArray.find(card => card.name === selectedCard)?.titleValue || ''}
                 subtitulo={cardsArray.find(card => card.name === selectedCard)?.subtitlecontent || ''}
                 icono={cardsArray.find(card => card.name === selectedCard)?.iconcontent || ''}
