@@ -1,15 +1,13 @@
 {
     "ESP": {
-        "somosuna":"Somos una",
-        "titular": "agencia de contenidos",
+        "titular": "Agencia de contenidos",
         "subt1": "de presencia internacional",
         "subt2": "focalizada en contenido técnico",
         "subt3": "para redes sociales",
         "subt4": "con clientes en 23 países"
     },
     "ENG": {
-        "somosuna":"We are a",
-        "titular": "contents agency",
+        "titular": "Contents agency",
         "subt1": "with international presence",
         "subt2": "focused on technical content",
         "subt3": "for social networks",

@@ -57,8 +57,7 @@ const QuienSomos: FC<QuienSomosProps> = ({ lang }) => {
       <Net3 />
       <Subtitle lang={lang} />
       <div className='flex flex-col text-center text-white justify-center text-2xl px-12 py-12'>
-        <p className='py-1 md:py-2'>
-          {content.somosuna} <span className='font-bold text-yellow-300'>{content.titular}</span> {content.subt1}
+        <p className='py-1 md:py-2'> <span className='font-bold text-yellow-300'>{content.titular}</span> {content.subt1}
         </p>
         <p className='py-1 md:py-2'>
           {content.subt2} {content.subt3} <span className='font-bold text-yellow-300'>{content.subt4}</span>
