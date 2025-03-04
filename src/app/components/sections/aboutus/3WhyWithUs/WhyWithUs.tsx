@@ -2,7 +2,6 @@ import React, { FC, useState, useEffect } from 'react';
 import content3 from './content-3.json';
 import Card from './Card';
 
-
 interface WhyWithUsProps {
   lang: "ESP" | "ENG";
 }
@@ -11,7 +10,7 @@ const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
   const content = content3[lang];
   const [selectedCard, setSelectedCard] = useState<string>('card3');
   const [styles, setStyles] = useState<{ [key: string]: { opacity: string; height: string; width: string } }>({});
-  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   const cardsArray = [
     { name: 'card1', titleValue: content.card1.titlevalue, subtitlecontent: content.card1.subtitlecontent, iconcontent: content.card1.iconcontent },
@@ -22,9 +21,14 @@ const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
   ];
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    // Solo se ejecuta en el cliente
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth < 768);
+      const handleResize = () => setIsMobile(window.innerWidth < 768);
+      window.addEventListener('resize', handleResize);
+
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   useEffect(() => {
@@ -54,8 +58,8 @@ const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
   };
 
   return (
-    <div className='flex flex-col  min-h-screen '>
-      <p className='text-7xl md:text-9xl text-white text-center pb-12 '>{content.titular}</p>
+    <div className='flex flex-col min-h-screen'>
+      <p className='text-7xl md:text-9xl text-white text-center pb-12'>{content.titular}</p>
       <div>
         <div className='flex justify-center mb-4'>
           {cardsArray.map((card) => (
