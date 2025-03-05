@@ -59,7 +59,7 @@ const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
 
   return (
     <div className='flex flex-col min-h-screen'>
-      <p className='text-7xl md:text-9xl text-white text-center pb-12'>{content.titular}</p>
+      <p className='text-5xl sm:text-6xl text-white text-center pb-12'>{content.titular}</p>
       <div>
         <div className='flex justify-center mb-4'>
           {cardsArray.map((card) => (

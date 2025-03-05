@@ -1,16 +1,44 @@
 {
-    "ESP": [
-        {"label": "Nuestros servicios", "value": ""},
-        {"label": "", "value": "Asesoría técnica y estrategia de contenidos"},
-        {"label": "", "value": "Creación de un Plan de contenidos"},
-        {"label": "", "value": "Creación de un Kit de acción digital"},
-        {"label": "", "value": "Gestión SEM (publicidad en Google)"}
-    ],
-    "ENG": [
-        {"label": "Our services", "value": ""},
-        {"label": "", "value": "Technical consulting and content strategy"},
-        {"label": "", "value": "Creation of a Content Plan"},
-        {"label": "", "value": "Creation of a Digital Action Kit"},
-        {"label": "", "value": "SEM management (Google advertising)"}
-    ]
+    "ESP": {
+        "Planes": {
+            "titular": "Creación de planes comunicativos",
+            "1": "Estrategias de contenido para redes, web y otros canales",
+            "2": "Organización y calendarización de procesos según las necesidades del plan",
+            "3": "Gestión presupuestaria estratégica para maximizar objetivos orientados a resultados"
+        },
+        "Contenidos": {
+            "titular": "Creación de contenidos",
+            "1": "Gestión integral de la producción de contenidos",
+            "2": "Entregas calendarizadas de kits de contenidos",
+            "3": "Contenido adaptado a diferentes plataformas",
+            "4": "Asistencia post y pre-publicación"
+        },
+        "Promocion": {
+            "titular": "Promoción de contenidos",
+            "1": "Inversión en publicidad SEM para maximización de resultados",
+            "2": "Optimización de resultados mediante estrategias SEO",
+            "3": "Análisis estratégico de resultados"
+        }
+    },
+    "ENG": {
+        "Planes": {
+            "titular": "Creation of Communication Plans",
+            "1": "Content strategies for social media, web, and other channels",
+            "2": "Organization and scheduling of processes according to the plan's needs",
+            "3": "Strategic budget management to maximize result-oriented objectives"
+        },
+        "Contenidos": {
+            "titular": "Content Creation",
+            "1": "Comprehensive content production management",
+            "2": "Scheduled delivery of content kits",
+            "3": "Content tailored for different platforms",
+            "4": "Pre- and post-publication support"
+        },
+        "Promocion": {
+            "titular": "Content Promotion",
+            "1": "Investment in SEM advertising for maximum results",
+            "2": "Optimization of results through SEO strategies",
+            "3": "Strategic analysis of results"
+        }
+    }
 }

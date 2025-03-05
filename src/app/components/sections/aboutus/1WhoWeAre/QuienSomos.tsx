@@ -64,24 +64,24 @@ const QuienSomos: FC<QuienSomosProps> = ({ lang }) => {
         </p>
       </div>
 
-      <div className='bg-yellow-300  w-full hidden md:flex justify-center items-center py-6'>
+      <div className='bg-gray-700 bg-opacity-50  w-full hidden md:flex justify-center items-center py-6 pl-24'>
         <div className=' flex transition-all duration-1000 ease-in-out '>
           {paisesVisibles.map(({ pais, opacity }) => (
             <span
               key={pais}
-              className={`fi fi-${pais} text-5xl mx-2 rounded-full border  shadow shadow-gray-500 shadow-6xl`}
+              className={`fi fi-${pais} text-7xl rounded-sm mx-2 border shadow shadow-gray-500 shadow-6xl`}
               style={{ opacity, transition: 'opacity 1s ease-in-out' }}
             />
           ))}
         </div>
       </div>
 
-      <div className='bg-yellow-300  w-full flex md:hidden justify-center items-center py-6 pl-16 '>
+      <div className='bg-black bg-opacity-50  w-full flex md:hidden justify-center items-center py-6 pl-16 '>
         <div className=' flex transition-all duration-1000 ease-in-out  mx-auto '>
           {paisesVisiblesResponsive.map(({ pais, opacity }) => (
             <span
               key={pais}
-              className={`fi fi-${pais} text-4xl mx-1 rounded-full border  shadow shadow-gray-500 shadow-6xl`}
+              className={`fi fi-${pais} text-7xl rounded-sm mx-1 border shadow shadow-gray-500 shadow-6xl`}
               style={{ opacity, transition: 'opacity 1s ease-in-out' }}
             />
           ))}
