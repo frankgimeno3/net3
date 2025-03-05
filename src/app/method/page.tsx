@@ -23,7 +23,7 @@ export default function Method() {
         <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
       </div>
       
-      <div className="flex flex-col z-10 w-full p-5">
+      <div className="flex flex-col z-10 w-full p-5 mt-24">
         <IntroOurMethod lang={lang} />
         <p className="font-bold text-4xl mt-10">Imagina cómo sería trabajar con nosotros</p>
         <p className="py-5">Subtítulo con un resumen de los pasos que se siguen</p>

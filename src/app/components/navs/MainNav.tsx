@@ -47,28 +47,28 @@ const MainNav: FC<MainNavProps> = ({ section, setSection, lang, setLang }) => {
         } flex-col sm:flex sm:flex-row sm:static absolute top-7 left-0 w-full sm:w-auto bg-gray-950 sm:bg-transparent text-md max-w-full`}
       >
         <div
-          className={`pt-6 pb-5 px-3 text-center cursor-pointer ${section === "services" ? "text-white" : "opacity-50 hover:text-yellow-300 hover:opacity-100"}`}
+          className={`pt-6 pb-5 px-3 text-center cursor-pointer ${section === "services" ? "text-white" : "opacity-50 hover:opacity-100"}`}
           onClick={() => handleRedirection("services")}
           style={{ transitionDuration: "1200ms" }}
         >
           <p>{NavContent.services[lang]}</p>
         </div>
         <div
-          className={`pt-6 pb-5 px-3 text-center cursor-pointer ${section === "ourMethod" ? "text-white" : "opacity-50 hover:text-yellow-300 hover:opacity-100"}`}
+          className={`pt-6 pb-5 px-3 text-center cursor-pointer ${section === "ourMethod" ? "text-white" : "opacity-50 hover:opacity-100"}`}
           onClick={() => handleRedirection("method")}
           style={{ transitionDuration: "1200ms" }}
         >
           <p>{NavContent.ourMethod[lang]}</p>
         </div>
         <div
-          className={`pt-6 pb-5 px-3 text-center cursor-pointer ${section === "contentGuide" ? "text-white" : "opacity-50 hover:text-yellow-300 hover:opacity-100"}`}
+          className={`pt-6 pb-5 px-3 text-center cursor-pointer ${section === "contentGuide" ? "text-white" : "opacity-50 hover:opacity-100"}`}
           onClick={() => handleRedirection("guide")}
           style={{ transitionDuration: "1200ms" }}
         >
           <p>{NavContent.contentGuide[lang]}</p>
         </div>
         <div
-          className={`pt-6 pb-5 px-3 text-center cursor-pointer ${section === "contact" ? "text-white" : "opacity-50 hover:text-yellow-300 hover:opacity-100"}`}
+          className={`pt-6 pb-5 px-3 text-center cursor-pointer ${section === "contact" ? "text-white" : "opacity-50 hover:opacity-100"}`}
           onClick={() => handleRedirection("/contact")}
           style={{ transitionDuration: "1200ms" }}
         >
