@@ -15,15 +15,16 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
 
     const cardsArray = [
         { name: 'card1', titleValue: content.Planes.titular, subtitlecontent: content.Planes.content1 },
-        { name: 'card2', titleValue: content.Planes.titular, subtitlecontent: content.Planes.content2 },
-        { name: 'card3', titleValue: content.Planes.titular, subtitlecontent: content.Planes.content3 },
-        { name: 'card4', titleValue: content.Contenidos.titular, subtitlecontent: content.Contenidos.content1 },
+        { name: 'card2', titleValue: content.Contenidos.titular, subtitlecontent: content.Contenidos.content1 },
+        { name: 'card3', titleValue: content.Promocion.titular, subtitlecontent: content.Promocion.content1 },
+        { name: 'card4', titleValue: content.Planes.titular, subtitlecontent: content.Planes.content2 },
         { name: 'card5', titleValue: content.Contenidos.titular, subtitlecontent: content.Contenidos.content2 },
-        { name: 'card6', titleValue: content.Contenidos.titular, subtitlecontent: content.Contenidos.content3 },
-        { name: 'card7', titleValue: content.Contenidos.titular, subtitlecontent: content.Contenidos.content4 },
-        { name: 'card8', titleValue: content.Promocion.titular, subtitlecontent: content.Promocion.content1 },
-        { name: 'card9', titleValue: content.Promocion.titular, subtitlecontent: content.Promocion.content2 },
-        { name: 'card10', titleValue: content.Promocion.titular, subtitlecontent: content.Promocion.content3 }
+        { name: 'card6', titleValue: content.Promocion.titular, subtitlecontent: content.Promocion.content2 },
+        { name: 'card7', titleValue: content.Planes.titular, subtitlecontent: content.Planes.content3 },
+        { name: 'card8', titleValue: content.Contenidos.titular, subtitlecontent: content.Contenidos.content3 },
+        { name: 'card9', titleValue: content.Promocion.titular, subtitlecontent: content.Promocion.content3 },
+        { name: 'card10', titleValue: content.Contenidos.titular, subtitlecontent: content.Contenidos.content4 }
+
     ];
 
     useEffect(() => {
@@ -127,7 +128,7 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
                                     left: `calc(50% + ${horizontalOffset}px - ${cardWidth / 2}px)`,
                                     top: `calc(50% + ${verticalOffset}px - ${cardHeight / 2}px)`,
                                     zIndex: zIndex,
-                                    transition: 'all 0.5s',
+                                    transition: 'all 2s',
                                 }}
                             >
                                 <Card
@@ -143,7 +144,7 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
                 </div>
             )}
             <div className='flex flex-row mx-auto'>
-                {cardsArray.map((card) => (
+                {cardsArray.reverse().map((card) => (
                     <div
                         key={card.name}
                         onClick={() => handleCardClick(card.name)}
