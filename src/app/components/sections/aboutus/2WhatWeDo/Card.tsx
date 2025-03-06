@@ -11,7 +11,7 @@ interface CardProps {
 const Card: FC<CardProps> = ({ subtitulo, opacityByPosition, heightByPosition, widthByPosition, titulo }) => {
   return (
     <div
-      className="flex flex-col shadow-xl text-gray-500 rounded-lg transition-all duration-300 h-full overflow-hidden border-2 border-transparent"
+      className="flex flex-col shadow-xl text-gray-500 rounded-md transition-all duration-300 h-full overflow-hidden border-2 border-transparent"
       style={{
         height: heightByPosition,
         width: widthByPosition,
