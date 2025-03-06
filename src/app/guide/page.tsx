@@ -22,7 +22,7 @@ export default function Guide() {
         <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
       </div>
       
-      <div className="flex flex-col z-10 w-full p-5">
+      <div className="flex flex-col z-10 w-full p-5 pt-36">
         <p className="text-5xl font-bold">Guía de contenidos</p>
         <p>A continuación se muestran los diferentes formatos de contenido que ofrecemos</p>
         <p>Elija si quiere ver formatos según la plataforma de publicación, o según la temática del contenido a publicar</p>
