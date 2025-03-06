@@ -9,11 +9,9 @@ interface WhyWithUsProps {
 const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
   const content = content3[lang];
 
-  // Estado para gestionar el icono seleccionado
-  const [selectedReason, setSelectedReason] = useState<number>(0);
+   const [selectedReason, setSelectedReason] = useState<number>(0);
 
-  // Motivos a mostrar
-  const reasons = [
+   const reasons = [
     'Asegúrate de tener contenido para todo el año en redes',
     'Externaliza en manos de un especialista',
     'Promociona tu contenido sin presupuestos adicionales',
@@ -21,15 +19,13 @@ const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
     'Convierte el coste variable de la comunicación en un coste previsible'
   ];
 
-  // useEffect para cambiar automáticamente el motivo seleccionado cada 3 segundos
-  useEffect(() => {
+   useEffect(() => {
     const timer = setInterval(() => {
-      setSelectedReason(prevReason => (prevReason + 1) % reasons.length); // Cambia al siguiente, y vuelve al inicio al llegar al final
-    }, 2000); // 3000ms = 3 segundos
+      setSelectedReason(prevReason => (prevReason + 1) % reasons.length);  
+    }, 2000);  
 
-    // Limpiar el intervalo al desmontar el componente
-    return () => clearInterval(timer);
-  }, []); // El array vacío asegura que se ejecute solo una vez al montar el componente
+     return () => clearInterval(timer);
+  }, []);  
 
   return (
     <div className='flex flex-col min-h-screen text-center text-white justify-center text-xl py-12'>

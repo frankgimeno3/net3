@@ -24,7 +24,6 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
         { name: 'card8', titleValue: content.Contenidos.titular, subtitlecontent: content.Contenidos.content3 },
         { name: 'card9', titleValue: content.Promocion.titular, subtitlecontent: content.Promocion.content3 },
         { name: 'card10', titleValue: content.Contenidos.titular, subtitlecontent: content.Contenidos.content4 }
-
     ];
 
     useEffect(() => {
@@ -40,7 +39,7 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
         return setInterval(() => {
             setSelectedCard(prev => {
                 const currentIndex = cardsArray.findIndex(card => card.name === prev);
-                const nextIndex = (currentIndex + 1) % cardsArray.length;
+                const nextIndex = (currentIndex - 1 + cardsArray.length) % cardsArray.length;
                 const nextCard = cardsArray[nextIndex];
                 setSelectedTitle(nextCard.titleValue);
                 return nextCard.name;
@@ -77,6 +76,7 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
     };
 
     const handleCardClick = (cardId: string) => {
+        console.log(cardId)
         setSelectedCard(cardId);
         handleSelectedTitle(cardId);
     };
@@ -147,25 +147,18 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
                 <div onClick={() => handleCardClick('card10')}
                     className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
                     style={{ opacity: selectedCard === 'card10' ? '100%' : '40%', cursor: 'pointer' }} />
-
                 <div onClick={() => handleCardClick('card9')}
                     className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
                     style={{ opacity: selectedCard === 'card9' ? '100%' : '40%', cursor: 'pointer' }} />
-
                 <div onClick={() => handleCardClick('card8')}
                     className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
                     style={{ opacity: selectedCard === 'card8' ? '100%' : '40%', cursor: 'pointer' }} />
-
-
                 <div onClick={() => handleCardClick('card7')}
                     className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
                     style={{ opacity: selectedCard === 'card7' ? '100%' : '40%', cursor: 'pointer' }} />
-
                 <div onClick={() => handleCardClick('card6')}
                     className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
                     style={{ opacity: selectedCard === 'card6' ? '100%' : '40%', cursor: 'pointer' }} />
-
-
                 <div onClick={() => handleCardClick('card5')}
                     className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
                     style={{ opacity: selectedCard === 'card5' ? '100%' : '40%', cursor: 'pointer' }} />
@@ -175,7 +168,6 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
                 <div onClick={() => handleCardClick('card3')}
                     className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
                     style={{ opacity: selectedCard === 'card3' ? '100%' : '40%', cursor: 'pointer' }} />
-
                 <div onClick={() => handleCardClick('card2')}
                     className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
                     style={{ opacity: selectedCard === 'card2' ? '100%' : '40%', cursor: 'pointer' }} />
