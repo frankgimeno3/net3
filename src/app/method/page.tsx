@@ -3,7 +3,6 @@ import { useState } from "react";
 import FooterSection from "../components/navs/FooterSection";
 import Contáctanos from "../components/sections/contact/Contáctanos";
 import MainNav from "../components/navs/MainNav";
-import IntroOurMethod from "../components/sections/ourMethod/IntroOurMethod";
 
 export default function Method() {
   const [section, setSection] = useState("ourMethod");
@@ -24,7 +23,6 @@ export default function Method() {
       </div>
       
       <div className="flex flex-col z-10 w-full p-5 mt-24">
-        <IntroOurMethod lang={lang} />
         <p className="font-bold text-4xl mt-10">Imagina cómo sería trabajar con nosotros</p>
         <p className="py-5">Subtítulo con un resumen de los pasos que se siguen</p>
         
