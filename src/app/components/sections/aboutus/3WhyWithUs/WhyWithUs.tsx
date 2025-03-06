@@ -10,8 +10,10 @@ const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
  
 
   return (
-<>
-{/* Aqui quiero poner una card centrada, con los iconos en lista vertical como sin fuerza, con uno seleccionado que itere
+    <div className='flex flex-col min-h-screen  text-center text-white justify-center text-xl py-12'>
+      <div>
+        <p className="text-4xl sm:text-8xl glitch">{content.titular}</p>
+      </div>{/* Aqui quiero poner una card centrada, con los iconos en lista vertical como sin fuerza, con uno seleccionado que itere
 el seleccionado sí debe tener fuerza y color, y a la derecha se debe de mostrar en texto el motivo a destacar
 Los motivos deben ser:
 · Asegúrate de tener contenido para todo el año en redes
@@ -19,7 +21,7 @@ Los motivos deben ser:
 · Promociona tu contenido sin presupuestos adicionales
 · Haz contenido para varias redes y formatos haciendo una sola gestión
 · Convierte el coste variable de la comunicación en un coste previsible */}
-</>
+</div>
   );
 };
 
