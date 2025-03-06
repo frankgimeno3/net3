@@ -65,13 +65,13 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
     }, [selectedCard]);
 
     const handleSelectedTitle = (cardId: string) => {
-        if (cardId === 'card1' || cardId === 'card2' || cardId === 'card3') {
+        if (cardId === 'card1' || cardId === 'card4' || cardId === 'card7') {
             setSelectedTitle(content.Planes.titular);
         }
-        if (cardId === 'card3' || cardId === 'card4' || cardId === 'card5' || cardId === 'card6') {
+        if (cardId === 'card2' || cardId === 'card5' || cardId === 'card8' || cardId === 'card10') {
             setSelectedTitle(content.Contenidos.titular);
         }
-        if (cardId === 'card7' || cardId === 'card8' || cardId === 'card9') {
+        if (cardId === 'card3' || cardId === 'card6' || cardId === 'card9') {
             setSelectedTitle(content.Promocion.titular);
         }
     };
@@ -128,7 +128,7 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
                                     left: `calc(50% + ${horizontalOffset}px - ${cardWidth / 2}px)`,
                                     top: `calc(50% + ${verticalOffset}px - ${cardHeight / 2}px)`,
                                     zIndex: zIndex,
-                                    transition: 'all 2s',
+                                    transition: 'all 1s',
                                 }}
                             >
                                 <Card
@@ -144,14 +144,44 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
                 </div>
             )}
             <div className='flex flex-row mx-auto'>
-                {cardsArray.reverse().map((card) => (
-                    <div
-                        key={card.name}
-                        onClick={() => handleCardClick(card.name)}
-                        className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
-                        style={{ opacity: selectedCard === card.name ? '100%' : '40%', cursor: 'pointer' }}
-                    />
-                ))}
+                <div onClick={() => handleCardClick('card10')}
+                    className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
+                    style={{ opacity: selectedCard === 'card10' ? '100%' : '40%', cursor: 'pointer' }} />
+
+                <div onClick={() => handleCardClick('card9')}
+                    className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
+                    style={{ opacity: selectedCard === 'card9' ? '100%' : '40%', cursor: 'pointer' }} />
+
+                <div onClick={() => handleCardClick('card8')}
+                    className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
+                    style={{ opacity: selectedCard === 'card8' ? '100%' : '40%', cursor: 'pointer' }} />
+
+
+                <div onClick={() => handleCardClick('card7')}
+                    className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
+                    style={{ opacity: selectedCard === 'card7' ? '100%' : '40%', cursor: 'pointer' }} />
+
+                <div onClick={() => handleCardClick('card6')}
+                    className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
+                    style={{ opacity: selectedCard === 'card6' ? '100%' : '40%', cursor: 'pointer' }} />
+
+
+                <div onClick={() => handleCardClick('card5')}
+                    className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
+                    style={{ opacity: selectedCard === 'card5' ? '100%' : '40%', cursor: 'pointer' }} />
+                <div onClick={() => handleCardClick('card4')}
+                    className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
+                    style={{ opacity: selectedCard === 'card4' ? '100%' : '40%', cursor: 'pointer' }} />
+                <div onClick={() => handleCardClick('card3')}
+                    className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
+                    style={{ opacity: selectedCard === 'card3' ? '100%' : '40%', cursor: 'pointer' }} />
+
+                <div onClick={() => handleCardClick('card2')}
+                    className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
+                    style={{ opacity: selectedCard === 'card2' ? '100%' : '40%', cursor: 'pointer' }} />
+                <div onClick={() => handleCardClick('card1')}
+                    className='w-3 h-3 rounded-full bg-yellow-300 mx-2'
+                    style={{ opacity: selectedCard === 'card1' ? '100%' : '40%', cursor: 'pointer' }} />
             </div>
         </div>
     );
