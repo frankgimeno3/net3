@@ -2,6 +2,7 @@
 import React, { FC } from 'react';
 import footerContent from '../content/FooterContent.json';
 import { useRouter } from 'next/navigation';
+import { Link } from 'lucide-react';
 
 interface FooterSectionProps {
   lang: 'ESP' | 'ENG';
@@ -48,7 +49,7 @@ const FooterSection: FC<FooterSectionProps> = ({ lang }) => {
               {content[section as SectionKey].map((item: string, index: number) => (
                 <p 
                   key={index} 
-                  className='cursor-pointer hover:text-yellow-300' 
+                  className='cursor-pointer hover:text-yellow-300 py-1' 
                   onClick={() => {
                      const redirection = content.redirections?.[section]?.[index];
                     if (redirection) {
