@@ -6,7 +6,7 @@ interface ContáctanosProps {
 
 const Contáctanos: FC<ContáctanosProps> = ({ lang }) => {
   return (
-    <div className='py-12'>
+    <div className='pb-96 '>
       <div className='flex flex-col w-full text-center' style={{ height: '500px' }}>
         {lang == "ESP" && (
           <div className='flex flex-row my-auto text-6xl text-white mx-auto'>

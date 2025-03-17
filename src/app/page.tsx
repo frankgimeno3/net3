@@ -28,9 +28,13 @@ export default function Home() {
         <QuienSomos lang={lang} />
         <QueHacemos lang={lang} />
         <WhyWithUs lang={lang} />
-        <Contáctanos lang={lang} />
-      </div>
-      <FooterSection lang={lang} />
-    </div>
+        <div className="flex flex-col mt-20 pt-16  pl-64">
+                <Contáctanos lang={lang} />
+                </div>
+                </div>
+                <div className='absolute z-50 bottom-0 w-full'>
+                <FooterSection lang={lang} />
+            </div>
+        </div>
   );
 }

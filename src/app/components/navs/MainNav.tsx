@@ -53,13 +53,7 @@ const MainNav: FC<MainNavProps> = ({ section, setSection, lang, setLang }) => {
         >
           <p>{NavContent.services[lang]}</p>
         </div>
-        <div
-          className={`pt-6 pb-5 px-3 text-center cursor-pointer ${section === "ourMethod" ? "text-white" : "opacity-50 hover:opacity-100"}`}
-          onClick={() => handleRedirection("method")}
-          style={{ transitionDuration: "1200ms" }}
-        >
-          <p>{NavContent.ourMethod[lang]}</p>
-        </div>
+         
         <div
           className={`pt-6 pb-5 px-3 text-center cursor-pointer ${section === "contentGuide" ? "text-white" : "opacity-50 hover:opacity-100"}`}
           onClick={() => handleRedirection("guide")}
