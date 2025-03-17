@@ -17,12 +17,12 @@
     "links": [
       "Aviso legal",
       "Política de privacidad y cookies",
-      "Declaración de accesibilidad",
+      "Vidrioperfil.com",
       "Contacto"
     ],
     "redirections": {
       "services": ["/services/consultancy", "/services/pr", "/services/newsletter", "/services/social", "/services/sem", "/services/other"],
-      "links": ["/pages/legal", "/pages/privacy-cookies", "/pages/accessibility", "/contact"]
+      "links": ["/pages/legal", "/pages/privacy-cookies", "www.vidrioperfil.com", "/contact"]
     }
   },
   "ENG": {
@@ -43,12 +43,12 @@
     "links": [
       "Legal advise",
       "Privacy and cookie policy",
-      "Accessibility Statement",
+      "Vidrioperfil.com",
       "Contact us"
     ],
     "redirections": {
       "services": ["/services/consultancy", "/services/pr", "/services/newsletter", "/services/social", "/services/sem", "/services/other"],
-      "links": ["/pages/legal", "/pages/privacy-cookies", "/pages/accessibility", "/contact"]
+      "links": ["/pages/legal", "/pages/privacy-cookies", "www.vidrioperfil.com", "/contact"]
     }
   }
 }
