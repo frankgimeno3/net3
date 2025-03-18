@@ -16,14 +16,8 @@ const paises = [
 const QuienSomos: FC<QuienSomosProps> = ({ lang }) => {
   const content = content1[lang];
 
-  // Estado para la versión de escritorio
   const [paisesVisibles, setPaisesVisibles] = useState(
     paises.slice(0, 10).map(pais => ({ pais, opacity: 1 }))
-  );
-
-  // Estado para la versión móvil
-  const [paisesVisiblesResponsive, setPaisesVisiblesResponsive] = useState(
-    paises.slice(0, 4).map(pais => ({ pais, opacity: 1 }))
   );
 
   useEffect(() => {
@@ -37,19 +31,6 @@ const QuienSomos: FC<QuienSomosProps> = ({ lang }) => {
     }, 1300);
 
     return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    const intervalResponsive = setInterval(() => {
-      setPaisesVisiblesResponsive(prev => {
-        const lastPais = prev[prev.length - 1].pais;
-        const nextPais = paises[(paises.indexOf(lastPais) + 1) % paises.length];
-        const newPaises = [...prev.slice(1), { pais: nextPais, opacity: 1 }];
-        return newPaises.map((p, i) => ({ ...p, opacity: i === 0 || i === newPaises.length - 1 ? 0 : 1 }));
-      });
-    }, 1300);
-
-    return () => clearInterval(intervalResponsive);
   }, []);
 
   return (
@@ -76,17 +57,7 @@ const QuienSomos: FC<QuienSomosProps> = ({ lang }) => {
         </div>
       </div>
 
-      {/* <div className='bg-black bg-opacity-50  w-full flex md:hidden justify-center items-center py-6 pl-16 '>
-        <div className=' flex transition-all duration-1000 ease-in-out  mx-auto '>
-          {paisesVisiblesResponsive.map(({ pais, opacity }) => (
-            <span
-              key={pais}
-              className={`fi fi-${pais} text-7xl rounded-sm mx-1 border shadow shadow-gray-500 shadow-6xl`}
-              style={{ opacity, transition: 'opacity 1s ease-in-out' }}
-            />
-          ))}
-        </div>
-      </div> */}
+      {/* El código del bloque responsive ha sido comentado o eliminado */}
     </div>
   );
 };

@@ -1,29 +1,13 @@
-"use client"
+"use client";
 import React, { FC } from 'react';
 import footerContent from '../content/FooterContent.json';
 import { useRouter } from 'next/navigation';
-import { Link } from 'lucide-react';
 
 interface FooterSectionProps {
   lang: 'ESP' | 'ENG';
 }
 
 type SectionKey = 'services' | 'links';
-
-interface FooterContent {
-  copyright1: string;
-  copyright2: string;
-  sections: {
-    services: string;
-    links: string;
-  };
-  services: string[];
-  links: string[];
-  redirections?: {
-    services: string[];
-    links: string[];
-  };
-}
 
 const FooterSection: FC<FooterSectionProps> = ({ lang }) => {
   const content = footerContent[lang] || footerContent["ENG"];

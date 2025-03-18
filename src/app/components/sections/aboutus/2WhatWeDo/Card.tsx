@@ -9,12 +9,6 @@ interface CardProps {
 }
 
 const Card: FC<CardProps> = ({ subtitulo, opacityByPosition, heightByPosition, widthByPosition, titulo }) => {
-  const [fadeIn, setFadeIn] = useState(false);
-
-  useEffect(() => {
-    setFadeIn(true);
-  }, []);
-
   return (
     <div
       className="flex flex-col shadow-xl text-gray-500 rounded-md transition-all duration-300 h-full overflow-hidden border-2 border-transparent"
@@ -28,9 +22,7 @@ const Card: FC<CardProps> = ({ subtitulo, opacityByPosition, heightByPosition, w
         <p className="my-auto text-white font-bold">{titulo}</p>
       </div>
       <div className="flex flex-col h-full px-12 bg-white">
-        <p
-          className={`text-2xl text-center my-auto `}
-        >
+        <p className={`text-2xl text-center my-auto`}>
           {subtitulo}
         </p>
       </div>
