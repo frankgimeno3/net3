@@ -6,6 +6,7 @@ import MainNav from '@/app/components/navs/MainNav';
 import PcServices from '../servicesMenu/pcServices';
 import FooterSection from '@/app/components/navs/FooterSection';
 import Contáctanos from '@/app/components/sections/contact/Contáctanos';
+import MServices from '../servicesMenu/mServices';
 
 interface SEMProps {
 
@@ -36,8 +37,13 @@ const SEM: FC<SEMProps> = ({ }) => {
                 <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
             </div>
             <div className="flex flex-row">
-                <PcServices selectedService={selectedService} lang={lang} />
-                <div className="p-5 m-5 pl-64 pt-24">
+            <div className="hidden md:block">
+          <PcServices selectedService={selectedService} lang={lang} />
+        </div>
+
+         <div className="block md:hidden fixed bottom-0 left-0 w-full z-50">
+          <MServices selectedService={selectedService} lang={lang} />
+        </div>                <div className="p-5 m-5 pl-64 pt-24">
                     <p className="font-bold">Asesoría</p>
                     <p>Analizamos tu empresa, entorno y posibilidades</p>
                     <p>Te exponemos tus posibilidades, opciones, y te hacemos una propuesta</p>

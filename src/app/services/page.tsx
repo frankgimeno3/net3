@@ -5,6 +5,7 @@ import FooterSection from "../components/navs/FooterSection";
 import Contáctanos from "../components/sections/contact/Contáctanos";
 import MainNav from "../components/navs/MainNav";
 import PcServices from "./servicesMenu/pcServices";
+import MServices from "./servicesMenu/mServices";
 
 export const espContent = [
   'Consultoría de contenido',
@@ -13,7 +14,6 @@ export const espContent = [
   'Contenido para redes',
   'SEM',
   'Otros servicios'
-
 ];
 
 export const engContent = [
@@ -23,13 +23,12 @@ export const engContent = [
   'Social Media Content',
   'SEM',
   'Other services'
-]
+];
 
 export default function Services() {
   const [section, setSection] = useState("services");
   const [lang, setLang] = useState<"ESP" | "ENG">("ESP");
-  const [selectedService] = useState("main")
-
+  const [selectedService] = useState("main");
 
   return (
     <div className="relative flex flex-col min-h-screen w-full justify-between text-white"
@@ -41,11 +40,20 @@ export default function Services() {
       }}
     >
       <div className="absolute inset-0 bg-black opacity-40 z-0" />
+      
       <div className="fixed top-0 left-0 w-full z-50">
         <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
       </div>
+
       <div className="flex flex-row">
-        <PcServices selectedService={selectedService} lang={lang} />
+         <div className="hidden md:block">
+          <PcServices selectedService={selectedService} lang={lang} />
+        </div>
+
+         <div className="block md:hidden fixed bottom-0 left-0 w-full z-50">
+          <MServices selectedService={selectedService} lang={lang} />
+        </div>
+
         <div className="p-12 pt-56">
           <p>Nuestros servicios</p>
           <p>Agrupamos nuestros servicios en x grupos:</p>
@@ -56,12 +64,13 @@ export default function Services() {
         </div>
       </div>
 
-      <div className="flex flex-col mt-20 pt-16  pl-64">
-                <Contáctanos lang={lang} />
-            </div>
-            <div className='absolute z-50 bottom-0 w-full'>
-                <FooterSection lang={lang} />
-            </div>
-        </div>
+      <div className="flex flex-col mt-20 pt-16 pl-64">
+        <Contáctanos lang={lang} />
+      </div>
+
+      <div className='absolute z-40 bottom-0 w-full'>
+        <FooterSection lang={lang} />
+      </div>
+    </div>
   );
 }

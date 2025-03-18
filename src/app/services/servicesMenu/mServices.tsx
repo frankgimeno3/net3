@@ -1,3 +1,4 @@
+// MServices.tsx
 'use client';
 
 import React, { FC } from 'react';
@@ -57,18 +58,19 @@ const MServices: FC<MServicesProps> = ({ selectedService, lang }) => {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-gray-800 bg-opacity-60 text-white z-50 flex justify-around py-2 shadow-md">
+    <div className="w-full bg-gray-800 bg-opacity-60 text-white z-50 flex justify-around py-2 shadow-md">
       {services.map((service, index) => (
         <div
           key={index}
           onClick={() => handleRedirection(service.route)}
           className={`flex flex-col items-center justify-center cursor-pointer transition-all p-2 rounded-md ${
             selectedService === service.name
-              ? 'text-yellow-400'
-              : 'text-white hover:text-yellow-300'
+              ? 'text-yellow-400 text-center'
+              : 'text-white hover:text-yellow-300 text-center'
           }`}
         >
           {service.icon}
+          {service.name}
         </div>
       ))}
     </div>

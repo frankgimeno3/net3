@@ -6,6 +6,7 @@ import MainNav from '@/app/components/navs/MainNav';
 import PcServices from '../servicesMenu/pcServices';
 import Contáctanos from '@/app/components/sections/contact/Contáctanos';
 import FooterSection from '@/app/components/navs/FooterSection';
+import MServices from '../servicesMenu/mServices';
 
 interface PRProps {
 
@@ -36,8 +37,13 @@ const PR: FC<PRProps> = ({ }) => {
                 <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
             </div>
             <div className="flex flex-row">
-                <PcServices selectedService={selectedService} lang={lang} />
-                <div className="p-5 m-5 pl-64 pt-24">
+            <div className="hidden md:block">
+          <PcServices selectedService={selectedService} lang={lang} />
+        </div>
+
+         <div className="block md:hidden fixed bottom-0 left-0 w-full z-50">
+          <MServices selectedService={selectedService} lang={lang} />
+        </div>                <div className="p-5 m-5 pl-64 pt-24">
                     <div className="p-5">
                         <p>Creación de notas de prensa</p>
                         <p>Te ofrecemos un plan en forma de pack, para que puedas publicar una nota de prensa cada mes</p>
