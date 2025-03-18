@@ -8,7 +8,7 @@ import FooterSection from '@/app/components/navs/FooterSection';
 import MServices from '../../components/servicesMenus/mServices';
 import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
 
-interface ConsultancyProps {}
+interface ConsultancyProps { }
 
 const Consultancy: FC<ConsultancyProps> = () => {
     const [section, setSection] = useState("services");
@@ -129,7 +129,7 @@ const Consultancy: FC<ConsultancyProps> = () => {
                         </div>
                     </div>
 
-                     <div
+                    <div
                         className="z-50"
                         style={{
                             position: 'fixed',
@@ -143,7 +143,7 @@ const Consultancy: FC<ConsultancyProps> = () => {
                 </div>
             </div>
 
-             <div ref={footerRef} className='absolute z-40 bottom-0 w-full'>
+            <div ref={footerRef} className='absolute z-40 bottom-0 w-full'>
                 <FooterSection lang={lang} />
             </div>
         </div>

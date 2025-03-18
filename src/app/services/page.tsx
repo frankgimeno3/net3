@@ -29,20 +29,20 @@ export default function Services() {
   const [section, setSection] = useState("services");
   const [lang, setLang] = useState<"ESP" | "ENG">("ESP");
   const [selectedService] = useState("main");
-    const footerRef = useRef<HTMLDivElement>(null);
-    const [isNearFooter, setIsNearFooter] = useState(false);
-    useEffect(() => {
-        const handleScroll = () => {
-            if (!footerRef.current) return;
-            const footerTop = footerRef.current.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            setIsNearFooter(footerTop < windowHeight + 60);
-        };
+  const footerRef = useRef<HTMLDivElement>(null);
+  const [isNearFooter, setIsNearFooter] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!footerRef.current) return;
+      const footerTop = footerRef.current.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      setIsNearFooter(footerTop < windowHeight + 60);
+    };
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-    
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="relative flex flex-col min-h-screen w-full justify-between text-white"
       style={{
@@ -53,17 +53,17 @@ export default function Services() {
       }}
     >
       <div className="absolute inset-0 bg-black opacity-40 z-0" />
-      
+
       <div className="fixed top-0 left-0 w-full z-50">
         <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
       </div>
 
       <div className="flex flex-row">
-         <div className="hidden md:block">
+        <div className="hidden md:block">
           <PcServices selectedService={selectedService} lang={lang} />
         </div>
 
-         <div className="block md:hidden fixed bottom-0 left-0 w-full z-50">
+        <div className="block md:hidden fixed bottom-0 left-0 w-full z-50">
           <MServices selectedService={selectedService} lang={lang} />
         </div>
 
@@ -78,20 +78,20 @@ export default function Services() {
       </div>
 
       <div
-                className="z-50"
-                style={{
-                    position: 'fixed',
-                    right: '6rem',
-                    bottom: isNearFooter ? '120px' : '24px',
-                    transition: 'bottom 0.3s ease'
-                }}
-            >
-                <ContactRedirectionButton lang={lang} />
-            </div>
+        className="z-50"
+        style={{
+          position: 'fixed',
+          right: '6rem',
+          bottom: isNearFooter ? '120px' : '24px',
+          transition: 'bottom 0.3s ease'
+        }}
+      >
+        <ContactRedirectionButton lang={lang} />
+      </div>
 
-            <div ref={footerRef} className='absolute z-40 bottom-0 w-full'>
-                <FooterSection lang={lang} />
-            </div>
+      <div ref={footerRef} className='absolute z-40 bottom-0 w-full'>
+        <FooterSection lang={lang} />
+      </div>
     </div>
   );
 }
