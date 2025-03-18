@@ -19,7 +19,7 @@ const Legal: FC<LegalProps> = ({ }) => {
         <section className="mb-8 ">
           <h2 className="text-2xl font-semibold mb-4">Información General</h2>
           <p>
-            Proporcion3, S.A., responsable del sitio web, en adelante "la Empresa", presenta este documento para dar cumplimiento a las exigencias de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), y para informar sobre las condiciones de uso del portal.
+            Proporcion3, S.A., responsable del sitio web, en adelante &quot;la Empresa&quot;, presenta este documento para dar cumplimiento a las exigencias de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), y para informar sobre las condiciones de uso del portal.
           </p>
           <p>
             Al acceder a este sitio, cualquier persona se considera usuario y asume la responsabilidad de cumplir con todas las disposiciones legales aplicables y las condiciones descritas aquí.
@@ -101,9 +101,9 @@ const Legal: FC<LegalProps> = ({ }) => {
           </p>
         </section>
       </div>
-        <div className='absolute z-50 bottom-0 w-full'>
-          <FooterSection lang={lang} />
-        </div>
+      <div className='absolute z-50 bottom-0 w-full'>
+        <FooterSection lang={lang} />
+      </div>
     </div>
   );
 };
