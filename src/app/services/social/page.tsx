@@ -67,19 +67,21 @@ const Social: FC<SocialProps> = ({ }) => {
                     <div className="p-5">
                         <p className="text-4xl">Gestión de Redes Sociales</p>
                         <p className="pt-8 pr-36">
-                            Desarrollamos estrategias de contenido que se alinean con los objetivos de tu marca, enfocándonos
+                            Desarrollamos <span className='font-bold text-yellow-200'>estrategias de contenidos</span> que se alinean con los objetivos de tu marca, enfocándonos
                             en la creación de contenido visualmente atractivo y relevante para tu audiencia. Nos encargamos de
                             gestionar la presencia de tu marca en las principales redes sociales, maximizando el alcance y
                             fomentando la interacción.
                         </p>
                         <p className="pt-8 pr-36">
-                            Ofrecemos un servicio integral que incluye la planificación, creación, y programación de publicaciones,
-                            adaptadas a la identidad y necesidades de tu marca. Además, medimos continuamente el rendimiento para
-                            optimizar las estrategias y lograr el máximo retorno de inversión (ROI).
+                            Olvídate de dedicar horas gestionando tu contenido para redes cada vez que tengas algo que publicar. 
+                            Para cada nota de prensa que creemos, te enviaremos un titular para publicar, junto a una miniatura y un link, con los tags UTM, 
+                            para medir y analizar los clicks, ya aplicados.  
                         </p>
                         <p className="pt-8 pr-36">
-                            Nuestro enfoque se basa en la creación de miniaturas impactantes que aumentan la tasa de interacción, y
-                            proporcionamos análisis detallados sobre la interacción de tus seguidores con cada publicación.
+                            Creamos <span className='font-bold text-yellow-200'>miniaturas personalizadas</span> a partir de los contenidos de las notas de 
+                            prensa  para cada una de tus publicaciones en redes, mejorando la tasa de interacción respecto a contenidos de sólo texto, y
+                            proporcionamos análisis detallados sobre la interacción de tus seguidores con la implementación de <span className='font-bold text-yellow-200'>links utm </span>
+                             que redirijan a la nota de prensa completa trackeando así el tráfico de cada publicación.
                         </p>
 
                         <div className="px-36 my-12 mb-96">

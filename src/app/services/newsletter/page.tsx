@@ -67,20 +67,16 @@ const Newsletter: FC<NewsletterProps> = ({ }) => {
                     style={{ marginTop: "75px" }}>
                     <p className="text-4xl">Email Marketing Estratégico</p>
                     <p className='pt-8 pr-36'>
-                        En nuestra agencia, te ayudamos a diseñar y ejecutar campañas de email marketing efectivas que
-                        no solo mantienen el contacto con tus suscriptores, sino que los convierten en clientes leales. Creamos
-                        estrategias personalizadas que incluyen la creación de newsletters, segmentación de audiencias, y análisis
-                        de resultados para optimizar continuamente tus esfuerzos.
+                        En nuestra agencia, te ayudamos a que tus clientes no se pierdan ninguna de tus noticias. Creamos
+                        estrategias personalizadas que incluyen la creación de <span className='font-bold text-yellow-200'>newsletters </span> en formato HTML, para que tus 
+                        suscriptores reciban por email todas tus publicaciones.
                     </p>
                     <p className='pt-8 pr-36'>
-                        Nos encargamos de todo el proceso: desde el diseño de contenidos hasta la gestión y envío de las
-                        campañas. Ofrecemos una variedad de formatos adaptados a las necesidades de tu marca, asegurándonos
-                        de mantener la coherencia en la comunicación y maximizando el impacto de cada mensaje enviado.
+                    <span className='font-bold text-yellow-200'>Olvídate de crear un diseño newsletter para cada nota prensa que crees.</span> Con nosotros, obtendrás un kit de contenidos con una sola carpeta,
+                        en que recibirás tus notas de prensa por un lado, y el HTML para el newsletter ya diseñado por otro, con un link a la nota completa de tu web y los
+                        UTM ya aplicados para que puedas analizar los resultados con posterioridad.
                     </p>
-                    <p className='pt-8 pr-36'>
-                        Con nuestro enfoque en resultados, medimos el rendimiento de cada campaña, optimizamos las métricas clave,
-                        y garantizamos una ejecución efectiva que se alinea con tus objetivos de negocio.
-                    </p>
+              
 
                     <div className='px-36 my-12 mb-96'>
                         <div className="pr-5 py-5 mt-4 text-right">

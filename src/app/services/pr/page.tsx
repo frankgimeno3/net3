@@ -68,10 +68,13 @@ const PR: FC<PRProps> = ({ }) => {
                     <div className="p-5">
                         <p className="text-4xl">Notas de Prensa y Relaciones con Medios</p>
                         <p className="pt-8 pr-36">
-                            Ofrecemos un servicio especializado en la creación y distribución de notas de prensa, adaptado a las necesidades de tu marca. Nuestro objetivo es garantizar que tu mensaje llegue a los medios más relevantes y a la audiencia adecuada. Planificamos la estrategia de comunicación con antelación, asegurando que cada nota de prensa esté alineada con los objetivos de tu campaña.
+                            Ofrecemos un servicio especializado en la <span className='font-bold text-yellow-200'>creación y distribución de notas de prensa</span>, adaptado a las necesidades de tu marca. Nuestro objetivo es garantizar que tu mensaje llegue a los medios más relevantes y a la audiencia adecuada. Planificamos la estrategia de comunicación con antelación, asegurando que cada nota de prensa esté alineada con los objetivos de tu campaña.
                         </p>
                         <p className="pt-8 pr-36">
-                            Entregamos el contenido de forma estructurada en un kit de contenidos, lo que te permite adaptar las notas de prensa a las características de cada plataforma y garantizar una mayor efectividad en la difusión.
+Para cada una de tus publicaciones, hacemos el servicio de <span className='font-bold text-yellow-200'>recolección de datos</span> a partir de formatos prácticos como preguntas directas por email a ti o a quien nos indiques, formularios, o incluso podemos hacerte propuestas informativas a partir de contenido propio. Posteriormente, realizaremos el <span className='font-bold text-yellow-200'>copywriting</span> a partir de dicho contenido, aplicando <span className='font-bold text-yellow-200'>filtros SEO</span> para optimizar resultados en buscadores, y te enviaremos un resultado para revisar y/o publicar con los medios o en tu propia página web.
+                        </p>
+                        <p className="pt-8 pr-36">
+                            Entregamos el contenido de forma estructurada en un <span className='font-bold text-yellow-200'> kit de contenidos</span>, lo que te permite adaptar las notas de prensa a las características de cada plataforma y garantizar una mayor efectividad en la difusión.
                         </p>
 
                         <div className="px-36 my-12 mb-96">

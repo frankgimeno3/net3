@@ -26,7 +26,7 @@ const Other: FC<OtherProps> = ({ }) => {
     };
 
     useEffect(() => {
-        setSelectedService(lang === "ESP" ? espContent[4] : engContent[4]);
+        setSelectedService(lang === "ESP" ? espContent[5] : engContent[5]);
     }, [lang]);
 
     useEffect(() => {
@@ -49,7 +49,7 @@ const Other: FC<OtherProps> = ({ }) => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundAttachment: 'fixed',
-                backgroundColor: 'rgba(0, 0, 0, 0.5)', // Fondo oscurecido
+                backgroundColor: 'rgba(0, 0, 0, 0.5)', 
             }}
         >
             <div className="fixed top-0 left-0 w-full z-50">
@@ -69,10 +69,10 @@ const Other: FC<OtherProps> = ({ }) => {
                     <div className="p-5">
                         <p className="text-4xl">Servicios Adicionales</p>
                         <p className="pt-8 pr-36">
-                            Además de los servicios incluidos en nuestros packs principales, ofrecemos soluciones personalizadas para cubrir necesidades específicas que puedan surgir en tu estrategia de comunicación. Esto puede incluir desde diseño gráfico, producción audiovisual, gestión de influencers, posicionamiento SEO o campañas puntuales de comunicación interna.
+                            Además de los servicios incluidos en nuestros packs principales, ofrecemos <span className='font-bold text-yellow-200'>soluciones personalizadas</span> para cubrir necesidades específicas que puedan surgir en tu estrategia de comunicación. Esto puede incluir desde diseño gráfico, producción audiovisual, gestión de influencers, posicionamiento SEO o campañas puntuales de comunicación interna.
                         </p>
                         <p className="pt-8 pr-36">
-                            Cada uno de estos servicios se define en función de tu caso particular, con propuestas y presupuestos hechos a medida. Queremos que tengas todo lo que necesitas en un solo lugar, con la flexibilidad de sumar lo que te aporte más valor en cada etapa.
+                            Cada uno de estos servicios se define en función de tu caso particular, con propuestas y presupuestos hechos a medida. <span className='font-bold text-yellow-200'>Queremos que tengas todo lo que necesitas en un solo lugar</span>, con la flexibilidad de sumar lo que te aporte más valor en cada etapa.
                         </p>
 
                         <div className="px-36 my-12 mb-96">

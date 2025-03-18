@@ -26,7 +26,7 @@ const SEM: FC<SEMProps> = ({ }) => {
     };
 
     useEffect(() => {
-        setSelectedService(lang === "ESP" ? espContent[2] : engContent[2]);
+        setSelectedService(lang === "ESP" ? espContent[4] : engContent[4]);
     }, [lang]);
 
     useEffect(() => {
@@ -69,10 +69,10 @@ const SEM: FC<SEMProps> = ({ }) => {
                     <div className="p-5">
                         <p className="text-4xl">Publicidad SEM</p>
                         <p className="pt-8 pr-36">
-                            Gestionamos campañas de publicidad en buscadores (SEM) que te permiten llegar justo a las personas que están buscando lo que tu marca ofrece. Diseñamos y optimizamos campañas en Google Ads (y otras plataformas) orientadas a obtener resultados concretos: visitas, leads o ventas.
+                            Gestionamos campañas de publicidad en <span className='font-bold text-yellow-200'>buscadores</span>  (SEM) que te permiten llegar justo a las personas que están buscando lo que tu marca ofrece. Diseñamos y optimizamos campañas en <span className='font-bold text-yellow-200'>Google Ads</span> orientadas a obtener resultados concretos: visitas, leads o ventas.
                         </p>
                         <p className="pt-8 pr-36">
-                            Nos encargamos de todo el proceso: desde la definición de objetivos y palabras clave hasta la redacción de anuncios y análisis de rendimiento. Integramos el SEM dentro del resto de tu estrategia de contenidos para maximizar el retorno y mantener la coherencia de tus mensajes.
+                        <span className='font-bold text-yellow-200'>Nos encargamos de todo el proceso</span>: desde la definición de objetivos y palabras clave hasta la redacción de anuncios y análisis de rendimiento. Integramos el SEM dentro del resto de tu estrategia de contenidos para maximizar el retorno y mantener la coherencia de tus mensajes.
                         </p>
 
                         <div className="px-36 my-12 mb-96">
