@@ -9,9 +9,9 @@ interface WhyWithUsProps {
 const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
   const content = content3[lang];
 
-   const [selectedReason, setSelectedReason] = useState<number>(0);
+  const [selectedReason, setSelectedReason] = useState<number>(0);
 
-   const reasons = [
+  const reasons = [
     'Asegúrate de tener contenido para todo el año en redes',
     'Externaliza en manos de un especialista',
     'Promociona tu contenido sin presupuestos adicionales',
@@ -19,13 +19,14 @@ const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
     'Convierte el coste variable de la comunicación en un coste previsible'
   ];
 
-   useEffect(() => {
+  useEffect(() => {
     const timer = setInterval(() => {
       setSelectedReason(prevReason => (prevReason + 1) % reasons.length);  
     }, 2000);  
 
-     return () => clearInterval(timer);
-  }, []);  
+    // Limpieza al desmontar el componente
+    return () => clearInterval(timer);
+  }, [reasons.length]);  // Agregada la dependencia 'reasons.length'
 
   return (
     <div className='flex flex-col min-h-screen text-center text-white justify-center text-xl py-12'>
@@ -39,12 +40,14 @@ const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
             {reasons.map((reason, index) => (
               <div
                 key={index}
-                className={`flex items-center flex-row py-2  text-xl `}
+                className={`flex items-center flex-row py-2 text-xl`}
               >
-                   <div className='w-12 h-12 mt-1 mr-5'>
-                    <Svgs index={index} selectedReason={selectedReason} />
-                  </div>
-                 <p className={`${selectedReason === index ? 'text-yellow-200' : 'text-gray-400 opacity-50'}`}> {reason} </p>
+                <div className='w-12 h-12 mt-1 mr-5'>
+                  <Svgs index={index} selectedReason={selectedReason} />
+                </div>
+                <p className={`${selectedReason === index ? 'text-yellow-200' : 'text-gray-400 opacity-50'}`}> 
+                  {reason} 
+                </p>
               </div>
             ))}
           </div>

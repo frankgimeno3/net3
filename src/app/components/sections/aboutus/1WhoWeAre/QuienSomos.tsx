@@ -57,7 +57,6 @@ const QuienSomos: FC<QuienSomosProps> = ({ lang }) => {
         </div>
       </div>
 
-      {/* El código del bloque responsive ha sido comentado o eliminado */}
     </div>
   );
 };
