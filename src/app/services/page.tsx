@@ -1,11 +1,11 @@
 'use client';
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import FooterSection from "../components/navs/FooterSection";
-import Contáctanos from "../components/sections/contact/Contáctanos";
 import MainNav from "../components/navs/MainNav";
-import PcServices from "./servicesMenu/pcServices";
-import MServices from "./servicesMenu/mServices";
+import PcServices from "../components/servicesMenus/pcServices";
+import MServices from "../components/servicesMenus/mServices";
+import ContactRedirectionButton from "../components/ContactRedirectionButton";
 
 export const espContent = [
   'Consultoría de contenido',
@@ -29,7 +29,20 @@ export default function Services() {
   const [section, setSection] = useState("services");
   const [lang, setLang] = useState<"ESP" | "ENG">("ESP");
   const [selectedService] = useState("main");
+    const footerRef = useRef<HTMLDivElement>(null);
+    const [isNearFooter, setIsNearFooter] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!footerRef.current) return;
+            const footerTop = footerRef.current.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            setIsNearFooter(footerTop < windowHeight + 60);
+        };
 
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+    
   return (
     <div className="relative flex flex-col min-h-screen w-full justify-between text-white"
       style={{
@@ -64,13 +77,21 @@ export default function Services() {
         </div>
       </div>
 
-      <div className="flex flex-col mt-20 pt-16 pl-64">
-        <Contáctanos lang={lang} />
-      </div>
+      <div
+                className="z-50"
+                style={{
+                    position: 'fixed',
+                    right: '6rem',
+                    bottom: isNearFooter ? '120px' : '24px',
+                    transition: 'bottom 0.3s ease'
+                }}
+            >
+                <ContactRedirectionButton lang={lang} />
+            </div>
 
-      <div className='absolute z-40 bottom-0 w-full'>
-        <FooterSection lang={lang} />
-      </div>
+            <div ref={footerRef} className='absolute z-40 bottom-0 w-full'>
+                <FooterSection lang={lang} />
+            </div>
     </div>
   );
 }

@@ -1,12 +1,12 @@
 "use client"
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 import { engContent } from '../page';
 import { espContent } from '../page';
 import MainNav from '@/app/components/navs/MainNav';
-import PcServices from '../servicesMenu/pcServices';
+import PcServices from '../../components/servicesMenus/pcServices';
 import FooterSection from '@/app/components/navs/FooterSection';
-import Contáctanos from '@/app/components/sections/contact/Contáctanos';
-import MServices from '../servicesMenu/mServices';
+import MServices from '../../components/servicesMenus/mServices';
+import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
 
 interface OtherProps {
 
@@ -22,6 +22,20 @@ const Other: FC<OtherProps> = ({ }) => {
      useEffect(() => {
         setSelectedService(lang === "ESP" ? espContent[5] : engContent[5]);
     }, [lang]);
+    
+    const footerRef = useRef<HTMLDivElement>(null);
+    const [isNearFooter, setIsNearFooter] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!footerRef.current) return;
+            const footerTop = footerRef.current.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            setIsNearFooter(footerTop < windowHeight + 60);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <div className="relative flex flex-col min-h-screen w-full justify-between text-white"
@@ -58,10 +72,19 @@ const Other: FC<OtherProps> = ({ }) => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col mt-20 pt-16  pl-64">
-                <Contáctanos lang={lang} />
+            <div
+                className="z-50"
+                style={{
+                    position: 'fixed',
+                    right: '6rem',
+                    bottom: isNearFooter ? '120px' : '24px',
+                    transition: 'bottom 0.3s ease'
+                }}
+            >
+                <ContactRedirectionButton lang={lang} />
             </div>
-            <div className='absolute z-50 bottom-0 w-full'>
+
+            <div ref={footerRef} className='absolute z-40 bottom-0 w-full'>
                 <FooterSection lang={lang} />
             </div>
         </div>

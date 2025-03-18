@@ -34,7 +34,7 @@ const FooterSection: FC<FooterSectionProps> = ({ lang }) => {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row w-full text-white p-7 items-center justify-center sm:justify-between sm:px-24 py-12 bg-gray-950 bg-opacity-90">
+    <div className="flex flex-col md:flex-row w-full text-white p-7 items-center justify-center sm:justify-between sm:px-24 py-12 bg-gray-950 bg-opacity-90">
       <div className="flex flex-col text-center sm:text-left mx-12">
         <p className="text-4xl">net3<span className="text-yellow-400">.es</span></p>
         <p>{content.copyright1}</p>
@@ -43,7 +43,7 @@ const FooterSection: FC<FooterSectionProps> = ({ lang }) => {
       </div>
       <div className="flex flex-col sm:flex-row text-sm mt-12 sm:mt-6 sm:mt-0 text-center sm:text-left">
         {(Object.keys(content.sections) as SectionKey[]).map((section) => (
-          <div key={section} className="flex flex-col w-full sm:w-56 sm:mx-12 ">
+          <div key={section} className="flex flex-col w-full sm:w-56 sm:px-12 ">
             <p className="font-bold text-yellow-400">{content.sections[section]}</p>
             <div className="flex flex-col py-3">
               {content[section as SectionKey].map((item: string, index: number) => (

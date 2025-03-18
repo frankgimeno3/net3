@@ -64,7 +64,7 @@ const QuienSomos: FC<QuienSomosProps> = ({ lang }) => {
         </p>
       </div>
 
-      <div className='bg-gray-700 bg-opacity-50  w-full hidden md:flex justify-center items-center py-6 pl-24'>
+      <div className='bg-gray-700 bg-opacity-50  w-full hidden md:flex justify-center items-center py-6 pl-24 overflow-hidden'>
         <div className=' flex transition-all duration-1000 ease-in-out '>
           {paisesVisibles.map(({ pais, opacity }) => (
             <span
@@ -76,7 +76,7 @@ const QuienSomos: FC<QuienSomosProps> = ({ lang }) => {
         </div>
       </div>
 
-      <div className='bg-black bg-opacity-50  w-full flex md:hidden justify-center items-center py-6 pl-16 '>
+      {/* <div className='bg-black bg-opacity-50  w-full flex md:hidden justify-center items-center py-6 pl-16 '>
         <div className=' flex transition-all duration-1000 ease-in-out  mx-auto '>
           {paisesVisiblesResponsive.map(({ pais, opacity }) => (
             <span
@@ -86,7 +86,7 @@ const QuienSomos: FC<QuienSomosProps> = ({ lang }) => {
             />
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

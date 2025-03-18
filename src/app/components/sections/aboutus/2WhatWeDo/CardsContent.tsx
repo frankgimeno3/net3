@@ -91,7 +91,7 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
     return (
         <div className='flex flex-col justify-start w-full'>
             {isMobile ? (
-                <div key={selectedCard} className=''>
+                <div key={selectedCard} className='mx-auto py-12'>
                     <Card
                         opacityByPosition='100%'
                         heightByPosition='400px'

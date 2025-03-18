@@ -1,12 +1,12 @@
 "use client"
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 import { engContent } from '../page';
 import { espContent } from '../page';
 import MainNav from '@/app/components/navs/MainNav';
-import PcServices from '../servicesMenu/pcServices';
-import Contáctanos from '@/app/components/sections/contact/Contáctanos';
+import PcServices from '../../components/servicesMenus/pcServices';
 import FooterSection from '@/app/components/navs/FooterSection';
-import MServices from '../servicesMenu/mServices';
+import MServices from '../../components/servicesMenus/mServices';
+import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
 
 interface PRProps {
 
@@ -19,10 +19,24 @@ const PR: FC<PRProps> = ({ }) => {
         lang === "ESP" ? espContent[1] : engContent[1]
     );
 
-    // Esto sincroniza selectedService si cambia lang
     useEffect(() => {
         setSelectedService(lang === "ESP" ? espContent[1] : engContent[1]);
     }, [lang]);
+
+    
+    const footerRef = useRef<HTMLDivElement>(null);
+    const [isNearFooter, setIsNearFooter] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!footerRef.current) return;
+            const footerTop = footerRef.current.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            setIsNearFooter(footerTop < windowHeight + 60);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <div className="relative flex flex-col min-h-screen w-full justify-between text-white"
@@ -45,7 +59,7 @@ const PR: FC<PRProps> = ({ }) => {
           <MServices selectedService={selectedService} lang={lang} />
         </div>                <div className="p-5 m-5 pl-64 pt-24">
                     <div className="p-5">
-                        <p>Creación de notas de prensa</p>
+                        <p>Notas de Prensa y Relaciones con Medios</p>
                         <p>Te ofrecemos un plan en forma de pack, para que puedas publicar una nota de prensa cada mes</p>
                         <p>Planificamos todos los artículos del año con antelación, para que conozcas el contenido de la campaña antes de elaborarlo</p>
                         <p>Entregamos el contenido en un kit de contenidos, para que puedas adaptarlo a cada plataforma</p>
@@ -59,10 +73,19 @@ const PR: FC<PRProps> = ({ }) => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col mt-20 pt-16  pl-64">
-                <Contáctanos lang={lang} />
+            <div
+                className="z-50"
+                style={{
+                    position: 'fixed',
+                    right: '6rem',
+                    bottom: isNearFooter ? '120px' : '24px',
+                    transition: 'bottom 0.3s ease'
+                }}
+            >
+                <ContactRedirectionButton lang={lang} />
             </div>
-            <div className='absolute z-50 bottom-0 w-full'>
+
+            <div ref={footerRef} className='absolute z-40 bottom-0 w-full'>
                 <FooterSection lang={lang} />
             </div>
         </div>
