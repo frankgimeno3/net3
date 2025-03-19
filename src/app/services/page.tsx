@@ -66,15 +66,15 @@ const Servicios: FC<ServiciosProps> = ({}) => {
         </div>
 
         <div
-          className="flex flex-col ml-64 mt-24 bg-gray-900 bg-opacity-70 min-h-screen p-24"
+          className="flex flex-col ml-0 md:ml-64 mt-24 bg-gray-900 bg-opacity-70 min-h-screen p-24"
           style={{ marginTop: '75px' }}
         >
-          <div className="p-5 mb-96">
+          <div className="p0 p-5 mb-96">
             <p className="text-4xl">Nuestros servicios</p>
-            <p className="pt-8 pr-36">
+            <p className="pt-8 pr-0 md:pr-36">
               Ofrecemos consultoría estratégica de contenido para optimizar tu presencia en línea. A través de un análisis profundo de tu marca y audiencia, desarrollamos estrategias de contenido que maximizan el impacto y el alcance, asegurando que tu mensaje resuene efectivamente con tu público objetivo.
             </p>
-            <p className="pt-8 pr-36">
+            <p className="pt-8 pr-0 md:pr-36">
               Nos especializamos en la creación y distribución de notas de prensa que capturan la atención de los medios de comunicación y potenciales clientes. Nuestra experiencia en redacción y relaciones públicas asegura una cobertura significativa, generando visibilidad y credibilidad para tu marca.
             </p>
 

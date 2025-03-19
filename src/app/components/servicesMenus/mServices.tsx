@@ -1,6 +1,3 @@
-// MServices.tsx
-'use client';
-
 import React, { FC } from 'react';
 import { useRouter } from 'next/navigation';
 import {
@@ -20,35 +17,38 @@ interface MServicesProps {
 const MServices: FC<MServicesProps> = ({ selectedService, lang }) => {
   const router = useRouter();
 
+  const iconSize = 20;  
+  const iconSizeSmUp = 24; 
+
   const services = [
     {
       name: lang === 'ESP' ? 'Consultoría de contenido' : 'Content consultancy',
-      icon: <FileText size={24} />,
+      icon: (isSm: boolean) => <FileText size={isSm ? iconSizeSmUp : iconSize} />,
       route: '/services/consultancy'
     },
     {
       name: lang === 'ESP' ? 'Notas de prensa' : 'Press Releases',
-      icon: <Newspaper size={24} />,
+      icon: (isSm: boolean) => <Newspaper size={isSm ? iconSizeSmUp : iconSize} />,
       route: '/services/pr'
     },
     {
       name: 'Newsletter',
-      icon: <Mail size={24} />,
+      icon: (isSm: boolean) => <Mail size={isSm ? iconSizeSmUp : iconSize} />,
       route: '/services/newsletter'
     },
     {
       name: lang === 'ESP' ? 'Contenido para redes' : 'Social Media Content',
-      icon: <Share2 size={24} />,
+      icon: (isSm: boolean) => <Share2 size={isSm ? iconSizeSmUp : iconSize} />,
       route: '/services/social'
     },
     {
       name: 'SEM',
-      icon: <TrendingUp size={24} />,
+      icon: (isSm: boolean) => <TrendingUp size={isSm ? iconSizeSmUp : iconSize} />,
       route: '/services/sem'
     },
     {
       name: lang === 'ESP' ? 'Otros servicios' : 'Other services',
-      icon: <MoreHorizontal size={24} />,
+      icon: (isSm: boolean) => <MoreHorizontal size={isSm ? iconSizeSmUp : iconSize} />,
       route: '/services/other'
     }
   ];
@@ -65,12 +65,20 @@ const MServices: FC<MServicesProps> = ({ selectedService, lang }) => {
           onClick={() => handleRedirection(service.route)}
           className={`flex flex-col items-center justify-center cursor-pointer transition-all p-2 rounded-md ${
             selectedService === service.name
-              ? 'text-yellow-400 text-center'
-              : 'text-white hover:text-yellow-300 text-center'
+              ? 'text-yellow-400'
+              : 'text-white hover:text-yellow-300'
           }`}
         >
-          {service.icon}
-          {service.name}
+          <div className="sm:block hidden">
+            {service.icon(true)}
+          </div>
+          <div className="block sm:hidden">
+            {service.icon(false)}
+          </div>
+
+          <span className="hidden sm:block text-center text-sm mt-1">
+            {service.name}
+          </span>
         </div>
       ))}
     </div>

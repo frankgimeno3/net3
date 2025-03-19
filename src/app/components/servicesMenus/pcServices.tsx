@@ -50,6 +50,7 @@ const PcServices: FC<PcServicesProps> = ({ selectedService, lang }) => {
             className='bg-gray-800 bg-opacity-60 text-white text-sm pt-8'
         >
             <div className="flex flex-col">
+                <p className=' pl-4 text-gray-300 text-xl mb-8 pb-2'>Servicios</p>
                 {contentArray.map((item, index) => (
                     <div
                         key={index}

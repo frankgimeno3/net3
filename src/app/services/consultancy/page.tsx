@@ -53,7 +53,7 @@ const Consultancy: FC<ConsultancyProps> = () => {
                 <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
             </div>
 
-            <div className="flex flex-row">
+            <div className="flex flex-row ">
                 <div className="hidden md:block">
                     <PcServices selectedService={selectedService} lang={lang} />
                 </div>
@@ -61,28 +61,27 @@ const Consultancy: FC<ConsultancyProps> = () => {
                 <div className="block md:hidden fixed bottom-0 left-0 w-full z-50">
                     <MServices selectedService={selectedService} lang={lang} />
                 </div>
-
-                <div className="flex flex-col ml-64 mt-24 bg-gray-900 bg-opacity-70 min-h-screen p-24"
+ 
+                <div className="flex flex-col xl:mt-24 bg-gray-900 bg-opacity-70 min-h-screen w-full pt-24 md:p-24 md:pl-[295px] max-w-9/10 " 
                     style={{ marginTop: "75px" }}>
-                    <p className="text-4xl">Estrategia y Consultoría de Contenidos</p>
-                    <p className='pt-8 pr-36'>
+                    <p className="text-2xl md:text-4xl px-8 md:pl-12 " >Estrategia y Consultoría de Contenidos</p>
+                    <p className='pt-8  px-8 md:pl-12 xl:pr-36' >
                         Antes de producir cualquier contenido, es fundamental entender qué necesita tu marca, qué recursos tiene disponibles
                         y qué objetivos busca alcanzar. Por eso, comenzamos con una <span className='font-bold text-yellow-200'>sesión de consultoría personalizada</span> donde analizamos tu
                         situación actual, identificamos oportunidades y definimos los indicadores clave de rendimiento (KPIs) que guiarán toda
                         la estrategia.
                     </p>
-                    <p className='pt-8 pr-36'>
+                    <p className='pt-8  px-8 md:pl-12 xl:pr-36' >
                         A partir de ese diagnóstico, construimos un <span className='font-bold text-yellow-200'>plan de contenidos </span>alineado con tus metas, que incluye canales
                         (web, redes, medios), temáticas, formatos, materiales requeridos y presupuesto estimado. También desarrollamos un <span className='font-bold text-yellow-200'>calendario
                             editorial</span> que contempla cada fase del proceso, desde la ideación hasta la entrega final de cada pieza.
                     </p>
-                    <p className='pt-8 pr-36'>
+                    <p className='pt-8  px-8 md:pl-12 xl:pr-36' >
                         Llegada la fecha de cada entrega, te entregaremos un <span className='font-bold text-yellow-200'>kit de contenidos</span>, un carpeta con la que, para una misma publicación, tendrás
                         un formato diferente para las notas de prensas de medios, contenido para tu web, contenido para redes sociales y/o newsletter.
                     </p>
-
-                    <div className='px-36 my-12 mb-96'>
-                        <div className="pr-5 py-5 mt-4 text-right">
+                    <div className='px-8 md:pl-12 xl:pr-36 my-12 mb-96'>
+                        <div className="pr-5 py-5 mt-4 text-right mb-96 md:mb-0">
                             <p className="font-bold pb-2">¿Quieres saber más?</p>
                             {[
                                 {
@@ -127,7 +126,7 @@ const Consultancy: FC<ConsultancyProps> = () => {
                             ))}
                         </div>
                     </div>
-
+ 
                     <div
                         className="z-50"
                         style={{
