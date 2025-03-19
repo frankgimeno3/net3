@@ -1,0 +1,47 @@
+{
+    "pr": {
+      "ESP": {
+        "title": "Notas de Prensa y Relaciones con Medios",
+        "intro": "Ofrecemos un servicio especializado en la creación y distribución de notas de prensa, adaptado a las necesidades de tu marca. Nuestro objetivo es garantizar que tu mensaje llegue a los medios más relevantes y a la audiencia adecuada. Planificamos la estrategia de comunicación con antelación, asegurando que cada nota de prensa esté alineada con los objetivos de tu campaña.",
+        "data_collection": "Para cada una de tus publicaciones, hacemos el servicio de recolección de datos a partir de formatos prácticos como preguntas directas por email a ti o a quien nos indiques, formularios, o incluso podemos hacerte propuestas informativas a partir de contenido propio. Posteriormente, realizaremos el copywriting a partir de dicho contenido, aplicando filtros SEO para optimizar resultados en buscadores, y te enviaremos un resultado para revisar y/o publicar con los medios o en tu propia página web.",
+        "content_kit": "Entregamos el contenido de forma estructurada en un kit de contenidos, lo que te permite adaptar las notas de prensa a las características de cada plataforma y garantizar una mayor efectividad en la difusión.",
+        "faq_intro": "¿Quieres saber más?",
+        "faqs": {
+          "nota": {
+            "question": "¿Qué es una nota de prensa?",
+            "answer": "Una nota de prensa es un documento informativo utilizado para comunicar eventos o novedades relevantes a los medios de comunicación. Su objetivo es captar la atención de los periodistas y medios especializados para que difundan la información entre su audiencia."
+          },
+          "cantidad": {
+            "question": "¿Cuántas notas de prensa se incluyen?",
+            "answer": "Ofrecemos distintos paquetes que incluyen una o varias notas de prensa al mes, dependiendo de las necesidades de tu campaña. Nuestro servicio está diseñado para adaptarse a tus objetivos y calendario de comunicación."
+          },
+          "kit": {
+            "question": "¿Qué es un kit de contenidos?",
+            "answer": "Un kit de contenidos es un conjunto de materiales que incluye la nota de prensa, imágenes, infografías y otros recursos diseñados para que puedas adaptarlos fácilmente a diversas plataformas. Este kit facilita la difusión del contenido en los medios y redes sociales."
+          }
+        }
+      },
+      "ENG": {
+        "title": "Press Releases & Media Relations",
+        "intro": "We offer a specialized press release creation and distribution service tailored to your brand's communication needs. Our goal is to ensure your message reaches the most relevant media outlets and resonates with the right audience. Every release is part of a pre-planned communication strategy aligned with your campaign objectives.",
+        "data_collection": "For each release, we collect key information using streamlined methods such as email interviews with you or your team, digital forms, or we can even create proposals based on your existing materials. From there, we craft high-impact copy using SEO best practices to enhance visibility across search engines. The final draft is sent to you for approval before publication—either through the media or on your own platform.",
+        "content_kit": "All content is delivered as a structured media kit, giving you the flexibility to tailor each release for different platforms and maximize your reach across channels.",
+        "faq_intro": "Want to know more?",
+        "faqs": {
+          "nota": {
+            "question": "What is a press release?",
+            "answer": "A press release is a professional communication tool used to announce newsworthy events or updates to media outlets. Its purpose is to catch the attention of journalists and industry reporters so that they share the story with their audience."
+          },
+          "cantidad": {
+            "question": "How many press releases are included?",
+            "answer": "We offer different packages that include one or multiple press releases per month, depending on your campaign’s communication goals. Our service is designed to be flexible and adapt to your editorial calendar."
+          },
+          "kit": {
+            "question": "What is a media kit?",
+            "answer": "A media kit is a collection of assets including your press release, images, infographics, and other supporting content. It's designed to help you distribute your message more effectively across various channels, including the press and social media."
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,51 @@
+{
+    "SEM": {
+      "ENG": {
+        "title": "SEM Advertising",
+        "description": "We manage search engine advertising campaigns (SEM) that allow you to reach the people who are actively searching for what your brand offers. We design and optimize campaigns in Google Ads aimed at achieving tangible results: traffic, leads, or sales.",
+        "process": "We handle the entire process: from defining goals and keywords to writing ads and analyzing performance. We integrate SEM into your overall content strategy to maximize return and maintain message consistency.",
+        "faq": {
+          "howItWorks": {
+            "question": "How does an SEM campaign work?",
+            "answer": "An SEM campaign is based on selecting relevant keywords for your business, which are then used in ads that appear to users on search engines when they search for those keywords. The goal is to maximize visibility and generate qualified traffic."
+          },
+          "budget": {
+            "question": "What is the minimum budget for an SEM campaign?",
+            "answer": "The budget for an SEM campaign depends on several factors, such as the competition for keywords and your campaign objectives. We work with you to define an appropriate budget tailored to your needs and maximize return on investment."
+          },
+          "platforms": {
+            "question": "Which platforms can you run SEM ads on?",
+            "answer": "While Google Ads is the most popular platform for SEM, we can also manage campaigns on other platforms such as Bing Ads, Amazon Ads, and social media platforms like Facebook and Instagram, depending on your business strategy."
+          },
+          "successMetrics": {
+            "question": "How is the success of an SEM campaign measured?",
+            "answer": "The success of an SEM campaign is measured through key performance indicators such as CTR (click-through rate), CPC (cost per click), conversions (leads or sales), and ROI (return on investment). We continuously analyze and optimize ads to improve results."
+          }
+        }
+      },
+      "ESP": {
+        "title": "Publicidad SEM",
+        "description": "Gestionamos campañas de publicidad en buscadores (SEM) que te permiten llegar justo a las personas que están buscando lo que tu marca ofrece. Diseñamos y optimizamos campañas en Google Ads orientadas a obtener resultados concretos: visitas, leads o ventas.",
+        "process": "Nos encargamos de todo el proceso: desde la definición de objetivos y palabras clave hasta la redacción de anuncios y análisis de rendimiento. Integramos el SEM dentro del resto de tu estrategia de contenidos para maximizar el retorno y mantener la coherencia de tus mensajes.",
+        "faq": {
+          "howItWorks": {
+            "question": "¿Cómo funciona una campaña de SEM?",
+            "answer": "Una campaña de SEM se basa en la selección de palabras clave relevantes para tu negocio, que luego se utilizan en anuncios que se muestran a los usuarios en los motores de búsqueda cuando buscan esas palabras clave. El objetivo es maximizar la visibilidad de tu marca y generar tráfico cualificado."
+          },
+          "budget": {
+            "question": "¿Cuál es el presupuesto mínimo para una campaña de SEM?",
+            "answer": "El presupuesto de una campaña de SEM depende de varios factores, como la competencia de las palabras clave y los objetivos que tengas para la campaña. Trabajamos contigo para definir el presupuesto adecuado a tus necesidades y maximizar el retorno de la inversión."
+          },
+          "platforms": {
+            "question": "¿En qué plataformas se puede hacer publicidad SEM?",
+            "answer": "Si bien Google Ads es la plataforma más popular para SEM, también podemos gestionar campañas en otras plataformas como Bing Ads, Amazon Ads y plataformas de redes sociales como Facebook e Instagram, dependiendo de la estrategia de tu negocio."
+          },
+          "successMetrics": {
+            "question": "¿Cómo se mide el éxito de una campaña SEM?",
+            "answer": "El éxito de una campaña SEM se mide a través de varios indicadores clave, como el CTR (tasa de clics), CPC (costo por clic), conversiones (leads o ventas) y el retorno de inversión (ROI). Realizamos un análisis constante para optimizar los anuncios y mejorar los resultados."
+          }
+        }
+      }
+    }
+  }
+  

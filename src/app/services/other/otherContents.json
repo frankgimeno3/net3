@@ -1,0 +1,73 @@
+{
+    "ESP": {
+      "title": "Servicios Adicionales",
+      "paragraph_1": {
+        "key_1": "Además de los servicios incluidos en nuestros packs principales, ofrecemos ",
+        "key_span_1": "soluciones personalizadas",
+        "key_2": " para cubrir necesidades específicas que puedan surgir en tu estrategia de comunicación. Esto puede incluir desde diseño gráfico, producción audiovisual, gestión de influencers, posicionamiento SEO o campañas puntuales de comunicación interna."
+      },
+      "paragraph_2": {
+        "key_1": "Cada uno de estos servicios se define en función de tu caso particular, con propuestas y presupuestos hechos a medida. ",
+        "key_span_1": "Queremos que tengas todo lo que necesitas en un solo lugar",
+        "key_2": ", con la flexibilidad de sumar lo que te aporte más valor en cada etapa."
+      },
+      "faq": [
+        {
+          "id": "tipos-servicios",
+          "title": "¿Qué tipos de servicios adicionales ofrecen?",
+          "answer": "Ofrecemos una amplia gama de servicios adicionales como diseño gráfico, producción audiovisual, gestión de influencers, SEO, y campañas de comunicación interna, todo adaptado a tus necesidades específicas."
+        },
+        {
+          "id": "subcontrataciones",
+          "title": "¿Puedo subcontratar algunos de estos servicios?",
+          "answer": "Sí, podemos gestionar subcontrataciones para servicios específicos, asegurándonos de que todo se integre perfectamente en tu estrategia de comunicación. Nos encargamos de coordinar y supervisar el trabajo."
+        },
+        {
+          "id": "presupuesto-adicional",
+          "title": "¿Cómo se definen los presupuestos para estos servicios?",
+          "answer": "Los presupuestos para los servicios adicionales se crean de manera personalizada, tomando en cuenta la naturaleza del servicio y los objetivos que deseas alcanzar. Trabajamos contigo para definir una propuesta que se ajuste a tu presupuesto."
+        },
+        {
+          "id": "beneficios-adicionales",
+          "title": "¿Cómo pueden estos servicios adicionales mejorar mi estrategia?",
+          "answer": "Estos servicios adicionales complementan y optimizan tu estrategia de comunicación al abordar áreas específicas que no cubren los packs principales, mejorando la visibilidad, el engagement y el rendimiento general de tus campañas."
+        }
+      ]
+    },
+    "ENG": {
+      "title": "Add-on Services",
+      "paragraph_1": {
+        "key_1": "Beyond our core service packages, we offer ",
+        "key_span_1": "tailored solutions",
+        "key_2": " to meet specific needs that may come up in your communications strategy. This could include anything from graphic design, video production, influencer partnerships, SEO optimization, or one-off internal communications campaigns."
+      },
+      "paragraph_2": {
+        "key_1": "These services are always shaped around your unique goals, with custom proposals and budgets. ",
+        "key_span_1": "Our goal is to be your one-stop content partner",
+        "key_2": " — giving you the flexibility to add the tools you need, exactly when you need them."
+      },
+      "faq": [
+        {
+          "id": "tipos-servicios",
+          "title": "What kind of add-on services do you offer?",
+          "answer": "We offer a wide range of services such as graphic design, video production, influencer marketing, SEO, and internal communications campaigns — all tailored to fit your strategy and content needs."
+        },
+        {
+          "id": "subcontrataciones",
+          "title": "Can I outsource some of these services through you?",
+          "answer": "Absolutely. We can manage third-party services on your behalf and ensure everything aligns seamlessly with your brand’s messaging and campaign goals. We handle the coordination and quality control so you don’t have to."
+        },
+        {
+          "id": "presupuesto-adicional",
+          "title": "How are the budgets for these services defined?",
+          "answer": "Each add-on service is priced based on scope, complexity, and your specific goals. We work with you to create a custom proposal that fits your timeline and budget."
+        },
+        {
+          "id": "beneficios-adicionales",
+          "title": "How can these services enhance my content strategy?",
+          "answer": "Add-on services give your content strategy an extra edge. They allow you to go deeper in key areas — like visibility, engagement, or storytelling — to maximize the impact of every piece of content you share."
+        }
+      ]
+    }
+  }
+  

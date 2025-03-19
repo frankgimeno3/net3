@@ -6,7 +6,7 @@ import FooterSection from '@/app/components/navs/FooterSection';
 import MServices from '../../components/servicesMenus/mServices';
 import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
 import { engContent, espContent } from '../content';
-import { consultancy } from '../servicescontents.json'; 
+import { consultancy } from './consultancyContents.json'; 
 
 interface ConsultancyProps { }
 
