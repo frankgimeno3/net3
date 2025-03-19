@@ -112,7 +112,7 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
 
                         const isSelected = card.name === selectedCard;
                         const cardWidth = isSelected ? 350 : 300;
-                        const cardHeight = isSelected ? 300 : 250;
+                        const cardHeight = isSelected ? 300 : 251;
 
                         const horizontalOffset = -diff * offsetX;
                         const verticalOffset = Math.abs(diff) * offsetY;
@@ -158,3 +158,4 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
 };
 
 export default CardsContent;
+ 
