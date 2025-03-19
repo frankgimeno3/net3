@@ -9,23 +9,6 @@ import MServices from '../components/servicesMenus/mServices';
 
 interface ServiciosProps {}
 
-export const espContent = [
-  'Consultoría de contenido',
-  'Notas de prensa',
-  'Newsletter',
-  'Contenido para redes',
-  'SEM',
-  'Otros servicios'
-];
-
-export const engContent = [
-  'Content consultancy',
-  'Press Releases',
-  'Newsletter',
-  'Social Media Content',
-  'SEM',
-  'Other services'
-];
 
 const Servicios: FC<ServiciosProps> = ({}) => {
   const [section, setSection] = useState('');

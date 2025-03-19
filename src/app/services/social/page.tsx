@@ -1,7 +1,6 @@
 "use client"
 import React, { FC, useEffect, useRef, useState } from 'react';
-import { engContent } from '../page';
-import { espContent } from '../page';
+import { engContent, espContent } from '../content';
 import MainNav from '@/app/components/navs/MainNav';
 import PcServices from '../../components/servicesMenus/pcServices';
 import FooterSection from '@/app/components/navs/FooterSection';
