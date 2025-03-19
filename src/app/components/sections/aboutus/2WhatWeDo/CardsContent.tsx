@@ -35,33 +35,21 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
         }
     }, []);
 
-    const startAutoChange = () => {
-        return setInterval(() => {
+    useEffect(() => {
+        // Definir un intervalo solo una vez
+        const interval = setInterval(() => {
             setSelectedCard(prev => {
                 const currentIndex = cardsArray.findIndex(card => card.name === prev);
-                const nextIndex = (currentIndex - 1 + cardsArray.length) % cardsArray.length;
+                const nextIndex = (currentIndex + 1) % cardsArray.length;
                 const nextCard = cardsArray[nextIndex];
                 setSelectedTitle(nextCard.titleValue);
                 return nextCard.name;
             });
         }, 4500);
-    };
 
-    const [autoChangeInterval, setAutoChangeInterval] = useState<NodeJS.Timeout | null>(null);
-
-    useEffect(() => {
-        if (autoChangeInterval) {
-            clearInterval(autoChangeInterval);  
-        }
-        const interval = startAutoChange();
-        setAutoChangeInterval(interval);
-
-        return () => {
-            if (interval) {
-                clearInterval(interval);  
-            }
-        };
-    }, [autoChangeInterval, startAutoChange]);  // Añadimos las dependencias
+        // Limpiar el intervalo cuando el componente se desmonte
+        return () => clearInterval(interval);
+    }, []); // Esta useEffect ahora solo se ejecuta una vez al montar el componente
 
     const handleSelectedTitle = (cardId: string) => {
         if (cardId === 'card1' || cardId === 'card4' || cardId === 'card7') {
@@ -76,7 +64,6 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
     };
 
     const handleCardClick = (cardId: string) => {
-        console.log(cardId)
         setSelectedCard(cardId);
         handleSelectedTitle(cardId);
     };
@@ -158,4 +145,3 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
 };
 
 export default CardsContent;
- 
