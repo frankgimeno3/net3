@@ -33,6 +33,40 @@
           "answer": "El email marketing puede combinarse eficazmente con otras estrategias, como el marketing en redes sociales o la optimización para motores de búsqueda (SEO). Por ejemplo, podemos promover contenidos de blog en tus newsletters, o incluir llamados a la acción para interactuar en redes sociales."
         }
       ]
+    },
+    "ENG": {
+      "title": "Strategic Email Marketing",
+      "paragraph_1": {
+        "key_1": "At our agency, we ensure your clients never miss any of your updates. We create custom strategies that include the development of ",
+        "key_span_1": "newsletters",
+        "key_2": " in HTML format, so your subscribers get all your posts directly in their inbox."
+      },
+      "paragraph_2": {
+        "key_span_1": "Forget about creating a new newsletter design for each press release you create.",
+        "key_1": " With us, you’ll receive a content kit in a single folder, containing your press releases on one side, and the pre-designed HTML for the newsletter on the other, complete with a link to the full article on your website and UTMs already applied for tracking and later analysis."
+      },
+      "faq": [
+        {
+          "id": "newsletter",
+          "title": "What is a newsletter?",
+          "answer": "A newsletter is a regularly scheduled email sent to a group of subscribers. Its goal is to keep them informed about updates, products, services, or relevant content, and to encourage interaction and conversions."
+        },
+        {
+          "id": "formatos",
+          "title": "What email marketing formats can I implement?",
+          "answer": "There are several types of email marketing formats, such as newsletters, promotions, product updates, event invitations, and surveys. Each serves a different purpose and should be designed according to your brand's communication strategy."
+        },
+        {
+          "id": "medir-resultados",
+          "title": "How do I measure results for email marketing?",
+          "answer": "Email marketing results are measured through key metrics such as open rate, click-through rate (CTR), conversion rate, bounce rate, and unsubscribe rate. These metrics help evaluate performance and fine-tune strategies."
+        },
+        {
+          "id": "combinacion",
+          "title": "How can I combine email marketing with other content strategies?",
+          "answer": "Email marketing can be effectively combined with other strategies, like social media marketing or search engine optimization (SEO). For example, we can promote blog content in your newsletters or include calls to action for engaging on social media."
+        }
+      ]
     }
   }
 }

@@ -6,8 +6,9 @@ import PcServices from '../../components/servicesMenus/pcServices';
 import FooterSection from '@/app/components/navs/FooterSection';
 import MServices from '../../components/servicesMenus/mServices';
 import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
+import { other } from './otherContents.json';
 
-interface OtherProps {}
+interface OtherProps { }
 
 const Other: FC<OtherProps> = () => {
   const [section, setSection] = useState("services");
@@ -40,6 +41,8 @@ const Other: FC<OtherProps> = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const content = lang === "ESP" ? other.ESP : other.ENG;
+
   return (
     <div
       className="relative flex flex-col w-full justify-between text-white"
@@ -64,49 +67,24 @@ const Other: FC<OtherProps> = () => {
         </div>
 
         <div className="flex flex-col xl:mt-24 bg-gray-900 bg-opacity-70 min-h-screen w-full pt-24 md:p-24 md:pl-[295px] max-w-9/10"
-             style={{ marginTop: "75px" }}
+          style={{ marginTop: "75px" }}
         >
           <p className="text-2xl md:text-4xl px-8 md:pl-12">
-            Servicios Adicionales
+            {content.title}
           </p>
           <p className="pt-8 px-8 md:pl-12 xl:pr-36">
-            Además de los servicios incluidos en nuestros packs principales, ofrecemos{" "}
-            <span className="font-bold text-yellow-200">soluciones personalizadas</span> para cubrir necesidades específicas que puedan surgir en tu estrategia de comunicación. Esto puede incluir desde diseño gráfico, producción audiovisual, gestión de influencers, posicionamiento SEO o campañas puntuales de comunicación interna.
+            {content.paragraph_1.key_1}{" "}
+            <span className="font-bold text-yellow-200">{content.paragraph_1.key_span_1}</span> {content.paragraph_1.key_2}
           </p>
           <p className="pt-8 px-8 md:pl-12 xl:pr-36">
-            Cada uno de estos servicios se define en función de tu caso particular, con propuestas y presupuestos hechos a medida.{" "}
-            <span className="font-bold text-yellow-200">Queremos que tengas todo lo que necesitas en un solo lugar</span>, con la flexibilidad de sumar lo que te aporte más valor en cada etapa.
+            {content.paragraph_2.key_1}{" "}
+            <span className="font-bold text-yellow-200">{content.paragraph_2.key_span_1}</span>{content.paragraph_2.key_2}
           </p>
 
           <div className="px-8 md:pl-12 xl:pr-36 my-12 mb-96">
             <div className="pr-5 py-5 mt-4 text-right mb-96 md:mb-0">
               <p className="font-bold pb-2">¿Quieres saber más?</p>
-              {[
-                {
-                  id: "tipos-servicios",
-                  title: "¿Qué tipos de servicios adicionales ofrecen?",
-                  answer:
-                    "Ofrecemos una amplia gama de servicios adicionales como diseño gráfico, producción audiovisual, gestión de influencers, SEO, y campañas de comunicación interna, todo adaptado a tus necesidades específicas.",
-                },
-                {
-                  id: "subcontrataciones",
-                  title: "¿Puedo subcontratar algunos de estos servicios?",
-                  answer:
-                    "Sí, podemos gestionar subcontrataciones para servicios específicos, asegurándonos de que todo se integre perfectamente en tu estrategia de comunicación. Nos encargamos de coordinar y supervisar el trabajo.",
-                },
-                {
-                  id: "presupuesto-adicional",
-                  title: "¿Cómo se definen los presupuestos para estos servicios?",
-                  answer:
-                    "Los presupuestos para los servicios adicionales se crean de manera personalizada, tomando en cuenta la naturaleza del servicio y los objetivos que deseas alcanzar. Trabajamos contigo para definir una propuesta que se ajuste a tu presupuesto.",
-                },
-                {
-                  id: "beneficios-adicionales",
-                  title: "¿Cómo pueden estos servicios adicionales mejorar mi estrategia?",
-                  answer:
-                    "Estos servicios adicionales complementan y optimizan tu estrategia de comunicación al abordar áreas específicas que no cubren los packs principales, mejorando la visibilidad, el engagement y el rendimiento general de tus campañas.",
-                },
-              ].map(({ id, title, answer }) => (
+              {content.faq.map(({ id, title, answer }) => (
                 <div
                   key={id}
                   className="bg-white bg-opacity-20 pr-5 hover:bg-opacity-30 cursor-pointer rounded-r mb-1"
