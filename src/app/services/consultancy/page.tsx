@@ -14,7 +14,7 @@ interface ConsultancyProps {}
 const Consultancy: FC<ConsultancyProps> = () => {
     const { lang } = useLanguage();  
     const [section, setSection] = useState("services");
-    const [selectedService, setSelectedService] = useState(lang === "ESP" ? espContent[0] : engContent[0]);
+    const [selectedService, setSelectedService] = useState(() => lang === "ESP" ? espContent[0] : engContent[0]);
     const [selectedQuestion, setSelectedQuestion] = useState<string>("none");
 
     const footerRef = useRef<HTMLDivElement>(null);
@@ -25,6 +25,7 @@ const Consultancy: FC<ConsultancyProps> = () => {
     };
 
     useEffect(() => {
+        // Actualiza el servicio seleccionado si el lenguaje cambia
         setSelectedService(lang === "ESP" ? espContent[0] : engContent[0]);
     }, [lang]);
 
@@ -66,7 +67,7 @@ const Consultancy: FC<ConsultancyProps> = () => {
 
                 <div className="flex flex-col xl:mt-24 bg-gray-900 bg-opacity-70 min-h-screen w-full pt-24 md:p-24 md:pl-[295px] max-w-9/10 "
                     style={{ marginTop: "75px" }}>
-                    <p className="text-2xl md:text-4xl px-8 md:pl-12 " >{content.title}</p>
+                    <p className="text-2xl md:text-4xl px-8 md:pl-12 ">{content.title}</p>
                     <p className='pt-8  px-8 md:pl-12 xl:pr-36' >
                         {content.paragraph_1.key_1} <span className='font-bold text-yellow-200'>{content.paragraph_1.key_span_1}</span>{content.paragraph_1.key_2}
                     </p>
