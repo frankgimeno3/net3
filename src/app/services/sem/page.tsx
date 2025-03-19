@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { engContent, espContent } from '../content';
 import MainNav from '@/app/components/navs/MainNav';
@@ -7,12 +7,12 @@ import FooterSection from '@/app/components/navs/FooterSection';
 import MServices from '../../components/servicesMenus/mServices';
 import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
 import { sem } from './semContents.json';
-import { useLanguage } from '@/app/context/LanguageContext'; // Importar el hook del contexto
+import { useLanguage } from '@/app/context/LanguageContext';
 
 interface SEMProps {}
 
 const SEM: FC<SEMProps> = () => {
-    const { lang } = useLanguage(); // Usar el hook del contexto para obtener el idioma
+    const { lang } = useLanguage();
     const [section, setSection] = useState("services");
     const [selectedService, setSelectedService] = useState(
         lang === "ESP" ? espContent[2] : engContent[2]
@@ -80,7 +80,7 @@ const SEM: FC<SEMProps> = () => {
                     <div className='px-8 md:pl-12 xl:pr-36 my-12 mb-96'>
                         <div className="pr-5 py-5 mt-4 text-right mb-96 md:mb-0">
                             <p className="font-bold pb-2">{content.faq.howItWorks.question}</p>
-                            {[content.faq.howItWorks, content.faq.budget, content.faq.platforms, content.faq.successMetrics].map((faq, index) => (
+                            {[content.faq.howItWorks, content.faq.budget, content.faq.platforms, content.faq.successMetrics].map((faq) => (
                                 <div
                                     key={faq.question}
                                     className='bg-white bg-opacity-20 pr-5 hover:bg-opacity-30 cursor-pointer rounded-r mb-1'
