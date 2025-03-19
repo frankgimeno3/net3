@@ -3,16 +3,17 @@ import React, { FC, useState } from 'react';
 import Link from 'next/link';
 import MainNav from '@/app/components/navs/MainNav';
 import FooterSection from '@/app/components/navs/FooterSection';
+import { useLanguage } from '../../context/LanguageContext'; 
 
 interface PrivacyCookiesProps {}
 
 const PrivacyCookies: FC<PrivacyCookiesProps> = ({ }) => {
     const [section, setSection] = useState("aboutus");
-    const [lang, setLang] = useState<"ESP" | "ENG">("ESP");
+  const { lang } = useLanguage();  
     
   return (
     <div className="relative flex flex-col min-h-screen w-full justify-between bg-white">
-      <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
+      <MainNav section={section} setSection={setSection}   />
      <div className=" px-4 py-12 text-gray-800 space-y-12 ml-12">
       <h1 className="text-3xl font-bold">Política de Privacidad y Cookies</h1>
       <p className="text-sm text-gray-500">Última actualización: 17/03/2025</p>

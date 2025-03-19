@@ -38,7 +38,6 @@ export default function Home() {
     >
       <div className="absolute inset-0 bg-black opacity-40 z-0" />
       <div className="fixed top-0 left-0 w-full z-50">
-        {/* Ya no es necesario pasar lang o setLang */}
         <MainNav section={section} setSection={setSection} />
       </div>
       <div className="flex flex-col z-10 w-full mb-96">

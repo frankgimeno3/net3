@@ -2,16 +2,17 @@
 import FooterSection from '@/app/components/navs/FooterSection';
 import MainNav from '@/app/components/navs/MainNav';
 import React, { FC, useState } from 'react';
+import { useLanguage } from '../../context/LanguageContext'; 
 
 interface LegalProps { }
 
 const Legal: FC<LegalProps> = ({ }) => {
   const [section, setSection] = useState("aboutus");
-  const [lang, setLang] = useState<"ESP" | "ENG">("ESP");
+  const { lang } = useLanguage();  
 
   return (
     <div className="relative flex flex-col min-h-screen w-full justify-between bg-white">
-      <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
+      <MainNav section={section} setSection={setSection}   />
 
       <div className="  px-4 py-12 text-gray-800 space-y-12 pl-24 mb-96">
         <h1 className="text-3xl font-bold mb-6">Condiciones Legales</h1>

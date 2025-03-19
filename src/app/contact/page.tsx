@@ -4,10 +4,11 @@ import { useState } from "react";
  import FooterSection from "../components/navs/FooterSection";
 import Contáctanos from "../components/sections/contact/Contáctanos";
 import MainNav from "../components/navs/MainNav";
+import { useLanguage } from '../context/LanguageContext'; 
 
 export default function Contact() {
   const [section, setSection] = useState("contact");
-  const [lang, setLang] = useState<"ESP" | "ENG">("ESP");
+  const { lang } = useLanguage();  
 
   return (
     <div className="relative flex flex-col min-h-screen justify-between text-white bg-slate-900 w-full">
