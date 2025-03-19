@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { engContent, espContent } from '../content';
 import MainNav from '@/app/components/navs/MainNav';
@@ -6,13 +6,14 @@ import PcServices from '../../components/servicesMenus/pcServices';
 import FooterSection from '@/app/components/navs/FooterSection';
 import MServices from '../../components/servicesMenus/mServices';
 import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
-import { pr } from './prContents.json'; 
+import { pr } from './prContents.json';
+import { useLanguage } from '@/app/context/LanguageContext'; // Importar el hook del contexto
 
-interface PRProps { }
+interface PRProps {}
 
 const PR: FC<PRProps> = () => {
+    const { lang } = useLanguage(); // Usar el hook del contexto para obtener el idioma
     const [section, setSection] = useState("services");
-    const [lang, setLang] = useState<"ESP" | "ENG">("ESP");
     const [selectedService, setSelectedService] = useState(
         lang === "ESP" ? espContent[1] : engContent[1]
     );
@@ -43,7 +44,6 @@ const PR: FC<PRProps> = () => {
 
     const content = lang === "ESP" ? pr.ESP : pr.ENG;
 
-
     return (
         <div className="relative flex flex-col w-full justify-between text-white"
             style={{
@@ -54,7 +54,7 @@ const PR: FC<PRProps> = () => {
             }}
         >
             <div className="fixed top-0 left-0 w-full z-50">
-                <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
+                <MainNav section={section} setSection={setSection}/>
             </div>
 
             <div className="flex flex-row">
@@ -67,7 +67,8 @@ const PR: FC<PRProps> = () => {
                 </div>
 
                 <div className="flex flex-col xl:mt-24 bg-gray-900 bg-opacity-70 min-h-screen w-full pt-24 md:p-24 md:pl-[295px] max-w-9/10"
-                    style={{ marginTop: "75px" }}>
+                    style={{ marginTop: "75px" }}
+                >
 
                     <p className="text-2xl md:text-4xl px-8 md:pl-12">
                         {content.title}

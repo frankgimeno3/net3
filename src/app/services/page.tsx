@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { FC, useEffect, useRef, useState } from 'react';
 
 import MainNav from '@/app/components/navs/MainNav';
@@ -6,13 +6,13 @@ import FooterSection from '@/app/components/navs/FooterSection';
 import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
 import PcServices from '../components/servicesMenus/pcServices';
 import MServices from '../components/servicesMenus/mServices';
+import { useLanguage } from '@/app/context/LanguageContext'; // Importar el hook del contexto
 
-interface ServiciosProps { }
+interface ServiciosProps {}
 
-
-const Servicios: FC<ServiciosProps> = ({ }) => {
+const Servicios: FC<ServiciosProps> = ({}) => {
+  const { lang } = useLanguage(); // Usar el hook del contexto para obtener el idioma
   const [section, setSection] = useState('');
-  const [lang, setLang] = useState<'ESP' | 'ENG'>('ESP');
   const [selectedService] = useState('none');
 
   const footerRef = useRef<HTMLDivElement>(null);
@@ -54,7 +54,7 @@ const Servicios: FC<ServiciosProps> = ({ }) => {
       }}
     >
       <div className="fixed top-0 left-0 w-full z-50">
-        <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
+        <MainNav section={section} setSection={setSection} />
       </div>
       <div className="flex flex-row">
         <div className="hidden md:block">
@@ -70,9 +70,9 @@ const Servicios: FC<ServiciosProps> = ({ }) => {
           style={{ marginTop: '75px' }}
         >
           <div className="p0 p-5 mb-96">
-            {lang == "ESP" && <p className="text-4xl">Nuestros servicios</p>}
-            {lang == "ENG" && <p className="text-4xl">Our Services</p>}
-            {lang == "ESP" && (
+            {lang === 'ESP' && <p className="text-4xl">Nuestros servicios</p>}
+            {lang === 'ENG' && <p className="text-4xl">Our Services</p>}
+            {lang === 'ESP' && (
               <>
                 <p className="pt-8 pr-0 md:pr-36">
                   Ofrecemos consultoría estratégica de contenido para optimizar tu presencia en línea. A través de un análisis profundo de tu marca y audiencia, desarrollamos estrategias de contenido que maximizan el impacto y el alcance, asegurando que tu mensaje resuene efectivamente con tu público objetivo.
@@ -83,7 +83,7 @@ const Servicios: FC<ServiciosProps> = ({ }) => {
               </>
             )}
 
-            {lang == "ENG" && (
+            {lang === 'ENG' && (
               <>
                 <p className="pt-8 pr-0 md:pr-36">
                   We offer strategic content consulting to optimize your online presence. Through in-depth analysis of your brand and audience, we develop content strategies that maximize impact and reach, ensuring your message effectively resonates with your target audience.
@@ -93,7 +93,6 @@ const Servicios: FC<ServiciosProps> = ({ }) => {
                 </p>
               </>
             )}
-
 
             {showMessage && (
               <div
@@ -122,8 +121,8 @@ const Servicios: FC<ServiciosProps> = ({ }) => {
                     >
                       <path d="M14 19l-7-7 7-7" />
                     </svg>
-                    {lang == "ESP" && <p className="max-w-96 px-5 text-gray-700">Haz click para más detalles</p>}
-                    {lang == "ENG" && <p className="max-w-96 px-5 text-gray-700">Click for more details</p>}
+                    {lang === 'ESP' && <p className="max-w-96 px-5 text-gray-700">Haz click para más detalles</p>}
+                    {lang === 'ENG' && <p className="max-w-96 px-5 text-gray-700">Click for more details</p>}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"

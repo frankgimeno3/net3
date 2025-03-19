@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { engContent, espContent } from '../content';
 import MainNav from '@/app/components/navs/MainNav';
@@ -7,12 +7,13 @@ import FooterSection from '@/app/components/navs/FooterSection';
 import MServices from '../../components/servicesMenus/mServices';
 import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
 import { social } from './socialContents.json';
+import { useLanguage } from '@/app/context/LanguageContext'; // Importar el hook del contexto
 
-interface SocialProps { }
+interface SocialProps {}
 
-const Social: FC<SocialProps> = ({ }) => {
+const Social: FC<SocialProps> = () => {
+    const { lang } = useLanguage(); // Usar el hook del contexto para obtener el idioma
     const [section, setSection] = useState("services");
-    const [lang, setLang] = useState<"ESP" | "ENG">("ESP");
     const [selectedService, setSelectedService] = useState(
         lang === "ESP" ? espContent[3] : engContent[3]
     );
@@ -22,7 +23,7 @@ const Social: FC<SocialProps> = ({ }) => {
     const [isNearFooter, setIsNearFooter] = useState(false);
 
     const handleSelectedQuestion = (question: string) => {
-        setSelectedQuestion((prev) => (prev === question ? "none" : question));
+        setSelectedQuestion(prev => (prev === question ? "none" : question));
     };
 
     useEffect(() => {
@@ -54,7 +55,7 @@ const Social: FC<SocialProps> = ({ }) => {
             }}
         >
             <div className="fixed top-0 left-0 w-full z-50">
-                <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
+                <MainNav section={section} setSection={setSection}  />
             </div>
             <div className="flex flex-row">
                 <div className="hidden md:block">

@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { engContent, espContent } from '../content';
 import MainNav from '@/app/components/navs/MainNav';
@@ -6,13 +6,14 @@ import PcServices from '../../components/servicesMenus/pcServices';
 import FooterSection from '@/app/components/navs/FooterSection';
 import MServices from '../../components/servicesMenus/mServices';
 import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
-import {sem} from './semContents.json'; 
+import { sem } from './semContents.json';
+import { useLanguage } from '@/app/context/LanguageContext'; // Importar el hook del contexto
 
 interface SEMProps {}
 
 const SEM: FC<SEMProps> = () => {
+    const { lang } = useLanguage(); // Usar el hook del contexto para obtener el idioma
     const [section, setSection] = useState("services");
-    const [lang, setLang] = useState<"ESP" | "ENG">("ESP");
     const [selectedService, setSelectedService] = useState(
         lang === "ESP" ? espContent[2] : engContent[2]
     );
@@ -53,7 +54,7 @@ const SEM: FC<SEMProps> = () => {
             }}
         >
             <div className="fixed top-0 left-0 w-full z-50">
-                <MainNav section={section} setSection={setSection} lang={lang} setLang={setLang} />
+                <MainNav section={section} setSection={setSection} />
             </div>
 
             <div className="flex flex-row">

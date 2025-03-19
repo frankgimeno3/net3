@@ -1,9 +1,10 @@
-import { Metadata } from "next";
-import "./globals.css";
+import { LanguageProvider } from './context/LanguageContext';  // Asegúrate de importar el contexto
+import { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Net3 - Technical Content Agency",
-  description: "Agencia de contenidos para medios técnicos y redes",
+  title: 'Net3 - Technical Content Agency',
+  description: 'Agencia de contenidos para medios técnicos y redes',
 };
 
 export default function RootLayout({
@@ -14,7 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
