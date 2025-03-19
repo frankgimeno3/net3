@@ -1,20 +1,19 @@
 "use client"
 import React, { FC, useEffect, useRef, useState } from 'react';
-import { engContent, espContent } from '../content';
 import MainNav from '@/app/components/navs/MainNav';
 import PcServices from '../../components/servicesMenus/pcServices';
 import FooterSection from '@/app/components/navs/FooterSection';
 import MServices from '../../components/servicesMenus/mServices';
 import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
+import { engContent, espContent } from '../content';
+import { consultancy } from '../servicescontents.json'; 
 
 interface ConsultancyProps { }
 
 const Consultancy: FC<ConsultancyProps> = () => {
     const [section, setSection] = useState("services");
     const [lang, setLang] = useState<"ESP" | "ENG">("ESP");
-    const [selectedService, setSelectedService] = useState(
-        lang === "ESP" ? espContent[0] : engContent[0]
-    );
+    const [selectedService, setSelectedService] = useState(lang === "ESP" ? espContent[0] : engContent[0]);
     const [selectedQuestion, setSelectedQuestion] = useState<string>("none");
 
     const footerRef = useRef<HTMLDivElement>(null);
@@ -40,6 +39,9 @@ const Consultancy: FC<ConsultancyProps> = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const content = lang === "ESP" ? consultancy.ESP : consultancy.ENG;
+
+
     return (
         <div className="relative flex flex-col w-full justify-between text-white"
             style={{
@@ -64,42 +66,20 @@ const Consultancy: FC<ConsultancyProps> = () => {
  
                 <div className="flex flex-col xl:mt-24 bg-gray-900 bg-opacity-70 min-h-screen w-full pt-24 md:p-24 md:pl-[295px] max-w-9/10 " 
                     style={{ marginTop: "75px" }}>
-                    <p className="text-2xl md:text-4xl px-8 md:pl-12 " >Estrategia y Consultoría de Contenidos</p>
+                    <p className="text-2xl md:text-4xl px-8 md:pl-12 " >{content.title}</p>
                     <p className='pt-8  px-8 md:pl-12 xl:pr-36' >
-                        Antes de producir cualquier contenido, es fundamental entender qué necesita tu marca, qué recursos tiene disponibles
-                        y qué objetivos busca alcanzar. Por eso, comenzamos con una <span className='font-bold text-yellow-200'>sesión de consultoría personalizada</span> donde analizamos tu
-                        situación actual, identificamos oportunidades y definimos los indicadores clave de rendimiento (KPIs) que guiarán toda
-                        la estrategia.
+                        {content.paragraph_1.key_1} <span className='font-bold text-yellow-200'>{content.paragraph_1.key_span_1}</span>{content.paragraph_1.key_2}
                     </p>
                     <p className='pt-8  px-8 md:pl-12 xl:pr-36' >
-                        A partir de ese diagnóstico, construimos un <span className='font-bold text-yellow-200'>plan de contenidos </span>alineado con tus metas, que incluye canales
-                        (web, redes, medios), temáticas, formatos, materiales requeridos y presupuesto estimado. También desarrollamos un <span className='font-bold text-yellow-200'>calendario
-                            editorial</span> que contempla cada fase del proceso, desde la ideación hasta la entrega final de cada pieza.
+                        {content.paragraph_2.key_1} <span className='font-bold text-yellow-200'>{content.paragraph_2.key_span_1}</span>{content.paragraph_2.key_2} <span className='font-bold text-yellow-200'>{content.paragraph_2.key_span_2}</span>{content.paragraph_2.key_3}
                     </p>
                     <p className='pt-8  px-8 md:pl-12 xl:pr-36' >
-                        Llegada la fecha de cada entrega, te entregaremos un <span className='font-bold text-yellow-200'>kit de contenidos</span>, un carpeta con la que, para una misma publicación, tendrás
-                        un formato diferente para las notas de prensas de medios, contenido para tu web, contenido para redes sociales y/o newsletter.
+                        {content.paragraph_3.key_1} <span className='font-bold text-yellow-200'>{content.paragraph_3.key_span_1}</span>{content.paragraph_3.key_2}
                     </p>
                     <div className='px-8 md:pl-12 xl:pr-36 my-12 mb-96'>
                         <div className="pr-5 py-5 mt-4 text-right mb-96 md:mb-0">
                             <p className="font-bold pb-2">¿Quieres saber más?</p>
-                            {[
-                                {
-                                    id: "plan",
-                                    title: "¿Qué es un plan de contenidos?",
-                                    answer: "Es un documento estratégico que organiza y define qué tipo de contenido se va a crear, en qué canales se va a publicar, con qué frecuencia y con qué objetivo, todo alineado con la estrategia de marca."
-                                },
-                                {
-                                    id: "estrategia",
-                                    title: "¿Qué es una estrategia de redes?",
-                                    answer: "Es un enfoque planificado para utilizar las redes sociales como herramienta de comunicación, marketing y posicionamiento de marca. Incluye objetivos, tipos de contenido, frecuencia y análisis de resultados."
-                                },
-                                {
-                                    id: "kit",
-                                    title: "¿Qué es un kit de contenidos?",
-                                    answer: "Es un conjunto de piezas gráficas, textuales o audiovisuales diseñadas para ser reutilizadas en distintas plataformas, manteniendo coherencia visual y de mensaje en todas las comunicaciones de la marca."
-                                }
-                            ].map(({ id, title, answer }) => (
+                            {content.faq.map(({ id, title, answer }) => (
                                 <div
                                     key={id}
                                     className='bg-white bg-opacity-20 pr-5 hover:bg-opacity-30 cursor-pointer rounded-r mb-1'

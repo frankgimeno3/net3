@@ -1,0 +1,79 @@
+{
+    "consultancy": {
+      "ESP": {
+        "title": "Estrategia y Consultoría de Contenidos",
+        "paragraph_1": {
+          "key_1": "Antes de producir cualquier contenido, es fundamental entender qué necesita tu marca, qué recursos tiene disponibles, con lo que podremos realizar una",
+          "key_span_1": "sesión de consultoría personalizada",
+          "key_2": " donde analizamos tu situación actual, identificamos oportunidades y definimos los indicadores clave de rendimiento (KPIs) que guiarán toda la estrategia."
+        },
+        "paragraph_2": {
+          "key_1": "A partir de ese diagnóstico, construimos un",
+          "key_span_1": "plan de contenidos",
+          "key_2": " alineado con tus metas, que incluye canales (web, redes, medios), temáticas, formatos, materiales requeridos y presupuesto estimado. También desarrollamos un",
+          "key_span_2": "calendario editorial",
+          "key_3": " que contempla cada fase del proceso, desde la ideación hasta la entrega final de cada pieza."
+        },
+        "paragraph_3": {
+          "key_1": "Llegada la fecha de cada entrega, te entregaremos un",
+          "key_span_1": "kit de contenidos",
+          "key_2": ", una carpeta con la que, para una misma publicación, tendrás un formato diferente para las notas de prensas de medios, contenido para tu web, contenido para redes sociales y/o newsletter."
+        },
+        "faq": [
+          {
+            "id": "plan",
+            "title": "¿Qué es un plan de contenidos?",
+            "answer": "Es un documento estratégico que organiza y define qué tipo de contenido se va a crear, en qué canales se va a publicar, con qué frecuencia y con qué objetivo, todo alineado con la estrategia de marca."
+          },
+          {
+            "id": "estrategia",
+            "title": "¿Qué es una estrategia de redes?",
+            "answer": "Es un enfoque planificado para utilizar las redes sociales como herramienta de comunicación, marketing y posicionamiento de marca. Incluye objetivos, tipos de contenido, frecuencia y análisis de resultados."
+          },
+          {
+            "id": "kit",
+            "title": "¿Qué es un kit de contenidos?",
+            "answer": "Es un conjunto de piezas gráficas, textuales o audiovisuales diseñadas para ser reutilizadas en distintas plataformas, manteniendo coherencia visual y de mensaje en todas las comunicaciones de la marca."
+          }
+        ]
+      },
+      "ENG": {
+        "title": "Content Strategy and Consultancy",
+        "paragraph_1": {
+          "key_1": "Before producing any content, it's essential to understand what your brand needs, what resources it has available, and with all of that we will be able to prepare a",
+          "key_span_1": "customized consultancy session",
+          "key_2": " where we analyze your current situation, identify opportunities, and define the key performance indicators (KPIs) that will guide the entire strategy."
+        },
+        "paragraph_2": {
+          "key_1": "Based on that diagnosis, we build a",
+          "key_span_1": "content plan",
+          "key_2": " aligned with your goals, including channels (web, social media, media), themes, formats, required materials, and estimated budget. We also develop an",
+          "key_span_2": "editorial calendar",
+          "key_3": " that outlines each phase of the process, from ideation to the final delivery of each piece."
+        },
+        "paragraph_3": {
+          "key_1": "On the scheduled delivery date, we will provide you with a",
+          "key_span_1": "content kit",
+          "key_2": ", a folder that will offer you a different format for the same publication, including press notes for media, content for your website, social media content, and/or newsletters."
+        },
+        "faq": [
+          {
+            "id": "plan",
+            "title": "What is a content plan?",
+            "answer": "It’s a strategic document that organizes and defines what type of content will be created, which channels it will be published on, how often, and with what objectives, all aligned with the brand’s strategy."
+          },
+          {
+            "id": "estrategia",
+            "title": "What is a social media strategy?",
+            "answer": "It’s a planned approach to using social media as a communication, marketing, and brand positioning tool. It includes objectives, types of content, frequency, and results analysis."
+          },
+          {
+            "id": "kit",
+            "title": "What is a content kit?",
+            "answer": "It’s a set of graphic, text, or audiovisual pieces designed to be reused across different platforms, maintaining visual and message consistency across all brand communications."
+          }
+        ]
+      }
+    }
+  }
+  
