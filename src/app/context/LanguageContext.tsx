@@ -1,5 +1,7 @@
 "use client"
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+
+
+import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 
 // Definir los tipos
 type LanguageContextType = {
@@ -16,16 +18,20 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
-  // Obtener el idioma guardado en localStorage, si existe
-  const storedLang = typeof window !== 'undefined' ? localStorage.getItem('lang') : 'ESP';
-  const [lang, setLang] = useState<"ESP" | "ENG">(storedLang as "ESP" | "ENG" || "ESP");
+  const [lang, setLang] = useState<"ESP" | "ENG">("ESP");
+
+  useEffect(() => {
+    // Solo se ejecuta en el cliente
+    const storedLang = localStorage.getItem('lang') as "ESP" | "ENG";
+    if (storedLang) {
+      setLang(storedLang);
+    }
+  }, []); // El efecto solo se ejecuta una vez, cuando el componente se monta
 
   // Cambiar el idioma y guardarlo en localStorage
   const changeLanguage = (newLang: "ESP" | "ENG") => {
     setLang(newLang);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('lang', newLang);  // Guardamos el idioma en localStorage
-    }
+    localStorage.setItem('lang', newLang);  // Guardamos el idioma en localStorage
   };
 
   return (
