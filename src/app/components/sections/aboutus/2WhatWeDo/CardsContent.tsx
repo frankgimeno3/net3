@@ -42,7 +42,7 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
                 const currentIndex = cardsArray.findIndex(card => card.name === prev);
                 const nextIndex = (currentIndex + 1) % cardsArray.length;
                 const nextCard = cardsArray[nextIndex];
-                setSelectedTitle(nextCard.titleValue);
+                setSelectedTitle(nextCard.titleValue);  // Actualizar título con el valor correcto
                 return nextCard.name;
             });
         }, 4500);
@@ -65,7 +65,7 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
 
     const handleCardClick = (cardId: string) => {
         setSelectedCard(cardId);
-        handleSelectedTitle(cardId);
+        handleSelectedTitle(cardId);  // Esto actualiza el título al hacer click en la tarjeta
     };
 
     const getCircularDiff = (index: number, selectedIndex: number, total: number) => {
@@ -131,7 +131,7 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
                 </div>
             )}
             <div className='flex flex-row mx-auto'>
-                 {cardsArray.map(card => (
+                {cardsArray.map(card => (
                     <div
                         key={card.name}
                         onClick={() => handleCardClick(card.name)}
