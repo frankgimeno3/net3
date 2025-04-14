@@ -82,8 +82,9 @@ const Newsletter: FC<NewsletterProps> = () => {
 
           <div className="px-8 md:pl-12 xl:pr-36 my-12 mb-96">
             <div className="pr-5 py-5 mt-4 text-right mb-96 md:mb-0">
-              <p className="font-bold pb-2">¿Quieres saber más?</p>
-              {content.faq.map(({ id, title, answer }) => (
+            {lang=="ENG" && <p className="font-bold pb-2">Want to know more?</p>}
+            {lang=="ESP" && <p className="font-bold pb-2">¿Quieres saber más?</p>}
+                          {content.faq.map(({ id, title, answer }) => (
                 <div
                   key={id}
                   className="bg-white bg-opacity-20 pr-5 hover:bg-opacity-30 cursor-pointer rounded-r mb-1"

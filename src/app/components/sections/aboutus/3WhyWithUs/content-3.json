@@ -1,58 +1,59 @@
 {
     "ESP": {
-        "titular": "Por qué elegirnos?",
-        "card1":{
-            "titlevalue":"",
-            "subtitlecontent":"",
-            "iconcontent":""
-        },
-        "card2":{
-            "titlevalue":"",
-            "subtitlecontent":"",
-            "iconcontent":""
-        },
-        "card3":{
-            "titlevalue":"",
-            "subtitlecontent":"",
-            "iconcontent":""
-        },
-        "card4":{
-            "titlevalue":"",
-            "subtitlecontent":"",
-            "iconcontent":""
-        },
-        "card5":{
-            "titlevalue":"",
-            "subtitlecontent":"",
-            "iconcontent":""
-        }
+      "titular": "Por qué elegirnos?",
+      "card1": {
+        "titlevalue": "Contenido para todo el año",
+        "subtitlecontent": "Asegúrate de tener contenido constante para redes sociales durante todo el año.",
+        "iconcontent": "icon1"
+      },
+      "card2": {
+        "titlevalue": "Especialización garantizada",
+        "subtitlecontent": "Externaliza la creación de contenido en manos de un especialista.",
+        "iconcontent": "icon2"
+      },
+      "card3": {
+        "titlevalue": "Promoción eficiente",
+        "subtitlecontent": "Promociona tu contenido sin presupuestos adicionales.",
+        "iconcontent": "icon3"
+      },
+      "card4": {
+        "titlevalue": "Multiformato y multiplataforma",
+        "subtitlecontent": "Haz contenido para varias redes y formatos en una sola gestión.",
+        "iconcontent": "icon4"
+      },
+      "card5": {
+        "titlevalue": "Costo predecible",
+        "subtitlecontent": "Convierte el coste variable de comunicación en uno previsible.",
+        "iconcontent": "icon5"
+      }
     },
     "ENG": {
-        "titular": "Why choose us?",
-        "card1":{
-            "titlevalue":"",
-            "subtitlecontent":"",
-            "iconcontent":""
-        },
-        "card2":{
-            "titlevalue":"",
-            "subtitlecontent":"",
-            "iconcontent":""
-        },
-        "card3":{
-            "titlevalue":"",
-            "subtitlecontent":"",
-            "iconcontent":""
-        },
-        "card4":{
-            "titlevalue":"",
-            "subtitlecontent":"",
-            "iconcontent":""
-        },
-        "card5":{
-            "titlevalue":"",
-            "subtitlecontent":"",
-            "iconcontent":""
-        }
+      "titular": "Why choose us?",
+      "card1": {
+        "titlevalue": "Year-round content",
+        "subtitlecontent": "Make sure you have consistent social media content all year long.",
+        "iconcontent": "icon1"
+      },
+      "card2": {
+        "titlevalue": "Guaranteed expertise",
+        "subtitlecontent": "Outsource your content creation to a specialist.",
+        "iconcontent": "icon2"
+      },
+      "card3": {
+        "titlevalue": "Efficient promotion",
+        "subtitlecontent": "Promote your content without extra budget.",
+        "iconcontent": "icon3"
+      },
+      "card4": {
+        "titlevalue": "Multiformat, multiplatform",
+        "subtitlecontent": "Create content for multiple formats and platforms with one process.",
+        "iconcontent": "icon4"
+      },
+      "card5": {
+        "titlevalue": "Predictable cost",
+        "subtitlecontent": "Turn variable communication costs into a predictable expense.",
+        "iconcontent": "icon5"
+      }
     }
-}
+  }
+  
