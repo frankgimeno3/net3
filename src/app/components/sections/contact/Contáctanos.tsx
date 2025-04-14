@@ -6,10 +6,10 @@ interface ContáctanosProps {
 
 const Contáctanos: FC<ContáctanosProps> = ({ lang }) => {
   return (
-    <div className='pb-96 '>
+    <div className=' '>
       <div className='flex flex-col w-full text-center' style={{ height: '500px' }}>
         {lang == "ESP" && (
-          <div className='flex flex-row my-auto text-6xl text-white mx-auto'>
+          <div className='flex flex-row mt-24 text-6xl text-white mx-auto'>
             <p className='hover:text-yellow-300'>C</p>
             <p className='hover:text-yellow-300'>o</p>
             <p className='hover:text-yellow-300'>n</p>
@@ -25,7 +25,7 @@ const Contáctanos: FC<ContáctanosProps> = ({ lang }) => {
         )}
 
         {lang == "ENG" && (
-          <div className='flex flex-row my-auto text-6xl text-white mx-auto'>
+          <div className='flex flex-row mt-24 text-6xl text-white mx-auto'>
             <p className='hover:text-yellow-300'>C</p>
             <p className='hover:text-yellow-300'>o</p>
             <p className='hover:text-yellow-300'>n</p>
@@ -38,7 +38,12 @@ const Contáctanos: FC<ContáctanosProps> = ({ lang }) => {
           </div>
         )}
 
-         <div className=" px-36">
+        <div className='flex flex-col mx-auto text-2xl mt-16'>
+        <p className='text-center md:text-left font-bold '>info@net3.com</p>
+        <p className='text-center md:text-left font-bold '>+34 934120764</p>
+        </div>
+
+         {/* <div className=" px-36">
           <form className="flex flex-col space-y-4">
           <input
               type="text"
@@ -77,7 +82,7 @@ const Contáctanos: FC<ContáctanosProps> = ({ lang }) => {
               Enviar
             </button>
           </form>
-        </div>
+        </div> */}
       </div>
     </div>
   );

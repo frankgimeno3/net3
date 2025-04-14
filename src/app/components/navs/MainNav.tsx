@@ -6,6 +6,7 @@ import 'flag-icons/css/flag-icons.min.css';
 import { useRouter } from 'next/navigation';
 import { Menu } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';   
+import Image from 'next/image';
 
 interface MainNavProps {
   section: string;
@@ -26,13 +27,14 @@ const MainNav: FC<MainNavProps> = ({ section, setSection }) => {
 
   return (
     <nav className="flex flex-row w-full text-white px-5 py-6 sm:py-1 justify-between items-center bg-gray-950 bg-opacity-80">
-      <p
-        className="px-5 text-xl md:text-4xl hover:text-yellow-100 cursor-pointer"
+      <div
+        className="flex flex-row px-5 text-xl md:text-4xl  cursor-pointer"
         onClick={() => handleRedirection('/')}
         style={{ transitionDuration: '3000ms' }}
       >
-        net3<span className="text-yellow-300">.es</span>
-      </p>
+       <Image src={'/net3Complete.svg'}  alt={'net3'} height={100} width={100}/> 
+        <p className="text-white">.es</p>
+      </div>
 
       <button
         className="block sm:hidden text-white"
