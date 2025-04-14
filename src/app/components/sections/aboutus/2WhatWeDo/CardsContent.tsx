@@ -10,7 +10,6 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
     const content = content2[lang];
 
     const [selectedCard, setSelectedCard] = useState<string>('card5');
-    const [selectedTitle, setSelectedTitle] = useState<string>(content.Contenidos.titular);
     const [isMobile, setIsMobile] = useState<boolean>(false);
 
     const cardsArray = [
@@ -25,6 +24,7 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
         { name: 'card9', titleValue: content.Promocion.titular, subtitlecontent: content.Promocion.content3 },
         { name: 'card10', titleValue: content.Contenidos.titular, subtitlecontent: content.Contenidos.content4 }
     ];
+    const [selectedTitle, setSelectedTitle] = useState<string>(cardsArray[5].titleValue);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -47,25 +47,23 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
             });
         }, 4500);
 
-        // Limpiar el intervalo cuando el componente se desmonte
         return () => clearInterval(interval);
-    }, []); // Esta useEffect ahora solo se ejecuta una vez al montar el componente
-
+    }, []);
     const handleSelectedTitle = (cardId: string) => {
         if (cardId === 'card1' || cardId === 'card4' || cardId === 'card7') {
-            setSelectedTitle(content.Planes.titular);
+            setSelectedTitle(content2[lang].Planes.titular);
         }
         if (cardId === 'card2' || cardId === 'card5' || cardId === 'card8' || cardId === 'card10') {
-            setSelectedTitle(content.Contenidos.titular);
+            setSelectedTitle(content2[lang].Contenidos.titular);
         }
         if (cardId === 'card3' || cardId === 'card6' || cardId === 'card9') {
-            setSelectedTitle(content.Promocion.titular);
+            setSelectedTitle(content2[lang].Promocion.titular);
         }
     };
 
     const handleCardClick = (cardId: string) => {
         setSelectedCard(cardId);
-        handleSelectedTitle(cardId);  // Esto actualiza el título al hacer click en la tarjeta
+        handleSelectedTitle(cardId);
     };
 
     const getCircularDiff = (index: number, selectedIndex: number, total: number) => {
@@ -83,7 +81,7 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
                         opacityByPosition='100%'
                         heightByPosition='400px'
                         widthByPosition='300px'
-                        titulo={selectedTitle}
+                        titulo={cardsArray.find(card => card.name === selectedCard)?.titleValue || ''}
                         subtitulo={cardsArray.find(card => card.name === selectedCard)?.subtitlecontent || ''}
                     />
                 </div>
@@ -122,12 +120,13 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
                                     opacityByPosition={isSelected ? '100%' : '30%'}
                                     heightByPosition={`${cardHeight}px`}
                                     widthByPosition={`${cardWidth}px`}
-                                    titulo={selectedTitle}
+                                    titulo={card.titleValue} // ✅ Aquí es válido usar 'card'
                                     subtitulo={isSelected ? card.subtitlecontent : ''}
                                 />
                             </div>
                         );
                     })}
+
                 </div>
             )}
             <div className='flex flex-row mx-auto'>
