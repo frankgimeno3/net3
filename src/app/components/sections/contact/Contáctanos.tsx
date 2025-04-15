@@ -38,9 +38,9 @@ const Contáctanos: FC<ContáctanosProps> = ({ lang }) => {
           </div>
         )}
 
-        <div className='flex flex-col mx-auto text-2xl mt-16'>
-        <p className='text-center md:text-left font-bold '>info@net3.com</p>
-        <p className='text-center md:text-left font-bold '>+34 934120764</p>
+        <div className='flex flex-col mx-auto text-2xl mt-16 '>
+        <p className='text-center md:text-left font-bold mx-auto'>info@net<span className='text-red-500'>3</span>.com</p>
+        <p className='text-center md:text-left font-bold mx-auto'>+34 - 93 412 07 64</p>
         </div>
 
          {/* <div className=" px-36">

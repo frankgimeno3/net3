@@ -27,25 +27,25 @@ const FooterSection: FC<FooterSectionProps> = ({ lang }) => {
           style={{ transitionDuration: '3000ms' }}
         >
           {/* Solo visible en pantallas mayores a sm */}
-          <div className="hidden sm:block">
-            <Image src="/net3logoesBlanco.png" alt="net3" height={100} width={100} />
+          <div className="hidden sm:block pb-5">
+            <Image src="/net3logoesBlanco.png" alt="net3" height={180} width={180} />
           </div>
 
           {/* Solo visible en pantallas menores a sm */}
-          <div className="block sm:hidden">
-            <Image src="/net3Complete.svg" alt="net3" height={100} width={100} />
+          <div className="block sm:hidden pb-5">
+            <Image src="/net3Complete.svg" alt="net3" height={180} width={180} />
           </div>
 
         </div>
 
-        <div className='py-4'>
+
+        <p className='text-center md:text-left font-bold text-lg'>info@net<span className='text-red-500'>3</span>.com</p>
+        <p className='text-center md:text-left font-bold text-sm'>+34 - 93 412 07 64</p>
+        <Image src="/grupoPropor3blanco.png" alt="net3" height={152} width={152} className='py-2 pt-6' />
+        <div className='pt-1'>
           <p className='text-center md:text-left text-xs'>{content.copyright1}</p>
           <p className='text-center md:text-left text-xs'>{content.copyright2}</p>
         </div>
-        <p className='text-center md:text-left font-bold text-sm'>info@net<span className='text-red-500'>3</span>.com</p>
-        <p className='text-center md:text-left font-bold text-sm'>+34 934120764</p>
-        <Image src="/grupoPropor3blanco.png" alt="net3" height={200} width={200} />
-
       </div>
       <div className="flex flex-col sm:flex-row text-sm mt-12 sm:mt-6 sm:mt-0 text-center sm:text-left">
         {(Object.keys(content.sections) as SectionKey[]).map((section) => (
