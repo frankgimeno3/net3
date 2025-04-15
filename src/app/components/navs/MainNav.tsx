@@ -5,7 +5,7 @@ import NavContent from '../content/NavContent.json';
 import 'flag-icons/css/flag-icons.min.css';
 import { useRouter } from 'next/navigation';
 import { Menu } from 'lucide-react';
-import { useLanguage } from '../../context/LanguageContext';   
+import { useLanguage } from '../../context/LanguageContext';
 import Image from 'next/image';
 
 interface MainNavProps {
@@ -28,12 +28,17 @@ const MainNav: FC<MainNavProps> = ({ section, setSection }) => {
   return (
     <nav className="flex flex-row w-full text-white px-5 py-6 sm:py-1 justify-between items-center bg-gray-950 bg-opacity-80">
       <div
-        className="flex flex-row px-5 text-xl md:text-4xl  cursor-pointer"
+        className="flex flex-row  text-xl md:text-4xl  cursor-pointer border border-white"
         onClick={() => handleRedirection('/')}
         style={{ transitionDuration: '3000ms' }}
       >
-       <Image src={'/net3Complete.svg'}  alt={'net3'} height={100} width={100}/> 
-        <p className="text-white">.es</p>
+         <div className="hidden sm:block border border-red-500">
+          <Image src="/net3logoesBlanco.png" alt="net3" height={200} width={200} />
+        </div>
+
+         <div className="block sm:hidden border border-red-500">
+          <Image src="/net3Complete.svg" alt="net3" height={200} width={200} />
+        </div>
       </div>
 
       <button
@@ -44,9 +49,8 @@ const MainNav: FC<MainNavProps> = ({ section, setSection }) => {
       </button>
 
       <div
-        className={`${
-          menuOpen ? 'flex' : 'hidden'
-        } flex-col sm:flex sm:flex-row sm:static absolute top-7 left-0 w-full sm:w-auto bg-gray-950 sm:bg-transparent text-md max-w-full`}
+        className={`${menuOpen ? 'flex' : 'hidden'
+          } flex-col sm:flex sm:flex-row sm:static absolute top-7 left-0 w-full sm:w-auto bg-gray-950 sm:bg-transparent text-md max-w-full`}
       >
         <div
           className={`pt-6 pb-5 px-3 text-center cursor-pointer ${section === 'services' ? 'text-white' : 'opacity-50 hover:opacity-100'}`}

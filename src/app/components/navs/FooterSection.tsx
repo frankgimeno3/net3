@@ -26,15 +26,26 @@ const FooterSection: FC<FooterSectionProps> = ({ lang }) => {
           onClick={() => handleRedirection('/')}
           style={{ transitionDuration: '3000ms' }}
         >
-          <Image src={'/net3Complete.svg'} alt={'net3'} height={100} width={100} />
-          <p className="text-white">.es</p>
+          {/* Solo visible en pantallas mayores a sm */}
+          <div className="hidden sm:block">
+            <Image src="/net3logoesBlanco.png" alt="net3" height={100} width={100} />
+          </div>
+
+          {/* Solo visible en pantallas menores a sm */}
+          <div className="block sm:hidden">
+            <Image src="/net3Complete.svg" alt="net3" height={100} width={100} />
+          </div>
+
         </div>
+
         <div className='py-4'>
           <p className='text-center md:text-left text-xs'>{content.copyright1}</p>
           <p className='text-center md:text-left text-xs'>{content.copyright2}</p>
         </div>
-        <p className='text-center md:text-left font-bold text-sm'>info@net3.com</p>
+        <p className='text-center md:text-left font-bold text-sm'>info@net<span className='text-red-500'>3</span>.com</p>
         <p className='text-center md:text-left font-bold text-sm'>+34 934120764</p>
+        <Image src="/grupoPropor3blanco.png" alt="net3" height={200} width={200} />
+
       </div>
       <div className="flex flex-col sm:flex-row text-sm mt-12 sm:mt-6 sm:mt-0 text-center sm:text-left">
         {(Object.keys(content.sections) as SectionKey[]).map((section) => (
@@ -59,6 +70,7 @@ const FooterSection: FC<FooterSectionProps> = ({ lang }) => {
           </div>
         ))}
       </div>
+      
     </div>
   );
 };

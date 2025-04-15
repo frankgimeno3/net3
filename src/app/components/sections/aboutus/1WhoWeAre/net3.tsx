@@ -10,12 +10,11 @@ const Net3: FC = ({ }) => {
       <p className='text-9xl absolute top-24 left-1/2 transform -translate-x-1/2 text-white ml-3 mt-6'>3</p>
     </div> */}
             <div
-              className="flex flex-row px-5 mx-auto mt-36 text-xl md:text-4xl  cursor-pointer items-end"
+              className="flex flex-row  mx-auto mt-44 text-xl md:text-4xl  cursor-pointer items-end"
               style={{ transitionDuration: '3000ms' }}
             >
-             <Image src={'/net3Complete.svg'}  alt={'net3'} height={500} width={500}/> 
-              <p className="text-white text-7xl">.es</p>
-            </div>
+             <Image src={'/net3Complete.svg'}  alt={'net3'} height={350} width={350}/> 
+             </div>
     </>
 
   );
