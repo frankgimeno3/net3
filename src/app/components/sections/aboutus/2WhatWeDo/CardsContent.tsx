@@ -24,7 +24,6 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
         { name: 'card9', titleValue: content.Promocion.titular, subtitlecontent: content.Promocion.content3 },
         { name: 'card10', titleValue: content.Contenidos.titular, subtitlecontent: content.Contenidos.content4 }
     ];
-    const [selectedTitle, setSelectedTitle] = useState<string>(cardsArray[5].titleValue);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -42,28 +41,16 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
                 const currentIndex = cardsArray.findIndex(card => card.name === prev);
                 const nextIndex = (currentIndex + 1) % cardsArray.length;
                 const nextCard = cardsArray[nextIndex];
-                setSelectedTitle(nextCard.titleValue);  // Actualizar título con el valor correcto
                 return nextCard.name;
             });
         }, 4500);
 
         return () => clearInterval(interval);
     }, []);
-    const handleSelectedTitle = (cardId: string) => {
-        if (cardId === 'card1' || cardId === 'card4' || cardId === 'card7') {
-            setSelectedTitle(content2[lang].Planes.titular);
-        }
-        if (cardId === 'card2' || cardId === 'card5' || cardId === 'card8' || cardId === 'card10') {
-            setSelectedTitle(content2[lang].Contenidos.titular);
-        }
-        if (cardId === 'card3' || cardId === 'card6' || cardId === 'card9') {
-            setSelectedTitle(content2[lang].Promocion.titular);
-        }
-    };
+   
 
     const handleCardClick = (cardId: string) => {
         setSelectedCard(cardId);
-        handleSelectedTitle(cardId);
     };
 
     const getCircularDiff = (index: number, selectedIndex: number, total: number) => {
