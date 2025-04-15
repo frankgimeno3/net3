@@ -23,7 +23,7 @@ const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
   return (
     <div className='flex flex-col min-h-screen text-center text-white justify-center text-xl py-12'>
       <div>
-        <p className="text-4xl sm:text-5xl md:text-8xl glitch">{content.titular}</p>
+        <p className="text-4xl sm:text-5xl md:text-7xl glitch">{content.titular}</p>
       </div>
 
       <div className="flex justify-center mt-24 mb-56 px-12 md:mb-0 md:px-0">
