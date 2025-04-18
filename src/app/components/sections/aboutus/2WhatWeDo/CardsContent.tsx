@@ -43,7 +43,7 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
                 const nextCard = cardsArray[nextIndex];
                 return nextCard.name;
             });
-        }, 4500);
+        }, 8000);
 
         return () => clearInterval(interval);
     }, []);

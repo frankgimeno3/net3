@@ -41,7 +41,6 @@ export default function Home() {
         <MainNav section={section} setSection={setSection} />
       </div>
       <div className="flex flex-col z-10 w-full mb-96">
-        {/* Pasa lang desde el contexto */}
         <QuienSomos lang={lang} />
         <QueHacemos lang={lang} />
         <WhyWithUs lang={lang} />
@@ -55,12 +54,10 @@ export default function Home() {
           transition: 'bottom 0.3s ease',
         }}
       >
-        {/* Pasa lang desde el contexto */}
         <ContactRedirectionButton lang={lang} />
       </div>
 
       <div ref={footerRef} className="absolute z-40 bottom-0 w-full">
-        {/* Pasa lang desde el contexto */}
         <FooterSection lang={lang} />
       </div>
     </div>
