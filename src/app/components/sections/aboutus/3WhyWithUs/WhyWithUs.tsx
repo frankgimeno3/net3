@@ -15,7 +15,7 @@ const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setSelectedReason(prevReason => (prevReason + 1) % cards.length);  
-    }, 8000);  
+    }, 4500);  
 
     return () => clearInterval(timer);
   }, [cards.length]);   
