@@ -102,8 +102,8 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
     <>
       <section ref={containerRef} className="relative text-gray-600 mb-32 overflow-hidden">
         <div style={{ height: `220vh` }} className="relative">
-          <div className="flex flex-col sticky top-0 h-screen items-center justify-center px-4">
-            <h2 className="text-4xl md:text-6xl font-bold">
+          <div className="flex flex-col sticky top-0 h-screen items-center justify-center px-2">
+            <h2 className="text-4xl md:text-5xl font-bold mt-5 text-center">
               {lang === 'ESP' ? '¿Qué hacemos?' : 'What we do'}
             </h2>
 
