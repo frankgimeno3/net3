@@ -4,7 +4,6 @@ import { engContent, espContent } from '../content';
 import MainNav from '@/app/components/navs/MainNav';
 import PcServices from '../../components/servicesMenus/pcServices';
 import FooterSection from '@/app/components/navs/FooterSection';
-import MServices from '../../components/servicesMenus/mServices';
 import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
 import { social } from './socialContents.json';
 import { useLanguage } from '@/app/context/LanguageContext'; // Importar el hook del contexto
@@ -60,10 +59,6 @@ const Social: FC<SocialProps> = () => {
             <div className="flex flex-row">
                 <div className="hidden md:block">
                     <PcServices selectedService={selectedService} lang={lang} />
-                </div>
-
-                <div className="block md:hidden fixed bottom-0 left-0 w-full z-50">
-                    <MServices selectedService={selectedService} lang={lang} />
                 </div>
 
                 <div className="flex flex-col xl:mt-24 bg-gray-900 bg-opacity-70 min-h-screen w-full pt-24 md:p-24 md:pl-[295px] max-w-9/10 "
