@@ -15,7 +15,7 @@ interface MainNavProps {
 
 const MainNav: FC<MainNavProps> = ({ section, setSection }) => {
   const router = useRouter();
-  const { lang, changeLanguage } = useLanguage();  // Obtener lang del contexto
+  const { lang, changeLanguage } = useLanguage();  
   const [showLangMenu, setShowLangMenu] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -26,17 +26,21 @@ const MainNav: FC<MainNavProps> = ({ section, setSection }) => {
   };
 
   return (
-    <nav className="flex flex-row w-full text-white px-5 py-6 sm:py-1 justify-between items-center bg-gray-950 bg-opacity-80">
+    <nav className="flex flex-row w-full text-white p-12 sm:py-4 justify-between items-center"
+      style={{ backgroundColor: "rgb(28, 28, 28)" }}>
       <div
         className="flex flex-row  text-xl md:text-4xl  cursor-pointer"
         onClick={() => handleRedirection('/')}
         style={{ transitionDuration: '3000ms' }}
       >
-         <div className="hidden sm:block ">
-          <Image src="/net3logoesBlanco.png" alt="net3" height={120} width={120} />
+        {/* <div className="hidden sm:block ">
+          <Image src="/net3logoesBlanco.png" alt="net3" height={180} width={180} />
+        </div> */}
+        <div className="hidden sm:block ">
+          <Image src="/net3Complete.svg" alt="net3" height={150} width={150} />
         </div>
 
-         <div className="block sm:hidden ">
+        <div className="block sm:hidden ">
           <Image src="/net3Complete.svg" alt="net3" height={120} width={120} />
         </div>
       </div>

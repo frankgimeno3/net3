@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useRef } from 'react';
 import CardsContent from './CardsContent';
 
 interface QueHacemosProps {
@@ -7,15 +7,16 @@ interface QueHacemosProps {
 
 const QueHacemos: FC<QueHacemosProps> = ({ lang }) => {
 
+  const queHacemosRef = useRef<HTMLDivElement>(null);
+ 
 
   return (
-    <div className='flex flex-col min-h-screen bg-gray-800 opacity-90 rounded-sm text-center text-white justify-center text-xl py-12'>
-      <div>
-      {lang == "ESP" &&  <p className="text-4xl sm:text-5xl md:text-7xl glitch">¿Qué hacemos?</p>}
-      {lang == "ENG" &&  <p className="text-4xl sm:text-5xl md:text-7xl glitch">What we do</p>}
-      </div>
-      <div className='flex flex-row justify-center w-full '>
-      <CardsContent lang={lang}/>
+    <div 
+      ref={queHacemosRef}
+      className="flex flex-col bg-white min-h-screen" // Eliminado opacity y transition
+    >
+      <div className='flex flex-row justify-center w-full'>
+        <CardsContent lang={lang} />
       </div>
     </div>
   );

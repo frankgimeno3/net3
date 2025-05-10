@@ -18,8 +18,8 @@ const Card: FC<CardProps> = ({ subtitulo, opacityByPosition, heightByPosition, w
         opacity: opacityByPosition,
       }}
     >
-      <div className="flex flex-col justify-center w-full bg-yellow-500 px-12 h-36 text-xl">
-        <p className="my-auto text-white font-bold">{titulo}</p>
+      <div className="flex flex-col justify-center w-full bg-gray-500 px-12 h-36 text-xl">
+        <p className="my-auto text-center text-white font-bold">{titulo}</p>
       </div>
       <div className="flex flex-col h-full px-12 bg-white">
         <p className={`text-2xl text-center my-auto`}>

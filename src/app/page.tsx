@@ -6,11 +6,11 @@ import QuienSomos from './components/sections/aboutus/1WhoWeAre/QuienSomos';
 import QueHacemos from './components/sections/aboutus/2WhatWeDo/QueHacemos';
 import WhyWithUs from './components/sections/aboutus/3WhyWithUs/WhyWithUs';
 import ContactRedirectionButton from './components/ContactRedirectionButton';
-import { useLanguage } from './context/LanguageContext'; 
+import { useLanguage } from './context/LanguageContext';
 
 export default function Home() {
   const [section, setSection] = useState('aboutus');
-  const { lang } = useLanguage();  
+  const { lang } = useLanguage();
   const footerRef = useRef<HTMLDivElement>(null);
   const [isNearFooter, setIsNearFooter] = useState(false);
 
@@ -27,39 +27,27 @@ export default function Home() {
   }, []);
 
   return (
-    <div
-      className="relative flex flex-col min-h-screen w-full justify-between text-white"
-      style={{
-        backgroundImage: 'url(/background/bgrnd.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-      }}
-    >
-      <div className="absolute inset-0 bg-black opacity-40 z-0" />
-      <div className="fixed top-0 left-0 w-full z-50">
+    <div className="relative flex flex-col min-h-screen w-full bg-gray-800 text-white">
+      <div className="fixed top-0 left-0 w-full z-50 bg-gray-900 shadow-md">
         <MainNav section={section} setSection={setSection} />
       </div>
-      <div className="flex flex-col z-10 w-full mb-96">
-        <QuienSomos lang={lang} />
+
+      <main className="flex flex-col w-full pt-20 ">
+        <QuienSomos lang={lang}   />
         <QueHacemos lang={lang} />
         <WhyWithUs lang={lang} />
-      </div>
+      </main>
+
       <div
-        className="z-50"
-        style={{
-          position: 'fixed',
-          right: '6rem',
-          bottom: isNearFooter ? '120px' : '24px',
-          transition: 'bottom 0.3s ease',
-        }}
+        className="sticky md:fixed md:bottom-5 mx-auto z-50 transition-all duration-300 md:right-16"
+        style={{ bottom: isNearFooter ? '120px' : '24px' }}
       >
         <ContactRedirectionButton lang={lang} />
       </div>
 
-      <div ref={footerRef} className="absolute z-40 bottom-0 w-full">
+      <footer ref={footerRef} className="relative w-full z-40">
         <FooterSection lang={lang} />
-      </div>
+      </footer>
     </div>
   );
 }
