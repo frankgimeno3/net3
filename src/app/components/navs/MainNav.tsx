@@ -17,7 +17,7 @@ const MainNav: FC = () => {
 
   return (
     <nav
-      className="flex flex-row w-full text-white p-12 sm:py-4 justify-between items-center"
+      className="flex flex-row w-full text-white p-6 sm:p-12  justify-between items-center"
       style={{ backgroundColor: 'rgb(28, 28, 28)' }}
     >
       <div
