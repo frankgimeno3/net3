@@ -59,7 +59,7 @@ export default function Home() {
         <BigMenu />
       )}
 
-      <main className="flex flex-col w-full py-32 z-10 relative">
+      <main className="flex flex-col w-full py-24 md:py-32 z-10 relative">
         <QuienSomos />
         <QueHacemos />
         <WhyWithUs />
