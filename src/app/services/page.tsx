@@ -8,17 +8,17 @@ import PcServices from '../components/servicesMenus/pcServices';
 import { useLanguage } from '@/app/context/LanguageContext';  
 import ServicesPcContent from './servicesComponents/ServicesPcContent';
 import ServicesContentMobile from './servicesComponents/ServicesContentMobile';
+import { useUI } from '@/app/context/UIContext';  
+import BigMenu from '@/app/components/navs/BigMenu';  
 
-interface ServiciosProps {}
-
-const Servicios: FC<ServiciosProps> = ({}) => {
+const Servicios: FC = () => {
   const { lang } = useLanguage();
-  const [section, setSection] = useState('');
-  const [selectedService] = useState('none');
+  const { isMenuOpen, setIsMenuOpen } = useUI();  
 
-  const footerRef = useRef<HTMLDivElement>(null);
+  const [selectedService] = useState('none');
   const [isNearFooter, setIsNearFooter] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
+  const footerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,6 +44,12 @@ const Servicios: FC<ServiciosProps> = ({}) => {
     setShowMessage(false);
   };
 
+  // Función para manejar la redirección y cerrar el menú
+  const handleRedirection = (url: string) => {
+    setIsMenuOpen(false);  // Cerramos el menú antes de hacer la redirección
+    window.location.href = url;  // Redirigimos a la URL
+  };
+
   return (
     <div
       className="relative flex flex-col min-h-screen w-full justify-between text-white"
@@ -55,23 +61,26 @@ const Servicios: FC<ServiciosProps> = ({}) => {
       }}
     >
       <div className="fixed top-0 left-0 w-full z-50">
-        <MainNav section={section} setSection={setSection} />
+        <MainNav />
       </div>
+
+      {/* Mostrar BigMenu si isMenuOpen es true */}
+      {isMenuOpen && (
+        <BigMenu />
+      )}
 
       <div className="flex flex-row">
         <div className="hidden md:block">
           <PcServices selectedService={selectedService} lang={lang} />
         </div>
 
-        <div
-          className="flex flex-col ml-0 md:ml-64  bg-gray-900 bg-opacity-70 min-h-screen p-6 md:p-24 md:pb-48 w-full"
-        >
+        <div className="flex flex-col ml-0 md:ml-64 bg-gray-900 bg-opacity-70 min-h-screen p-6 md:p-24 md:pb-48 w-full">
           <div className="p-5 md:mb-96 w-full">
             <div className="hidden md:block pt-24">
-            <ServicesPcContent showMessage={showMessage} closeMessage={closeMessage} />
+              <ServicesPcContent showMessage={showMessage} closeMessage={closeMessage} />
             </div>
             <div className="block md:hidden pt-24 w-full">
-              <ServicesContentMobile/>
+              <ServicesContentMobile />
             </div>
 
             <div
@@ -83,14 +92,14 @@ const Servicios: FC<ServiciosProps> = ({}) => {
                 transition: 'bottom 0.3s ease',
               }}
             >
-              <ContactRedirectionButton lang={lang} />
+              <ContactRedirectionButton  />
             </div>
           </div>
         </div>
       </div>
 
       <div ref={footerRef} className="relative z-40 w-full">
-        <FooterSection lang={lang} />
+        <FooterSection   />
       </div>
     </div>
   );

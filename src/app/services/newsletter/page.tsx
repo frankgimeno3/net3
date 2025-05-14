@@ -6,14 +6,13 @@ import PcServices from '../../components/servicesMenus/pcServices';
 import FooterSection from '@/app/components/navs/FooterSection';
 import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
 import { newsletter } from './newsletterContents.json';
-import { useLanguage } from '@/app/context/LanguageContext'; // Importar el hook del contexto
+import { useLanguage } from '@/app/context/LanguageContext';  
 
 interface NewsletterProps {}
 
 const Newsletter: FC<NewsletterProps> = () => {
-  const { lang } = useLanguage(); // Usar el hook del contexto para obtener el idioma
-  const [section, setSection] = useState("services");
-  const [selectedService, setSelectedService] = useState(
+  const { lang } = useLanguage();  
+   const [selectedService, setSelectedService] = useState(
     lang === "ESP" ? espContent[2] : engContent[2]
   );
   const [selectedQuestion, setSelectedQuestion] = useState<string>("none");
@@ -53,7 +52,7 @@ const Newsletter: FC<NewsletterProps> = () => {
       }}
     >
       <div className="fixed top-0 left-0 w-full z-50">
-        <MainNav section={section} setSection={setSection} />
+        <MainNav  />
       </div>
 
       <div className="flex flex-row">
@@ -117,13 +116,13 @@ const Newsletter: FC<NewsletterProps> = () => {
               transition: 'bottom 0.3s ease'
             }}
           >
-            <ContactRedirectionButton lang={lang} />
+            <ContactRedirectionButton   />
           </div>
         </div>
       </div>
 
       <div ref={footerRef} className="absolute z-40 bottom-0 w-full">
-        <FooterSection lang={lang} />
+        <FooterSection   />
       </div>
     </div>
   );

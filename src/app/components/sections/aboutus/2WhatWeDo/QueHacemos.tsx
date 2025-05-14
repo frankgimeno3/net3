@@ -1,19 +1,16 @@
 import React, { FC, useRef } from 'react';
 import CardsContent from './CardsContent';
+import { useLanguage } from '@/app/context/LanguageContext';
 
-interface QueHacemosProps {
-  lang: "ESP" | "ENG";
-}
-
-const QueHacemos: FC<QueHacemosProps> = ({ lang }) => {
-
-  const queHacemosRef = useRef<HTMLDivElement>(null);
  
-
+const QueHacemos: FC = () => {
+  const queHacemosRef = useRef<HTMLDivElement>(null);
+   const { lang } = useLanguage();  
+ 
   return (
     <div 
       ref={queHacemosRef}
-      className="flex flex-col bg-white min-h-screen" // Eliminado opacity y transition
+      className="flex flex-col bg-white min-h-screen bg-opacity-90" 
     >
       <div className='flex flex-row justify-center w-full'>
         <CardsContent lang={lang} />

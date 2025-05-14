@@ -12,8 +12,7 @@ interface ConsultancyProps {}
 
 const Consultancy: FC<ConsultancyProps> = () => {
     const { lang } = useLanguage();  
-    const [section, setSection] = useState("services");
-    const [selectedService, setSelectedService] = useState(() => lang === "ESP" ? espContent[0] : engContent[0]);
+     const [selectedService, setSelectedService] = useState(() => lang === "ESP" ? espContent[0] : engContent[0]);
     const [selectedQuestion, setSelectedQuestion] = useState<string>("none");
 
     const footerRef = useRef<HTMLDivElement>(null);
@@ -52,7 +51,7 @@ const Consultancy: FC<ConsultancyProps> = () => {
             }}
         >
             <div className="fixed top-0 left-0 w-full z-50">
-                <MainNav section={section} setSection={setSection} />
+                <MainNav  />
             </div>
 
             <div className="flex flex-row">
@@ -115,13 +114,13 @@ const Consultancy: FC<ConsultancyProps> = () => {
                             transition: 'bottom 0.3s ease'
                         }}
                     >
-                        <ContactRedirectionButton lang={lang} />
+                        <ContactRedirectionButton   />
                     </div>
                 </div>
             </div>
 
             <div ref={footerRef} className='absolute z-40 bottom-0 w-full'>
-                <FooterSection lang={lang} />
+                <FooterSection   />
             </div>
         </div>
     );

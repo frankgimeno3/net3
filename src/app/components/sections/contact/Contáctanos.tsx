@@ -1,11 +1,11 @@
+import { useLanguage } from '@/app/context/LanguageContext';
 import React, { FC } from 'react';
 
-interface ContáctanosProps {
-  lang: string;
-}
+ 
+const Contáctanos: FC = () => {
+  const { lang } = useLanguage();  
 
-const Contáctanos: FC<ContáctanosProps> = ({ lang }) => {
-  return (
+   return (
     <div className=' '>
       <div className='flex flex-col w-full text-center' style={{ height: '500px' }}>
         {lang == "ESP" && (

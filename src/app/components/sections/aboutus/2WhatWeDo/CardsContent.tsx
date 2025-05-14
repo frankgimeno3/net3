@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import content2 from './content-2.json';
 import Card from './Card';
-import ProgressBar from './ProgressBar'; // Asegúrate de importar correctamente el componente de la barra de progreso
+import ProgressBar from './ProgressBar'; 
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -1,12 +1,12 @@
 import React, { FC, useState, useEffect } from 'react';
 import content3 from './content-3.json';
 import Svgs from './svgs/Svgs';
+import { useLanguage } from '@/app/context/LanguageContext';
+ 
 
-interface WhyWithUsProps {
-  lang: 'ESP' | 'ENG';
-}
+const WhyWithUs: FC = () => {
+    const { lang } = useLanguage();  
 
-const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
   const content = content3[lang];
   const cards = [
     content.card1,
@@ -25,16 +25,15 @@ const WhyWithUs: FC<WhyWithUsProps> = ({ lang }) => {
   }, [cards.length]);
 
   return (
-    <section className=" bg-gray-900 text-white">
+    <section className="  text-white">
       <div className="">
-        {/* Sticky content */}
-        <div className="flex flex-col sticky top-0 h-screen flex items-center justify-center px-4">
+         <div className="flex flex-col sticky top-0 h-screen flex items-center justify-center px-4">
           <div className="text-center mb-8">
             <h2 className="text-3xl pt-24 md:text-6xl font-bold">
               ¿{content.titular}
             </h2>
           </div>
-          <div className="bg-gray-800 px-10 py-5 rounded-xl shadow-xl max-w-4xl w-full">
+          <div className="bg-gray-800 bg-opacity-80 px-10 py-5 rounded-xl shadow-xl max-w-4xl w-full">
             <div className="flex flex-col">
               {cards.map((card, index) => (
                 <div

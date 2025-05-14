@@ -1,4 +1,5 @@
 import { LanguageProvider } from './context/LanguageContext';
+import { UIProvider } from './context/UIContext'; // 👈 importa el nuevo contexto
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -19,7 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <LanguageProvider>
-          {children}
+          <UIProvider>  
+            {children}
+          </UIProvider>
         </LanguageProvider>
       </body>
     </html>

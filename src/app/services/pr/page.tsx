@@ -12,8 +12,7 @@ interface PRProps {}
 
 const PR: FC<PRProps> = () => {
     const { lang } = useLanguage(); // Usar el hook del contexto para obtener el idioma
-    const [section, setSection] = useState("services");
-    const [selectedService, setSelectedService] = useState(
+     const [selectedService, setSelectedService] = useState(
         lang === "ESP" ? espContent[1] : engContent[1]
     );
     const [selectedQuestion, setSelectedQuestion] = useState<string>("none");
@@ -53,7 +52,7 @@ const PR: FC<PRProps> = () => {
             }}
         >
             <div className="fixed top-0 left-0 w-full z-50">
-                <MainNav section={section} setSection={setSection}/>
+                <MainNav  />
             </div>
 
             <div className="flex flex-row">
@@ -138,13 +137,13 @@ const PR: FC<PRProps> = () => {
                             transition: 'bottom 0.3s ease'
                         }}
                     >
-                        <ContactRedirectionButton lang={lang} />
+                        <ContactRedirectionButton   />
                     </div>
                 </div>
             </div>
 
             <div ref={footerRef} className='absolute z-40 bottom-0 w-full'>
-                <FooterSection lang={lang} />
+                <FooterSection   />
             </div>
         </div>
     );

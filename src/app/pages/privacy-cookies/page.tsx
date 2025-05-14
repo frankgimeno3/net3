@@ -8,12 +8,11 @@ import { useLanguage } from '../../context/LanguageContext';
 interface PrivacyCookiesProps {}
 
 const PrivacyCookies: FC<PrivacyCookiesProps> = ({ }) => {
-    const [section, setSection] = useState("aboutus");
-    const { lang } = useLanguage();  
+     const { lang } = useLanguage();  
     
     return (
         <div className="relative flex flex-col min-h-screen w-full justify-between bg-white">
-            <MainNav section={section} setSection={setSection}   />
+            <MainNav     />
             <div className=" px-4 py-12 text-gray-800 space-y-12 ml-12">
                 <h1 className="text-3xl font-bold">{lang === "ESP" ? "Política de Privacidad y Cookies" : "Privacy and Cookie Policy"}</h1>
                 <p className="text-sm text-gray-500">{lang === "ESP" ? "Última actualización: 17/03/2025" : "Last updated: 17/03/2025"}</p>
@@ -162,7 +161,7 @@ const PrivacyCookies: FC<PrivacyCookiesProps> = ({ }) => {
                     </div>
                 </section>
             </div>
-            <FooterSection lang={'ESP'} />
+            <FooterSection   />
         </div>
     );
 };

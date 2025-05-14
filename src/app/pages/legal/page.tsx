@@ -7,12 +7,11 @@ import { useLanguage } from '../../context/LanguageContext';
 interface LegalProps { }
 
 const Legal: FC<LegalProps> = ({ }) => {
-  const [section, setSection] = useState("aboutus");
-  const { lang } = useLanguage();  
+   const { lang } = useLanguage();  
 
   return (
     <div className="relative flex flex-col min-h-screen w-full justify-between bg-white">
-      <MainNav section={section} setSection={setSection}   />
+      <MainNav     />
 
       <div className="  px-4 py-12 text-gray-800 space-y-12 pl-24 mb-96">
         <h1 className="text-3xl font-bold mb-6">
@@ -164,7 +163,7 @@ const Legal: FC<LegalProps> = ({ }) => {
         </section>
       </div>
       <div className='absolute z-50 bottom-0 w-full'>
-        <FooterSection lang={lang} />
+        <FooterSection   />
       </div>
     </div>
   );

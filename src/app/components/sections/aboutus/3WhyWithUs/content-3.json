@@ -2,18 +2,18 @@
     "ESP": {
       "titular": "Por qué elegirnos?",
       "card1": {
-        "titlevalue": "Contenido para todo el año",
-        "subtitlecontent": "Asegúrate de tener contenido constante para redes sociales durante todo el año.",
+        "titlevalue": "Impacto directo al especialista",
+        "subtitlecontent": "Publicación incluida en medios técnicos especializados B2B",
         "iconcontent": "icon1"
       },
       "card2": {
         "titlevalue": "Especialización garantizada",
-        "subtitlecontent": "Externaliza la creación de contenido en manos de un especialista.",
+        "subtitlecontent": "Externaliza operaciones repetitivas en manos de un especialista.",
         "iconcontent": "icon2"
       },
       "card3": {
-        "titlevalue": "Promoción eficiente",
-        "subtitlecontent": "Promociona tu contenido sin presupuestos adicionales.",
+        "titlevalue": "Mejora a partir de tus propios datos",
+        "subtitlecontent": "Analiza los resultados de cada publicación, aprendiendo de errores y aciertos",
         "iconcontent": "icon3"
       },
       "card4": {
@@ -22,26 +22,26 @@
         "iconcontent": "icon4"
       },
       "card5": {
-        "titlevalue": "Costo predecible",
-        "subtitlecontent": "Convierte el coste variable de comunicación en uno previsible.",
+        "titlevalue": "Contenido para todo el año",
+        "subtitlecontent": "Asegúrate de tener contenido constante para redes sociales durante todo el año.",
         "iconcontent": "icon5"
       }
     },
     "ENG": {
       "titular": "Why choose us?",
       "card1": {
-        "titlevalue": "Year-round content",
-        "subtitlecontent": "Make sure you have consistent social media content all year long.",
+        "titlevalue": "B2B technical media specialization",
+        "subtitlecontent": "We include publication of contents in our B2B technical publications",
         "iconcontent": "icon1"
       },
       "card2": {
         "titlevalue": "Guaranteed expertise",
-        "subtitlecontent": "Outsource your content creation to a specialist.",
+        "subtitlecontent": "Outsource your repetitive marketing tasks to a specialist.",
         "iconcontent": "icon2"
       },
       "card3": {
-        "titlevalue": "Efficient promotion",
-        "subtitlecontent": "Promote your content without extra budget.",
+        "titlevalue": "Data driven improvements",
+        "subtitlecontent": "We analyse your results to learn and improve after every publication",
         "iconcontent": "icon3"
       },
       "card4": {
@@ -50,8 +50,8 @@
         "iconcontent": "icon4"
       },
       "card5": {
-        "titlevalue": "Predictable cost",
-        "subtitlecontent": "Turn variable communication costs into a predictable expense.",
+        "titlevalue": "Year-round content",
+        "subtitlecontent": "Make sure you have consistent social media content all year long.",
         "iconcontent": "icon5"
       }
     }
