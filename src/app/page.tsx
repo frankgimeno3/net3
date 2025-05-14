@@ -10,6 +10,7 @@ import ContactRedirectionButton from './components/ContactRedirectionButton';
 // import { useLanguage } from './context/LanguageContext';
 import BigMenu from './components/navs/BigMenu';
 import { useUI } from './context/UIContext';
+import Contáctanos from './components/sections/contact/Contáctanos';
 
 export default function Home() {
   // const { lang } = useLanguage();
@@ -63,6 +64,7 @@ export default function Home() {
         <QuienSomos />
         <QueHacemos />
         <WhyWithUs />
+        <Contáctanos/>
       </main>
 
       <div

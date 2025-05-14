@@ -9,7 +9,7 @@ const Contáctanos: FC = () => {
     <div className=' '>
       <div className='flex flex-col w-full text-center' style={{ height: '500px' }}>
         {lang == "ESP" && (
-          <div className='flex flex-row mt-24 text-6xl text-white mx-auto'>
+          <div className='flex flex-row mt-24 text-3xl md:text-6xl text-white mx-auto'>
             <p className='hover:text-yellow-300'>C</p>
             <p className='hover:text-yellow-300'>o</p>
             <p className='hover:text-yellow-300'>n</p>

@@ -43,7 +43,7 @@ const WhyWithUs: FC = () => {
                   } p-4 rounded-md`}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 hidden md:block">
+                    <div className="w-6 md:w-12 h-6 md:h-12">
                       <Svgs index={index} selectedReason={selectedReason} />
                     </div>
                     <div>

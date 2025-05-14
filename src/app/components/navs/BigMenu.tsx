@@ -25,15 +25,15 @@ const BigMenu: FC = () => {
         style={{ backgroundColor: 'rgba(23, 23, 23, 0.99)' }}
       >
         <h1 className="text-4xl font-bold">HOME</h1>
-        <h1 className="text-lg">Quién somos y qué hacemos</h1>
+        <h1 className="text-lg text-center pt-5">Quién somos y qué hacemos</h1>
       </div>
 
       {/* Segundo div con flex 1/4 */}
       <div className="flex-[1] w-full flex flex-col items-center justify-center space-y-6 bg-zinc-900">
-        <p className="font-bold text-4xl">MENÚ</p>
+        <p className="font-bold text-xl md:text-4xl p-5 ">MENÚ</p>
 
         <div
-          className={`hover:bg-zinc-500 hover:bg-opacity-10 pt-6 pb-5 px-3 text-center cursor-pointer w-full
+          className={`text-xs md:text-lg hover:bg-zinc-500 hover:bg-opacity-10 pt-6 pb-5 px-3 text-center cursor-pointer w-full
              ${section === 'home' ? 'text-gray-500 bg-white' : 'opacity-50 hover:opacity-100'}`}
           onClick={() => handleRedirection('/', 'home')}
           style={{ transitionDuration: '1200ms' }}
@@ -42,7 +42,7 @@ const BigMenu: FC = () => {
         </div>
 
         <div
-          className={`hover:bg-zinc-500 hover:bg-opacity-70 pt-6 pb-5 px-3 text-center cursor-pointer w-full
+          className={`text-xs md:text-lg hover:bg-zinc-500 hover:bg-opacity-70 pt-6 pb-5 px-3 text-center cursor-pointer w-full
              ${section === 'services' ? 'text-gray-500 bg-white' : 'opacity-50 hover:opacity-100'}`}
           onClick={() => handleRedirection('/services', 'services')}
           style={{ transitionDuration: '1200ms' }}
@@ -51,7 +51,7 @@ const BigMenu: FC = () => {
         </div>
 
         <div
-          className={`hover:bg-zinc-500 hover:bg-opacity-70 pt-6 pb-5 px-3 text-center cursor-pointer w-full
+          className={`text-xs md:text-lg hover:bg-zinc-500 hover:bg-opacity-70 pt-6 pb-5 px-3 text-center cursor-pointer w-full
              ${section === 'contact' ? 'text-gray-500 bg-white' : 'opacity-50 hover:opacity-100'}`}
           onClick={() => handleRedirection('/contact', 'services')}
           style={{ transitionDuration: '1200ms' }}
