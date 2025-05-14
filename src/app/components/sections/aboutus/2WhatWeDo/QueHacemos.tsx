@@ -10,7 +10,7 @@ const QueHacemos: FC = () => {
   return (
     <div 
       ref={queHacemosRef}
-      className="flex flex-col bg-white min-h-screen bg-opacity-90 mb-96 md:pb-0" 
+      className="flex flex-col bg-white min-h-screen bg-opacity-90  md:mb-0" 
     >
       <div className='flex flex-row justify-center w-full mb-64 md:mb-0'>
         <CardsContent lang={lang} />

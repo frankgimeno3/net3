@@ -16,8 +16,7 @@ const ContactRedirectionButton: FC = () => {
   return (
     <button
       onClick={handleContactRedirection}
-      className=" hidden sm:block
-      items-center group rounded-full shadow-xl text-gray-900 over:text-white bg-gray-100 hover:bg-red-700 hover:opacity-80 py-4  text-md px-4 flex items-center mb-4 transition-all duration-700 ease-in-out"
+      className="items-center group rounded-full shadow-xl text-gray-900 over:text-white bg-gray-100 hover:bg-red-700 hover:opacity-80 py-4  text-md px-4 flex items-center mb-4 transition-all duration-700 ease-in-out"
       >
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -25,21 +25,20 @@ const WhyWithUs: FC = () => {
   }, [cards.length]);
 
   return (
-    <section className="  text-white">
-      <div className="">
+    <section className=" mb-12  text-white">
          <div className="flex flex-col sticky top-0 h-screen flex items-center justify-center px-4">
           <div className="text-center mb-8">
-            <h2 className="text-3xl pt-24 md:text-6xl font-bold">
+            <h2 className="text-3xl md:pt-24 md:text-5xl font-bold">
               ¿{content.titular}
             </h2>
           </div>
-          <div className="bg-gray-800 bg-opacity-80 px-10 py-5 rounded-xl shadow-xl max-w-4xl w-full">
+          <div className="bg-gray-800 bg-opacity-80 md:px-10 py-5 rounded-xl shadow-xl max-w-4xl md:mx-24">
             <div className="flex flex-col">
               {cards.map((card, index) => (
                 <div
                   key={index}
-                  className={`transition-opacity duration-500 ease-in-out ${index === selectedReason
-                    ? 'bg-white text-gray-700 opacity-100'
+                  className={`mx-5 transition-opacity duration-500 ease-in-out ${index === selectedReason
+                    ? ' md:font-base  bg-white  text-gray-700  opacity-100'
                     : 'opacity-50 text-gray-400'
                   } p-4 rounded-md`}
                 >
@@ -48,8 +47,8 @@ const WhyWithUs: FC = () => {
                       <Svgs index={index} selectedReason={selectedReason} />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-semibold">{card.titlevalue}</h3>
-                      <p className="text-lg">{card.subtitlecontent}</p>
+                      <h3 className="text-sm md:text-2xl ">{card.titlevalue}</h3>
+                      <p className="hidden md:block text-lg">{card.subtitlecontent}</p>
                     </div>
                   </div>
                 </div>
@@ -57,7 +56,6 @@ const WhyWithUs: FC = () => {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 };

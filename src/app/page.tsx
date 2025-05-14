@@ -66,7 +66,8 @@ export default function Home() {
       </main>
 
       <div
-        className="sticky md:fixed md:bottom-5 mx-auto z-50 transition-all duration-300 md:right-16"
+        className="hidden md:block
+        sticky md:fixed md:bottom-5 mx-auto z-50 transition-all duration-300 md:right-16"
         style={{ bottom: isNearFooter ? '120px' : '24px' }}
       >
         <ContactRedirectionButton />
