@@ -108,7 +108,7 @@ const CardsContent: FC<CardsContentProps> = ({ lang }) => {
             </h2>
 
             {/* Fondo blanco flotante */}
-            <div className="mt-12 relative max-w-3xl w-full h-96">
+            <div className="mt-12 relative max-w-3xl w-full h-64 md:h-96">
               <div className="absolute inset-0 bg-gray-100 rounded-xl shadow-xl z-0" />
 
               {cardsArray.map((card, index) => (

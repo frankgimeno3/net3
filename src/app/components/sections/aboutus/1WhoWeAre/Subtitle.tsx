@@ -46,7 +46,7 @@ const Subtitle: FC<SubtitleProps> = ({ lang }) => {
 
   return (
     <div className='mx-auto  sm:mb-6'>
-     <div className="flex flex-col text-center text-white  hidden md:flex h-48  sm:px-1 sm:w-auto">
+     <div className="flex flex-col text-center text-white  hidden md:flex h-50 md:h-48  sm:px-1 sm:w-auto">
       <p className="text-4xl sm:text-8xl glitch px-36 my-auto " data-text={displayText}>
         {displayText}
       </p>

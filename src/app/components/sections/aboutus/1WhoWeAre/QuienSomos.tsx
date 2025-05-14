@@ -57,7 +57,7 @@ const QuienSomos: FC = () => {
   return (
     <div id="quien-somos-component" className='flex flex-col w-full min-h-screen md:pt-24 h-full md:mb-16'>
       <Subtitle lang={lang} />
-      <div className='flex flex-wrap md:flex-col mx-auto text-center text-white text-md md:text-2xl px-8 md:px-36 py-12 md:mt-0'>
+      <div className='flex flex-wrap md:flex-col mx-auto text-center text-white text-md md:text-2xl px-8 md:px-36 pt-8 md:py-12 md:mt-0'>
         <p className='md:py-1'>
           <span className='font-bold text-2xl md:text-3xl text-red-500 opacity-90 
             hover:font-bold hover:opacity-90 hover:text-4xl 
