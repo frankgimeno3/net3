@@ -7,12 +7,12 @@ import QuienSomos from './components/sections/aboutus/1WhoWeAre/QuienSomos';
 import QueHacemos from './components/sections/aboutus/2WhatWeDo/QueHacemos';
 import WhyWithUs from './components/sections/aboutus/3WhyWithUs/WhyWithUs';
 import ContactRedirectionButton from './components/ContactRedirectionButton';
-import { useLanguage } from './context/LanguageContext';
+// import { useLanguage } from './context/LanguageContext';
 import BigMenu from './components/navs/BigMenu';
 import { useUI } from './context/UIContext';
 
 export default function Home() {
-  const { lang } = useLanguage();
+  // const { lang } = useLanguage();
   const footerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null); // ← Referencia al video
   const [isNearFooter, setIsNearFooter] = useState(false);

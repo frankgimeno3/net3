@@ -1,5 +1,5 @@
 "use client"
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import Link from 'next/link';
 import MainNav from '@/app/components/navs/MainNav';
 import FooterSection from '@/app/components/navs/FooterSection';

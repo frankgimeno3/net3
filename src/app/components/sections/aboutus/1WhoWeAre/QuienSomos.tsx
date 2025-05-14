@@ -14,23 +14,23 @@ const QuienSomos: FC = () => {
   const { lang } = useLanguage();  
   const content = content1[lang];
 
-  const [paisesVisibles, setPaisesVisibles] = useState(
-    paises.slice(0, 10).map(pais => ({ pais, opacity: 0.5 }))
-  );
+  // const [paisesVisibles, setPaisesVisibles] = useState(
+  //   paises.slice(0, 10).map(pais => ({ pais, opacity: 0.5 }))
+  // );
 
   const [isButtonVisible, setIsButtonVisible] = useState(true);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPaisesVisibles(prev => {
-        const lastPais = prev[prev.length - 1].pais;
-        const nextPais = paises[(paises.indexOf(lastPais) + 1) % paises.length];
-        const newPaises = [...prev.slice(1), { pais: nextPais, opacity: 0.5 }];
-        return newPaises.map((p, i) => ({ ...p, opacity: i === 0 || i === newPaises.length - 1 ? 0 : 0.5 }));
-      });
-    }, 1300);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setPaisesVisibles(prev => {
+  //       const lastPais = prev[prev.length - 1].pais;
+  //       const nextPais = paises[(paises.indexOf(lastPais) + 1) % paises.length];
+  //       const newPaises = [...prev.slice(1), { pais: nextPais, opacity: 0.5 }];
+  //       return newPaises.map((p, i) => ({ ...p, opacity: i === 0 || i === newPaises.length - 1 ? 0 : 0.5 }));
+  //     });
+  //   }, 1300);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   const scrollToNextSection = () => {
     window.scrollBy({ top: 960, behavior: 'smooth' });

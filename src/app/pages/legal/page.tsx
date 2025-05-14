@@ -1,7 +1,7 @@
 "use client";
 import FooterSection from '@/app/components/navs/FooterSection';
 import MainNav from '@/app/components/navs/MainNav';
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import { useLanguage } from '../../context/LanguageContext'; 
 
 interface LegalProps { }

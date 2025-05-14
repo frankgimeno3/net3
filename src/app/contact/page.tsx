@@ -4,12 +4,10 @@ import FooterSection from "../components/navs/FooterSection";
 import Contáctanos from "../components/sections/contact/Contáctanos";
 import MainNav from "../components/navs/MainNav";
 import BigMenu from "../components/navs/BigMenu";
-import { useLanguage } from '../context/LanguageContext'; 
 import { useUI } from '../context/UIContext'; 
 
 export default function Contact() {
-  const { lang } = useLanguage();  
-  const { isMenuOpen } = useUI();  
+   const { isMenuOpen } = useUI();  
 
   return (
     <div className="relative flex flex-col min-h-screen justify-between text-white bg-slate-900 w-full">
