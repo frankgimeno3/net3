@@ -5,10 +5,10 @@ import 'flag-icons/css/flag-icons.min.css';
 import gsap from 'gsap';
 import { useLanguage } from '@/app/context/LanguageContext';
  
-const paises = [
-  "ar", "bo", "br", "cl", "co", "cr", "cu", "do", "ec", "sv", "gt", "hn",
-  "mx", "ni", "pa", "py", "pe", "uy", "ve", "us"
-];
+// const paises = [
+//   "ar", "bo", "br", "cl", "co", "cr", "cu", "do", "ec", "sv", "gt", "hn",
+//   "mx", "ni", "pa", "py", "pe", "uy", "ve", "us"
+// ];
 
 const QuienSomos: FC = () => {
   const { lang } = useLanguage();  

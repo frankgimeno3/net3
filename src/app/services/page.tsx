@@ -45,10 +45,10 @@ const Servicios: FC = () => {
   };
 
   // Función para manejar la redirección y cerrar el menú
-  const handleRedirection = (url: string) => {
-    setIsMenuOpen(false);  // Cerramos el menú antes de hacer la redirección
-    window.location.href = url;  // Redirigimos a la URL
-  };
+  // const handleRedirection = (url: string) => {
+  //   setIsMenuOpen(false);  // Cerramos el menú antes de hacer la redirección
+  //   window.location.href = url;  // Redirigimos a la URL
+  // };
 
   return (
     <div
