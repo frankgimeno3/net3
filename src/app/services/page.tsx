@@ -13,7 +13,7 @@ import BigMenu from '@/app/components/navs/BigMenu';
 
 const Servicios: FC = () => {
   const { lang } = useLanguage();
-  const { isMenuOpen, setIsMenuOpen } = useUI();  
+  const { isMenuOpen } = useUI();  
 
   const [selectedService] = useState('none');
   const [isNearFooter, setIsNearFooter] = useState(false);
