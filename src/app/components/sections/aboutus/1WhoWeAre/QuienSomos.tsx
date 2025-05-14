@@ -57,9 +57,9 @@ const QuienSomos: FC = () => {
   return (
     <div id="quien-somos-component" className='flex flex-col w-full min-h-screen md:pt-24 h-full mb-16'>
       <Subtitle lang={lang} />
-      <div className='flex flex-wrap md:flex-col mx-auto text-start md:text-center text-white text-lg md:text-2xl md:px-36 py-12 md:mt-0'>
+      <div className='flex flex-wrap md:flex-col mx-auto text-center text-white text-md md:text-2xl px-8 md:px-36 py-12 pt-16 md:mt-0'>
         <p className='md:py-1'>
-          <span className='font-bold text-3xl text-red-500 opacity-90 
+          <span className='font-bold text-2xl md:text-3xl text-red-500 opacity-90 
             hover:font-bold hover:opacity-90 hover:text-4xl 
             transition-all duration-700 pr-2'>
             {content.titular}
@@ -68,7 +68,7 @@ const QuienSomos: FC = () => {
         </p>
         <p className='md:py-1'>
           {content.subt2} {content.subt3}
-          <span className='font-bold text-3xl text-red-500 opacity-90 
+          <span className='font-bold text-2xl md:text-3xl text-red-500 opacity-90 
             hover:font-bold hover:opacity-90 hover:text-4xl 
             transition-all duration-700 pl-2 '>
             {content.subt4}
