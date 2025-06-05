@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { useLanguage } from '@/app/context/LanguageContext';
 
 const MainNav: FC = () => {
-  const router = useRouter();
+  const router = useRouter(); 
   const { lang, changeLanguage } = useLanguage();
   const [showLangMenu, setShowLangMenu] = useState(false);
 
@@ -16,10 +16,10 @@ const MainNav: FC = () => {
   };
 
   return (
-    <nav
-      className="flex flex-row py-6 px-12 justify-between bg-white text-gray-800 fixed top-0 left-0 w-full z-50 shadow-md items-center"
-      style={{ backgroundColor: 'rgb(28, 28, 28)' }}
-    >
+<nav
+  className="flex flex-row py-6 px-4 sm:px-12 justify-between bg-white text-gray-800 fixed top-0 left-0 w-full z-50 shadow-md items-center"
+  style={{ backgroundColor: 'rgb(28, 28, 28)' }}
+>
       <div
         className="flex flex-row text-xl md:text-4xl cursor-pointer"
         onClick={() => handleRedirection('/')}

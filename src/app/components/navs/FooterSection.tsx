@@ -24,10 +24,11 @@ const FooterSection: FC<FooterSectionProps> = ({ id }) => {
   return (
     <footer
       id={id}
-      className="flex flex-row justify-between p-5 bg-black text-white px-24 py-12 z-50 relative items-center"
+      className="flex flex-col md:flex-row justify-between p-5 bg-black text-white px-4 sm:px-24 py-12 z-50 relative items-center"
       style={{ backgroundColor: "rgb(28, 28, 28)" }}
     >
-      <div className="flex flex-col text-center sm:text-left mx-12">
+      <div className="flex flex-col text-center sm:text-left sm:px-12 mt-12 gap-4 md:gap-0">
+
         <div
           className="flex flex-row text-xl md:text-4xl cursor-pointer"
           onClick={() => handleRedirection('/')}
@@ -59,11 +60,11 @@ const FooterSection: FC<FooterSectionProps> = ({ id }) => {
         </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row text-sm  sm:mt-6 text-center sm:text-left pr-36">
+      <div className="flex flex-col sm:flex-row text-sm mt-12 sm:mt-6 text-center sm:text-left md:pr-36 ">
         {(Object.keys(content.sections) as SectionKey[]).map((section) => (
-          <div key={section} className="flex flex-col w-full sm:px-12">
+          <div key={section} className="flex flex-col w-full sm:px-12 py-6">
             <p className="font-bold text-white text-lg">{content.sections[section]}</p>
-            <div className="flex flex-col py-3">
+            <div className="flex flex-col md:py-3">
               {content[section as SectionKey].map((item: string, index: number) => (
                 <p
                   key={index}
