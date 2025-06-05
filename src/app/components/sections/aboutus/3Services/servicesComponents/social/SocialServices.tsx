@@ -10,23 +10,11 @@ const SocialServices: FC<SocialServicesProps> = () => {
   const content = lang === 'ESP' ? social.ESP : social.ENG;
 
   const [selectedQuestion, setSelectedQuestion] = useState<string>('none');
-  const footerRef = useRef<HTMLDivElement>(null);
-  const [isNearFooter, setIsNearFooter] = useState(false);
-
+  
   const handleSelectedQuestion = (id: string) => {
     setSelectedQuestion(prev => (prev === id ? 'none' : id));
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!footerRef.current) return;
-      const footerTop = footerRef.current.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      setIsNearFooter(footerTop < windowHeight + 60);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+ 
 
   const faqItems = [
     {
