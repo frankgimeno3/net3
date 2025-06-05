@@ -27,35 +27,35 @@ const Contáctanos: FC = () => {
             type="text"
             name="name"
             placeholder="Tu nombre aquí"
-            className="px-4 py-2 text-gray-500 bg-transparent shadow-xl hover:placeholder-gray-300
+            className="px-4 py-2 text-gray-500 bg-transparent 
             placeholder-gray-400  border border-gray-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-yellow-300"
           />
           <input
             type="text"
             name="empresa"
             placeholder="Empresa"
-            className="px-4 py-2 text-gray-500 bg-transparent shadow-xl hover:placeholder-gray-300
+            className="px-4 py-2 text-gray-500 bg-transparent 
             placeholder-gray-400 border border-gray-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-yellow-300"
           />
           <input
             type="text"
             name="cargo"
             placeholder="Cargo"
-            className="px-4 py-2 text-gray-500 bg-transparent shadow-xl hover:placeholder-gray-300
+            className="px-4 py-2 text-gray-500 bg-transparent 
             placeholder-gray-400 border border-gray-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-yellow-300"
           />
           <input
             type="email"
             name="email"
             placeholder="Correo electrónico"
-            className="px-4 py-2 text-gray-500 bg-transparent shadow-xl hover:placeholder-gray-300
+            className="px-4 py-2 text-gray-500 bg-transparent 
             placeholder-gray-400 border border-gray-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-yellow-300"
           />
           <textarea
             name="message"
             placeholder="Mensaje"
             rows={4}
-            className="px-4 py-2 text-gray-500 bg-transparent shadow-xl hover:placeholder-gray-300
+            className="px-4 py-2 text-gray-500 bg-transparent 
             placeholder-gray-400 border border-gray-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-yellow-300"
           />
           <button
