@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
+    "aws-amplify": "^6.15.0",
     "flag-icons": "^7.3.2",
     "framer-motion": "^12.4.10",
     "gsap": "^3.13.0",

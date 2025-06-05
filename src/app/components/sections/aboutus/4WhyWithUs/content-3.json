@@ -1,0 +1,59 @@
+{
+    "ESP": {
+      "titular": "Por qué elegirnos?",
+      "card1": {
+        "titlevalue": "Impacto directo al especialista",
+        "subtitlecontent": "Publicación incluida en nuestros medios técnicos especializados B2B",
+        "iconcontent": "icon1"
+      },
+      "card2": {
+        "titlevalue": "Contenido más profesional",
+        "subtitlecontent": "Externaliza el copywriting en manos de un especialista.",
+        "iconcontent": "icon2"
+      },
+      "card3": {
+        "titlevalue": "Mejora a partir de tus propios datos",
+        "subtitlecontent": "Analiza los resultados de cada publicación, aprendiendo de errores y aciertos",
+        "iconcontent": "icon3"
+      },
+      "card4": {
+        "titlevalue": "Multiformato y multiplataforma",
+        "subtitlecontent": "Haz contenido para varias redes y formatos en una sola gestión.",
+        "iconcontent": "icon4"
+      },
+      "card5": {
+        "titlevalue": "Contenido para todo el año",
+        "subtitlecontent": "Asegúrate de tener contenido constante para redes sociales durante todo el año.",
+        "iconcontent": "icon5"
+      }
+    },
+    "ENG": {
+      "titular": "Why choose us?",
+      "card1": {
+        "titlevalue": "B2B technical media specialization",
+        "subtitlecontent": "We include publication of contents in our B2B technical publications",
+        "iconcontent": "icon1"
+      },
+      "card2": {
+        "titlevalue": "Guaranteed expertise",
+        "subtitlecontent": "Outsource your repetitive marketing tasks to a specialist.",
+        "iconcontent": "icon2"
+      },
+      "card3": {
+        "titlevalue": "Data driven improvements",
+        "subtitlecontent": "We analyse your results to learn and improve after every publication",
+        "iconcontent": "icon3"
+      },
+      "card4": {
+        "titlevalue": "Multiformat, multiplatform",
+        "subtitlecontent": "Create content for multiple formats and platforms with one process.",
+        "iconcontent": "icon4"
+      },
+      "card5": {
+        "titlevalue": "Year-round content",
+        "subtitlecontent": "Make sure you have consistent social media content all year long.",
+        "iconcontent": "icon5"
+      }
+    }
+  }
+  

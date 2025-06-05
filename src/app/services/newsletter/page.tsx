@@ -6,13 +6,13 @@ import PcServices from '../../components/servicesMenus/pcServices';
 import FooterSection from '@/app/components/navs/FooterSection';
 import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
 import { newsletter } from './newsletterContents.json';
-import { useLanguage } from '@/app/context/LanguageContext';  
+import { useLanguage } from '@/app/context/LanguageContext';
 
-interface NewsletterProps {}
+interface NewsletterProps { }
 
 const Newsletter: FC<NewsletterProps> = () => {
-  const { lang } = useLanguage();  
-   const [selectedService, setSelectedService] = useState(
+  const { lang } = useLanguage();
+  const [selectedService, setSelectedService] = useState(
     lang === "ESP" ? espContent[2] : engContent[2]
   );
   const [selectedQuestion, setSelectedQuestion] = useState<string>("none");
@@ -52,7 +52,7 @@ const Newsletter: FC<NewsletterProps> = () => {
       }}
     >
       <div className="fixed top-0 left-0 w-full z-50">
-        <MainNav  />
+        <MainNav />
       </div>
 
       <div className="flex flex-row">
@@ -61,68 +61,68 @@ const Newsletter: FC<NewsletterProps> = () => {
         </div>
 
 
-        <div className="flex flex-col xl:mt-24 bg-gray-900 bg-opacity-70 min-h-screen w-full pt-24 md:p-24 md:pl-[295px] max-w-9/10"
-          style={{ marginTop: "75px" }}
-        >
-          <p className="text-2xl md:text-4xl px-8 md:pl-12">{content.title}</p>
-          <p className="pt-8 px-8 md:pl-12 xl:pr-36">
-            {content.paragraph_1.key_1}{" "}
-            <span className="font-bold text-yellow-200">{content.paragraph_1.key_span_1}</span>
-            {content.paragraph_1.key_2}
-          </p>
-          <p className="pt-8 px-8 md:pl-12 xl:pr-36">
-            <span className="font-bold text-yellow-200">{content.paragraph_2.key_span_1}</span>
-            {content.paragraph_2.key_1}
-          </p>
+          <div className="flex flex-col xl:mt-24 bg-gray-900 bg-opacity-70 min-h-screen w-full pt-24 md:p-24 md:pl-[295px] max-w-9/10"
+            style={{ marginTop: "75px" }}
+          >
+            <p className="text-2xl md:text-4xl px-8 md:pl-12">{content.title}</p>
+            <p className="pt-8 px-8 md:pl-12 xl:pr-36">
+              {content.paragraph_1.key_1}{" "}
+              <span className="font-bold text-yellow-200">{content.paragraph_1.key_span_1}</span>
+              {content.paragraph_1.key_2}
+            </p>
+            <p className="pt-8 px-8 md:pl-12 xl:pr-36">
+              <span className="font-bold text-yellow-200">{content.paragraph_2.key_span_1}</span>
+              {content.paragraph_2.key_1}
+            </p>
 
-          <div className="px-8 md:pl-12 xl:pr-36 my-12 mb-96">
-            <div className="pr-5 py-5 mt-4 text-right mb-96 md:mb-0">
-            {lang=="ENG" && <p className="font-bold pb-2">Want to know more?</p>}
-            {lang=="ESP" && <p className="font-bold pb-2">¿Quieres saber más?</p>}
-                          {content.faq.map(({ id, title, answer }) => (
-                <div
-                  key={id}
-                  className="bg-white bg-opacity-20 pr-5 hover:bg-opacity-30 cursor-pointer rounded-r mb-1"
-                  onClick={() => handleSelectedQuestion(id)}
-                >
-                  <div className="flex justify-between items-center">
-                    <p className="p-5">{title}</p>
-                    <div className="ml-2">
-                      {selectedQuestion === id ? (
-                        <svg className="w-4 h-4 inline" viewBox="0 0 24 24" fill="none">
-                          <path d="M6 15L12 9L18 15" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      ) : (
-                        <svg className="w-4 h-4 inline transform rotate-180" viewBox="0 0 24 24" fill="none">
-                          <path d="M6 15L12 9L18 15" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      )}
+            <div className="px-8 md:pl-12 xl:pr-36 my-12 mb-96">
+              <div className="pr-5 py-5 mt-4 text-right mb-96 md:mb-0">
+                {lang == "ENG" && <p className="font-bold pb-2">Want to know more?</p>}
+                {lang == "ESP" && <p className="font-bold pb-2">¿Quieres saber más?</p>}
+                {content.faq.map(({ id, title, answer }) => (
+                  <div
+                    key={id}
+                    className="bg-white bg-opacity-20 pr-5 hover:bg-opacity-30 cursor-pointer rounded-r mb-1"
+                    onClick={() => handleSelectedQuestion(id)}
+                  >
+                    <div className="flex justify-between items-center">
+                      <p className="p-5">{title}</p>
+                      <div className="ml-2">
+                        {selectedQuestion === id ? (
+                          <svg className="w-4 h-4 inline" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 15L12 9L18 15" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        ) : (
+                          <svg className="w-4 h-4 inline transform rotate-180" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 15L12 9L18 15" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        )}
+                      </div>
                     </div>
+                    {selectedQuestion === id && (
+                      <p className="mt-2 text-sm text-left text-white px-8 pb-8">{answer}</p>
+                    )}
                   </div>
-                  {selectedQuestion === id && (
-                    <p className="mt-2 text-sm text-left text-white px-8 pb-8">{answer}</p>
-                  )}
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+
+            <div
+              className="z-50"
+              style={{
+                position: 'fixed',
+                right: '6rem',
+                bottom: isNearFooter ? '120px' : '24px',
+                transition: 'bottom 0.3s ease'
+              }}
+            >
+              <ContactRedirectionButton />
             </div>
           </div>
-
-          <div
-            className="z-50"
-            style={{
-              position: 'fixed',
-              right: '6rem',
-              bottom: isNearFooter ? '120px' : '24px',
-              transition: 'bottom 0.3s ease'
-            }}
-          >
-            <ContactRedirectionButton   />
-          </div>
-        </div>
       </div>
 
       <div ref={footerRef} className="absolute z-40 bottom-0 w-full">
-        <FooterSection   />
+        <FooterSection />
       </div>
     </div>
   );

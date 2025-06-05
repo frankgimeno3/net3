@@ -8,11 +8,11 @@ import ContactRedirectionButton from '@/app/components/ContactRedirectionButton'
 import { pr } from './prContents.json';
 import { useLanguage } from '@/app/context/LanguageContext'; // Importar el hook del contexto
 
-interface PRProps {}
+interface PRProps { }
 
 const PR: FC<PRProps> = () => {
     const { lang } = useLanguage(); // Usar el hook del contexto para obtener el idioma
-     const [selectedService, setSelectedService] = useState(
+    const [selectedService, setSelectedService] = useState(
         lang === "ESP" ? espContent[1] : engContent[1]
     );
     const [selectedQuestion, setSelectedQuestion] = useState<string>("none");
@@ -52,7 +52,7 @@ const PR: FC<PRProps> = () => {
             }}
         >
             <div className="fixed top-0 left-0 w-full z-50">
-                <MainNav  />
+                <MainNav />
             </div>
 
             <div className="flex flex-row">
@@ -84,7 +84,7 @@ const PR: FC<PRProps> = () => {
                     <div className='px-8 md:pl-12 xl:pr-36 my-12 mb-96'>
                         <div className="pr-5 py-5 mt-4 text-right mb-96 md:mb-0">
                             <p className="font-bold pb-2">{content.faq_intro}</p>
-                            {[ 
+                            {[
                                 {
                                     id: "nota",
                                     title: content.faqs.nota.question,
@@ -137,13 +137,13 @@ const PR: FC<PRProps> = () => {
                             transition: 'bottom 0.3s ease'
                         }}
                     >
-                        <ContactRedirectionButton   />
+                        <ContactRedirectionButton />
                     </div>
                 </div>
             </div>
 
             <div ref={footerRef} className='absolute z-40 bottom-0 w-full'>
-                <FooterSection   />
+                <FooterSection />
             </div>
         </div>
     );

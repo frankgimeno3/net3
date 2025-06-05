@@ -1,83 +1,101 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import MainNav from './components/navs/MainNav';
-import FooterSection from './components/navs/FooterSection';
+import { useEffect, useRef } from 'react';
 import QuienSomos from './components/sections/aboutus/1WhoWeAre/QuienSomos';
 import QueHacemos from './components/sections/aboutus/2WhatWeDo/QueHacemos';
-import WhyWithUs from './components/sections/aboutus/3WhyWithUs/WhyWithUs';
+import WhyWithUs from './components/sections/aboutus/4WhyWithUs/WhyWithUs';
 import ContactRedirectionButton from './components/ContactRedirectionButton';
-// import { useLanguage } from './context/LanguageContext';
-import BigMenu from './components/navs/BigMenu';
-import { useUI } from './context/UIContext';
 import Contáctanos from './components/sections/contact/Contáctanos';
+import OurServices from './components/sections/aboutus/3Services/OurServices';
 
 export default function Home() {
-  // const { lang } = useLanguage();
-  const footerRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null); // ← Referencia al video
-  const [isNearFooter, setIsNearFooter] = useState(false);
-
-  const { isMenuOpen } = useUI();
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (!footerRef.current) return;
-      const footerTop = footerRef.current.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      setIsNearFooter(footerTop < windowHeight + 60);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    // ← Establece la velocidad del video a 50%
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.5
+      videoRef.current.playbackRate = 0.5;
+
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.warn("Autoplay bloqueado por el navegador:", error);
+        });
+      }
     }
   }, []);
 
+  const scrollToNextSection = () => {
+    window.scrollBy({ top: 960, behavior: 'smooth' });
+  };
+
   return (
-    <div className="relative flex flex-col min-h-screen w-full bg-gray-800 text-white opacity-90">
+    <div className="relative mx-auto z-10">
       <video
-        ref={videoRef}  
-        src="/abstract.mp4"
+        ref={videoRef}
+        src="/abstractvid.mp4"
         autoPlay
         loop
         muted
-        className="fixed top-0 left-0 w-full h-full object-cover z-0"
+        className="fixed top-0 left-0 w-screen h-screen object-cover z-0"
       />
 
-      <div className="absolute top-0 left-0 w-full h-full bg-zinc-900 opacity-70 z-10" />
+      <div className="relative z-10 text-white">
+        <QuienSomos />
 
-      <div className="fixed top-0 left-0 w-full z-50 shadow-md">
-        <MainNav />
+        <div
+          className="bg-gray-100"
+          style={{
+            position: "relative",
+            zIndex: 10,
+            borderTopLeftRadius: "50% 100px",
+            borderTopRightRadius: "50% 100px",
+          }}
+        >
+          <QueHacemos />
+        </div>
+
+        <div
+          style={{
+            position: "relative",
+            zIndex: 11,
+            borderTopLeftRadius: "50% 100px",
+            borderTopRightRadius: "50% 100px",
+            marginTop: "-100px",
+            marginBottom: "-100px",
+          }}
+        >
+          <OurServices />
+        </div>
+
+        <WhyWithUs />
+        <Contáctanos />
       </div>
 
-      {isMenuOpen && (
-        <BigMenu />
-      )}
+       <button
+        id="floating-scroll-button"
+        onClick={scrollToNextSection}
+        className="fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-gray-100 p-4 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:bg-gray-300 hover:opacity-50"
+        style={{ zIndex: 1000 }}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-6 h-6 text-gray-500"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
 
-      <main className="flex flex-col w-full py-24 md:py-32 z-10 relative">
-        <QuienSomos />
-        <QueHacemos />
-        <WhyWithUs />
-        <Contáctanos/>
-      </main>
-
-      <div
-        className="hidden md:block
-        sticky md:fixed md:bottom-5 mx-auto z-50 transition-all duration-300 md:right-16"
-        style={{ bottom: isNearFooter ? '120px' : '24px' }}
+       <div
+        className="hidden md:block fixed bottom-5 right-16 z-50 transition-all duration-300"
       >
         <ContactRedirectionButton />
       </div>
-
-      <footer ref={footerRef} className="relative w-full z-40">
-        <FooterSection />
-      </footer>
     </div>
   );
 }
