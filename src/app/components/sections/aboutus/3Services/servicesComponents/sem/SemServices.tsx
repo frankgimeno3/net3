@@ -2,19 +2,21 @@
 import React, { FC, useState } from 'react';
 import { useLanguage } from '@/app/context/LanguageContext';
 import { sem } from './semContents.json';
- 
+import { useRouter } from 'next/navigation';
+import ActionButton from '@/app/components/sections/ActionButton';
+
 interface SemServicesProps {}
 
 const SemServices: FC<SemServicesProps> = () => {
   const { lang } = useLanguage();
   const content = lang === 'ESP' ? sem.ESP : sem.ENG;
+  const router = useRouter();
 
   const [selectedQuestion, setSelectedQuestion] = useState<string>('none');
-  
   const handleSelectedQuestion = (question: string) => {
     setSelectedQuestion(prev => (prev === question ? 'none' : question));
   };
- 
+
   const faqs = [
     content.faq.howItWorks,
     content.faq.budget,
@@ -22,31 +24,59 @@ const SemServices: FC<SemServicesProps> = () => {
     content.faq.successMetrics,
   ];
 
-  return (
-    <div className="flex flex-col max-w-5xl mx-auto py-36 px-6">
-      <h2 className="text-left text-6xl font-bold mb-12">{content.title}</h2>
-      <p className="pt-8">{content.description}</p>
-      <p className="pt-8 font-bold text-yellow-200">
-        {content.process}
-      </p>
+  const handleContactRedirection = () => {
+    router.push('/contact');
+  };
 
-      <div className=" my-12  ">
-           <p className="font-bold pb-2">{content.faq.howItWorks.question}</p>
-          {faqs.map(({ question, answer }) => (
-            <div
-              key={question}
-              className="bg-white bg-opacity-20 pr-5 hover:bg-opacity-30 cursor-pointer rounded-r mb-1"
-              onClick={() => handleSelectedQuestion(question)}
-            >
-              <div className="flex justify-between items-center">
-                <p className="p-5">{question}</p>
+  return (
+    <div className="flex flex-col max-w-5xl  py-12">
+      <h2 className="text-left text-6xl font-bold mb-12">{content.title}</h2>
+
+       <div className="flex flex-col gap-5 mb-5">
+        <div className="flex flex-row w-full justify-between items-start">
+          <div className="flex flex-col">
+            <div className="flex flex-col max-w-lg mr-12 gap-3 pt-3">
+              <p className="text-lg leading-relaxed">{content.description}</p>
+              <ActionButton
+                label={lang === 'ENG' ? 'Want to know more?' : '¿Quieres saber más?'}
+                onClick={handleContactRedirection}
+                align="left"
+              />
+            </div>
+          </div>
+          <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl shrink-0" />
+        </div>
+
+        <div className="flex flex-row w-full justify-between items-start">
+          <div className="flex flex-col">
+            <div className="flex flex-col max-w-lg mr-12 gap-3 pt-3">
+              <p className="text-lg leading-relaxed ">
+                {content.process}
+              </p>
+              <ActionButton
+                label={lang === 'ENG' ? 'Want to know more?' : '¿Quieres saber más?'}
+                onClick={handleContactRedirection}
+                align="left"
+              />
+            </div>
+          </div>
+          <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl shrink-0" />
+        </div>
+      </div>
+
+       <div className="flex flex-col mt-3">
+        {faqs.map(({ question, answer }) => (
+          <div
+            key={question}
+            className="flex flex-row rounded-r mb-2 rounded-xl"
+            onClick={() => handleSelectedQuestion(question)}
+          >
+            <div className="flex flex-col w-full">
+              <div className="flex flex-row justify-between items-center bg-indigo-500 w-full pr-8 cursor-pointer">
+                <p className="p-5 text-lg font-medium pl-8">{question}</p>
                 <div className="ml-2">
                   {selectedQuestion === question ? (
-                    <svg
-                      className="w-4 h-4 inline"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
+                    <svg className="w-4 h-4 inline" viewBox="0 0 24 24" fill="none">
                       <path
                         d="M6 15L12 9L18 15"
                         stroke="white"
@@ -73,17 +103,16 @@ const SemServices: FC<SemServicesProps> = () => {
                 </div>
               </div>
               {selectedQuestion === question && (
-                <p className="mt-2 text-sm text-left text-white px-8 pb-8">
-                  {answer}
-                </p>
+                <div className="flex py-3 bg-gray-100 text-gray-500 rounded-b-xl mb-3">
+                  <p className="text-left px-8 pb-3 py-2">{answer}</p>
+                </div>
               )}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-
-     
-   );
+    </div>
+  );
 };
 
 export default SemServices;

@@ -46,9 +46,11 @@ export default function Home() {
           className="bg-gray-100"
           style={{
             position: "relative",
-            zIndex: 10,
+            zIndex: 11,
             borderTopLeftRadius: "50% 100px",
             borderTopRightRadius: "50% 100px",
+            borderBottomLeftRadius: "50% 100px",
+            borderBottomRightRadius: "50% 100px",
           }}
         >
           <QueHacemos />
@@ -57,21 +59,29 @@ export default function Home() {
         <div
           style={{
             position: "relative",
-            zIndex: 11,
-            borderTopLeftRadius: "50% 100px",
-            borderTopRightRadius: "50% 100px",
+            zIndex: 10,
             marginTop: "-100px",
             marginBottom: "-100px",
           }}
         >
           <OurServices />
         </div>
-
         <WhyWithUs />
-        <Contáctanos />
+
+        <div
+          style={{
+            position: "relative",
+            zIndex: 11,
+            borderTopLeftRadius: "50% 100px",
+            borderTopRightRadius: "50% 100px",
+          }}
+        >
+          <Contáctanos />
+
+        </div>
       </div>
 
-       <button
+      <button
         id="floating-scroll-button"
         onClick={scrollToNextSection}
         className="fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-gray-100 p-4 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:bg-gray-300 hover:opacity-50"
@@ -91,7 +101,7 @@ export default function Home() {
         </svg>
       </button>
 
-       <div
+      <div
         className="hidden md:block fixed bottom-5 right-16 z-50 transition-all duration-300"
       >
         <ContactRedirectionButton />

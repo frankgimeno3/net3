@@ -16,7 +16,7 @@ const QuienSomos: FC = () => {
   return (
     <div id="quien-somos-component" className='flex flex-col w-full min-h-screen h-full'>
       <div className="relative z-10 p-8 mx-auto flex flex-col justify-center flex-grow max-w-5xl">
-        <h1 className="text-6xl font-bold">
+        <h1 className="text-7xl font-bold">
           {content.titular}
         </h1>
         <h2 className="text-2xl my-8">

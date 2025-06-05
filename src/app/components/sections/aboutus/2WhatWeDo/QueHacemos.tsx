@@ -52,24 +52,25 @@ const QueHacemos: FC = () => {
 
   return (
     <section
-      className="bg-gray-100 text-gray-600"
+      className="bg-gray-100 text-gray-600 py-36"
       style={{
         position: "relative",
         zIndex: 10,
         borderTopLeftRadius: "50% 100px",
         borderTopRightRadius: "50% 100px",
+                borderBottomLeftRadius: "50% 100px",
+        borderBottomRightRadius: "50% 100px",
       }}
     >
       <div className="flex flex-col max-w-5xl mx-auto py-36 px-6">
-        <h2 className="text-left text-6xl font-bold mb-12">
+        <h2 className="text-left text-7xl font-bold mb-12">
           {lang === "ESP" ? "¿Qué hacemos?" : "What we do"}
         </h2>
 
         {sectionData.map((section, i) => (
-          <div key={i} className="my-14 flex flex-row w-full justify-between">
+          <div key={i} className="my-5 flex flex-row w-full justify-between">
             <div className="flex flex-col">
               <h3 className="text-left text-4xl font-bold mb-8  max-w-lg">{section.title}</h3>
-
               <div className="flex flex-row items-center justify-between">
                 <div className="flex flex-col max-w-xl mr-12 gap-3">
                   {section.items.map((item, j) => (

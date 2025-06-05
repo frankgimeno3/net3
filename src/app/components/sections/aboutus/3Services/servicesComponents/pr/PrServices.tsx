@@ -1,5 +1,5 @@
 'use client';
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { useLanguage } from '@/app/context/LanguageContext';
 import { pr } from './prContents.json';
 import { useRouter } from 'next/navigation';
@@ -16,7 +16,12 @@ const PrServices: FC<PrServicesProps> = () => {
     router.push('/contact');
   };
 
-    const faqs = [
+  const [selectedQuestion, setSelectedQuestion] = useState<string>('none');
+  const handleSelectedQuestion = (id: string) => {
+    setSelectedQuestion(prev => (prev === id ? 'none' : id));
+  };
+
+  const faqs = [
     {
       id: 'nota',
       title: content.faqs.nota.question,
@@ -35,23 +40,14 @@ const PrServices: FC<PrServicesProps> = () => {
   ];
 
   return (
-    <div className="flex flex-col max-w-5xl mx-auto py-36 px-6">
+    <div className="flex flex-col max-w-5xl  py-12">
       <h2 className="text-left text-6xl font-bold mb-12">{content.title}</h2>
 
-      <p className="text-lg leading-relaxed mb-6">{content.intro}</p>
-      <p className="text-lg leading-relaxed mb-6">{content.data_collection}</p>
-      <p className="text-lg leading-relaxed mb-12">{content.content_kit}</p>
-
- 
-      {faqs.map(({ id, title, answer }) => (
-        <div
-          key={id}
-          className="my-14 flex flex-row w-full justify-between items-start"
-        >
+       <div className="flex flex-col gap-5 mb-5">
+        <div className="flex flex-row w-full justify-between items-start  ">
           <div className="flex flex-col">
-            <h3 className="text-left text-4xl font-bold mb-8 max-w-lg">{title}</h3>
-            <div className="flex flex-col max-w-xl mr-12 gap-3">
-              <p className="text-lg leading-relaxed">{answer}</p>
+            <div className="flex flex-col max-w-lg mr-12 gap-3 pt-3">
+              <p className="text-lg leading-relaxed">{content.intro}</p>
               <ActionButton
                 label={lang === 'ENG' ? 'Want to know more?' : '¿Quieres saber más?'}
                 onClick={handleContactRedirection}
@@ -59,9 +55,85 @@ const PrServices: FC<PrServicesProps> = () => {
               />
             </div>
           </div>
-          <div className="w-96 h-96 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-xl shrink-0" />
+          <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl shrink-0" />
         </div>
-      ))}
+
+        <div className="flex flex-row w-full justify-between items-start">
+          <div className="flex flex-col">
+            <div className="flex flex-col max-w-lg mr-12 gap-3 pt-3">
+              <p className="text-lg leading-relaxed">{content.data_collection}</p>
+              <ActionButton
+                label={lang === 'ENG' ? 'Want to know more?' : '¿Quieres saber más?'}
+                onClick={handleContactRedirection}
+                align="left"
+              />
+            </div>
+          </div>
+          <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl shrink-0" />
+        </div>
+
+        <div className="flex flex-row w-full justify-between items-start">
+          <div className="flex flex-col">
+            <div className="flex flex-col max-w-lg mr-12 gap-3 pt-3">
+              <p className="text-lg leading-relaxed">{content.content_kit}</p>
+              <ActionButton
+                label={lang === 'ENG' ? 'Want to know more?' : '¿Quieres saber más?'}
+                onClick={handleContactRedirection}
+                align="left"
+              />
+            </div>
+          </div>
+          <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl shrink-0" />
+        </div>
+      </div>
+
+       <div className="flex flex-col mt-3">
+        {faqs.map(({ id, title, answer }) => (
+          <div
+            key={id}
+            className="flex flex-row rounded-r mb-2 rounded-xl"
+            onClick={() => handleSelectedQuestion(id)}
+          >
+            <div className="flex flex-col w-full">
+              <div className="flex flex-row justify-between items-center bg-indigo-500 w-full pr-8 cursor-pointer">
+                <p className="p-5 text-lg font-medium pl-8">{title}</p>
+                <div className="ml-2">
+                  {selectedQuestion === id ? (
+                    <svg className="w-4 h-4 inline" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M6 15L12 9L18 15"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      className="w-4 h-4 inline transform rotate-180"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M6 15L12 9L18 15"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  )}
+                </div>
+              </div>
+              {selectedQuestion === id && (
+                <div className="flex py-3 bg-gray-100 text-gray-500 rounded-b-xl mb-3">
+                  <p className="text-left px-8 pb-3 py-2">{answer}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
