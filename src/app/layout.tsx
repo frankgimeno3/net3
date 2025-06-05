@@ -25,7 +25,7 @@ export default function RootLayout({
        >
         <LanguageProvider>
           <UIProvider>
-            <main className="min-h-screen bg-gray-100">
+            <main className="min-h-screen max-w-screen bg-gray-100">
             <MainNav />
               {children}
             <FooterSection id="main-footer"/>

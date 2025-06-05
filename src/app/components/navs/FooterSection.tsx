@@ -24,7 +24,8 @@ const FooterSection: FC<FooterSectionProps> = ({ id }) => {
   return (
     <footer
       id={id}
-      className="flex flex-col md:flex-row justify-between p-5 bg-black text-white px-4 sm:px-24 py-12 z-50 relative items-center"
+      className="flex flex-col md:flex-row justify-between p-5 bg-black text-white px-4 sm:px-24 py-12 z-50 
+      w-full relative items-center"
       style={{ backgroundColor: "rgb(28, 28, 28)" }}
     >
       <div className="flex flex-col text-center sm:text-left sm:px-12 mt-12 gap-4 md:gap-0">

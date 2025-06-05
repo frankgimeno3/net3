@@ -25,7 +25,7 @@ const Contáctanos: FC = () => {
     },
   };
 
-  const t = translations[lang] || translations['ESP']; // fallback to Spanish
+  const t = translations[lang] || translations['ESP'];   
 
   return (
     <div
@@ -36,11 +36,11 @@ const Contáctanos: FC = () => {
       }}
     >
       <div className='w-full max-w-6xl mx-auto flex flex-col text-center my-auto'>
-        <div className='flex flex-row text-7xl md:text-7xl mx-auto'>
+        <div className='flex flex-row text-4xl md:text-7xl mx-auto'>
           <p>{t.title}</p>
         </div>
 
-        <div className="px-36 pt-12">
+        <div className="px-12   md:px-36 pt-12">
           <form className="flex flex-col space-y-4">
             <input
               type="text"

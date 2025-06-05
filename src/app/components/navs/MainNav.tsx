@@ -17,7 +17,7 @@ const MainNav: FC = () => {
 
   return (
 <nav
-  className="flex flex-row py-6 px-4 sm:px-12 justify-between bg-white text-gray-800 fixed top-0 left-0 w-full z-50 shadow-md items-center"
+  className="flex flex-row py-6 px-12 justify-between bg-white text-gray-800 fixed top-0 left-0 w-full z-50 shadow-md items-center"
   style={{ backgroundColor: 'rgb(28, 28, 28)' }}
 >
       <div
@@ -34,12 +34,11 @@ const MainNav: FC = () => {
       </div>
 
       <div className="flex flex-row text-gray-200 text-md items-center relative">
-        <p className="hover:text-white pr-12 cursor-pointer"
-                onClick={() => handleRedirection('/services')}
->
+        <p className="hover:text-white pr-12 cursor-pointer hidden md:flex" 
+        onClick={() => handleRedirection('/services')}>
           {lang === 'ENG' ? 'Services' : 'Servicios'}
         </p>
-        <p className="hover:text-white pr-12 cursor-pointer"
+        <p className="hover:text-white pr-12 cursor-pointer hidden md:flex"
                 onClick={() => handleRedirection('/contact')}
 >
           {lang === 'ENG' ? 'Contact' : 'Contacto'}
