@@ -1,22 +1,17 @@
 'use client';
 import React, { FC, useEffect, useRef, useState } from 'react';
-
-import MainNav from '@/app/components/navs/MainNav';
-import FooterSection from '@/app/components/navs/FooterSection';
-import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
+ 
 import PcServices from '../components/servicesMenus/pcServices';
 import { useLanguage } from '@/app/context/LanguageContext';
 import ServicesPcContent from './servicesComponents/ServicesPcContent';
 import ServicesContentMobile from './servicesComponents/ServicesContentMobile';
-import { useUI } from '@/app/context/UIContext';
-
+ 
 const Servicios: FC = () => {
   const { lang } = useLanguage();
  
   const [selectedService] = useState('none');
    const [showMessage, setShowMessage] = useState(false);
-  const footerRef = useRef<HTMLDivElement>(null);
-
+ 
 useEffect(() => {
     const timer = setTimeout(() => {
       setShowMessage(true);

@@ -2,8 +2,7 @@
 import React, { FC, useState, useEffect, useRef } from 'react';
 import { useLanguage } from '@/app/context/LanguageContext';
 import { social } from './socialContents.json';
-import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
-
+ 
 interface SocialServicesProps {}
 
 const SocialServices: FC<SocialServicesProps> = () => {

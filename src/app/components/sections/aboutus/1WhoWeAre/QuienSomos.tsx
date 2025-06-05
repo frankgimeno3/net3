@@ -9,7 +9,7 @@ const QuienSomos: FC = () => {
   const content = content1[lang];
   const router = useRouter();
 
-  const handleRedirection = (redirection: string, newSection: string) => {
+  const handleRedirection = (redirection: string) => {
     router.push(redirection);
   };
 
@@ -31,7 +31,7 @@ const QuienSomos: FC = () => {
           <button
             className="p-3 px-5 bg-gray-200 rounded hover:bg-white hover:text-black transition-colors w-max text-gray-700"
             style={{ width: "220px" }}
-            onClick={() => handleRedirection('/en/contact', 'contact')}
+            onClick={() => handleRedirection('/en/contact')}
           >
             {content.buttonContent}
           </button>

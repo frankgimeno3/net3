@@ -1,9 +1,8 @@
 'use client';
-import React, { FC, useState, useEffect, useRef } from 'react';
+import React, { FC, useState } from 'react';
 import { useLanguage } from '@/app/context/LanguageContext';
 import { sem } from './semContents.json';
-import ContactRedirectionButton from '@/app/components/ContactRedirectionButton';
-
+ 
 interface SemServicesProps {}
 
 const SemServices: FC<SemServicesProps> = () => {
