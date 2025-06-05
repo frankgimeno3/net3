@@ -1,5 +1,5 @@
 'use client';
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useState } from 'react';
  
 import PcServices from '../components/servicesMenus/pcServices';
 import { useLanguage } from '@/app/context/LanguageContext';
@@ -8,21 +8,7 @@ import ServicesContentMobile from './servicesComponents/ServicesContentMobile';
  
 const Servicios: FC = () => {
   const { lang } = useLanguage();
- 
-  const [selectedService] = useState('none');
-   const [showMessage, setShowMessage] = useState(false);
- 
-useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowMessage(true);
-    }, 8000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const closeMessage = () => {
-    setShowMessage(false);
-  };
+  const [selectedService] = useState('none');  
 
   return (
     <div
@@ -41,7 +27,7 @@ useEffect(() => {
         <div className="flex flex-col ml-0 md:ml-64 bg-gray-900 bg-opacity-70 min-h-screen p-6 md:p-24 md:pb-48 w-full">
           <div className="p-5 md:mb-96 w-full">
             <div className="hidden md:block pt-24">
-              <ServicesPcContent showMessage={showMessage} closeMessage={closeMessage} />
+              <ServicesPcContent   />
             </div>
             <div className="block md:hidden pt-24 w-full">
               <ServicesContentMobile />

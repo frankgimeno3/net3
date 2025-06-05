@@ -69,7 +69,7 @@ const SEM: FC<SEMProps> = () => {
                         {content.description}
                     </p>
                     <p className="pt-8 px-8 md:pl-12 xl:pr-36">
-                        <span className='font-bold text-yellow-200'>{content.process}</span>
+                        <span className=' '>{content.process}</span>
                     </p>
 
                     <div className='px-8 md:pl-12 xl:pr-36 my-12 mb-96'>

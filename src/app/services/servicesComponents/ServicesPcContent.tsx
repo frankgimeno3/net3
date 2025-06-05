@@ -2,12 +2,10 @@
 import React from 'react';
 import { useLanguage } from '@/app/context/LanguageContext';
 
-interface ServicesPcContentProps {
-    showMessage: boolean;
-    closeMessage: () => void;
+interface ServicesPcContentProps { 
 }
 
-const ServicesPcContent: React.FC<ServicesPcContentProps> = ({ showMessage, closeMessage }) => {
+const ServicesPcContent: React.FC<ServicesPcContentProps> = ({ }) => {
     const { lang } = useLanguage();
 
     return (
@@ -37,54 +35,6 @@ const ServicesPcContent: React.FC<ServicesPcContentProps> = ({ showMessage, clos
                 </>
             )}
 
-            {showMessage && (
-                <div
-                    className="hidden md:block absolute top-24 left-56 text-sm opacity-80 bg-yellow-300"
-                    style={{
-                        zIndex: 1000,
-                        fontWeight: 'normal',
-                        padding: '10px 20px',
-                        borderRadius: '5px',
-                        color: 'white',
-                    }}
-                >
-                    <div className="flex flex-row items-center justify-between">
-                        <div className="flex items-center">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="mr-2 text-gray-700"
-                            >
-                                <path d="M14 19l-7-7 7-7" />
-                            </svg>
-                            {lang === 'ESP' && <p className="max-w-96 px-5 text-gray-700">Haz click para más detalles</p>}
-                            {lang === 'ENG' && <p className="max-w-96 px-5 text-gray-700">Click for more details</p>}
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="cursor-pointer text-gray-700"
-                                onClick={closeMessage}
-                            >
-                                <path d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            )}
         </div>
     );
 };
