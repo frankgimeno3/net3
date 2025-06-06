@@ -23,7 +23,7 @@ const OtherServices: FC<OtherServicesProps> = () => {
 
   return (
     <div className="flex flex-col max-w-5xl py-12">
-      <h2 className="text-left text-6xl font-bold mb-12">{content.title}</h2>
+      <h2 className="text-left text-3xl md:text-6xl font-bold mb-12">{content.title}</h2>
 
        <div className="flex flex-row w-full justify-between items-start mb-6">
         <div className="flex flex-col">
@@ -40,7 +40,7 @@ const OtherServices: FC<OtherServicesProps> = () => {
             />
           </div>
         </div>
-        <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl shrink-0" />
+        <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl hidden md:block" />
       </div>
 
        <div className="flex flex-row w-full justify-between items-start mb-12">
@@ -58,7 +58,7 @@ const OtherServices: FC<OtherServicesProps> = () => {
             />
           </div>
         </div>
-        <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl shrink-0" />
+        <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl hidden md:block" />
       </div>
 
        <div className="flex flex-col mt-3">

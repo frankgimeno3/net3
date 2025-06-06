@@ -39,23 +39,18 @@ export default function Home() {
         className="fixed top-0 left-0 w-screen h-screen object-cover z-0"
       />
 
-      <div className="relative z-10 text-white">
+      <div className="relative z-10 text-white ">
         <QuienSomos />
 
+ 
         <div
-          className="bg-gray-100"
           style={{
             position: "relative",
             zIndex: 11,
-            borderTopLeftRadius: "50% 100px",
-            borderTopRightRadius: "50% 100px",
-            borderBottomLeftRadius: "50% 100px",
-            borderBottomRightRadius: "50% 100px",
           }}
         >
           <QueHacemos />
         </div>
-
         <div
           style={{
             position: "relative",
@@ -101,9 +96,7 @@ export default function Home() {
         </svg>
       </button>
 
-      <div
-        className="hidden md:block fixed bottom-5 right-16 z-50 transition-all duration-300"
-      >
+      <div className="hidden md:block fixed bottom-5 right-16 z-50 transition-all duration-300">
         <ContactRedirectionButton />
       </div>
     </div>

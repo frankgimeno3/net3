@@ -46,11 +46,10 @@ const SocialServices: FC<SocialServicesProps> = () => {
 
   return (
     <div className="flex flex-col max-w-5xl py-12">
-      <h2 className="text-left text-6xl font-bold mb-12">{content.title}</h2>
+      <h2 className="text-left text-3xl md:text-6xl font-bold mb-12">{content.title}</h2>
 
       <div className="flex flex-col gap-5 mb-5">
-        {/* Sección 1 */}
-        <div className="flex flex-row w-full justify-between items-start">
+         <div className="flex flex-row w-full justify-between items-start">
           <div className="flex flex-col">
             <div className="flex flex-col max-w-lg mr-12 gap-3 pt-3">
               <p className="text-lg leading-relaxed">{content.description.first}</p>
@@ -61,14 +60,13 @@ const SocialServices: FC<SocialServicesProps> = () => {
               />
             </div>
           </div>
-          <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl shrink-0" />
+          <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl hidden md:block" />
         </div>
 
-        {/* Sección 2 */}
-        <div className="flex flex-row w-full justify-between items-start">
+         <div className="flex flex-row w-full justify-between items-start">
           <div className="flex flex-col">
             <div className="flex flex-col max-w-lg mr-12 gap-3 pt-3">
-              <p className="text-lg leading-relaxed">{content.description.second}</p>
+              <p className="text-lg leading-relaxed ">{content.description.second}</p>
               <ActionButton
                 label={lang === 'ENG' ? 'Want to know more?' : '¿Quieres saber más?'}
                 onClick={handleContactRedirection}
@@ -76,11 +74,10 @@ const SocialServices: FC<SocialServicesProps> = () => {
               />
             </div>
           </div>
-          <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl shrink-0" />
+          <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl hidden md:block" />
         </div>
 
-        {/* Sección 3 */}
-        <div className="flex flex-row w-full justify-between items-start">
+         <div className="flex flex-row w-full justify-between items-start">
           <div className="flex flex-col">
             <div className="flex flex-col max-w-lg mr-12 gap-3 pt-3">
               <p className="text-lg leading-relaxed">{content.description.third}</p>
@@ -91,12 +88,11 @@ const SocialServices: FC<SocialServicesProps> = () => {
               />
             </div>
           </div>
-          <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl shrink-0" />
+          <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl hidden md:block" />
         </div>
       </div>
 
-      {/* FAQ */}
-      <div className="flex flex-col mt-3">
+       <div className="flex flex-col mt-3">
         {faqItems.map(({ id, title, answer }) => (
           <div
             key={id}

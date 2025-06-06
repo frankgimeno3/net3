@@ -25,7 +25,7 @@ const OurServices: FC = () => {
             }}
         >
             <div className="flex flex-col max-w-5xl mx-auto py-36 px-6">
-                <h2 className="text-left text-7xl font-bold my-12 mt-24">
+                <h2 className="text-left text-4xl md:text-7xl font-bold my-12 mt-24">
                     {lang == "ESP" ? "Nuestros servicios":"Our services"}
                 </h2>
                 <ConsultancyService/>

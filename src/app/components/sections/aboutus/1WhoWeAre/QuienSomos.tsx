@@ -5,7 +5,7 @@ import { useLanguage } from '@/app/context/LanguageContext';
 import { useRouter } from 'next/navigation';
 
 const QuienSomos: FC = () => {
-  const { lang } = useLanguage();  
+  const { lang } = useLanguage();
   const content = content1[lang];
   const router = useRouter();
 
@@ -14,28 +14,30 @@ const QuienSomos: FC = () => {
   };
 
   return (
-    <div id="quien-somos-component" className='flex flex-col w-full min-h-screen h-full'>
-      <div className="relative z-10 p-8 mx-auto flex flex-col justify-center flex-grow max-w-5xl">
-        <h1 className="text-7xl font-bold">
-          {content.titular}
-        </h1>
-        <h2 className="text-2xl my-8">
-          {content.subtitulo}
-        </h2>
-        <p className='font-bold pb-2'>{content.labelText}</p>
-        <div className='flex flex-row w-full'>
-          <input
-            placeholder={content.placeholderText}
-            className='rounded bg-white bg-opacity-10 border border-gray-100 px-4 w-96 mr-4'
-          />
-          <button
-            className="p-3 px-5 bg-gray-200 rounded hover:bg-white hover:text-black transition-colors w-max text-gray-700"
-            style={{ width: "220px" }}
-            onClick={() => handleRedirection('/en/contact')}
-          >
-            {content.buttonContent}
-          </button>
-        </div>
+    <div id="quien-somos-component" className="w-full pt-24 md:p-8 px-12  md:flex flex-col mx-auto min-h-screen h-full 
+    justify-center md:max-w-5xl text-center md:text-left ">
+      <h1 className="mt-12 text-4xl md:text-7xl font-bold">
+        {content.titular}
+      </h1>
+      <h2 className="text-lg md:text-2xl py-8">
+        {content.subtitulo}
+      </h2>
+
+      <p className='font-bold pb-2 hidden md:block'>{content.labelText}</p>
+      <div className='flex flex-col md:flex-row w-full'>
+        <input
+          placeholder={content.placeholderText}
+          className='rounded bg-white bg-opacity-10 border border-gray-100 px-4 w-56 md:w-96 md:mr-4 mx-auto md:mx-0
+          min-h-12 hidden md:block'
+        />
+        <button
+          className=" p-2 md:p-3 px-5 bg-gray-200 rounded hover:bg-white hover:text-black transition-colors w-max text-gray-700
+          mt-2 md:mt-0 mx-auto md:mx-0 min-h-12 "
+          style={{ width: "225px" }}
+          onClick={() => handleRedirection('/contact')}
+        >
+          {content.buttonContent}
+        </button>
       </div>
     </div>
   );

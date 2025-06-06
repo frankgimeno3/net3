@@ -28,7 +28,7 @@ const WhyWithUs: FC = () => {
     <section className=" py-36 mt-24  text-white">
       <div className="flex flex-col items-center justify-center px-4">
         <div className="bg-gray-800 bg-opacity-80 md:px-10 rounded-xl shadow-xl max-w-4xl md:mx-24 py-24">
-          <h2 className="text-center mb-8 text-7xl md:text-5xl font-bold">
+          <h2 className="text-center mb-8 text-4xl md:text-7xl md:text-5xl font-bold">
             ¿{content.titular}
           </h2>
           <div className="flex flex-col">
