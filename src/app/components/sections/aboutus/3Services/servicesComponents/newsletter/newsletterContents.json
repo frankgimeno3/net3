@@ -2,15 +2,7 @@
   "newsletter": {
     "ESP": {
       "title": "Email Marketing Estratégico",
-      "paragraph_1": {
-        "key_1": "En nuestra agencia, te ayudamos a que tus clientes no se pierdan ninguna de tus noticias. Creamos estrategias personalizadas que incluyen la creación de ",
-        "key_span_1": "newsletters",
-        "key_2": " en formato HTML, para que tus suscriptores reciban por email todas tus publicaciones."
-      },
-      "paragraph_2": {
-        "key_span_1": "Olvídate de crear un diseño newsletter para cada nota prensa que crees.",
-        "key_1": " Con nosotros, obtendrás un kit de contenidos con una sola carpeta, en que recibirás tus notas de prensa por un lado, y el HTML para el newsletter ya diseñado por otro, con un link a la nota completa de tu web y los UTM ya aplicados para que puedas analizar los resultados con posterioridad."
-      },
+      "description": "Creamos newsletters en HTML para que tus suscriptores reciban tus novedades de forma atractiva y medible. Te entregamos todo listo para enviar y analizar resultados fácilmente.",
       "faq": [
         {
           "id": "newsletter",
@@ -36,15 +28,7 @@
     },
     "ENG": {
       "title": "Strategic Email Marketing",
-      "paragraph_1": {
-        "key_1": "At our agency, we ensure your clients never miss any of your updates. We create custom strategies that include the development of ",
-        "key_span_1": "newsletters",
-        "key_2": " in HTML format, so your subscribers get all your posts directly in their inbox."
-      },
-      "paragraph_2": {
-        "key_span_1": "Forget about creating a new newsletter design for each press release you create.",
-        "key_1": " With us, you’ll receive a content kit in a single folder, containing your press releases on one side, and the pre-designed HTML for the newsletter on the other, complete with a link to the full article on your website and UTMs already applied for tracking and later analysis."
-      },
+      "description": "We create HTML newsletters so your subscribers get your updates in an attractive, measurable way. We deliver everything ready to send and track results easily.",
       "faq": [
         {
           "id": "newsletter",

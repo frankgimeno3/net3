@@ -2,16 +2,7 @@
   "other":{
     "ESP": {
       "title": "Servicios Adicionales",
-      "paragraph_1": {
-        "key_1": "Además de los servicios incluidos en nuestros packs principales, ofrecemos ",
-        "key_span_1": "soluciones personalizadas",
-        "key_2": " para cubrir necesidades específicas que puedan surgir en tu estrategia de comunicación. Esto puede incluir desde diseño gráfico, producción audiovisual, gestión de influencers, posicionamiento SEO o campañas puntuales de comunicación interna."
-      },
-      "paragraph_2": {
-        "key_1": "Cada uno de estos servicios se define en función de tu caso particular, con propuestas y presupuestos hechos a medida. ",
-        "key_span_1": "Queremos que tengas todo lo que necesitas en un solo lugar",
-        "key_2": ", con la flexibilidad de sumar lo que te aporte más valor en cada etapa."
-      },
+      "description": "Ofrecemos soluciones personalizadas como diseño gráfico, audiovisual, influencers o SEO, adaptadas a tus necesidades y con propuestas a medida para potenciar tu comunicación.",
       "faq": [
         {
           "id": "tipos-servicios",
@@ -37,16 +28,7 @@
     },
     "ENG": {
       "title": "Add-on Services",
-      "paragraph_1": {
-        "key_1": "Beyond our core service packages, we offer ",
-        "key_span_1": "tailored solutions",
-        "key_2": " to meet specific needs that may come up in your communications strategy. This could include anything from graphic design, video production, influencer partnerships, SEO optimization, or one-off internal communications campaigns."
-      },
-      "paragraph_2": {
-        "key_1": "These services are always shaped around your unique goals, with custom proposals and budgets. ",
-        "key_span_1": "Our goal is to be your one-stop content partner",
-        "key_2": " — giving you the flexibility to add the tools you need, exactly when you need them."
-      },
+      "description": "We offer tailored solutions like graphic design, video, influencers, or SEO, adapted to your needs and with custom proposals to boost your communications.",
       "faq": [
         {
           "id": "tipos-servicios",
@@ -56,7 +38,7 @@
         {
           "id": "subcontrataciones",
           "title": "Can I outsource some of these services through you?",
-          "answer": "Absolutely. We can manage third-party services on your behalf and ensure everything aligns seamlessly with your brand’s messaging and campaign goals. We handle the coordination and quality control so you don’t have to."
+          "answer": "Absolutely. We can manage third-party services on your behalf and ensure everything aligns seamlessly with your brand's messaging and campaign goals. We handle the coordination and quality control so you don't have to."
         },
         {
           "id": "presupuesto-adicional",
@@ -71,5 +53,4 @@
       ]
     }
   }
-  
 }

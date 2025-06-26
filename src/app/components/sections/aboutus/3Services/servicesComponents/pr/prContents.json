@@ -2,9 +2,7 @@
     "pr": {
       "ESP": {
         "title": "Notas de Prensa y Relaciones con Medios",
-        "intro": "Ofrecemos un servicio especializado en la creación y distribución de notas de prensa, adaptado a las necesidades de tu marca. Nuestro objetivo es garantizar que tu mensaje llegue a los medios más relevantes y a la audiencia adecuada. Planificamos la estrategia de comunicación con antelación, asegurando que cada nota de prensa esté alineada con los objetivos de tu campaña.",
-        "data_collection": "Para cada una de tus publicaciones, hacemos el servicio de recolección de datos a partir de formatos prácticos como preguntas directas por email a ti o a quien nos indiques, formularios, o incluso podemos hacerte propuestas informativas a partir de contenido propio. Posteriormente, realizaremos el copywriting a partir de dicho contenido, aplicando filtros SEO para optimizar resultados en buscadores, y te enviaremos un resultado para revisar y/o publicar con los medios o en tu propia página web.",
-        "content_kit": "Entregamos el contenido de forma estructurada en un kit de contenidos, lo que te permite adaptar las notas de prensa a las características de cada plataforma y garantizar una mayor efectividad en la difusión.",
+        "description": "Creamos y distribuimos notas de prensa adaptadas a tu marca, asegurando que tu mensaje llegue a los medios y audiencia adecuados. Recopilamos la información necesaria, redactamos el contenido optimizado y lo entregamos en un kit listo para su difusión.",
         "faq_intro": "¿Quieres saber más?",
         "faqs": {
           "nota": {
@@ -23,9 +21,7 @@
       },
       "ENG": {
         "title": "Press Releases & Media Relations",
-        "intro": "We offer a specialized press release creation and distribution service tailored to your brand's communication needs. Our goal is to ensure your message reaches the most relevant media outlets and resonates with the right audience. Every release is part of a pre-planned communication strategy aligned with your campaign objectives.",
-        "data_collection": "For each release, we collect key information using streamlined methods such as email interviews with you or your team, digital forms, or we can even create proposals based on your existing materials. From there, we craft high-impact copy using SEO best practices to enhance visibility across search engines. The final draft is sent to you for approval before publication—either through the media or on your own platform.",
-        "content_kit": "All content is delivered as a structured media kit, giving you the flexibility to tailor each release for different platforms and maximize your reach across channels.",
+        "description": "We create and distribute press releases tailored to your brand, ensuring your message reaches the right media and audience. We gather key info, write optimized content, and deliver it as a ready-to-use media kit.",
         "faq_intro": "Want to know more?",
         "faqs": {
           "nota": {
@@ -34,7 +30,7 @@
           },
           "cantidad": {
             "question": "How many press releases are included?",
-            "answer": "We offer different packages that include one or multiple press releases per month, depending on your campaign’s communication goals. Our service is designed to be flexible and adapt to your editorial calendar."
+            "answer": "We offer different packages that include one or multiple press releases per month, depending on your campaign's communication goals. Our service is designed to be flexible and adapt to your editorial calendar."
           },
           "kit": {
             "question": "What is a media kit?",

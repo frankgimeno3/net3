@@ -3,8 +3,7 @@ import content2 from "./content-2.json";
 import { useLanguage } from "@/app/context/LanguageContext";
 import { useRouter } from "next/navigation";
 import ActionButton from "../../ActionButton";
-
-
+import Image from "next/image";
 
 const QueHacemos: FC = () => {
   const { lang } = useLanguage();
@@ -18,6 +17,12 @@ const QueHacemos: FC = () => {
   const handleContactRedirection = () => {
     router.push("/contact");
   };
+
+  const imagePaths = [
+    "/contentImages/1CalendarComuPlans.png",
+    "/contentImages/2seosem.png",
+    "/contentImages/3copywriting.png",
+  ];
 
   const sectionData = [
     {
@@ -52,7 +57,7 @@ const QueHacemos: FC = () => {
 
   return (
     <section
-      className="bg-gray-100 text-gray-600 py-36   "
+      className="bg-gray-100 text-gray-600 py-36"
       style={{
         position: "relative",
         zIndex: 10,
@@ -62,26 +67,35 @@ const QueHacemos: FC = () => {
         borderBottomRightRadius: "50% 100px",
       }}
     >
-      <div className="flex flex-col md:max-w-5xl  py-8 md:py-36 px-6 mx-6 md:mx-auto  ">
-        <h2 className="text-left text-5xl md:text-7xl font-bold mb-12 w-full  ">
+      <div className="flex flex-col md:max-w-5xl py-8 md:py-36 px-6 mx-6 md:mx-auto">
+        <h2 className="text-left text-5xl md:text-7xl font-bold mb-12 w-full">
           {lang === "ESP" ? "¿Qué hacemos?" : "What we do"}
         </h2>
         {sectionData.map((section, i) => (
-          <div key={i} className="my-5 flex flex-row w-full justify-between">
-            <div className="flex flex-col ">
-              <h3 className="text-left text-3xl font-bold mb-2 md:mb-8  md:max-w-lg">{section.title}</h3>
+          <div key={i} className="my-5 flex flex-row w-full justify-between items-start">
+            <div className="flex flex-col w-1/2">
+              <h3 className="text-left text-3xl font-bold mb-2 md:mb-8 md:max-w-lg">{section.title}</h3>
               <div className="flex flex-row items-center justify-between">
-                <div className="flex flex-col md:max-w-xl  mr-12   md:gap-3">
+                <div className="flex flex-col md:max-w-xl mr-12 md:gap-3">
                   {section.items.map((item, j) => (
                     <p key={j} className="leading-relaxed text-md md:text-lg">
                       {item.text}
                     </p>
                   ))}
-                  <ActionButton label={section.button} onClick={handleContactRedirection} align={"left"}/>
+                  <ActionButton label={section.button} onClick={handleContactRedirection} align={"left"} />
                 </div>
               </div>
             </div>
-            <div className="w-96 h-96 bg-gray-300 hover:bg-opacity-90 rounded-xl hidden md:block"></div>
+            <div className=" hidden md:block relative " 
+            style={{"width":"450px", "height":"450px"}}>
+              <Image
+                src={imagePaths[i]}
+                layout="fill"
+                objectFit="contain"
+                alt={`quehacemos-img-${i}`}
+                className="rounded-xl"
+               />
+            </div>
           </div>
         ))}
       </div>

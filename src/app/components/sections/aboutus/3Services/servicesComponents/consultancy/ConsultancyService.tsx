@@ -4,6 +4,7 @@ import { useLanguage } from '@/app/context/LanguageContext';
 import { consultancy } from './consultancyContents.json';
 import { useRouter } from 'next/navigation';
 import ActionButton from '@/app/components/sections/ActionButton';
+import Image from "next/image";
 
 interface ConsultancyServiceProps { }
 
@@ -25,7 +26,7 @@ const ConsultancyService: FC<ConsultancyServiceProps> = () => {
     <div className="flex flex-col max-w-5xl  py-12">
       <h2 className="text-left text-3xl md:text-6xl font-bold mb-12">{content.title}</h2>
 
-       <div className="flex flex-col gap-5 mb-5">
+      <div className="flex flex-col gap-5 mb-5">
         <div className="flex flex-row w-full justify-between items-start">
           <div className="flex flex-col ">
             <div className="flex flex-col max-w-lg mr-12 gap-3 pt-3">
@@ -43,8 +44,16 @@ const ConsultancyService: FC<ConsultancyServiceProps> = () => {
               />
             </div>
           </div>
-          <div className=" w-80 h-80 bg-white bg-opacity-10  rounded-xl hidden md:block" />
-
+          <div className=" hidden md:block relative "
+            style={{ "width": "450px", "height": "450px" }}>
+            <Image
+              src={"/contentImages/4consulting.png"}
+              layout="fill"
+              objectFit="contain"
+              alt={`s1`}
+              className="rounded-xl"
+            />
+          </div>
         </div>
 
         <div className="flex flex-row w-full justify-between items-start">
@@ -68,8 +77,16 @@ const ConsultancyService: FC<ConsultancyServiceProps> = () => {
               />
             </div>
           </div>
-          <div className=" w-80 h-80 bg-white bg-opacity-10  rounded-xl hidden md:block" />
-        </div>
+          <div className=" hidden md:block relative "
+            style={{ "width": "450px", "height": "450px" }}>
+            <Image
+              src={"/contentImages/5orderfolders.png"}
+              layout="fill"
+              objectFit="contain"
+              alt={`s2`}
+              className="rounded-xl"
+            />
+          </div>        </div>
 
         <div className="flex flex-row w-full justify-between items-start">
           <div className="flex flex-col ">
@@ -88,8 +105,16 @@ const ConsultancyService: FC<ConsultancyServiceProps> = () => {
               />
             </div>
           </div>
-          <div className="w-80 h-80 bg-white bg-opacity-10  rounded-xl hidden md:block" />
-
+          <div className=" hidden md:block relative "
+            style={{ "width": "450px", "height": "450px" }}>
+            <Image
+              src={"/contentImages/6entregaas.png"}
+              layout="fill"
+              objectFit="contain"
+              alt={`s2`}
+              className="rounded-xl"
+            />
+          </div>
         </div>
       </div>
 
@@ -133,7 +158,7 @@ const ConsultancyService: FC<ConsultancyServiceProps> = () => {
               </div>
               {selectedQuestion === id && (
                 <div className="flex py-3 bg-gray-100  text-gray-500 rounded-b-xl mb-3 ">
-                    <p className="text-left px-8 pb-3 py-2  ">{answer}</p>
+                  <p className="text-left px-8 pb-3 py-2  ">{answer}</p>
                 </div>
               )}
             </div>

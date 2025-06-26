@@ -4,6 +4,7 @@ import { useLanguage } from '@/app/context/LanguageContext';
 import { sem } from './semContents.json';
 import { useRouter } from 'next/navigation';
 import ActionButton from '@/app/components/sections/ActionButton';
+import Image from 'next/image';
 
 interface SemServicesProps {}
 
@@ -32,39 +33,29 @@ const SemServices: FC<SemServicesProps> = () => {
     <div className="flex flex-col max-w-5xl  py-12">
       <h2 className="text-left text-3xl md:text-6xl font-bold mb-12">{content.title}</h2>
 
-       <div className="flex flex-col gap-5 mb-5">
-        <div className="flex flex-row w-full justify-between items-start">
-          <div className="flex flex-col">
-            <div className="flex flex-col max-w-lg mr-12 gap-3 pt-3">
-              <p className="text-lg leading-relaxed">{content.description}</p>
-              <ActionButton
-                label={lang === 'ENG' ? 'Want to know more?' : '¿Quieres saber más?'}
-                onClick={handleContactRedirection}
-                align="left"
-              />
-            </div>
+      <div className="flex flex-row w-full justify-between items-start mb-5">
+        <div className="flex flex-col">
+          <div className="flex flex-col max-w-lg mr-12 gap-3 pt-3">
+            <p className="text-lg leading-relaxed">{content.description}</p>
+            <ActionButton
+              label={lang === 'ENG' ? 'Want to know more?' : '¿Quieres saber más?'}
+              onClick={handleContactRedirection}
+              align="left"
+            />
           </div>
-          <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl hidden md:block" />
         </div>
-
-        <div className="flex flex-row w-full justify-between items-start">
-          <div className="flex flex-col">
-            <div className="flex flex-col max-w-lg mr-12 gap-3 pt-3">
-              <p className="text-lg leading-relaxed ">
-                {content.process}
-              </p>
-              <ActionButton
-                label={lang === 'ENG' ? 'Want to know more?' : '¿Quieres saber más?'}
-                onClick={handleContactRedirection}
-                align="left"
-              />
-            </div>
-          </div>
-          <div className="w-80 h-80 bg-white bg-opacity-10 rounded-xl hidden md:block" />
+        <div className="hidden md:block relative" style={{ width: '450px', height: '450px' }}>
+          <Image
+            src={"/contentImages/2seosem.png"}
+            layout="fill"
+            objectFit="contain"
+            alt={`s2`}
+            className="rounded-xl"
+          />
         </div>
       </div>
 
-       <div className="flex flex-col mt-3">
+      <div className="flex flex-col mt-3">
         {faqs.map(({ question, answer }) => (
           <div
             key={question}
