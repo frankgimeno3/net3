@@ -27,30 +27,17 @@ const QueHacemos: FC = () => {
   const sectionData = [
     {
       title: content.Planes.titular,
-      items: [
-        { text: content.Planes.content1 },
-        { text: content.Planes.content2 },
-        { text: content.Planes.content3 },
-      ],
+      resumen: lang === "ESP" ? (content.Planes as any).resumen : (content.Planes as any).summary,
       button: lang === "ESP" ? "Crea tu plan comunicativo" : "Create your communication plan",
     },
     {
       title: content.Promocion.titular,
-      items: [
-        { text: content.Promocion.content1 },
-        { text: content.Promocion.content2 },
-        { text: content.Promocion.content3 },
-      ],
+      resumen: lang === "ESP" ? (content.Promocion as any).resumen : (content.Promocion as any).summary,
       button: lang === "ESP" ? "Aparece el primero con anuncios en Google" : "Appears first with Google Ads",
     },
     {
       title: content.Contenidos.titular,
-      items: [
-        { text: content.Contenidos.content1 },
-        { text: content.Contenidos.content2 },
-        { text: content.Contenidos.content3 },
-        { text: content.Contenidos.content4 },
-      ],
+      resumen: lang === "ESP" ? (content.Contenidos as any).resumen : (content.Contenidos as any).summary,
       button: lang === "ESP" ? "Prueba con un artículo gratis!" : "Try with a free article!",
     },
   ];
@@ -67,7 +54,7 @@ const QueHacemos: FC = () => {
         borderBottomRightRadius: "50% 100px",
       }}
     >
-      <div className="flex flex-col md:max-w-5xl py-8 md:py-36 px-6 mx-6 md:mx-auto">
+      <div className="flex flex-col md:max-w-5xl py-8 md:py-12 px-6 mx-6 md:mx-auto">
         <h2 className="text-left text-5xl md:text-7xl font-bold mb-12 w-full">
           {lang === "ESP" ? "¿Qué hacemos?" : "What we do"}
         </h2>
@@ -77,25 +64,23 @@ const QueHacemos: FC = () => {
               <h3 className="text-left text-3xl font-bold mb-2 md:mb-8 md:max-w-lg">{section.title}</h3>
               <div className="flex flex-row items-center justify-between">
                 <div className="flex flex-col md:max-w-xl mr-12 md:gap-3">
-                  {section.items.map((item, j) => (
-                    <p key={j} className="leading-relaxed text-md md:text-lg">
-                      {item.text}
-                    </p>
-                  ))}
+                  <p className="leading-relaxed text-md md:text-lg">
+                    {section.resumen}
+                  </p>
                   <ActionButton label={section.button} onClick={handleContactRedirection} align={"left"} />
                 </div>
               </div>
             </div>
-            <div className=" hidden md:block relative " 
-            style={{"width":"450px", "height":"450px"}}>
-              <Image
-                src={imagePaths[i]}
-                layout="fill"
-                objectFit="contain"
-                alt={`quehacemos-img-${i}`}
-                className="rounded-xl"
-               />
-            </div>
+              <div className=" hidden md:block relative " 
+              style={{"width":"450px", "height":"450px"}}>
+                <Image
+                  src={imagePaths[i]}
+                  layout="fill"
+                  objectFit="contain"
+                  alt={`quehacemos-img-${i}`}
+                  className=""
+                />
+              </div>
           </div>
         ))}
       </div>

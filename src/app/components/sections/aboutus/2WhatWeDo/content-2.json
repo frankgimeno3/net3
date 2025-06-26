@@ -2,43 +2,29 @@
     "ESP": {
         "Planes": {
             "titular": "Creación de planes comunicativos",
-            "content1": "Estrategias de contenido para redes, web y otros canales",
-            "content2": "Organización y calendarización de procesos según las necesidades del plan",
-            "content3": "Gestión presupuestaria estratégica para maximizar objetivos orientados a resultados"
+            "resumen": "Creamos estrategias de contenido personalizadas para redes, web y otros canales, organizamos y calendarizamos procesos según tus necesidades y gestionamos el presupuesto para maximizar resultados."
         },
         "Contenidos": {
             "titular": "Creación de contenidos",
-            "content1": "Gestión integral de la producción de contenidos",
-            "content2": "Entregas calendarizadas de kits de contenidos",
-            "content3": "Contenido adaptado a diferentes plataformas",
-            "content4": "Asistencia post y pre-publicación"
+            "resumen": "Gestionamos la producción integral de contenidos, entregamos kits adaptados a cada plataforma y te asistimos antes y después de la publicación."
         },
         "Promocion": {
             "titular": "Promoción de contenidos",
-            "content1": "Inversión en publicidad SEM para maximización de resultados",
-            "content2": "Optimización de resultados mediante estrategias SEO",
-            "content3": "Análisis estratégico de resultados"
+            "resumen": "Invertimos en publicidad SEM, optimizamos resultados con SEO y analizamos estratégicamente el impacto de tus campañas."
         }
     },
     "ENG": {
         "Planes": {
             "titular": "Creation of Communication Plans",
-            "content1": "Content strategies for social media, web, and other channels",
-            "content2": "Organization and scheduling of processes according to the plan's needs",
-            "content3": "Strategic budget management to maximize result-oriented objectives"
+            "summary": "We create personalized content strategies for social media, web, and other channels, organize and schedule processes according to your needs, and manage budgets to maximize results."
         },
         "Contenidos": {
             "titular": "Content Creation",
-            "content1": "Comprehensive content production management",
-            "content2": "Scheduled delivery of content kits",
-            "content3": "Content tailored for different platforms",
-            "content4": "Pre- and post-publication support"
+            "summary": "We manage comprehensive content production, deliver kits tailored to each platform, and assist you before and after publication."
         },
         "Promocion": {
             "titular": "Content Promotion",
-            "content1": "Investment in SEM advertising for maximum results",
-            "content2": "Optimization of results through SEO strategies",
-            "content3": "Strategic analysis of results"
+            "summary": "We invest in SEM advertising, optimize results with SEO, and strategically analyze the impact of your campaigns."
         }
     }
 }
