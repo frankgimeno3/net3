@@ -34,10 +34,6 @@ const MainNav: FC = () => {
       </div>
 
       <div className="flex flex-row text-gray-200 text-md items-center relative">
-        <p className="hover:text-white pr-12 cursor-pointer hidden md:flex" 
-        onClick={() => handleRedirection('/services')}>
-          {lang === 'ENG' ? 'Services' : 'Servicios'}
-        </p>
         <p className="hover:text-white pr-12 cursor-pointer hidden md:flex"
                 onClick={() => handleRedirection('/contact')}
 >

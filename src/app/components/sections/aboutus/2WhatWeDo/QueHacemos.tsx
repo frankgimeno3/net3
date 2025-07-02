@@ -19,7 +19,7 @@ const QueHacemos: FC = () => {
   };
 
   const imagePaths = [
-    "/contentImages/1CalendarComuPlans.png",
+    "/contentImages/1CalendarComuPlans.jpg",
     "/contentImages/2seosem.png",
     "/contentImages/3copywriting.png",
   ];
