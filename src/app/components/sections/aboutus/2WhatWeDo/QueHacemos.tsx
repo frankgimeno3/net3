@@ -75,10 +75,9 @@ const QueHacemos: FC = () => {
               style={{"width":"450px", "height":"450px"}}>
                 <Image
                   src={imagePaths[i]}
-                  layout="fill"
-                  objectFit="contain"
+fill
                   alt={`quehacemos-img-${i}`}
-                  className=""
+                  className="object-contain"
                 />
               </div>
           </div>

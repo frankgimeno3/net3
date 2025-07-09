@@ -30,7 +30,6 @@ button, .button {
   font-family: var(--font-inter), sans-serif;
 }
 
-/* Animaciones y demás estilos */
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 0%;

@@ -1,17 +1,37 @@
 'use client';
 import React, { FC, useState } from 'react';
 import { useLanguage } from '@/app/context/LanguageContext';
-import { other } from './otherContents.json';
+import otherData from './otherContents.json';
 import { useRouter } from 'next/navigation';
 import ActionButton from '@/app/components/sections/ActionButton';
 import Image from 'next/image';
 
-interface OtherServicesProps {}
+interface FaqItem {
+  id: string;
+  title: string;
+  answer: string;
+}
 
-const OtherServices: FC<OtherServicesProps> = () => {
+interface LanguageContent {
+  title: string;
+  description: string;
+  faq: FaqItem[];
+}
+
+interface OtherDataStructure {
+  ESP: LanguageContent;
+  ENG: LanguageContent;
+}
+
+interface OtherJsonStructure {
+  other: OtherDataStructure;
+}
+
+const OtherServices: FC = () => {
   const { lang } = useLanguage();
-  const content = other[lang];
   const router = useRouter();
+
+  const content: LanguageContent = otherData.other[lang as keyof OtherDataStructure];
 
   const [selectedQuestion, setSelectedQuestion] = useState<string>('none');
   const handleSelectedQuestion = (id: string) => {
@@ -39,11 +59,10 @@ const OtherServices: FC<OtherServicesProps> = () => {
         </div>
         <div className="hidden md:block relative" style={{ width: '450px', height: '450px' }}>
           <Image
-            src={"/contentImages/10other.png"}
-            layout="fill"
-            objectFit="contain"
-            alt={`s2`}
-            className="rounded-xl"
+            src="/contentImages/10other.png"
+            fill
+            alt="other services"
+            className="rounded-xl object-contain"
           />
         </div>
       </div>

@@ -3,7 +3,6 @@ import OtherServices from "./servicesComponents/other/OtherServices";
 import NewsletterService from "./servicesComponents/newsletter/NewsletterService";
 import ConsultancyService from "./servicesComponents/consultancy/ConsultancyService";
 import PrServices from "./servicesComponents/pr/PrServices";
-// import SemServices from "./servicesComponents/sem/SemServices";
 import SocialServices from "./servicesComponents/social/SocialServices";
  import { useLanguage } from '@/app/context/LanguageContext';
 

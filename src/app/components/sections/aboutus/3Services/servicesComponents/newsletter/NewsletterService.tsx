@@ -1,17 +1,38 @@
 'use client';
 import React, { FC, useState } from 'react';
 import { useLanguage } from '@/app/context/LanguageContext';
-import { newsletter } from './newsletterContents.json';
+import newsletterData from './newsletterContents.json';
 import { useRouter } from 'next/navigation';
 import ActionButton from '@/app/components/sections/ActionButton';
 import Image from 'next/image';
 
-interface NewsletterServiceProps {}
+interface FaqItem {
+  id: string;
+  title: string;
+  answer: string;
+}
 
-const NewsletterService: FC<NewsletterServiceProps> = () => {
+interface LanguageContent {
+  title: string;
+  description: string;
+  faq: FaqItem[];
+}
+
+interface NewsletterData {
+  ESP: LanguageContent;
+  ENG: LanguageContent;
+}
+
+interface NewsletterJsonStructure {
+  newsletter: NewsletterData;
+}
+
+const NewsletterService: FC = () => {
   const { lang } = useLanguage();
-  const content = newsletter[lang];
   const router = useRouter();
+
+  // Accede a la propiedad newsletter primero
+  const content: LanguageContent = newsletterData.newsletter[lang as keyof NewsletterData];
 
   const [selectedQuestion, setSelectedQuestion] = useState<string>('none');
   const handleSelectedQuestion = (id: string) => {
@@ -39,11 +60,10 @@ const NewsletterService: FC<NewsletterServiceProps> = () => {
         </div>
         <div className="hidden md:block relative" style={{ width: '450px', height: '450px' }}>
           <Image
-            src={"/contentImages/9em.png"}
-            layout="fill"
-            objectFit="contain"
-            alt={`s2`}
-            className="rounded-xl"
+            src="/contentImages/9em.png"
+            fill
+            alt="newsletter"
+            className="rounded-xl object-contain"
           />
         </div>
       </div>

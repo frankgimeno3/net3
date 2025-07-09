@@ -1,27 +1,54 @@
 'use client';
 import React, { FC, useState } from 'react';
 import { useLanguage } from '@/app/context/LanguageContext';
-import { pr } from './prContents.json';
+import prData from './prContents.json';
 import { useRouter } from 'next/navigation';
 import ActionButton from '@/app/components/sections/ActionButton';
 import Image from 'next/image';
 
-interface PrServicesProps { }
+interface FaqItem {
+  question: string;
+  answer: string;
+}
 
-const PrServices: FC<PrServicesProps> = () => {
+interface Faqs {
+  nota: FaqItem;
+  cantidad: FaqItem;
+  kit: FaqItem;
+}
+
+interface LanguageContent {
+  title: string;
+  description: string;
+  faqs: Faqs;
+}
+
+interface PrDataStructure {
+  ESP: LanguageContent;
+  ENG: LanguageContent;
+}
+
+interface PrJsonStructure {
+  pr: PrDataStructure;
+}
+
+const PrServices: FC = () => {
   const { lang } = useLanguage();
-  const content = pr[lang];
   const router = useRouter();
 
-  const handleContactRedirection = () => {
-    router.push('/contact');
-  };
+  // Accede primero a 'pr' y luego al idioma
+  const content: LanguageContent = prData.pr[lang as keyof PrDataStructure];
 
   const [selectedQuestion, setSelectedQuestion] = useState<string>('none');
   const handleSelectedQuestion = (id: string) => {
     setSelectedQuestion(prev => (prev === id ? 'none' : id));
   };
 
+  const handleContactRedirection = () => {
+    router.push('/contact');
+  };
+
+  // Genera el array FAQ para mapearlo
   const faqs = [
     {
       id: 'nota',
@@ -41,7 +68,7 @@ const PrServices: FC<PrServicesProps> = () => {
   ];
 
   return (
-    <div className="flex flex-col max-w-5xl  py-12">
+    <div className="flex flex-col max-w-5xl py-12">
       <h2 className="text-left text-3xl md:text-6xl font-bold mb-12">{content.title}</h2>
 
       <div className="flex flex-row w-full justify-between items-start mb-5">
@@ -57,11 +84,10 @@ const PrServices: FC<PrServicesProps> = () => {
         </div>
         <div className="hidden md:block relative" style={{ width: '450px', height: '450px' }}>
           <Image
-            src={"/contentImages/7press.png"}
-            layout="fill"
-            objectFit="contain"
-            alt={`s2`}
-            className="rounded-xl"
+            src="/contentImages/7press.png"
+            fill
+            alt="press services"
+            className="rounded-xl object-contain"
           />
         </div>
       </div>

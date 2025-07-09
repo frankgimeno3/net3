@@ -1,17 +1,37 @@
 'use client';
 import React, { FC, useState } from 'react';
 import { useLanguage } from '@/app/context/LanguageContext';
-import { sem } from './semContents.json';
+import semData from './semContents.json';
 import { useRouter } from 'next/navigation';
 import ActionButton from '@/app/components/sections/ActionButton';
 import Image from 'next/image';
 
-interface SemServicesProps {}
+interface FaqItem {
+  question: string;
+  answer: string;
+}
 
-const SemServices: FC<SemServicesProps> = () => {
+interface LanguageContent {
+  title: string;
+  description: string;
+  faq: {
+    howItWorks: FaqItem;
+    budget: FaqItem;
+    platforms: FaqItem;
+    successMetrics: FaqItem;
+  };
+}
+
+interface SemDataStructure {
+  ESP: LanguageContent;
+  ENG: LanguageContent;
+}
+
+const SemServices: FC = () => {
   const { lang } = useLanguage();
-  const content = lang === 'ESP' ? sem.ESP : sem.ENG;
   const router = useRouter();
+
+const content: LanguageContent = semData.sem[lang as keyof SemDataStructure];
 
   const [selectedQuestion, setSelectedQuestion] = useState<string>('none');
   const handleSelectedQuestion = (question: string) => {
@@ -30,7 +50,7 @@ const SemServices: FC<SemServicesProps> = () => {
   };
 
   return (
-    <div className="flex flex-col max-w-5xl  py-12">
+    <div className="flex flex-col max-w-5xl py-12">
       <h2 className="text-left text-3xl md:text-6xl font-bold mb-12">{content.title}</h2>
 
       <div className="flex flex-row w-full justify-between items-start mb-5">
@@ -46,11 +66,10 @@ const SemServices: FC<SemServicesProps> = () => {
         </div>
         <div className="hidden md:block relative" style={{ width: '450px', height: '450px' }}>
           <Image
-            src={"/contentImages/2seosem.png"}
-            layout="fill"
-            objectFit="contain"
-            alt={`s2`}
-            className="rounded-xl"
+            src="/contentImages/2seosem.png"
+            fill
+            alt="sem services"
+            className="rounded-xl object-contain"
           />
         </div>
       </div>

@@ -1,14 +1,36 @@
 'use client';
+
 import React, { FC, useState } from 'react';
 import { useLanguage } from '@/app/context/LanguageContext';
-import { social } from './socialContents.json';
+import socialJson from './socialContents.json';
 import { useRouter } from 'next/navigation';
 import ActionButton from '@/app/components/sections/ActionButton';
 import Image from 'next/image';
 
-interface SocialServicesProps {}
+interface Question {
+  title: string;
+  answer: string;
+}
 
-const SocialServices: FC<SocialServicesProps> = () => {
+interface LanguageContent {
+  title: string;
+  description: string;
+  questions: {
+    packs: Question;
+    redes: Question;
+    interacciones: Question;
+    miniaturas: Question;
+  };
+}
+
+interface SocialContent {
+  ESP: LanguageContent;
+  ENG: LanguageContent;
+}
+
+const social = (socialJson as { social: SocialContent }).social;
+
+const SocialServices: FC = () => {
   const { lang } = useLanguage();
   const content = lang === 'ESP' ? social.ESP : social.ENG;
   const router = useRouter();
@@ -62,11 +84,10 @@ const SocialServices: FC<SocialServicesProps> = () => {
         </div>
         <div className="hidden md:block relative" style={{ width: '450px', height: '450px' }}>
           <Image
-            src={"/contentImages/8social.png"}
-            layout="fill"
-            objectFit="contain"
-            alt={`s2`}
-            className="rounded-xl"
+            src="/contentImages/8social.png"
+            fill
+            alt="s2"
+            className="rounded-xl object-contain"
           />
         </div>
       </div>
