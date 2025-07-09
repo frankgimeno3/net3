@@ -6,6 +6,7 @@ import { useLanguage } from '@/app/context/LanguageContext';
 const Contáctanos = () => {
   const { lang } = useLanguage();
   const [status, setStatus] = useState<'idle' | 'loading' | 'sent'>('idle');
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const translations = {
     ESP: {
@@ -16,6 +17,7 @@ const Contáctanos = () => {
       email: 'Correo electrónico',
       message: 'Mensaje',
       submit: 'Enviar',
+            sending: 'Enviado!',
       sent: 'Su mensaje ha sido enviado correctamente.',
     },
     ENG: {
@@ -26,6 +28,7 @@ const Contáctanos = () => {
       email: 'Email',
       message: 'Message',
       submit: 'Send',
+      sending: 'Sent!',
       sent: 'Your message has been successfully sent.',
     },
   };
@@ -45,21 +48,22 @@ const Contáctanos = () => {
       message: formData.get('message'),
     };
 
-try {
-  await fetch('/api/sendMail', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  });
-
-  setStatus('sent');
-  e.currentTarget.reset(); 
-} catch (error) {
-  setStatus('sent');
-  e.currentTarget.reset();  
-}
+    try {
+      await fetch('/api/sendMail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+    } catch (error) {
+      console.error('Error enviando el correo:', error);
+    } finally {
+      setTimeout(() => {
+        setStatus('sent');
+        setShowConfirmation(true);
+      }, 4000);
+    }
   };
 
   return (
@@ -117,10 +121,10 @@ try {
               className="mt-6 text-md text-white px-8 py-2 rounded-xl bg-indigo-500 hover:bg-indigo-400 transition duration-300 hover:shadow-md disabled:opacity-50"
               disabled={status === 'loading'}
             >
-              {status === 'loading' ? '...' : t.submit}
+              {status === 'loading' ? t.sending : t.submit}
             </button>
 
-            {status === 'sent' && (
+            {showConfirmation && (
               <p className="text-blue-700 mt-4">{t.sent}</p>
             )}
           </form>

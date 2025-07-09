@@ -4,13 +4,15 @@
         "subtitulo": "Generamos contenidos b2b sobre empresas como la tuya, y los adaptamos a medios especializados y redes sociales.",
         "labelText": "¿Quieres mejorar la comunicación de tu empresa?",
         "placeholderText": "Tu email aquí",
-        "buttonContent": "Agenda una consultoría"
+        "buttonContent": "Agenda una consultoría",
+        "sending": "Enviado!"
     },
     "ENG": {
         "titular": "Specialized news for professionals and industries worldwide",
         "subtitulo": "We generate b2b content about companies like yours, and adapt it to specialized media and social networks.",
         "labelText": "Do you want to improve communication for your company?",
         "placeholderText": "Your email here",
-        "buttonContent": "Book your consultancy"
+        "buttonContent": "Book your consultancy",
+        "sending": "Sent!"
     }
 }
