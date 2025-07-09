@@ -22,10 +22,7 @@ interface OtherDataStructure {
   ESP: LanguageContent;
   ENG: LanguageContent;
 }
-
-interface OtherJsonStructure {
-  other: OtherDataStructure;
-}
+ 
 
 const OtherServices: FC = () => {
   const { lang } = useLanguage();

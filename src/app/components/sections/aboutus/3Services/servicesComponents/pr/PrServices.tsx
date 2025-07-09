@@ -28,15 +28,10 @@ interface PrDataStructure {
   ENG: LanguageContent;
 }
 
-interface PrJsonStructure {
-  pr: PrDataStructure;
-}
-
 const PrServices: FC = () => {
   const { lang } = useLanguage();
   const router = useRouter();
 
-  // Accede primero a 'pr' y luego al idioma
   const content: LanguageContent = prData.pr[lang as keyof PrDataStructure];
 
   const [selectedQuestion, setSelectedQuestion] = useState<string>('none');
@@ -48,7 +43,6 @@ const PrServices: FC = () => {
     router.push('/contact');
   };
 
-  // Genera el array FAQ para mapearlo
   const faqs = [
     {
       id: 'nota',

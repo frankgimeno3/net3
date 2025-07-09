@@ -23,10 +23,6 @@ interface NewsletterData {
   ENG: LanguageContent;
 }
 
-interface NewsletterJsonStructure {
-  newsletter: NewsletterData;
-}
-
 const NewsletterService: FC = () => {
   const { lang } = useLanguage();
   const router = useRouter();
