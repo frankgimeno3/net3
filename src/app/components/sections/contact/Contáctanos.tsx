@@ -5,7 +5,7 @@ import { useLanguage } from '@/app/context/LanguageContext';
 
 const Contáctanos = () => {
   const { lang } = useLanguage();
-  const [status, setStatus] = useState<'idle' | 'loading' | 'sent'>('idle');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'sent' | 'error'>('idle');
   const [showConfirmation, setShowConfirmation] = useState(false);
 
   const translations = {
@@ -17,8 +17,9 @@ const Contáctanos = () => {
       email: 'Correo electrónico',
       message: 'Mensaje',
       submit: 'Enviar',
-            sending: 'Enviado!',
+      sending: 'Enviando...',
       sent: 'Su mensaje ha sido enviado correctamente.',
+      error: 'Hubo un problema al enviar el mensaje. Intente nuevamente.',
     },
     ENG: {
       title: 'Contact us',
@@ -28,8 +29,9 @@ const Contáctanos = () => {
       email: 'Email',
       message: 'Message',
       submit: 'Send',
-      sending: 'Sent!',
+      sending: 'Sending...',
       sent: 'Your message has been successfully sent.',
+      error: 'There was a problem sending the message. Please try again.',
     },
   };
 
@@ -49,20 +51,24 @@ const Contáctanos = () => {
     };
 
     try {
-      await fetch('/api/sendMail', {
+      const response = await fetch('/api/mail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });
+
+      if (!response.ok) {
+        throw new Error('Error en la petición');
+      }
+
+      setStatus('sent');
+      setShowConfirmation(true);
     } catch (error) {
       console.error('Error enviando el correo:', error);
-    } finally {
-      setTimeout(() => {
-        setStatus('sent');
-        setShowConfirmation(true);
-      }, 4000);
+      setStatus('error');
+      setShowConfirmation(true);
     }
   };
 
@@ -124,8 +130,11 @@ const Contáctanos = () => {
               {status === 'loading' ? t.sending : t.submit}
             </button>
 
-            {showConfirmation && (
-              <p className="text-blue-700 mt-4">{t.sent}</p>
+            {showConfirmation && status === 'sent' && (
+              <p className="text-green-600 mt-4">{t.sent}</p>
+            )}
+            {showConfirmation && status === 'error' && (
+              <p className="text-red-600 mt-4">{t.error}</p>
             )}
           </form>
         </div>
