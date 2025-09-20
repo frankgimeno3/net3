@@ -7,7 +7,7 @@ interface AdminProps {
 const Admin: FC<AdminProps> = ({ }) => {
   return (
     <div>
-        <p>Aquí va un formulario de admin</p>
+        <p>Aquí va un formulario de login para acceder al dashboard de admin</p>
     </div>
   );
 };
