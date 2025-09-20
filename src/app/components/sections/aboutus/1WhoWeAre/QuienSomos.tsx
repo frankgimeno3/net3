@@ -10,7 +10,7 @@ const QuienSomos: FC = () => {
   const content = content1[lang];
 
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'sent'>('idle');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'sent' | 'error'>('idle');
   const [showConfirmation, setShowConfirmation] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -22,23 +22,26 @@ const QuienSomos: FC = () => {
     const data = {
       subject: 'SOLICITUD DE CONSULTORIA',
       message: `EL USUARIO ${email} HA RELLENADO UN FORMULARIO SOLICITANDO CONTACTO PARA UNA CONSULTORIA`,
+      email, // opcional, por si quieres incluirlo en el backend
     };
 
     try {
-      await fetch('/api/sendMail', {
+      const response = await fetch('/api/mail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });
+
+      if (!response.ok) throw new Error('Error en la petición');
+
+      setStatus('sent');
+      setShowConfirmation(true);
     } catch (error) {
       console.error('Error enviando el correo:', error);
-    } finally {
-      setTimeout(() => {
-        setStatus('sent');
-        setShowConfirmation(true);
-      }, 4000);
+      setStatus('error');
+      setShowConfirmation(true);
     }
   };
 
@@ -77,11 +80,18 @@ const QuienSomos: FC = () => {
         </button>
       </form>
 
-      {showConfirmation && (
+      {showConfirmation && status === 'sent' && (
         <p className="text-white mt-4">
           {lang === 'ESP'
             ? 'Su mensaje ha sido enviado correctamente.'
             : 'Your message has been successfully sent.'}
+        </p>
+      )}
+      {showConfirmation && status === 'error' && (
+        <p className="text-red-500 mt-4">
+          {lang === 'ESP'
+            ? 'Hubo un error al enviar el mensaje. Intente nuevamente.'
+            : 'There was an error sending the message. Please try again.'}
         </p>
       )}
     </div>
