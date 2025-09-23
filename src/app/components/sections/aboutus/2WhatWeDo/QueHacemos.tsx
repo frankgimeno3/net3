@@ -14,10 +14,6 @@ const QueHacemos: FC = () => {
     return <div>Error: contenido no disponible para el idioma seleccionado.</div>;
   }
 
-  const handleContactRedirection = () => {
-    router.push("/contact");
-  };
-
   const imagePaths = [
     "/contentImages/1CalendarComuPlans.jpg",
     "/contentImages/2seosem.png",
@@ -26,19 +22,19 @@ const QueHacemos: FC = () => {
 
   const sectionData = [
     {
-      title: content.Planes.titular,
-      resumen: lang === "ESP" ? (content.Planes as any).resumen : (content.Planes as any).summary,
-      button: lang === "ESP" ? "Crea tu plan comunicativo" : "Create your communication plan",
-    },
-    {
-      title: content.Promocion.titular,
-      resumen: lang === "ESP" ? (content.Promocion as any).resumen : (content.Promocion as any).summary,
-      button: lang === "ESP" ? "Aparece el primero con anuncios en Google" : "Appears first with Google Ads",
-    },
-    {
       title: content.Contenidos.titular,
       resumen: lang === "ESP" ? (content.Contenidos as any).resumen : (content.Contenidos as any).summary,
-      button: lang === "ESP" ? "Prueba con un artículo gratis!" : "Try with a free article!",
+      path: "/pages/details/contents",
+    },
+    {
+      title: content.Publicidad.titular,
+      resumen: lang === "ESP" ? (content.Publicidad as any).resumen : (content.Publicidad as any).summary,
+      path: "/pages/details/adv",
+    },
+    {
+      title: content.Funnel.titular,
+      resumen: lang === "ESP" ? (content.Funnel as any).resumen : (content.Funnel as any).summary,
+      path: "/pages/details/funnel",
     },
   ];
 
@@ -55,31 +51,27 @@ const QueHacemos: FC = () => {
       }}
     >
       <div className="flex flex-col md:max-w-5xl py-8 md:py-12 px-6 mx-6 md:mx-auto">
-        <h2 className="text-left text-5xl md:text-7xl font-bold mb-12 w-full">
+        <h1 className="text-center text-5xl md:text-7xl font-bold mb-24 w-full text-gray-500">
           {lang === "ESP" ? "¿Qué hacemos?" : "What we do"}
-        </h2>
+        </h1>
         {sectionData.map((section, i) => (
           <div key={i} className="my-5 flex flex-row w-full justify-between items-start">
-            <div className="flex flex-col w-1/2">
-              <h3 className="text-left text-3xl font-bold mb-2 md:mb-8 md:max-w-lg">{section.title}</h3>
+            <div className="flex flex-col w-1/2 items-top">
+              <h2 className="text-left font-bold mb-2 md:mb-8 md:max-w-lg">{section.title}</h2>
               <div className="flex flex-row items-center justify-between">
                 <div className="flex flex-col md:max-w-xl mr-12 md:gap-3">
-                  <p className="leading-relaxed text-md md:text-lg">
-                    {section.resumen}
-                  </p>
-                  <ActionButton label={section.button} onClick={handleContactRedirection} align={"left"} />
+                  <p className="leading-relaxed text-md md:text-lg">{section.resumen}</p>
+                  <ActionButton
+                    label={lang === "ESP" ? "Quieres saber más?" : "Want to know more?"}
+                    onClick={() => router.push(section.path)}
+                    align="left"
+                  />
                 </div>
               </div>
             </div>
-              <div className=" hidden md:block relative " 
-              style={{"width":"450px", "height":"450px"}}>
-                <Image
-                  src={imagePaths[i]}
-fill
-                  alt={`quehacemos-img-${i}`}
-                  className="object-contain"
-                />
-              </div>
+            <div className="hidden md:block relative shadow-xl mt-2 rounded-xl " style={{ width: "450px", height: "450px" }}>
+              <Image src={imagePaths[i]} fill alt={`quehacemos-img-${i}`} className="overflow-crop rounded-xl  " />
+            </div>
           </div>
         ))}
       </div>

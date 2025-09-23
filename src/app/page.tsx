@@ -7,6 +7,7 @@ import WhyWithUs from './components/sections/aboutus/4WhyWithUs/WhyWithUs';
 import ContactRedirectionButton from './components/ContactRedirectionButton';
 import Contáctanos from './components/sections/contact/Contáctanos';
 import OurServices from './components/sections/aboutus/3Services/OurServices';
+import Customers from './components/sections/aboutus/3customers/Customers';
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -42,7 +43,7 @@ export default function Home() {
       <div className="relative z-10 text-white ">
         <QuienSomos />
 
- 
+
         <div
           style={{
             position: "relative",
@@ -51,7 +52,7 @@ export default function Home() {
         >
           <QueHacemos />
         </div>
-        <div
+        {/* <div
           style={{
             position: "relative",
             zIndex: 10,
@@ -61,7 +62,18 @@ export default function Home() {
         >
           <OurServices />
         </div>
-        <WhyWithUs />
+        <WhyWithUs /> */}
+
+        <div
+          style={{
+            position: "relative",
+            zIndex: 10,
+            marginTop: "-100px",
+            marginBottom: "-100px",
+          }}
+        >
+          <Customers />
+        </div>
 
         <div
           style={{

@@ -51,8 +51,8 @@ const QuienSomos: FC = () => {
       className="w-full pt-24 md:p-8 px-12 md:flex flex-col mx-auto min-h-screen h-full 
       justify-center md:max-w-5xl text-center md:text-left"
     >
-      <h1 className="mt-12 text-4xl md:text-7xl font-bold">{content.titular}</h1>
-      <h2 className="text-lg md:text-2xl py-8">{content.subtitulo}</h2>
+      <h1 className="mt-12  font-bold">{content.titular}</h1>
+      <h3 className="text-lg md:text-2xl py-8">{content.subtitulo}</h3>
 
       <p className="font-bold pb-2 hidden md:block">{content.labelText}</p>
 

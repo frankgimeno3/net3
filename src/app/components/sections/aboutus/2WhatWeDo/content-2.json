@@ -1,30 +1,30 @@
 {
     "ESP": {
-        "Planes": {
-            "titular": "Creación de planes comunicativos",
-            "resumen": "Creamos estrategias de contenido personalizadas para redes, web y otros canales, organizamos y calendarizamos procesos según tus necesidades y gestionamos el presupuesto para maximizar resultados."
-        },
         "Contenidos": {
-            "titular": "Creación de contenidos",
-            "resumen": "Gestionamos la producción integral de contenidos, entregamos kits adaptados a cada plataforma y te asistimos antes y después de la publicación."
+            "titular": "Agencia de contenidos",
+            "resumen": "Diseñamos y producimos contenido estratégico durante todo el año en video, texto, audio y diseño gráfico. Creamos piezas pensadas para tu web, redes sociales y materiales impresos que conectan con tu audiencia."
         },
-        "Promocion": {
-            "titular": "Promoción de contenidos",
-            "resumen": "Invertimos en publicidad SEM, optimizamos resultados con SEO y analizamos estratégicamente el impacto de tus campañas."
+        "Publicidad": {
+            "titular": "Agencia publicitaria",
+            "resumen": "Desarrollamos y gestionamos campañas publicitarias de pago a medida en Google, redes sociales y medios especializados. Creamos anuncios efectivos en formato banner, página publicitaria o SEM para maximizar tu alcance. Disponemos de nuestros propios medios de comunicación!"
+        },
+        "Funnel": {
+            "titular": "Newsletter y funnel de ventas",
+            "resumen": "Transformamos a tus seguidores en clientes a través de newsletters y embudos de venta bien diseñados. Generamos suscriptores y los guiamos paso a paso hasta la conversión."
         }
     },
     "ENG": {
-        "Planes": {
-            "titular": "Creation of Communication Plans",
-            "summary": "We create personalized content strategies for social media, web, and other channels, organize and schedule processes according to your needs, and manage budgets to maximize results."
-        },
         "Contenidos": {
-            "titular": "Content Creation",
-            "summary": "We manage comprehensive content production, deliver kits tailored to each platform, and assist you before and after publication."
+            "titular": "Content Agency",
+            "summary": "We design and produce strategic content year-round in video, text, audio, and graphic design. From websites and social media to printed materials, we create pieces that truly connect with your audience."
         },
-        "Promocion": {
-            "titular": "Content Promotion",
-            "summary": "We invest in SEM advertising, optimize results with SEO, and strategically analyze the impact of your campaigns."
+        "Publicidad": {
+            "titular": "Advertising Agency",
+            "summary": "We design and manage tailored paid advertising campaigns on Google, social media, and specialized media outlets. We create effective ads in banner, advertorial, and SEM formats to maximize your reach. Plus, we offer placement in our own media channels!"
+        },
+        "Funnel": {
+            "titular": "Newsletter & Sales Funnel",
+            "summary": "We turn your followers into customers through well-crafted newsletters and sales funnels. We generate subscribers and guide them step by step toward conversion."
         }
     }
 }
