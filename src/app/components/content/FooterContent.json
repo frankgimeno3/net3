@@ -7,21 +7,26 @@
       "links": "Enlaces de interés"
     },
     "services": [
-      "Consultoría de contenido",
-      "Notas de prensa",
-      "Newsletter",
-      "Contenido para redes",
-      "SEM",
-      "Otros servicios"
+      "Agencia de contenidos",
+      "Agencia de publicidad",
+      "Newsletters y funnel"
     ],
     "links": [
       "Aviso legal",
       "Política de privacidad y cookies",
-       "Contacto"
+      "Contacto"
     ],
     "redirections": {
-      "services": ["/services/consultancy", "/services/pr", "/services/newsletter", "/services/social", "/services/sem", "/services/other"],
-      "links": ["/pages/legal", "/pages/privacy-cookies",  "/contact"]
+      "services": [
+        "/pages/details/contents",
+        "/pages/details/adv",
+        "/pages/details/funnel"
+      ],
+      "links": [
+        "/pages/legal",
+        "/pages/privacy-cookies",
+        "/contact"
+      ]
     }
   },
   "ENG": {
@@ -32,21 +37,26 @@
       "links": "Links of interest"
     },
     "services": [
-      "Content consultancy",
-      "Press Releases",
-      "Newsletter",
-      "Social Media Content",
-      "SEM",
-      "Other services"
+      "Content agency",
+      "Advertising agency",
+      "Newsletters and funnel"
     ],
     "links": [
       "Legal advise",
       "Privacy and cookie policy",
-       "Contact us"
+      "Contact us"
     ],
     "redirections": {
-      "services": ["/services/consultancy", "/services/pr", "/services/newsletter", "/services/social", "/services/sem", "/services/other"],
-      "links": ["/pages/legal", "/pages/privacy-cookies", "/contact"]
+      "services": [
+        "/pages/details/contents",
+        "/pages/details/adv",
+        "/pages/details/funnel"
+      ],
+      "links": [
+        "/pages/legal",
+        "/pages/privacy-cookies",
+        "/contact"
+      ]
     }
   }
 }
