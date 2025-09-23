@@ -15,9 +15,9 @@ const QueHacemos: FC = () => {
   }
 
   const imagePaths = [
-    "/contentImages/1CalendarComuPlans.jpg",
+    "/contentImages/4consulting.png",
     "/contentImages/2seosem.png",
-    "/contentImages/3copywriting.png",
+    "/contentImages/9em.png",
   ];
 
   const sectionData = [
@@ -70,7 +70,13 @@ const QueHacemos: FC = () => {
               </div>
             </div>
             <div className="hidden md:block relative shadow-xl mt-2 rounded-xl " style={{ width: "450px", height: "450px" }}>
-              <Image src={imagePaths[i]} fill alt={`quehacemos-img-${i}`} className="overflow-crop rounded-xl  " />
+              <Image
+                src={imagePaths[i]}
+                fill
+                alt={`quehacemos-img-${i}`}
+                className="overflow-crop rounded-xl cursor-pointer hover:opacity-90 hover:scale-95 transition-transform duration-300"
+                onClick={() => router.push(section.path)}
+              />
             </div>
           </div>
         ))}

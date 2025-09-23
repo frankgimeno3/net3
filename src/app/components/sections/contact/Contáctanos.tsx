@@ -124,7 +124,7 @@ const Contáctanos = () => {
             />
             <button
               type="submit"
-              className="mt-6 text-md text-white px-8 py-2 rounded-xl bg-indigo-500 hover:bg-indigo-400 transition duration-300 hover:shadow-md disabled:opacity-50"
+              className="mt-6 text-md text-white font-bold px-8 py-2 rounded-xl bg-red-700 hover:bg-red-600 transition duration-300 hover:shadow-md disabled:opacity-50"
               disabled={status === 'loading'}
             >
               {status === 'loading' ? t.sending : t.submit}

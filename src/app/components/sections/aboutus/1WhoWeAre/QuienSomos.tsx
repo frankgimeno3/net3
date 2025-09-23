@@ -71,8 +71,8 @@ const QuienSomos: FC = () => {
         />
         <button
           type="submit"
-          className="p-2 md:p-3 px-5 bg-gray-200 rounded hover:bg-white hover:text-black transition-colors w-max text-gray-700
-          mt-2 md:mt-0 mx-auto md:mx-0 min-h-12"
+          className="p-2 md:p-3 px-5 bg-red-600/70 rounded hover:bg-red-600 hover:text-white transition-colors w-max text-white font-bold
+          mt-2 md:mt-0 mx-auto md:mx-0 min-h-12 hover:shadow-xl hover:shadow-white/10"
           style={{ width: '225px' }}
           disabled={status === 'loading'}
         >
