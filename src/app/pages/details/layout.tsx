@@ -20,6 +20,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             }
         }
     }, []);
+
+     const scrollToNextSection = () => {
+    window.scrollBy({ top: 960, behavior: 'smooth' });
+  };
+
     return (
 
         <div className="relative mx-auto z-10">
@@ -40,7 +45,27 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
                 </div>
             </div>
+         <button
+        id="floating-scroll-button"
+        onClick={scrollToNextSection}
+        className="fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-gray-100 p-4 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:bg-gray-300 hover:opacity-50"
+        style={{ zIndex: 1000 }}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-6 h-6 text-gray-500"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
         </div>
+
 
     );
 }

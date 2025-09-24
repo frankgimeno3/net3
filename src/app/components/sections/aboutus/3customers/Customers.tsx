@@ -1,5 +1,6 @@
 import { useLanguage } from '@/app/context/LanguageContext';
 import React, { FC } from 'react';
+import Image from 'next/image';
 
 interface CustomersProps { }
 
@@ -24,26 +25,26 @@ const customersData = [
     },
     {
         src: '/customerLogos/GlassMexico-png-transparent-300x113.png',
-        urlES: '#',
-        urlEN: '#',
+        urlES: 'https://www.glasstechmexico.com/',
+        urlEN: 'https://www.glasstechmexico.com/',
         alt: 'Glass Mexico',
     },
     {
         src: '/customerLogos/doorswindows-Mexico.png',
-        urlES: '#',
-        urlEN: '#',
+        urlES: 'https://www.glasstechmexico.com/en/doorswindows-2/',
+        urlEN: 'https://www.glasstechmexico.com/en/doorswindows-2/',
         alt: 'Doors & Windows Mexico',
     },
     {
         src: '/customerLogos/CHINAGLASS_2.jpeg',
-        urlES: '#',
-        urlEN: '#',
+        urlES: 'https://www.vidrioperfil.com/es-es/china-glass',
+        urlEN: 'https://www.vidrioperfil.com/es-es/china-glass',
         alt: 'China Glass',
     },
     {
         src: '/customerLogos/VITRUM_25.png',
-        urlES: '#',
-        urlEN: '#',
+        urlES: 'https://vitrumlife.it/magazine/',
+        urlEN: 'https://vitrumlife.it/magazine/',
         alt: 'VITRUM',
     },
 ];
@@ -65,16 +66,30 @@ const Customers: FC<CustomersProps> = () => {
                 <h2 className="text-left text-4xl md:text-7xl font-bold my-12 mt-24">
                     {lang === 'ESP' ? 'Ya han trabajado con nosotros' : 'Already worked with us'}
                 </h2>
-                <p>
+                <p className="text-lg leading-relaxed">
                     {lang === 'ESP'
                         ? (
                             <>
-                                <span className="font-bold pr-0.5">NET</span><span className="text-red-500 font-bold text-lg">3</span> forma parte del grupo <span className='font-bold'>PROPORCION 3</span>, una empresa con más de 30 años de experiencia como creadora de contenidos técnicos especializados para los sectores del Vidrio, Ventanas, Puertas, Cerramientos y Protección Solar. Entre las marcas que han trabajado con nosotros se encuentran:
+                                <Image
+                                    src="/net3Complete.svg"
+                                    alt="net3"
+                                    height={24}
+                                    width={60}
+                                    className="inline align-baseline"
+                                />{' '}
+                                forma parte del grupo <span className='font-bold'>PROPORCION 3</span>, una empresa con más de 30 años de experiencia como creadora de contenidos técnicos especializados para los sectores del Vidrio, Ventanas, Puertas, Cerramientos y Protección Solar. Entre las marcas que han trabajado con nosotros se encuentran:
                             </>
                         )
                         : (
                             <>
-                                <span className="font-bold pr-0.5">NET</span><span className="text-red-500 font-bold text-lg">3</span> is part of the <span className='font-bold'>PROPORCION 3</span> group, a company with over 30 years of experience creating specialized technical content for the Glass, Windows, Doors, Enclosures, and Solar Protection sectors. Among the brands that have worked with us are:
+                                <Image
+                                    src="/net3Complete.svg"
+                                    alt="net3"
+                                    height={24}
+                                    width={60}
+                                    className="inline align-baseline"
+                                />{' '}
+                                is part of the <span className='font-bold'>PROPORCION 3</span> group, a company with over 30 years of experience creating specialized technical content for the Glass, Windows, Doors, Enclosures, and Solar Protection sectors. Among the brands that have worked with us are:
                             </>
                         )
                     }

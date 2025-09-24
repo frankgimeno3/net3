@@ -100,7 +100,8 @@ const QueHacemos: FC = () => {
               />
             </div>
             <div className="flex flex-col w-1/2 items-top">
-              <h2 className="text-left font-bold mb-2 md:mb-8 md:max-w-lg">
+              <h2 className="text-left font-bold mb-2 md:mb-8 md:max-w-lg cursor-pointer hover:text-gray-700" 
+              onClick={() => router.push(section.path)}>
                 {section.title}
               </h2>
               <div className="flex flex-row items-center justify-between">
