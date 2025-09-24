@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 import Net3 from '../contents/contentsComponents/net3';
 import FunnelSubtitle from './funnelComponents/FunnelSubtitle';
 import { useLanguage } from '@/app/context/LanguageContext';
+import Spiral3D from './Spiral3D';
 
 interface FunnelProps {
   
@@ -11,11 +12,12 @@ interface FunnelProps {
 const Funnel: FC<FunnelProps> = ({ }) => {
       const { lang } = useLanguage();
   
+  
   return (
-    <>
-      <div className='flex flex-col py-24  text-center'>
+  <>
+      <div className='flex flex-col py-24  text-center px-80'>
       <Net3 />
-      <h1 className='pt-14'>Convierte tus acciones en redes sociales en un proceso de ventas</h1>
+      <h1 className='pt-14'>Funneliza tu proceso de conversión en ventas </h1>
       <div className='flex flex-col mx-auto '>
         <FunnelSubtitle lang={lang} />
       </div>
@@ -38,10 +40,10 @@ const Funnel: FC<FunnelProps> = ({ }) => {
           }}
         >
           <div className="flex flex-col md:max-w-5xl py-8 md:py-12 px-6 mx-6 md:mx-auto text-white">
-           
-           {/* AQUI VA EL CONTENIDO */}
+           <Spiral3D/>
           </div>
         </section>
+          {/* CONTENIDO DEBAJO */}
       </div>
 
 </>    );
