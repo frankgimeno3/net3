@@ -2,7 +2,7 @@ import { useLanguage } from '@/app/context/LanguageContext';
 import React, { FC } from 'react';
 import Image from 'next/image';
 
-interface CustomersProps { }
+interface CustomersProps {}
 
 const customersData = [
     {
@@ -62,57 +62,51 @@ const Customers: FC<CustomersProps> = () => {
                 borderBottomRightRadius: '50% 100px',
             }}
         >
-            <div className="flex flex-col max-w-5xl mx-auto py-36 px-6">
+            <div className="flex flex-col max-w-6xl mx-auto py-36 px-6">
                 <h2 className="text-left text-4xl md:text-7xl font-bold my-12 mt-24">
                     {lang === 'ESP' ? 'Ya han trabajado con nosotros' : 'Already worked with us'}
                 </h2>
                 <p className="text-lg leading-relaxed">
-                    {lang === 'ESP'
-                        ? (
-                            <>
-                                <Image
-                                    src="/net3Complete.svg"
-                                    alt="net3"
-                                    height={24}
-                                    width={60}
-                                    className="inline align-baseline"
-                                />{' '}
-                                forma parte del grupo <span className='font-bold'>PROPORCION 3</span>, una empresa con más de 30 años de experiencia como creadora de contenidos técnicos especializados para los sectores del Vidrio, Ventanas, Puertas, Cerramientos y Protección Solar. Entre las marcas que han trabajado con nosotros se encuentran:
-                            </>
-                        )
-                        : (
-                            <>
-                                <Image
-                                    src="/net3Complete.svg"
-                                    alt="net3"
-                                    height={24}
-                                    width={60}
-                                    className="inline align-baseline"
-                                />{' '}
-                                is part of the <span className='font-bold'>PROPORCION 3</span> group, a company with over 30 years of experience creating specialized technical content for the Glass, Windows, Doors, Enclosures, and Solar Protection sectors. Among the brands that have worked with us are:
-                            </>
-                        )
-                    }
+                    {lang === 'ESP' ? (
+                        <>
+                            <Image
+                                src="/net3Complete.svg"
+                                alt="net3"
+                                height={24}
+                                width={60}
+                                className="inline align-baseline"
+                            />{' '}
+                            forma parte del grupo <span className="font-bold">PROPORCION 3</span>, una empresa con más de 30 años de experiencia como creadora de contenidos técnicos especializados para los sectores del Vidrio, Ventanas, Puertas, Cerramientos y Protección Solar. Entre las marcas que han trabajado con nosotros se encuentran:
+                        </>
+                    ) : (
+                        <>
+                            <Image
+                                src="/net3Complete.svg"
+                                alt="net3"
+                                height={24}
+                                width={60}
+                                className="inline align-baseline"
+                            />{' '}
+                            is part of the <span className="font-bold">PROPORCION 3</span> group, a company with over 30 years of experience creating specialized technical content for the Glass, Windows, Doors, Enclosures, and Solar Protection sectors. Among the brands that have worked with us are:
+                        </>
+                    )}
                 </p>
 
-                <div className="mt-12 flex flex-wrap -mx-2">
+                <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
                     {customersData.map((customer, index) => (
                         <a
                             key={index}
                             href={lang === 'ESP' ? customer.urlES : customer.urlEN}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-1/3 px-2 mb-4 overflow-hidden rounded-lg"
-                            style={{ height: 150 }}
+                            className="relative w-full h-36 sm:h-40 md:h-44 lg:h-48 rounded-lg overflow-hidden bg-white flex items-center justify-center"
                         >
-                            <div className="flex items-center justify-center h-full">
-                                <img
-                                    src={customer.src}
-                                    alt={customer.alt}
-                                    className="w-full h-auto object-center transform transition-transform duration-300 hover:scale-110"
-                                    style={{ display: 'block' }}
-                                />
-                            </div>
+                            <Image
+                                src={customer.src}
+                                alt={customer.alt}
+                                fill
+                                className="object-contain transition-transform duration-300 hover:scale-110"
+                            />
                         </a>
                     ))}
                 </div>
