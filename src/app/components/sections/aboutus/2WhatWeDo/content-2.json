@@ -1,11 +1,11 @@
 {
     "ESP": {
         "Contenidos": {
-            "titular": "Agencia de contenidos",
+            "titular": "Contenidos",
             "resumen": "Diseñamos y producimos contenido estratégico durante todo el año en video, texto, audio y diseño gráfico. Creamos piezas pensadas para tu web, redes sociales y materiales impresos que conectan con tu audiencia."
         },
         "Publicidad": {
-            "titular": "Agencia publicitaria",
+            "titular": "Publicidad",
             "resumen": "Desarrollamos y gestionamos campañas publicitarias de pago a medida en Google, redes sociales y medios especializados. Creamos anuncios efectivos en formato banner, página publicitaria o SEM para maximizar tu alcance. Disponemos de nuestros propios medios de comunicación!"
         },
         "Funnel": {
@@ -15,11 +15,11 @@
     },
     "ENG": {
         "Contenidos": {
-            "titular": "Content Agency",
+            "titular": "Contents",
             "summary": "We design and produce strategic content year-round in video, text, audio, and graphic design. From websites and social media to printed materials, we create pieces that truly connect with your audience."
         },
         "Publicidad": {
-            "titular": "Advertising Agency",
+            "titular": "Advertising",
             "summary": "We design and manage tailored paid advertising campaigns on Google, social media, and specialized media outlets. We create effective ads in banner, advertorial, and SEM formats to maximize your reach. Plus, we offer placement in our own media channels!"
         },
         "Funnel": {

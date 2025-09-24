@@ -22,7 +22,7 @@ const QuienSomos: FC = () => {
     const data = {
       subject: 'SOLICITUD DE CONSULTORIA',
       message: `EL USUARIO ${email} HA RELLENADO UN FORMULARIO SOLICITANDO CONTACTO PARA UNA CONSULTORIA`,
-      email, // opcional, por si quieres incluirlo en el backend
+      email,  
     };
 
     try {

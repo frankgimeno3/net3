@@ -40,7 +40,7 @@ const QueHacemos: FC = () => {
 
   return (
     <section
-      className="bg-gray-100 text-gray-600 py-36"
+      className="bg-gray-100 text-gray-600 py-24"
       style={{
         position: "relative",
         zIndex: 10,
@@ -50,12 +50,21 @@ const QueHacemos: FC = () => {
         borderBottomRightRadius: "50% 100px",
       }}
     >
-      <div className="flex flex-col md:max-w-5xl py-8 md:py-12 px-6 mx-6 md:mx-auto">
-        <h1 className="text-center text-5xl md:text-7xl font-bold mb-24 w-full text-gray-500">
+      <div className="flex flex-col md:max-w-5xl py-8 md:py-12 px-6 mx-6 md:mx-auto ">
+        <h1 className="text-center text-5xl md:text-7xl font-bold mb-12 w-full text-gray-500">
           {lang === "ESP" ? "¿Qué hacemos?" : "What we do"}
         </h1>
         {sectionData.map((section, i) => (
-          <div key={i} className="my-5 flex flex-row w-full justify-between items-start">
+          <div key={i} className="my-5 flex flex-row w-full justify-between items-center bg-white shadow rounded-xl pr-3">
+            <div className="hidden md:block relative shadow-xl   rounded-xl " style={{ width: "450px", height: "450px" }}>
+              <Image
+                src={imagePaths[i]}
+                fill
+                alt={`quehacemos-img-${i}`}
+                className="overflow-crop rounded-xl cursor-pointer hover:opacity-90 hover:scale-95 transition-transform duration-300"
+                onClick={() => router.push(section.path)}
+              />
+            </div>
             <div className="flex flex-col w-1/2 items-top">
               <h2 className="text-left font-bold mb-2 md:mb-8 md:max-w-lg">{section.title}</h2>
               <div className="flex flex-row items-center justify-between">
@@ -69,15 +78,7 @@ const QueHacemos: FC = () => {
                 </div>
               </div>
             </div>
-            <div className="hidden md:block relative shadow-xl mt-2 rounded-xl " style={{ width: "450px", height: "450px" }}>
-              <Image
-                src={imagePaths[i]}
-                fill
-                alt={`quehacemos-img-${i}`}
-                className="overflow-crop rounded-xl cursor-pointer hover:opacity-90 hover:scale-95 transition-transform duration-300"
-                onClick={() => router.push(section.path)}
-              />
-            </div>
+
           </div>
         ))}
       </div>

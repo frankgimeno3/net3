@@ -1,0 +1,56 @@
+{
+  "ESP": {
+    "mainTitle": "Tus competidores publican contenidos todo el año?",
+    "mainTitleHighlight": "Tú también puedes.",
+    "paragraph1": "Tener presupuesto o buenas ideas no es suficiente para mantener un flujo constante de contenidos.",
+    "paragraph2Start": "El secreto para publicar todo el año está en crear un",
+    "paragraph2Highlight": "plan de contenidos anual",
+    "paragraph2End": "planificar todas las operaciones necesarias para llevarlo a cabo, y tener la capacidad de ejecutarlo independientemente a las fluctuaciones de trabajo del departamento de márketing.",
+    "paragraph3": "Con nosotros, diseñarás una estrategia a principio de año, harás un plan de cómo obtener los materiales necesarios y dónde publicarlos.",
+    "paragraph4Highlight": "Nos encargaremos de generarlo por ti,",
+    "paragraph4End": "pasándote en cada momento del año lo que necesitas publicar, de modo que tu empresa mantendrá una presencia constante y profesional en todos los canales digitales.",
+    "title": "Crea mejores contenidos",
+    "subtitle1": "¿Tu capacidad de contenido se limita a crear posts sobre tu producto?",
+    "subtitle2": "Esto es lo que nosotros podemos hacer por ti:",
+    "services": {
+      "audiovisual": { "title": "Audiovisuales", "description": "Producción audiovisual con calidad profesional." },
+      "pressNotes": { "title": "Creación de notas de prensa", "description": "Redacción y distribución estratégica para medios." },
+      "UI": { "title": "Diseño interfaces de usuario (UI)", "description": "Interfaces atractivas y funcionales." },
+      "UX": { "title": "Diseño experiencia de usuario (UX)", "description": "Optimización de la interacción digital." },
+      "socialContent": { "title": "Contenido visual para RRSS", "description": "Piezas visuales optimizadas para redes sociales." },
+      "banners": { "title": "Banners", "description": "Diseños publicitarios creativos y efectivos." },
+      "mailing": { "title": "Mailing", "description": "Campañas de email marketing personalizadas." },
+      "infographics": { "title": "Diseño editorial e Infografía", "description": "Diseño de revistas, catálogos y publicaciones." },
+      "graphicDesign": { "title": "Diseño gráfico", "description": "Otros diseños personalizados para todo tipo de soportes." }
+    },
+    "contactPrompt": "¿Te interesa?",
+    "contactButton": "Contáctanos ahora"
+  },
+  "ENG": {
+    "mainTitle": "Do your competitors publish content all year round?",
+    "mainTitleHighlight": "You can too.",
+    "paragraph1": "Having a budget or good ideas is not enough to maintain a steady flow of content.",
+    "paragraph2Start": "The secret to publishing year-round is to create an",
+    "paragraph2Highlight": "annual content plan",
+    "paragraph2End": "plan all the necessary operations to carry it out, and have the capacity to execute it regardless of marketing department workload fluctuations.",
+    "paragraph3": "With us, you will design a strategy at the beginning of the year, make a plan on how to obtain the necessary materials and where to publish them.",
+    "paragraph4Highlight": "We will take care of generating it for you,",
+    "paragraph4End": "providing you at every moment of the year with what you need to publish, so your company maintains a constant and professional presence across all digital channels.",
+    "title": "Create better content",
+    "subtitle1": "Is your content capacity limited to creating posts about your product?",
+    "subtitle2": "This is what we can do for you:",
+    "services": {
+      "audiovisual": { "title": "Audiovisual", "description": "Professional-quality audiovisual production." },
+      "pressNotes": { "title": "Press note creation", "description": "Strategic writing and distribution for media." },
+      "UI": { "title": "User interface design (UI)", "description": "Attractive and functional interfaces." },
+      "UX": { "title": "User experience design (UX)", "description": "Optimization of digital interaction." },
+      "socialContent": { "title": "Visual content for social media", "description": "Visual pieces optimized for social networks." },
+      "banners": { "title": "Banners", "description": "Creative and effective advertising designs." },
+      "mailing": { "title": "Mailing", "description": "Personalized email marketing campaigns." },
+      "infographics": { "title": "Editorial and infographic design", "description": "Design of magazines, catalogs, and publications." },
+      "graphicDesign": { "title": "Graphic design", "description": "Other custom designs for all types of media." }
+    },
+    "contactPrompt": "Interested?",
+    "contactButton": "Contact us now"
+  }
+}
