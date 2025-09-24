@@ -1,7 +1,5 @@
 "use client"
 import React, { useEffect, useRef } from "react";
-import MainNav from "@/app/components/navs/MainNav";
-import FooterSection from "@/app/components/navs/FooterSection";
 import Contáctanos from "@/app/components/sections/contact/Contáctanos";
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -1,4 +1,3 @@
-import { useRouter } from 'next/navigation';
 import React, { FC } from 'react';
 import Image from "next/image";
 import texts from './texts.json';
@@ -8,8 +7,7 @@ interface ContentsPlanProps {
 }
 
 const ContentsPlan: FC<ContentsPlanProps> = ({ lang }) => {
-  const router = useRouter();
-  const t = texts[lang];
+   const t = texts[lang];
 
   return (
     <div className="flex flex-col py-56 px-96">

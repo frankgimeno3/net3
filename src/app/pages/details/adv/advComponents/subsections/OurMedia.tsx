@@ -1,15 +1,13 @@
 import React, { FC } from 'react';
 import Image from "next/image";
 import texts from './texts.json';
-import { useRouter } from 'next/navigation';
-
+ 
 interface OurMediaProps {
       lang: 'ENG' | 'ESP';
 }
 
 const OurMedia: FC<OurMediaProps> = ({lang }) => {
-    const router = useRouter();
-    const t = texts[lang];
+     const t = texts[lang];
 
     
   return (

@@ -3,10 +3,8 @@
 import { useEffect, useRef } from 'react';
 import QuienSomos from './components/sections/aboutus/1WhoWeAre/QuienSomos';
 import QueHacemos from './components/sections/aboutus/2WhatWeDo/QueHacemos';
-import WhyWithUs from './components/sections/aboutus/4WhyWithUs/WhyWithUs';
 import ContactRedirectionButton from './components/ContactRedirectionButton';
 import Contáctanos from './components/sections/contact/Contáctanos';
-import OurServices from './components/sections/aboutus/3Services/OurServices';
 import Customers from './components/sections/aboutus/3customers/Customers';
 
 export default function Home() {
@@ -52,17 +50,7 @@ export default function Home() {
         >
           <QueHacemos />
         </div>
-        {/* <div
-          style={{
-            position: "relative",
-            zIndex: 10,
-            marginTop: "-100px",
-            marginBottom: "-100px",
-          }}
-        >
-          <OurServices />
-        </div>
-        <WhyWithUs /> */}
+      
 
         <div
           style={{

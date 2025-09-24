@@ -3,8 +3,8 @@ import React, { FC } from 'react';
 import Net3 from '../contents/contentsComponents/net3';
 import FunnelSubtitle from './funnelComponents/FunnelSubtitle';
 import { useLanguage } from '@/app/context/LanguageContext';
-import Spiral3D from './Spiral3D';
 import SoloNewsletter from './funnelComponents/subsections/SoloNewsletter';
+import NuestroSistema from './funnelComponents/subsections/NuestrSistema';
 
 interface FunnelProps {
   
@@ -41,7 +41,7 @@ const Funnel: FC<FunnelProps> = ({ }) => {
           }}
         >
           <div className="flex flex-col md:max-w-5xl py-8 md:py-12 px-6 mx-6 md:mx-auto text-white">
-           <Spiral3D/>
+           <NuestroSistema lang = {lang}/>
           </div>
         </section>
           <SoloNewsletter lang = {lang}/>
