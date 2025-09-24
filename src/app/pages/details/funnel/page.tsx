@@ -4,6 +4,7 @@ import Net3 from '../contents/contentsComponents/net3';
 import FunnelSubtitle from './funnelComponents/FunnelSubtitle';
 import { useLanguage } from '@/app/context/LanguageContext';
 import Spiral3D from './Spiral3D';
+import SoloNewsletter from './funnelComponents/subsections/SoloNewsletter';
 
 interface FunnelProps {
   
@@ -43,7 +44,7 @@ const Funnel: FC<FunnelProps> = ({ }) => {
            <Spiral3D/>
           </div>
         </section>
-          {/* CONTENIDO DEBAJO */}
+          <SoloNewsletter lang = {lang}/>
       </div>
 
 </>    );
