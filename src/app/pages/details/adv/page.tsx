@@ -3,6 +3,8 @@ import React, { FC } from 'react';
 import Net3 from '../contents/contentsComponents/net3';
 import AdvSubtitle from './advComponents/AdvSubtitle';
 import { useLanguage } from '@/app/context/LanguageContext';
+import AdvServices from './advComponents/subsections/Advservices';
+import OurMedia from './advComponents/subsections/OurMedia';
 
 interface AdvProps {
   
@@ -39,9 +41,10 @@ const Adv: FC<AdvProps> = ({ }) => {
         >
           <div className="flex flex-col md:max-w-5xl py-8 md:py-12 px-6 mx-6 md:mx-auto text-white">
            
-           {/* AQUI VA EL CONTENIDO */}
+          <AdvServices lang = {lang}/>
           </div>
         </section>
+        <OurMedia lang = {lang}/>
       </div>
       </>
         );

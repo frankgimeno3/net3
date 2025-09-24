@@ -1,0 +1,50 @@
+{
+  "ESP": {
+    "mainTitle": "Tus competidores publican contenidos todo el año?",
+    "mainTitleHighlight": "Tú también puedes.",
+    "paragraph1": "Tener presupuesto o buenas ideas no es suficiente para mantener un flujo constante de contenidos.",
+    "paragraph2Start": "El secreto para publicar todo el año está en crear un",
+    "paragraph2Highlight": "plan de contenidos anual",
+    "paragraph2End": "planificar todas las operaciones necesarias para llevarlo a cabo, y tener la capacidad de ejecutarlo independientemente a las fluctuaciones de trabajo del departamento de márketing.",
+    "paragraph3": "Con nosotros, diseñarás una estrategia a principio de año, harás un plan de cómo obtener los materiales necesarios y dónde publicarlos.",
+    "paragraph4Highlight": "Nos encargaremos de generarlo por ti,",
+    "paragraph4End": "pasándote en cada momento del año lo que necesitas publicar, de modo que tu empresa mantendrá una presencia constante y profesional en todos los canales digitales.",
+    "title": "Saca más rendimiento a tu presupuesto publicitario",
+    "subtitle1": "",
+    "subtitle2": "Esto es lo que nosotros podemos hacer por ti:",
+    "services": {
+      "SEM": { "title": "SEM", "description": "Contratación y monitoreo de publicidad en Google Ads." },
+      "RRSS": { "title": "Publicidad en redes sociales", "description": "Publicidad con banners en Linkedin, Instagram o X." },
+      "Video": { "title": "Publicidad en vídeo", "description": "Publicidad en vídeo para youtube o redes" },
+      "Elaboracion": { "title": "Elaboración de anuncios", "description": "Creación de anuncios multiformato para cada plataforma" },
+      "UTM": { "title": "Seguimientos UTM", "description": "Etiquetaje de tráfico para elaboración de informes de seguimiento mejorados." },
+      "PubliMedios": { "title": "Publicidad y relación con medios", "description": "Publicidad autoritativa, para construir confianza a través de medios de prestigio en tu nicho técnico." }
+    },
+    "contactPrompt": "¿Te interesa?",
+    "contactButton": "Contáctanos ahora"
+  },
+  "ENG": {
+    "mainTitle": "Do your competitors publish content all year round?",
+    "mainTitleHighlight": "You can too.",
+    "paragraph1": "Having a budget or good ideas is not enough to maintain a steady flow of content.",
+    "paragraph2Start": "The secret to publishing year-round is to create an",
+    "paragraph2Highlight": "annual content plan",
+    "paragraph2End": "plan all the necessary operations to carry it out, and have the capacity to execute it regardless of marketing department workload fluctuations.",
+    "paragraph3": "With us, you will design a strategy at the beginning of the year, make a plan on how to obtain the necessary materials and where to publish them.",
+    "paragraph4Highlight": "We will take care of generating it for you,",
+    "paragraph4End": "providing you at every moment of the year with what you need to publish, so your company maintains a constant and professional presence across all digital channels.",
+    "title": "Get more out of your advertising budget",
+    "subtitle1": "",
+    "subtitle2": "This is what we can do for you:",
+    "services": {
+      "SEM": { "title": "SEM", "description": "Hiring and monitoring advertising on Google Ads." },
+      "RRSS": { "title": "Social media advertising", "description": "Banner advertising on LinkedIn, Instagram, or X." },
+      "Video": { "title": "Video advertising", "description": "Video advertising for YouTube or social networks." },
+      "Elaboracion": { "title": "Ad creation", "description": "Creation of multi-format ads for each platform." },
+      "UTM": { "title": "UTM tracking", "description": "Traffic tagging for enhanced tracking reports." },
+      "PubliMedios": { "title": "Advertising and media relations", "description": "Authoritative advertising to build trust through prestigious media in your technical niche." }
+    },
+    "contactPrompt": "Interested?",
+    "contactButton": "Contact us now"
+  }
+}
