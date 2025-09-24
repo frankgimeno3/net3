@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-const MyIcon: FC = () => (
+const Money: FC = () => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -32,4 +32,4 @@ const MyIcon: FC = () => (
   </svg>
 );
 
-export default MyIcon;
+export default Money;

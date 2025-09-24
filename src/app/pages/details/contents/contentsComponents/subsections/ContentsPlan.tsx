@@ -12,10 +12,10 @@ const ContentsPlan: FC<ContentsPlanProps> = ({ lang }) => {
   const t = texts[lang];
 
   return (
-    <div className="flex flex-col py-24 px-96">
-      <h2 className="font-semibold mb-24 text-left text-2xl md:text-3xl">
+    <div className="flex flex-col py-56 px-96">
+      <h1 className="font-semibold mb-12 text-left   ">
         {t.mainTitle} <span className='text-red-500 font-bold'>{t.mainTitleHighlight}</span>
-      </h2>
+      </h1>
 
       <div className="flex flex-col md:flex-row items-start text-lg">
         <div className="flex-1 space-y-4 text-gray-100 text-left leading-relaxed pr-12 pt-2">
