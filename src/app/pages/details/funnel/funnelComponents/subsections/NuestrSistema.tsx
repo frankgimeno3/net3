@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Spiral3D from '../../Spiral3D';
-import { useRouter } from 'next/navigation';
- import ContentCard from './ContentCard';
+// import { useRouter } from 'next/navigation';
+//  import ContentCard from './ContentCard';
 import texts from './texts.json';
 
 interface NuestroSistemaProps {
@@ -35,7 +35,7 @@ interface NuestroSistemaProps {
 }
 
 const NuestroSistema: FC<NuestroSistemaProps> = ({lang}) => {
-    const router = useRouter();
+    // const router = useRouter();
 
    const t: TextsLang = texts[lang];
   return (
