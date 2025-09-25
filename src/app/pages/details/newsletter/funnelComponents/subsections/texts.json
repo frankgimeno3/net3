@@ -1,56 +1,96 @@
 {
   "ESP": {
-    "mainTitle": "Cómo crear mi propio newsletter?",
-    "mainTitleHighlight": "Nosotros te ayudamos.",
-    "paragraph1": "Para empezar, te ayudamos a crear un flujo de contenidos que lleve a tus suscriptores de redes sociales directamente a tu base de datos, mediante lead magnets. ",
-    "paragraph2Start": "A continuación, ",
-    "paragraph2Highlight": "creamos para ti el newsletter en formato HTML,",
-    "paragraph2End": "y te ayudamos a contratar un servidor de envío de newsletters profesional y de calidad, monitoreando posibles incidencias y publicando las notas de prensa que se generen, para que tus suscriptores las reciban en un newsletter mensual o bisemanal.",
-    "paragraph3": "El grupo PROPORCIÓN 3 lleva más de diez años publicando newsletters a través de sus publicaciones VIDRIOPERFIL NEWS, segmentando más de 90.000 suscriptores en diferentes bases de datos de newsletters.",
-    "paragraph4Highlight": "También ofrecemos la posibilidad de utilizar publicidad en newsletters de otros,",
-    "paragraph4End": "pudiendo aprovechar sus suscriptores para generar un impacto o redirigir tráfico a tu web.",
-    "title": "Así debería funcionar tu sistema de ventas en 2025",
-    "subtitle1": "",
-    "subtitle2": "",
-    "services": {
-      "audiovisual": { "title": "Audiovisuales", "description": "Producción audiovisual con calidad profesional." },
-      "pressNotes": { "title": "Creación de notas de prensa", "description": "Redacción y distribución estratégica para medios." },
-      "UI": { "title": "Diseño interfaces de usuario (UI)", "description": "Interfaces atractivas y funcionales." },
-      "UX": { "title": "Diseño experiencia de usuario (UX)", "description": "Optimización de la interacción digital." },
-      "socialContent": { "title": "Contenido visual para RRSS", "description": "Piezas visuales optimizadas para redes sociales." },
-      "banners": { "title": "Banners", "description": "Diseños publicitarios creativos y efectivos." },
-      "mailing": { "title": "Mailing", "description": "Campañas de email marketing personalizadas." },
-      "infographics": { "title": "Diseño editorial e Infografía", "description": "Diseño de revistas, catálogos y publicaciones." },
-      "graphicDesign": { "title": "Diseño gráfico", "description": "Otros diseños personalizados para todo tipo de soportes." }
+    "fasesDelFunnel": {
+      "intro": "El <span class='font-bold text-red-500'>funnel de ventas</span> ha reemplazado los sistemas antiguos de venta fría o pago por tráfico masivo, que solo agotaban las bases de datos y dependían de la suerte. Hoy, gracias a las redes sociales y al marketing digital, las empresas pueden construir <span class='font-bold'>relaciones reales con sus clientes</span> en lugar de presionarlos con mensajes directos.",
+      "descripcionFases": "El sistema de funnel organiza a los contactos en <span class='bg-red-600 font-bold text-white rounded-xl shadow p-1 px-2 mr-1'>3 fases principales</span>, de modo que cada una refleja el nivel de cercanía del cliente hacia la compra, permitiendo diseñar estrategias distintas y mucho más efectivas en cada etapa.",
+      "fases": {
+        "TOFU": {
+          "titulo": "Fase TOFU",
+          "descripcion": "En la <span class='font-bold text-white'>fase de consciencia</span>, el objetivo es captar la atención. Aquí predominan las campañas de <span class='font-bold text-white'>impacto</span>: anuncios, banners, contenidos virales o publicaciones en redes que generan interés inicial y, en el mejor de los casos, llevan a una suscripción básica como seguir una cuenta o unirse a un newsletter. Ya no se espera una venta inmediata, sino <span class='font-bold text-white'>abrir la puerta a una relación</span> con el cliente."
+        },
+        "MOFU": {
+          "titulo": "Fase MOFU",
+          "descripcion": "La <span class='font-bold text-white'>fase de consideración</span> es donde ocurre la mayor parte del proceso. El cliente, que ya mostró interés, empieza a consumir contenido de valor: newsletters, posts en redes o artículos en blogs. Aquí se <span class='font-bold text-white'>construye la confianza</span> mediante información útil, casos de éxito, comparativas o invitaciones a eventos digitales. Poco a poco, el cliente entiende cómo el producto o servicio se alinea con sus necesidades."
+        },
+        "BOFU": {
+          "titulo": "Fase BOFU",
+          "descripcion": "Finalmente, en la <span class='font-bold text-white'>fase de decisión</span>, el enfoque puede ser más comercial. El cliente ya <span class='font-bold text-white'>está preparado</span> para recibir llamadas a la acción más directas, como solicitar una demo, registrarse para una oferta exclusiva o concretar una reunión con un asesor. En este punto, lejos de incomodarle, valora la orientación y claridad para dar el último paso hacia la compra."
+        }
+      },
+      "conclusion": "Este modelo <span class='font-bold text-red-500'>es actualmente el estándar</span> porque respeta los hábitos digitales de los usuarios, optimiza recursos y permite medir la efectividad de cada acción. En la práctica, también ayuda a distribuir mejor el presupuesto de marketing, asegurando que cada euro invertido trabaje en el momento adecuado del recorrido del cliente."
     },
-    "contactPrompt": "¿Te interesa?",
-    "contactButton": "Contáctanos ahora"
+    "importanciaNewsletter": {
+      "titulo": "La importancia de un newsletter",
+      "parrafos": [
+        "El newsletter es una de las herramientas más poderosas para destacar frente a la competencia y posicionarte en la mente de tus clientes. Es el corazón de la fase MOFU, el espacio ideal para generar confianza, aportar valor y guiar al usuario de forma natural hacia la venta.",
+        "A diferencia de las redes sociales, donde dependes del algoritmo y la atención está muy fragmentada, con un newsletter tu mensaje llega directamente al correo de tu cliente, en un entorno mucho menos saturado. Día a día, tus suscriptores recibirán información sobre tus productos, conocerán mejor tu propuesta de valor y asociarán tu marca como la solución más confiable a sus necesidades."
+      ],
+      "acciones": [
+        { "titulo": "Campañas de ofertas sin resultar invasivas", "descripcion": "Segmentadas y enviadas a quienes ya hayan mostrado interés en tus productos." },
+        { "titulo": "Asesoramiento personalizado", "descripcion": "Ofrece guías o asesorías mediante botones de “quiero saber más”, junto a la información del producto." },
+        { "titulo": "Eventos gratuitos y formativos", "descripcion": "Masterclasses y formaciones diseñadas para resolver problemas concretos, orientando al usuario hacia tu solución." },
+        { "titulo": "Encuestas de satisfacción o conocimiento", "descripcion": "Recoge información directa de tus clientes para mejorar tu oferta y fortalecer la relación." },
+        { "titulo": "Publicidad segmentada y de impacto", "descripcion": "Promociona tus productos con la misma fuerza que en Google Ads, pero de forma directa, evitando clics irrelevantes o tráfico fantasma." },
+        { "titulo": "Campañas de branding", "descripcion": "Acciones enfocadas en mejorar la percepción de tu marca, no solo entre clientes y prospectos, sino también dentro de tu equipo." }
+      ]
+    },
+    "soloNewsletter": {
+      "mainTitle": "Cómo crear mi propio newsletter?",
+      "mainTitleHighlight": "Nosotros te ayudamos.",
+      "paragraph1": "Para empezar, te ayudamos a crear un flujo de contenidos que lleve a tus suscriptores de redes sociales directamente a tu base de datos, mediante lead magnets.",
+      "paragraph2Start": "A continuación,",
+      "paragraph2Highlight": "creamos para ti el newsletter en formato HTML,",
+      "paragraph2End": "y te ayudamos a contratar un servidor de envío de newsletters profesional y de calidad, monitoreando posibles incidencias y publicando las notas de prensa que se generen, para que tus suscriptores las reciban en un newsletter mensual o bisemanal.",
+      "paragraph3": "El grupo PROPORCIÓN 3 lleva más de diez años publicando newsletters a través de sus publicaciones VIDRIOPERFIL NEWS, segmentando más de 90.000 suscriptores en diferentes bases de datos de newsletters.",
+      "paragraph4Highlight": "También ofrecemos la posibilidad de utilizar publicidad en newsletters de otros,",
+      "paragraph4End": "pudiendo aprovechar sus suscriptores para generar un impacto o redirigir tráfico a tu web."
+    }
   },
   "ENG": {
-    "mainTitle": "Do your competitors publish content all year round?",
-    "mainTitleHighlight": "You can too.",
-    "paragraph1": "Having a budget or good ideas is not enough to maintain a steady flow of content.",
-    "paragraph2Start": "The secret to publishing year-round is to create an",
-    "paragraph2Highlight": "annual content plan",
-    "paragraph2End": "plan all the necessary operations to carry it out, and have the capacity to execute it regardless of marketing department workload fluctuations.",
-    "paragraph3": "With us, you will design a strategy at the beginning of the year, make a plan on how to obtain the necessary materials and where to publish them.",
-    "paragraph4Highlight": "We will take care of generating it for you,",
-    "paragraph4End": "providing you at every moment of the year with what you need to publish, so your company maintains a constant and professional presence across all digital channels.",
-    "title": "Create better content",
-    "subtitle1": "Is your content capacity limited to creating posts about your product?",
-    "subtitle2": "This is what we can do for you:",
-    "services": {
-      "audiovisual": { "title": "Audiovisual", "description": "Professional-quality audiovisual production." },
-      "pressNotes": { "title": "Press note creation", "description": "Strategic writing and distribution for media." },
-      "UI": { "title": "User interface design (UI)", "description": "Attractive and functional interfaces." },
-      "UX": { "title": "User experience design (UX)", "description": "Optimization of digital interaction." },
-      "socialContent": { "title": "Visual content for social media", "description": "Visual pieces optimized for social networks." },
-      "banners": { "title": "Banners", "description": "Creative and effective advertising designs." },
-      "mailing": { "title": "Mailing", "description": "Personalized email marketing campaigns." },
-      "infographics": { "title": "Editorial and infographic design", "description": "Design of magazines, catalogs, and publications." },
-      "graphicDesign": { "title": "Graphic design", "description": "Other custom designs for all types of media." }
+    "fasesDelFunnel": {
+      "intro": "The <span class='font-bold text-red-500'>sales funnel</span> has replaced outdated cold-selling systems or massive paid traffic strategies, which exhausted databases and depended on luck. Today, thanks to social media and digital marketing, companies can build <span class='font-bold'>real relationships with their clients</span> instead of pressuring them with direct messages.",
+      "descripcionFases": "The funnel system organizes contacts into <span class='bg-red-600 font-bold text-white rounded-xl shadow p-1 px-2 mr-1'>3 main phases</span>, each reflecting the client’s proximity to purchase, allowing the design of different and much more effective strategies at every stage.",
+      "fases": {
+        "TOFU": {
+          "titulo": "TOFU Phase",
+          "descripcion": "In the <span class='font-bold text-white'>awareness phase</span>, the goal is to capture attention. Campaigns focus on <span class='font-bold text-white'>impact</span>: ads, banners, viral content, or social posts that generate initial interest and ideally lead to a basic subscription like following an account or joining a newsletter. Immediate sales are not expected; the goal is <span class='font-bold text-white'>to open the door to a relationship</span> with the client."
+        },
+        "MOFU": {
+          "titulo": "MOFU Phase",
+          "descripcion": "The <span class='font-bold text-white'>consideration phase</span> is where most of the process happens. The client, already interested, starts consuming valuable content: newsletters, social posts, or blog articles. Trust is <span class='font-bold text-white'>built</span> through useful information, success cases, comparisons, or invitations to digital events. Gradually, the client understands how the product or service aligns with their needs."
+        },
+        "BOFU": {
+          "titulo": "BOFU Phase",
+          "descripcion": "Finally, in the <span class='font-bold text-white'>decision phase</span>, the approach can be more commercial. The client is <span class='font-bold text-white'>ready</span> to receive direct calls-to-action, like requesting a demo, registering for an exclusive offer, or scheduling a meeting with an advisor. At this point, guidance and clarity are appreciated to take the final step toward purchase."
+        }
+      },
+      "conclusion": "This model <span class='font-bold text-red-500'>is currently the standard</span> because it respects users' digital habits, optimizes resources, and measures the effectiveness of every action. In practice, it also helps allocate the marketing budget better, ensuring every dollar works at the right stage of the customer journey."
     },
-    "contactPrompt": "Interested?",
-    "contactButton": "Contact us now"
+    "importanciaNewsletter": {
+      "titulo": "The importance of a newsletter",
+      "parrafos": [
+        "The newsletter is one of the most powerful tools to stand out from competitors and position yourself in your clients’ minds. It is the heart of the MOFU phase, the ideal space to build trust, provide value, and naturally guide the user toward a sale.",
+        "Unlike social media, where you depend on algorithms and attention is fragmented, a newsletter delivers your message directly to your client’s inbox, in a much less crowded environment. Day by day, subscribers will receive information about your products, understand your value proposition better, and associate your brand as the most reliable solution to their needs."
+      ],
+      "acciones": [
+        { "titulo": "Offer campaigns without being invasive", "descripcion": "Targeted and sent to those who already showed interest in your products." },
+        { "titulo": "Personalized advice", "descripcion": "Provide guides or advice via “learn more” buttons along with product info." },
+        { "titulo": "Free and educational events", "descripcion": "Masterclasses and trainings designed to solve concrete problems, guiding the user to your solution." },
+        { "titulo": "Satisfaction or knowledge surveys", "descripcion": "Collect direct information from clients to improve your offer and strengthen the relationship." },
+        { "titulo": "Segmented and impactful advertising", "descripcion": "Promote your products as strongly as Google Ads, but directly, avoiding irrelevant clicks or fake traffic." },
+        { "titulo": "Branding campaigns", "descripcion": "Actions focused on improving brand perception, not only among clients and prospects, but also within your team." }
+      ]
+    },
+    "soloNewsletter": {
+      "mainTitle": "Do your competitors publish content all year round?",
+      "mainTitleHighlight": "You can too.",
+      "paragraph1": "Having a budget or good ideas is not enough to maintain a steady flow of content.",
+      "paragraph2Start": "The secret to publishing year-round is to create an",
+      "paragraph2Highlight": "annual content plan",
+      "paragraph2End": "plan all the necessary operations to carry it out, and have the capacity to execute it regardless of marketing department workload fluctuations.",
+      "paragraph3": "With us, you will design a strategy at the beginning of the year, make a plan on how to obtain the necessary materials and where to publish them.",
+      "paragraph4Highlight": "We will take care of generating it for you,",
+      "paragraph4End": "providing you at every moment of the year with what you need to publish, so your company maintains a constant and professional presence across all digital channels."
+    }
   }
 }
