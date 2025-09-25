@@ -7,20 +7,23 @@ import AdvServices from './advComponents/subsections/Advservices';
 import OurMedia from './advComponents/subsections/OurMedia';
 
 interface AdvProps {
-  
+
 }
 
 const Adv: FC<AdvProps> = ({ }) => {
-    const { lang } = useLanguage();
-  
+  const { lang } = useLanguage();
+
   return (
     <>
       <div className='flex flex-col py-24  text-center'>
-      <Net3 />
-      <h1 className='pt-14'>Somos tu agencia publicitaria</h1>
-      <div className='flex flex-col mx-auto '>
-        <AdvSubtitle lang={lang} />
-      </div>
+        <Net3 />
+        {lang == "ESP" ?
+          <h1 className="pt-14">Somos tu agencia publicitaria</h1>
+          :
+          <h1 className="pt-14">We are your advertising agency</h1>
+        }      <div className='flex flex-col mx-auto '>
+          <AdvSubtitle lang={lang} />
+        </div>
       </div>
       <div
         style={{
@@ -40,14 +43,14 @@ const Adv: FC<AdvProps> = ({ }) => {
           }}
         >
           <div className="flex flex-col md:max-w-5xl py-8 md:py-12 px-6 mx-6 md:mx-auto text-white">
-           
-          <AdvServices lang = {lang}/>
+
+            <AdvServices lang={lang} />
           </div>
         </section>
-        <OurMedia lang = {lang}/>
+        <OurMedia lang={lang} />
       </div>
-      </>
-        );
+    </>
+  );
 };
 
 export default Adv;
