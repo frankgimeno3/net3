@@ -19,12 +19,12 @@ const Spiral3D: React.FC = () => {
   };
 
   // Coordenadas aproximadas para los textos (centrados sobre las barras)
-  const tofuPos = svgToPx(588000, 92000);
-  const mofuPos = svgToPx(584000, 150000);
-  const bofuPos = svgToPx(587000, 200000);
+  const tofuPos = svgToPx(548000, 115500);
+  const mofuPos = svgToPx(544000, 152000);
+  const bofuPos = svgToPx(547000, 183000);
 
   return (
-    <div className="relative w-[800px] h-[500px] ">
+    <div className="relative w-[800px] h-[500px]  ">
       <svg
         viewBox="500000 80000 250000 160000"
         xmlns="http://www.w3.org/2000/svg"
@@ -65,19 +65,19 @@ const Spiral3D: React.FC = () => {
 
       {/* Textos posicionados sobre las barras */}
       <div
-        className="absolute font-bold text-white text-6xl"
+        className="absolute font-bold text-white text-5xl"
         style={{ left: tofuPos.left, top: tofuPos.top }}
       >
         <p>TOFU</p>
       </div>
       <div
-        className="absolute font-bold text-white text-6xl"
+        className="absolute font-bold text-white text-5xl"
         style={{ left: mofuPos.left, top: mofuPos.top }}
       >
         <p>MOFU</p>
       </div>
       <div
-        className="absolute font-bold text-white text-6xl"
+        className="absolute font-bold text-white text-5xl"
         style={{ left: bofuPos.left, top: bofuPos.top }}
       >
         <p>BOFU</p>

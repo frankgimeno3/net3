@@ -18,7 +18,7 @@ const Funnel: FC<FunnelProps> = ({ }) => {
   <>
       <div className='flex flex-col py-24  text-center px-80'>
       <Net3 />
-      <h1 className='pt-14'>Funneliza tu proceso de conversión en ventas </h1>
+      <h1 className='pt-14'>Genera confianza con un newsletter</h1>
       <div className='flex flex-col mx-auto '>
         <FunnelSubtitle lang={lang} />
       </div>
@@ -30,7 +30,7 @@ const Funnel: FC<FunnelProps> = ({ }) => {
         }}
       >
         <section
-          className="bg-gray-100/5 text-gray-600 py-24"
+          className="bg-gray-100/30 text-gray-600 py-24"
           style={{
             position: "relative",
             zIndex: 10,

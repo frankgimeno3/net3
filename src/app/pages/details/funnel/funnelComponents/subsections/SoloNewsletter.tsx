@@ -35,7 +35,7 @@ const SoloNewsletter: FC<SoloNewsletterProps> = ({ lang }) => {
       <div className="flex flex-col md:flex-row items-center pt-12 text-lg">
         <div className="flex-1 max-w-md">
           <Image
-            src="/contentImages/Vidrioperfilnews.png"
+            src="/contentImages/VidrioperfilNews.png"
             alt="social media plan"
             width={400}
             height={400}
