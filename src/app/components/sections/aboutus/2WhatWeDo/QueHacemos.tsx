@@ -54,7 +54,7 @@ const QueHacemos: FC = () => {
         lang === "ESP"
           ? (content.Funnel as any).resumen
           : (content.Funnel as any).summary,
-      path: "/pages/details/funnel",
+      path: "/pages/details/newsletter",
     },
   ];
 
@@ -67,7 +67,7 @@ const QueHacemos: FC = () => {
 
   return (
     <section
-      className="bg-gray-100 text-gray-600 py-24"
+      className="bg-white/90 text-gray-600 py-24"
       style={{
         position: "relative",
         zIndex: 10,
@@ -77,18 +77,18 @@ const QueHacemos: FC = () => {
         borderBottomRightRadius: "50% 100px",
       }}
     >
-      <div className="flex flex-col md:max-w-5xl py-8 md:py-12 px-6 mx-6 md:mx-auto ">
-        <h1 className="text-center text-5xl md:text-7xl font-bold mb-12 w-full text-gray-500">
+      <div className="flex flex-col md:max-w-7xl py-8 md:py-12 px-6 mx-6 md:mx-auto ">
+        <h1 className="text-center text-5xl md:text-7xl font-bold mb-6 w-full text-gray-500">
           {lang === "ESP" ? "¿Qué hacemos?" : "What we do"}
         </h1>
         {sectionData.map((section, i) => (
           <div
             key={i}
-            className="my-5 flex flex-row w-full justify-between items-center bg-white shadow rounded-xl pr-3"
+            className="my-36 flex flex-row w-full  items-center   pr-3"
           >
             <div
               className="hidden md:block relative shadow-xl rounded-xl"
-              style={{ width: "450px", height: "450px" }}
+              style={{ width: "600px", height: "600px" }}
             >
               <Image
                 src={imagePaths[i]}
@@ -98,17 +98,17 @@ const QueHacemos: FC = () => {
                 onClick={() => router.push(section.path)}
               />
             </div>
-            <div className="flex flex-col w-1/2 items-top">
-              <h2 className="text-left font-bold mb-2 md:mb-8 md:max-w-lg cursor-pointer hover:text-gray-700" 
+            <div className="flex flex-col w-1/2 items-top ">
+              <h2 className="text-left font-bold mb-2 md:mb-8 md:max-w-lg cursor-pointer hover:text-gray-700 pl-12" 
               onClick={() => router.push(section.path)}>
                 {section.title}
               </h2>
               <div className="flex flex-row items-center justify-between">
                 <div className="flex flex-col md:max-w-xl mr-12 md:gap-3">
-                  <p className="leading-relaxed text-md md:text-lg">
+                  <p className="leading-relaxed text-md md:text-lg pl-12">
                     {section.resumen}
                   </p>
-                  <div className="flex flex-row gap-4 flex-wrap">
+                  <div className="flex flex-row gap-4 flex-wrap pl-12">
                     {iconsByRow[i].map((Icon, idx) => (
                       <div
                         key={idx}

@@ -16,7 +16,12 @@ const Contents: FC<ContentsProps> = ({ }) => {
     <>
       <div className='flex flex-col py-24  text-center px-80'>
            <Net3 />
-          <h1 className='pt-14'>Nuestros servicios de creación de contenidos</h1>
+{lang == "ESP" ? 
+  <h1 className="pt-14">Nuestros servicios de creación de contenidos</h1>
+  :
+  <h1 className="pt-14">Our content creation services</h1>
+}
+          
           <div className='flex flex-col mx-auto '>
             <Subtitle lang={lang} />
           </div>
