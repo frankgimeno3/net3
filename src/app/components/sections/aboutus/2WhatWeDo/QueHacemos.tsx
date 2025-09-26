@@ -77,17 +77,17 @@ const QueHacemos: FC = () => {
         borderBottomRightRadius: "50% 100px",
       }}
     >
-      <div className="flex flex-col md:max-w-7xl py-8 md:py-12 md:px-6 md:mx-6 md:mx-auto ">
+      <div className="flex flex-col md:max-w-7xl py-8 lg:py-12 md:px-6 md:mx-6 md:mx-auto ">
         <h1 className="text-center text-5xl md:text-7xl font-bold md:mb-6 w-full text-gray-500">
           {lang === "ESP" ? "¿Qué hacemos?" : "What we do"}
         </h1>
         {sectionData.map((section, i) => (
           <div
             key={i}
-            className="md:my-36 my-12 flex flex-row w-full  items-center   pr-3"
+            className="lg:my-36 my-12 flex flex-row w-full  items-center   pr-3"
           >
             <div
-              className="hidden md:block relative shadow-xl rounded-xl"
+              className="hidden lg:block relative shadow-xl rounded-xl"
               style={{ width: "600px", height: "600px" }}
             >
               <Image
@@ -98,12 +98,12 @@ const QueHacemos: FC = () => {
                 onClick={() => router.push(section.path)}
               />
             </div>
-            <div className="flex flex-col md:w-1/2 items-top ">
+            <div className="flex flex-col lg:w-1/2 items-top sm:pl-36 md:pl-36 lg:pl-0 ">
               <h2 className="text-left font-bold mb-2 md:mb-8 md:max-w-lg cursor-pointer hover:text-gray-700 pl-12"
                 onClick={() => router.push(section.path)}>
                 {section.title}
               </h2>
-              <div className="flex flex-row items-center justify-between">
+              <div className="flex flex-row items-center justify-between ">
                 <div className="flex flex-col md:max-w-xl mr-12 md:gap-3">
                   <p className="leading-relaxed text-md md:text-lg pl-12">
                     {section.resumen}
