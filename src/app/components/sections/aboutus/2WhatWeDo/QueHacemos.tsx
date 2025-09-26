@@ -8,8 +8,8 @@ import Image from "next/image";
 // Importamos los SVGs
 import PR from "./svg/PR";
 import Video from "./svg/Video";
- import Banners from "./svg/Banners";
- import RRSS from "./svg/RRSS";
+import Banners from "./svg/Banners";
+import RRSS from "./svg/RRSS";
 import Mailing from "./svg/Mailing";
 import Funnel from "./svg/Funnel";
 import Money from "./svg/Money";
@@ -77,14 +77,14 @@ const QueHacemos: FC = () => {
         borderBottomRightRadius: "50% 100px",
       }}
     >
-      <div className="flex flex-col md:max-w-7xl py-8 md:py-12 px-6 mx-6 md:mx-auto ">
-        <h1 className="text-center text-5xl md:text-7xl font-bold mb-6 w-full text-gray-500">
+      <div className="flex flex-col md:max-w-7xl py-8 md:py-12 md:px-6 md:mx-6 md:mx-auto ">
+        <h1 className="text-center text-5xl md:text-7xl font-bold md:mb-6 w-full text-gray-500">
           {lang === "ESP" ? "¿Qué hacemos?" : "What we do"}
         </h1>
         {sectionData.map((section, i) => (
           <div
             key={i}
-            className="my-36 flex flex-row w-full  items-center   pr-3"
+            className="md:my-36 my-12 flex flex-row w-full  items-center   pr-3"
           >
             <div
               className="hidden md:block relative shadow-xl rounded-xl"
@@ -98,9 +98,9 @@ const QueHacemos: FC = () => {
                 onClick={() => router.push(section.path)}
               />
             </div>
-            <div className="flex flex-col w-1/2 items-top ">
-              <h2 className="text-left font-bold mb-2 md:mb-8 md:max-w-lg cursor-pointer hover:text-gray-700 pl-12" 
-              onClick={() => router.push(section.path)}>
+            <div className="flex flex-col md:w-1/2 items-top ">
+              <h2 className="text-left font-bold mb-2 md:mb-8 md:max-w-lg cursor-pointer hover:text-gray-700 pl-12"
+                onClick={() => router.push(section.path)}>
                 {section.title}
               </h2>
               <div className="flex flex-row items-center justify-between">
