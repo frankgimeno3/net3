@@ -47,14 +47,12 @@ const QuienSomos: FC = () => {
 
   return (
     <div
-      id="quien-somos-component"
-      className="w-full pt-24 md:p-8 px-12 md:flex flex-col mx-auto min-h-screen h-full 
-      justify-center md:max-w-5xl text-center md:text-left"
-    >
-      <h1 className="mt-12  font-bold">{content.titular}</h1>
-      <h3 className="text-lg md:text-2xl py-8">{content.subtitulo}</h3>
+      id="quien-somos-component" className="w-full py-24 md:p-8 px-12 md:flex flex-col mx-auto md:min-h-screen h-full justify-center md:max-w-5xl text-center md:text-left " >
 
-      <p className="font-bold pb-2 hidden md:block">{content.labelText}</p>
+      <h1 className="mt-12  font-bold">{content.titular}</h1>
+      <h3 className="text-lg md:text-2xl py-8 hidden md:block">{content.subtitulo}</h3>
+
+      <p className="font-bold pb-2 my-8 md:mt-0 px-1 ">{content.labelText}</p>
 
       <form
         onSubmit={handleSubmit}
@@ -67,7 +65,7 @@ const QuienSomos: FC = () => {
           onChange={(e) => setEmail(e.target.value)}
           required
           className="rounded bg-white bg-opacity-10 border border-gray-100 px-4 w-56 md:w-96 md:mr-4 mx-auto md:mx-0
-          min-h-12 hidden md:block"
+          min-h-12 "
         />
         <button
           type="submit"
