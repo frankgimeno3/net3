@@ -7,24 +7,24 @@ import SoloNewsletter from './funnelComponents/subsections/SoloNewsletter';
 import NuestroSistema from './funnelComponents/subsections/NuestrSistema';
 
 interface FunnelProps {
-  
+
 }
 
 const Funnel: FC<FunnelProps> = ({ }) => {
-      const { lang } = useLanguage();
-  
-  
+  const { lang } = useLanguage();
+
+
   return (
-  <>
-      <div className='flex flex-col py-24  text-center px-80'>
-      <Net3 />
-{lang == "ESP" ? 
-  <h1 className="pt-14">Genera confianza con un newsletter</h1>
-  :
-  <h1 className="pt-14">Build trust with a newsletter</h1>
-}      <div className='flex flex-col mx-auto '>
-        <FunnelSubtitle lang={lang} />
-      </div>
+    <>
+      <div className='flex flex-col py-24  text-center px-12 lg:px-80'>
+        <Net3 />
+        {lang == "ESP" ?
+          <h1 className="pt-14">Genera confianza con un newsletter</h1>
+          :
+          <h1 className="pt-14">Build trust with a newsletter</h1>
+        }      <div className='flex flex-col mx-auto '>
+          <FunnelSubtitle lang={lang} />
+        </div>
       </div>
       <div
         style={{
@@ -44,13 +44,13 @@ const Funnel: FC<FunnelProps> = ({ }) => {
           }}
         >
           <div className="flex flex-col md:max-w-5xl py-8 md:py-12 px-6 mx-6 md:mx-auto text-white">
-           <NuestroSistema lang = {lang}/>
+            <NuestroSistema lang={lang} />
           </div>
         </section>
-          <SoloNewsletter lang = {lang}/>
+        <SoloNewsletter lang={lang} />
       </div>
 
-</>    );
+    </>);
 };
 
 export default Funnel;
