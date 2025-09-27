@@ -71,7 +71,7 @@ const BetterContent: FC<BetterContentProps> = ({ lang }) => {
       <div className="flex flex-col bg-white/10 p-12  rounded-xl mx-auto mt-8">
         <p className="py-2 text-gray-200 text-2xl text-center">{t.contactPrompt}</p>
         <button
-          className="bg-red-600/70 hover:bg-red-600 text-white w-56 mx-auto font-bold px-4 py-2 rounded-xl"
+          className="bg-red-600/70 hover:bg-red-600 text-white md:w-56 mx-auto font-bold px-4 py-2 rounded-xl"
           onClick={() => router.push('/contact')}
         >
           {t.contactButton}

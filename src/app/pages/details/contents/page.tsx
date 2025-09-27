@@ -47,7 +47,7 @@ const Contents: FC<ContentsProps> = ({ }) => {
             <BetterContent lang={lang} />
           </div>
         </section>
-        {/* <ContentsPlan lang={lang} /> */}
+        <ContentsPlan lang={lang} />
       </div>
 
     </>
