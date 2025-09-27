@@ -78,7 +78,7 @@ const QueHacemos: FC = () => {
       }}
     >
       <div className="flex flex-col md:max-w-7xl py-8 lg:py-12 md:px-6 md:mx-6 md:mx-auto ">
-        <h1 className="text-center text-5xl md:text-7xl font-bold md:mb-6 w-full text-gray-500">
+        <h1 className="text-left lg:text-center text-5xl md:text-7xl font-bold md:mb-6 w-full text-gray-500 pl-12 sm:pl-44 lg:pl-0">
           {lang === "ESP" ? "¿Qué hacemos?" : "What we do"}
         </h1>
         {sectionData.map((section, i) => (
