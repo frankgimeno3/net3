@@ -15,7 +15,7 @@ const Adv: FC<AdvProps> = ({ }) => {
 
   return (
     <>
-      <div className='flex flex-col py-24  text-center'>
+      <div className='flex flex-col py-24  text-center px-12 lg:px-80'>
         <Net3 />
         {lang == "ESP" ?
           <h1 className="pt-14">Somos tu agencia publicitaria</h1>
@@ -31,8 +31,8 @@ const Adv: FC<AdvProps> = ({ }) => {
           zIndex: 11,
         }}
       >
-        <section
-          className="bg-gray-100/5 text-gray-600 py-24"
+       <section
+          className="bg-gray-100/30 text-gray-600 py-24"
           style={{
             position: "relative",
             zIndex: 10,
@@ -43,8 +43,7 @@ const Adv: FC<AdvProps> = ({ }) => {
           }}
         >
           <div className="flex flex-col md:max-w-5xl py-8 md:py-12 px-6 mx-6 md:mx-auto text-white">
-
-            <AdvServices lang={lang} />
+                <AdvServices lang={lang} />
           </div>
         </section>
         <OurMedia lang={lang} />
