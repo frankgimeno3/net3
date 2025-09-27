@@ -29,7 +29,7 @@ const OurMedia: FC<OurMediaProps> = ({lang }) => {
             alt="calendar plan"
             width={400}
             height={400}
-            className="rounded-xl object-cover shadow-sm shadow-white/20 opacity-90 border border-gray-100/10"
+            className="rounded-xl object-cover opacity-90 border border-gray-100/10"
           />
         </div>
       </div>
