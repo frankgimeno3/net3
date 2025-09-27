@@ -56,12 +56,12 @@ const ContentsSubtitle: FC<ContentsSubtitleProps> = ({ lang }) => {
   return (
     <div className=' w-full  sm:mb-6'>
       <div className="flex flex-col text-center text-white  hidden md:flex md:h-48  sm:px-1 sm:w-auto">
-        <p className="text-5xl sm:text-5xl glitch   my-auto " data-text={displayText}>
+        <p className="text-xl md:text-5xl glitch   my-auto " data-text={displayText}>
           {displayText}
         </p>
       </div>
       <div className="flex flex-col text-center text-white flex md:hidden py-8 pt-8  wax-w-64 sm:w-auto h-36">
-        <p className="my-auto text-5xl max-w-64 glitch " data-text={displayText}>
+        <p className="my-auto text-xl md:text-5xl max-w-64 glitch " data-text={displayText}>
           {displayText}
         </p>
       </div>

@@ -53,8 +53,10 @@ const BetterContent: FC<BetterContentProps> = ({ lang }) => {
     <div>
       <h2 className="text-5xl font-bold text-center">{t.title}</h2>
       <p className="text-center pt-5 text-gray-400 italic ">{t.subtitle1}</p>
-      <p className="text-center my-12 rounded shadow font-bold bg-red-500/90 w-96 p-5 mx-auto">{t.subtitle2}</p>
-
+ 
+      <p className="font-bold bg-red-600 text-white p-4 rounded-xl shadow mx-auto my-8 text-center hidden md:block text-sm md:text-lg"
+        style={{ width: '620px' }}>{t.subtitle2}</p>      
+      <p className="font-bold bg-red-600 text-white p-4 rounded-xl shadow mx-auto my-8 text-center block md:hidden text-sm md:text-lg">{t.subtitle2} </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-12 justify-items-center">
         {servicesData.map((service) => (
           <ContentCard

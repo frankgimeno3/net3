@@ -14,26 +14,26 @@ const Contents: FC<ContentsProps> = ({ }) => {
 
   return (
     <>
-      <div className='flex flex-col py-24  text-center px-80'>
-           <Net3 />
-{lang == "ESP" ? 
-  <h1 className="pt-14">Nuestros servicios de creación de contenidos</h1>
-  :
-  <h1 className="pt-14">Our content creation services</h1>
-}
-          
-          <div className='flex flex-col mx-auto '>
-            <Subtitle lang={lang} />
-          </div>
-       </div>
+      <div className='flex flex-col py-24  text-center px-12 lg:px-80'>
+        <Net3 />
+        {lang == "ESP" ?
+          <h1 className="pt-14">Nuestros servicios de creación de contenidos</h1>
+          :
+          <h1 className="pt-14">Our content creation services</h1>
+        }
+
+        <div className='flex flex-col mx-auto '>
+          <Subtitle lang={lang} />
+        </div>
+      </div>
       <div
         style={{
           position: "relative",
           zIndex: 11,
         }}
       >
-        <section
-          className="bg-gray-600/30 text-gray-600 py-24"
+                <section
+          className="bg-gray-100/30 text-gray-600 py-24"
           style={{
             position: "relative",
             zIndex: 10,
@@ -47,7 +47,7 @@ const Contents: FC<ContentsProps> = ({ }) => {
             <BetterContent lang={lang} />
           </div>
         </section>
-        <ContentsPlan lang={lang} />
+        {/* <ContentsPlan lang={lang} /> */}
       </div>
 
     </>

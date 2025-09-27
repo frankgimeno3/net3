@@ -22,7 +22,8 @@ const Funnel: FC<FunnelProps> = ({ }) => {
           <h1 className="pt-14">Genera confianza con un newsletter</h1>
           :
           <h1 className="pt-14">Build trust with a newsletter</h1>
-        }      <div className='flex flex-col mx-auto '>
+        }      
+        <div className='flex flex-col mx-auto '>
           <FunnelSubtitle lang={lang} />
         </div>
       </div>
